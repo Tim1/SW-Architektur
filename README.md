@@ -2,4 +2,6 @@ SW-Architektur
 ==============
 
 Prototype
-RunningEasy JavaEE Projekt für Software Architektur
+
+
+RunningEasy JavaEE Projekt fuer Software Architektur
