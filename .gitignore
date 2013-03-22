@@ -1,8 +1,12 @@
 bin/
-!lib/
+
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# include lib and doc folder (even if jars)#
+!lib/*
+!doc/*
