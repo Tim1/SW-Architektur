@@ -1,6 +1,7 @@
 bin/
 
 *.class
+desktop.ini
 
 # Package Files #
 *.jar
