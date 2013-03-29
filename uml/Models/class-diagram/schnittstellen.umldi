@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_WPhLsJNFEeK-j5kILn9WLg" activeDiagram="_WPhLsZNFEeK-j5kILn9WLg">
   <model href="overview.uml#_w8IxIM37EdqwVrslYOdUDA"/>
-  <diagrams xmi:id="_WPhLsZNFEeK-j5kILn9WLg" position="0,0" size="100,100" name="Blatt_01_Aufgabe_01" viewport="-43,148">
+  <diagrams xmi:id="_WPhLsZNFEeK-j5kILn9WLg" position="0,0" size="100,100" name="Blatt_01_Aufgabe_01" viewport="0,0">
     <property xmi:id="_WTtvMJNFEeK-j5kILn9WLg" key="pageFormatName" value="A4"/>
     <property xmi:id="_WTtvMZNFEeK-j5kILn9WLg" key="diagramWidth" value="840"/>
     <property xmi:id="_WTtvMpNFEeK-j5kILn9WLg" key="diagramHeight" value="1188"/>
@@ -247,7 +247,7 @@
       </contained>
     </contained>
     <contained xsi:type="di:GraphNode" xmi:id="_QrkQAJVrEeKn95o17-kmTQ" position="550,0" size="244,100">
-      <property xmi:id="_QrkQAZVrEeKn95o17-kmTQ" key="noteValue" value="Schnittstellen + Business Logik"/>
+      <property xmi:id="_QrkQAZVrEeKn95o17-kmTQ" key="noteValue" value="Schnittstellen + Business Logik "/>
       <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_QrkQApVrEeKn95o17-kmTQ" presentation="default" typeInfo="Note"/>
     </contained>
     <contained xsi:type="di:GraphNode" xmi:id="_Ku6EkJTMEeKAE4Eo82P5ew" position="301,201" size="226,-1">
