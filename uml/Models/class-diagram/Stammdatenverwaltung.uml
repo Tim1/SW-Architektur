@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Stammdatenverwaltung">
+    <packagedElement xmi:type="uml:Package" xmi:id="_eye4IJkgEeKKvqojDxZvIg" name="Business-Logik">
+      <packagedElement xmi:type="uml:Class" xmi:id="_A3ZH8JkhEeKKvqojDxZvIg" name="LaueferBA">
+        <ownedOperation xmi:id="_OVbaYJkhEeKKvqojDxZvIg" name="createLauefer"/>
+        <ownedOperation xmi:id="_R8r08JkhEeKKvqojDxZvIg" name="updateLauefer"/>
+        <ownedOperation xmi:id="_aB2lQJkhEeKKvqojDxZvIg" name="generateGesamtStatistik"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CJQ_gJkhEeKKvqojDxZvIg" name="VereinBA">
+        <ownedOperation xmi:id="_doMZ0JkhEeKKvqojDxZvIg" name="updateVerein"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E-wl8JkhEeKKvqojDxZvIg" name="VeranstaltungBA">
+        <ownedOperation xmi:id="_ggdAYJkhEeKKvqojDxZvIg" name="createVeranstaltung"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Iuj4gJkhEeKKvqojDxZvIg" name="TeilnahmeBA">
+        <ownedOperation xmi:id="_kpG30JkhEeKKvqojDxZvIg" name="createTeilnahme"/>
+        <ownedOperation xmi:id="_mkF90JkhEeKKvqojDxZvIg" name="deleteTeilnahme"/>
+        <ownedOperation xmi:id="_n6rWQJkhEeKKvqojDxZvIg" name="generateStartListe"/>
+        <ownedOperation xmi:id="_petU0JkhEeKKvqojDxZvIg" name="generaateUnpayedLaueferListe"/>
+        <ownedOperation xmi:id="_sL4swJkhEeKKvqojDxZvIg" name="getAktuelleAnzahlTeilnehmer"/>
+        <ownedOperation xmi:id="_vl7xwJkhEeKKvqojDxZvIg" name="disqualifiquateLauefer"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_J2kpcJkhEeKKvqojDxZvIg" name="ErgebnisBA">
+        <ownedOperation xmi:id="_MJUSsJkiEeKKvqojDxZvIg" name="editTime"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uCHEAJkgEeKKvqojDxZvIg" name="Lauefer" clientDependency="_98EmU5kgEeKKvqojDxZvIg">
+      <interfaceRealization xmi:id="_98EmU5kgEeKKvqojDxZvIg" name="InterfaceRealization1" supplier="_3TAAkJkgEeKKvqojDxZvIg" client="_uCHEAJkgEeKKvqojDxZvIg" contract="_3TAAkJkgEeKKvqojDxZvIg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wHA7AJkgEeKKvqojDxZvIg" name="Veranstaltung" clientDependency="_8e4PkJkgEeKKvqojDxZvIg">
+      <interfaceRealization xmi:id="_8e4PkJkgEeKKvqojDxZvIg" name="InterfaceRealization1" supplier="_3TAAkJkgEeKKvqojDxZvIg" client="_wHA7AJkgEeKKvqojDxZvIg" contract="_3TAAkJkgEeKKvqojDxZvIg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wyMmAJkgEeKKvqojDxZvIg" name="Teilnahme" clientDependency="_-wNZA5kgEeKKvqojDxZvIg">
+      <interfaceRealization xmi:id="_-wNZA5kgEeKKvqojDxZvIg" name="InterfaceRealization1" supplier="_3TAAkJkgEeKKvqojDxZvIg" client="_wyMmAJkgEeKKvqojDxZvIg" contract="_3TAAkJkgEeKKvqojDxZvIg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yH9fEJkgEeKKvqojDxZvIg" name="Ergebnis" clientDependency="__kJ-c5kgEeKKvqojDxZvIg">
+      <interfaceRealization xmi:id="__kJ-c5kgEeKKvqojDxZvIg" name="InterfaceRealization1" supplier="_3TAAkJkgEeKKvqojDxZvIg" client="_yH9fEJkgEeKKvqojDxZvIg" contract="_3TAAkJkgEeKKvqojDxZvIg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0VXKwJkgEeKKvqojDxZvIg" name="Verein" clientDependency="_8-YPAJkgEeKKvqojDxZvIg">
+      <interfaceRealization xmi:id="_8-YPAJkgEeKKvqojDxZvIg" name="InterfaceRealization1" supplier="_3TAAkJkgEeKKvqojDxZvIg" client="_0VXKwJkgEeKKvqojDxZvIg" contract="_3TAAkJkgEeKKvqojDxZvIg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3TAAkJkgEeKKvqojDxZvIg" name="Serializable"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WAS-6pkiEeKKvqojDxZvIg" name="A_&lt;laueferBA>_&lt;lauefer>" memberEnd="_WAS-65kiEeKKvqojDxZvIg _WAS-7pkiEeKKvqojDxZvIg" navigableOwnedEnd="_WAS-7pkiEeKKvqojDxZvIg">
+      <ownedEnd xmi:id="_WAS-65kiEeKKvqojDxZvIg" name="laueferBA" type="_A3ZH8JkhEeKKvqojDxZvIg" association="_WAS-6pkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WAS-7JkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WAS-7ZkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_WAS-7pkiEeKKvqojDxZvIg" name="lauefer" type="_uCHEAJkgEeKKvqojDxZvIg" association="_WAS-6pkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WAS-75kiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WAS-8JkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aLyH4JkiEeKKvqojDxZvIg" name="A_&lt;vereinBA>_&lt;verein>" memberEnd="_aLyH4ZkiEeKKvqojDxZvIg _aLyH5JkiEeKKvqojDxZvIg" navigableOwnedEnd="_aLyH5JkiEeKKvqojDxZvIg">
+      <ownedEnd xmi:id="_aLyH4ZkiEeKKvqojDxZvIg" name="vereinBA" type="_CJQ_gJkhEeKKvqojDxZvIg" association="_aLyH4JkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aLyH4pkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aLyH45kiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_aLyH5JkiEeKKvqojDxZvIg" name="verein" type="_0VXKwJkgEeKKvqojDxZvIg" association="_aLyH4JkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aLyH5ZkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aLyH5pkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_akRgYJkiEeKKvqojDxZvIg" name="A_&lt;veranstaltungBA>_&lt;veranstaltung>" memberEnd="_akRgYZkiEeKKvqojDxZvIg _akRgZJkiEeKKvqojDxZvIg" navigableOwnedEnd="_akRgZJkiEeKKvqojDxZvIg">
+      <ownedEnd xmi:id="_akRgYZkiEeKKvqojDxZvIg" name="veranstaltungBA" type="_E-wl8JkhEeKKvqojDxZvIg" association="_akRgYJkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akRgYpkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akRgY5kiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_akRgZJkiEeKKvqojDxZvIg" name="veranstaltung" type="_wHA7AJkgEeKKvqojDxZvIg" association="_akRgYJkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akRgZZkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akRgZpkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_a5oFUJkiEeKKvqojDxZvIg" name="A_&lt;teilnahmeBA>_&lt;teilnahme>" memberEnd="_a5oFUZkiEeKKvqojDxZvIg _a5oFVJkiEeKKvqojDxZvIg" navigableOwnedEnd="_a5oFVJkiEeKKvqojDxZvIg">
+      <ownedEnd xmi:id="_a5oFUZkiEeKKvqojDxZvIg" name="teilnahmeBA" type="_Iuj4gJkhEeKKvqojDxZvIg" association="_a5oFUJkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a5oFUpkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a5oFU5kiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_a5oFVJkiEeKKvqojDxZvIg" name="teilnahme" type="_wyMmAJkgEeKKvqojDxZvIg" association="_a5oFUJkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a5oFVZkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a5oFVpkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bPEJ2pkiEeKKvqojDxZvIg" name="A_&lt;ergebnisBA>_&lt;ergebnis>" memberEnd="_bPEJ25kiEeKKvqojDxZvIg _bPEJ3pkiEeKKvqojDxZvIg" navigableOwnedEnd="_bPEJ3pkiEeKKvqojDxZvIg">
+      <ownedEnd xmi:id="_bPEJ25kiEeKKvqojDxZvIg" name="ergebnisBA" type="_J2kpcJkhEeKKvqojDxZvIg" association="_bPEJ2pkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bPEJ3JkiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bPEJ3ZkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_bPEJ3pkiEeKKvqojDxZvIg" name="ergebnis" type="_yH9fEJkgEeKKvqojDxZvIg" association="_bPEJ2pkiEeKKvqojDxZvIg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bPEJ35kiEeKKvqojDxZvIg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bPEJ4JkiEeKKvqojDxZvIg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
