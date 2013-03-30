@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="use_case">
+    <packagedElement xmi:type="uml:Actor" xmi:id="_dvzroJlLEeKInpoZ4jRNBw" name="Laeufer"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_hiHfoJlLEeKInpoZ4jRNBw" name="anmelden Veranstaltung">
+      <include xmi:id="_-5YUk5lLEeKInpoZ4jRNBw" name="Include1" addition="_5-iyQJlLEeKInpoZ4jRNBw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_kMD9YJlLEeKInpoZ4jRNBw" name="abmelden Veranstaltung"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_5-iyQJlLEeKInpoZ4jRNBw" name="Startnummer anlegen"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_DWBfAJlMEeKInpoZ4jRNBw" name="GesamtStatistik anfordern"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_IKlaMJlMEeKInpoZ4jRNBw" name="SMS-EMail-Service aktivieren"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_KcYdsJlMEeKInpoZ4jRNBw" name="Verein ändern"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_PKDGsJlMEeKInpoZ4jRNBw" name="DB"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_QqdJhplMEeKInpoZ4jRNBw" name="A_&lt;laeufer>_&lt;anmelden Veranstaltung>" memberEnd="_QqdwkJlMEeKInpoZ4jRNBw _Qqdwk5lMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_QqdwkJlMEeKInpoZ4jRNBw" name="laeufer" type="_dvzroJlLEeKInpoZ4jRNBw" association="_QqdJhplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QqdwkZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QqdwkplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_Qqdwk5lMEeKInpoZ4jRNBw" name="anmelden Veranstaltung" type="_hiHfoJlLEeKInpoZ4jRNBw" association="_QqdJhplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QqdwlJlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QqdwlZlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TXKAUJlMEeKInpoZ4jRNBw" name="A_&lt;laeufer>_&lt;abmelden Veranstaltung>" memberEnd="_TXKAUZlMEeKInpoZ4jRNBw _TXKAVJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_TXKAUZlMEeKInpoZ4jRNBw" name="laeufer" type="_dvzroJlLEeKInpoZ4jRNBw" association="_TXKAUJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TXKAUplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TXKAU5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_TXKAVJlMEeKInpoZ4jRNBw" name="abmelden Veranstaltung" type="_kMD9YJlLEeKInpoZ4jRNBw" association="_TXKAUJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TXKAVZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TXKAVplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UUIl9plMEeKInpoZ4jRNBw" name="A_&lt;laeufer>_&lt;gesamtStatistik anfordern>" memberEnd="_UUIl95lMEeKInpoZ4jRNBw _UUIl-plMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_UUIl95lMEeKInpoZ4jRNBw" name="laeufer" type="_dvzroJlLEeKInpoZ4jRNBw" association="_UUIl9plMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UUIl-JlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UUIl-ZlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_UUIl-plMEeKInpoZ4jRNBw" name="gesamtStatistik anfordern" type="_DWBfAJlMEeKInpoZ4jRNBw" association="_UUIl9plMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UUIl-5lMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UUIl_JlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_U8BFVplMEeKInpoZ4jRNBw" name="A_&lt;laeufer>_&lt;verein ändern>" memberEnd="_U8BsYJlMEeKInpoZ4jRNBw _U8BsY5lMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_U8BsYJlMEeKInpoZ4jRNBw" name="laeufer" type="_dvzroJlLEeKInpoZ4jRNBw" association="_U8BFVplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U8BsYZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U8BsYplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_U8BsY5lMEeKInpoZ4jRNBw" name="verein ändern" type="_KcYdsJlMEeKInpoZ4jRNBw" association="_U8BFVplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U8BsZJlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U8BsZZlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WtHPhplMEeKInpoZ4jRNBw" name="A_&lt;laeufer>_&lt;sMS-EMail-Service aktivieren>" memberEnd="_WtHPh5lMEeKInpoZ4jRNBw _WtHPiplMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_WtHPh5lMEeKInpoZ4jRNBw" name="laeufer" type="_dvzroJlLEeKInpoZ4jRNBw" association="_WtHPhplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WtHPiJlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WtHPiZlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_WtHPiplMEeKInpoZ4jRNBw" name="sMS-EMail-Service aktivieren" type="_IKlaMJlMEeKInpoZ4jRNBw" association="_WtHPhplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WtHPi5lMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WtHPjJlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YRU0QJlMEeKInpoZ4jRNBw" name="A_&lt;anmelden Veranstaltung>_&lt;dB>" memberEnd="_YRU0QZlMEeKInpoZ4jRNBw _YRU0RJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_YRU0QZlMEeKInpoZ4jRNBw" name="anmelden Veranstaltung" type="_hiHfoJlLEeKInpoZ4jRNBw" association="_YRU0QJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YRU0QplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YRU0Q5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_YRU0RJlMEeKInpoZ4jRNBw" name="dB" type="_PKDGsJlMEeKInpoZ4jRNBw" association="_YRU0QJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YRU0RZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YRU0RplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Y-uFwJlMEeKInpoZ4jRNBw" name="A_&lt;abmelden Veranstaltung>_&lt;dB>" memberEnd="_Y-uFwZlMEeKInpoZ4jRNBw _Y-uFxJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_Y-uFwZlMEeKInpoZ4jRNBw" name="abmelden Veranstaltung" type="_kMD9YJlLEeKInpoZ4jRNBw" association="_Y-uFwJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y-uFwplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y-uFw5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_Y-uFxJlMEeKInpoZ4jRNBw" name="dB" type="_PKDGsJlMEeKInpoZ4jRNBw" association="_Y-uFwJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y-uFxZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y-uFxplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZkjWsJlMEeKInpoZ4jRNBw" name="A_&lt;gesamtStatistik anfordern>_&lt;dB>" memberEnd="_ZkjWsZlMEeKInpoZ4jRNBw _ZkjWtJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_ZkjWsZlMEeKInpoZ4jRNBw" name="gesamtStatistik anfordern" type="_DWBfAJlMEeKInpoZ4jRNBw" association="_ZkjWsJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZkjWsplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZkjWs5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ZkjWtJlMEeKInpoZ4jRNBw" name="dB" type="_PKDGsJlMEeKInpoZ4jRNBw" association="_ZkjWsJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZkjWtZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZkjWtplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aguEBplMEeKInpoZ4jRNBw" name="A_&lt;verein ändern>_&lt;dB>" memberEnd="_aguEB5lMEeKInpoZ4jRNBw _aguECplMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_aguEB5lMEeKInpoZ4jRNBw" name="verein ändern" type="_KcYdsJlMEeKInpoZ4jRNBw" association="_aguEBplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aguECJlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aguECZlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_aguECplMEeKInpoZ4jRNBw" name="dB" type="_PKDGsJlMEeKInpoZ4jRNBw" association="_aguEBplMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aguEC5lMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aguEDJlMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_biYVUJlMEeKInpoZ4jRNBw" name="A_&lt;sMS-EMail-Service aktivieren>_&lt;dB>" memberEnd="_biYVUZlMEeKInpoZ4jRNBw _biYVVJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_biYVUZlMEeKInpoZ4jRNBw" name="sMS-EMail-Service aktivieren" type="_IKlaMJlMEeKInpoZ4jRNBw" association="_biYVUJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_biYVUplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_biYVU5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_biYVVJlMEeKInpoZ4jRNBw" name="dB" type="_PKDGsJlMEeKInpoZ4jRNBw" association="_biYVUJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_biYVVZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_biYVVplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_gnlUkJlMEeKInpoZ4jRNBw" name="Startgebühr überweisen"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jTvY0JlMEeKInpoZ4jRNBw" name="A_&lt;laeufer>_&lt;startgebühr überweisen>" memberEnd="_jTvY0ZlMEeKInpoZ4jRNBw _jTvY1JlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_jTvY0ZlMEeKInpoZ4jRNBw" name="laeufer" type="_dvzroJlLEeKInpoZ4jRNBw" association="_jTvY0JlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jTvY0plMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jTvY05lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_jTvY1JlMEeKInpoZ4jRNBw" name="startgebühr überweisen" type="_gnlUkJlMEeKInpoZ4jRNBw" association="_jTvY0JlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jTvY1ZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jTvY1plMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_rMdokJlMEeKInpoZ4jRNBw" name="Bank Anwendung"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uAsDsJlMEeKInpoZ4jRNBw" name="A_&lt;startgebühr überweisen>_&lt;bank Anwendung>" memberEnd="_uAsDsZlMEeKInpoZ4jRNBw _uAsDtJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_uAsDsZlMEeKInpoZ4jRNBw" name="startgebühr überweisen" type="_gnlUkJlMEeKInpoZ4jRNBw" association="_uAsDsJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uAsDsplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uAsDs5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_uAsDtJlMEeKInpoZ4jRNBw" name="bank Anwendung" type="_rMdokJlMEeKInpoZ4jRNBw" association="_uAsDsJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uAsDtZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uAsDtplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_u-V-wJlMEeKInpoZ4jRNBw" name="A_&lt;startgebühr überweisen>_&lt;dB>" memberEnd="_u-V-wZlMEeKInpoZ4jRNBw _u-V-xJlMEeKInpoZ4jRNBw">
+      <ownedEnd xmi:id="_u-V-wZlMEeKInpoZ4jRNBw" name="startgebühr überweisen" type="_gnlUkJlMEeKInpoZ4jRNBw" association="_u-V-wJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u-V-wplMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u-V-w5lMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_u-V-xJlMEeKInpoZ4jRNBw" name="dB" type="_PKDGsJlMEeKInpoZ4jRNBw" association="_u-V-wJlMEeKInpoZ4jRNBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u-V-xZlMEeKInpoZ4jRNBw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u-V-xplMEeKInpoZ4jRNBw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
