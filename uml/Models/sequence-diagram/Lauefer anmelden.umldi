@@ -16,6 +16,17 @@
     <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HXl-MpuVEeK9W8-fmw0pUg" presentation="org.topcased.modeler.uml.sequencediagram">
       <element href="Lauefer%20anmelden.uml#idInteraction"/>
     </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_aqofsJuWEeK9W8-fmw0pUg" position="183,138" size="550,66">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aqofsZuWEeK9W8-fmw0pUg" presentation="default">
+        <element href="Lauefer%20anmelden.uml#_aqt_QJuWEeK9W8-fmw0pUg"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_aqofspuWEeK9W8-fmw0pUg">
+        <property xmi:id="_aqofs5uWEeK9W8-fmw0pUg" key="eStructuralFeatureID" value="15"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aqoftJuWEeK9W8-fmw0pUg" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_aqt_QJuWEeK9W8-fmw0pUg"/>
+        </semanticModel>
+      </contained>
+    </contained>
     <contained xsi:type="di:GraphNode" xmi:id="_aYulcJuYEeK9N-GZPkYBaQ" position="182,212" size="613,88">
       <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aYulcZuYEeK9N-GZPkYBaQ" presentation="default">
         <element href="Lauefer%20anmelden.uml#_aY0FAJuYEeK9N-GZPkYBaQ"/>
@@ -31,17 +42,6 @@
             <element href="Lauefer%20anmelden.uml#_aY0FAZuYEeK9N-GZPkYBaQ"/>
           </semanticModel>
         </contained>
-      </contained>
-    </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_aqofsJuWEeK9W8-fmw0pUg" position="183,138" size="550,66">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aqofsZuWEeK9W8-fmw0pUg" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_aqt_QJuWEeK9W8-fmw0pUg"/>
-      </semanticModel>
-      <contained xsi:type="di:GraphNode" xmi:id="_aqofspuWEeK9W8-fmw0pUg">
-        <property xmi:id="_aqofs5uWEeK9W8-fmw0pUg" key="eStructuralFeatureID" value="15"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aqoftJuWEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_aqt_QJuWEeK9W8-fmw0pUg"/>
-        </semanticModel>
       </contained>
     </contained>
     <contained xsi:type="di:GraphNode" xmi:id="_H4wKgJuVEeK9W8-fmw0pUg" position="192,40" size="100,543">
@@ -127,11 +127,11 @@
       </semanticModel>
       <contained xsi:type="di:EdgeObjectOffset" xmi:id="_wcBk45uVEeK9W8-fmw0pUg" id="nameEdgeObject" offset="-1,-14"/>
     </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_lbCHMJuWEeK9W8-fmw0pUg" position="356,549" size="236,118">
+    <contained xsi:type="di:GraphNode" xmi:id="_lbCHMJuWEeK9W8-fmw0pUg" position="21,591" size="236,118">
       <property xmi:id="_lbCHMZuWEeK9W8-fmw0pUg" key="noteValue" value="Wenn Input Kontodaten schon beinhaltet und sofort bezahlt werden möchte."/>
       <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_lbCHMpuWEeK9W8-fmw0pUg" presentation="default" typeInfo="Note"/>
     </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_e1NX0JuYEeK9N-GZPkYBaQ" position="619,40" size="156,371">
+    <contained xsi:type="di:GraphNode" xmi:id="_e1NX0JuYEeK9N-GZPkYBaQ" position="619,40" size="156,541">
       <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e1NX0ZuYEeK9N-GZPkYBaQ" presentation="default">
         <element href="Lauefer%20anmelden.uml#_e1Ol8JuYEeK9N-GZPkYBaQ"/>
       </semanticModel>
