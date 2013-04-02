@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
-  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="use_case">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Laeufer">
     <packagedElement xmi:type="uml:Actor" xmi:id="_dvzroJlLEeKInpoZ4jRNBw" name="Laeufer"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_hiHfoJlLEeKInpoZ4jRNBw" name="anmelden Veranstaltung">
       <include xmi:id="_-5YUk5lLEeKInpoZ4jRNBw" name="Include1" addition="_5-iyQJlLEeKInpoZ4jRNBw"/>
