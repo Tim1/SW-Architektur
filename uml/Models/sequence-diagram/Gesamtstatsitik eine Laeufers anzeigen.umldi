@@ -13,6 +13,8 @@
     <property xmi:id="_81UVeJuYEeK9N-GZPkYBaQ" key="orientation" value="portrait"/>
     <anchorage xmi:id="__A_i0JuYEeK9N-GZPkYBaQ" position="58,128" graphEdge="__BAJ4ZuYEeK9N-GZPkYBaQ"/>
     <anchorage xmi:id="_fkk4EJvAEeKLfc5tllaeJg" position="59,359" graphEdge="_fkk4EZvAEeKLfc5tllaeJg"/>
+    <anchorage xmi:id="_VYluwJvMEeKaYNUjYNk0yA" position="259,195" graphEdge="_VZBMkZvMEeKaYNUjYNk0yA"/>
+    <anchorage xmi:id="_YyN9AZvMEeKaYNUjYNk0yA" position="258,262" graphEdge="_YyjUMJvMEeKaYNUjYNk0yA"/>
     <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_81J9YpuYEeK9N-GZPkYBaQ" presentation="org.topcased.modeler.uml.sequencediagram">
       <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#idInteraction"/>
     </semanticModel>
@@ -30,7 +32,6 @@
       </contained>
       <contained xsi:type="di:GraphNode" xmi:id="_E8eCwJuZEeK9N-GZPkYBaQ" position="81,59" size="20,192">
         <anchorage xmi:id="_E8fQ4ZuZEeK9N-GZPkYBaQ" position="3,10" graphEdge="_E8f38JuZEeK9N-GZPkYBaQ"/>
-        <anchorage xmi:id="_UtLQsJvAEeKLfc5tllaeJg" position="6,65" graphEdge="_UtL3wZvAEeKLfc5tllaeJg"/>
         <anchorage xmi:id="_a2tawJvAEeKLfc5tllaeJg" position="1,112" graphEdge="_a2uB0JvAEeKLfc5tllaeJg"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_E8eCwZuZEeK9N-GZPkYBaQ" presentation="default">
           <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_E8ep0JuZEeK9N-GZPkYBaQ"/>
@@ -42,18 +43,6 @@
         </semanticModel>
         <contained xsi:type="di:EdgeObjectOffset" xmi:id="_E8f38puZEeK9N-GZPkYBaQ" id="nameEdgeObject" offset="62,6"/>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_UtKpoJvAEeKLfc5tllaeJg" position="68,114" size="20,40">
-        <anchorage xmi:id="_UtL3wJvAEeKLfc5tllaeJg" position="-7,10" graphEdge="_UtL3wZvAEeKLfc5tllaeJg"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UtKpoZvAEeKLfc5tllaeJg" presentation="default">
-          <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_UtKpopvAEeKLfc5tllaeJg"/>
-        </semanticModel>
-      </contained>
-      <contained xsi:type="di:GraphEdge" xmi:id="_UtL3wZvAEeKLfc5tllaeJg" anchor="_UtLQsJvAEeKLfc5tllaeJg _UtL3wJvAEeKLfc5tllaeJg">
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UtL3wpvAEeKLfc5tllaeJg" presentation="default">
-          <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_UtMe05vAEeKLfc5tllaeJg"/>
-        </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_UtL3w5vAEeKLfc5tllaeJg" id="nameEdgeObject" offset="53,10"/>
-      </contained>
       <contained xsi:type="di:GraphNode" xmi:id="_a2rlkJvAEeKLfc5tllaeJg" position="68,161" size="20,40">
         <anchorage xmi:id="_a2tawZvAEeKLfc5tllaeJg" position="-12,10" graphEdge="_a2uB0JvAEeKLfc5tllaeJg"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_a2rlkZvAEeKLfc5tllaeJg" presentation="default">
@@ -64,7 +53,7 @@
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_a2uB0ZvAEeKLfc5tllaeJg" presentation="default">
           <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_a2uo4pvAEeKLfc5tllaeJg"/>
         </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_a2uB0pvAEeKLfc5tllaeJg" id="nameEdgeObject" offset="51,11"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_a2uB0pvAEeKLfc5tllaeJg" id="nameEdgeObject" offset="55,20"/>
       </contained>
     </contained>
     <contained xsi:type="di:GraphEdge" xmi:id="__BAJ4ZuYEeK9N-GZPkYBaQ" anchor="__A_i0JuYEeK9N-GZPkYBaQ __BAJ4JuYEeK9N-GZPkYBaQ">
@@ -79,9 +68,29 @@
       </semanticModel>
       <contained xsi:type="di:EdgeObjectOffset" xmi:id="_fkk4E5vAEeKLfc5tllaeJg" id="nameEdgeObject" offset="0,-10"/>
     </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_3jr8kJvAEeKLfc5tllaeJg" position="485,77" size="234,199">
-      <property xmi:id="_3jr8kZvAEeKLfc5tllaeJg" key="noteValue" value="Frägt ein Lauefer nach all seinen Ergebnissen zu jeder teilgenommenen Veranstaltung, fragt LaueferBA alle wichtigen Daten aus der Datenbank ab."/>
-      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_3jr8kpvAEeKLfc5tllaeJg" presentation="default" typeInfo="Note"/>
+    <contained xsi:type="di:GraphNode" xmi:id="_QskEgJvMEeKaYNUjYNk0yA" position="458,40" size="201,300">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_QskEgZvMEeKaYNUjYNk0yA" presentation="default">
+        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_Qs2YYJvMEeKaYNUjYNk0yA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_Tux4UJvMEeKaYNUjYNk0yA" position="90,87" size="20,84">
+        <anchorage xmi:id="_VZBMkJvMEeKaYNUjYNk0yA" position="6,10" graphEdge="_VZBMkZvMEeKaYNUjYNk0yA"/>
+        <anchorage xmi:id="_YyN9AJvMEeKaYNUjYNk0yA" position="4,77" graphEdge="_YyjUMJvMEeKaYNUjYNk0yA"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Tux4UZvMEeKaYNUjYNk0yA" presentation="default">
+          <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_Tux4UpvMEeKaYNUjYNk0yA"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_VZBMkZvMEeKaYNUjYNk0yA" anchor="_VYluwJvMEeKaYNUjYNk0yA _VZBMkJvMEeKaYNUjYNk0yA">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_VZBMkpvMEeKaYNUjYNk0yA" presentation="default">
+        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_VZKWgpvMEeKaYNUjYNk0yA"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_VZBMk5vMEeKaYNUjYNk0yA" id="nameEdgeObject" offset="31,-12"/>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_YyjUMJvMEeKaYNUjYNk0yA" anchor="_YyN9AJvMEeKaYNUjYNk0yA _YyN9AZvMEeKaYNUjYNk0yA">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YyjUMZvMEeKaYNUjYNk0yA" presentation="default">
+        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_YymXgpvMEeKaYNUjYNk0yA"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_YyjUMpvMEeKaYNUjYNk0yA" id="nameEdgeObject" offset="2,-11"/>
     </contained>
   </diagrams>
 </diagrams:Diagrams>

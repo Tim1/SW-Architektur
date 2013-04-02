@@ -5,13 +5,11 @@
       <ownedBehavior xmi:type="uml:Interaction" xmi:id="idInteraction" name="Lauefer anmeldenInteraction">
         <ownedRule xmi:id="_R4IIQJuWEeK9W8-fmw0pUg" name="Input beinhaltet Kontodaten"/>
         <ownedRule xmi:id="_XUpJYJuYEeK9N-GZPkYBaQ" name="Constraint1"/>
-        <lifeline xmi:id="_H4wKgpuVEeK9W8-fmw0pUg" name="TeilnameBA" coveredBy="_TNywJJuVEeK9W8-fmw0pUg _hK19AJuZEeK9N-GZPkYBaQ _hK1V8JuZEeK9N-GZPkYBaQ _pz1BgJuYEeK9N-GZPkYBaQ _k3aK0JuYEeK9N-GZPkYBaQ _CY_EQZuXEeK9W8-fmw0pUg _CY_EQJuXEeK9W8-fmw0pUg _CVm1kJuWEeK9W8-fmw0pUg _CVmOgpuWEeK9W8-fmw0pUg _wcCL8JuVEeK9W8-fmw0pUg _hVttEZuVEeK9W8-fmw0pUg _hVttEJuVEeK9W8-fmw0pUg _TNyJEJuVEeK9W8-fmw0pUg _hVse8JuVEeK9W8-fmw0pUg _CY92IJuXEeK9W8-fmw0pUg _aqt_QJuWEeK9W8-fmw0pUg _aY0FAJuYEeK9N-GZPkYBaQ _hKzgwJuZEeK9N-GZPkYBaQ"/>
+        <lifeline xmi:id="_H4wKgpuVEeK9W8-fmw0pUg" name="TeilnameBA" coveredBy="_TNywJJuVEeK9W8-fmw0pUg _hK19AJuZEeK9N-GZPkYBaQ _hK1V8JuZEeK9N-GZPkYBaQ _k3aK0JuYEeK9N-GZPkYBaQ _CY_EQZuXEeK9W8-fmw0pUg _CY_EQJuXEeK9W8-fmw0pUg _CVm1kJuWEeK9W8-fmw0pUg _CVmOgpuWEeK9W8-fmw0pUg _wcCL8JuVEeK9W8-fmw0pUg _hVttEZuVEeK9W8-fmw0pUg _hVttEJuVEeK9W8-fmw0pUg _TNyJEJuVEeK9W8-fmw0pUg _hVse8JuVEeK9W8-fmw0pUg _CY92IJuXEeK9W8-fmw0pUg _aqt_QJuWEeK9W8-fmw0pUg _aY0FAJuYEeK9N-GZPkYBaQ _hKzgwJuZEeK9N-GZPkYBaQ"/>
         <lifeline xmi:id="_nSUOYJuVEeK9W8-fmw0pUg" name="BankBA" coveredBy="_wcBk5JuVEeK9W8-fmw0pUg _pgxqBJuVEeK9W8-fmw0pUg _pgwb4JuVEeK9W8-fmw0pUg _aqt_QJuWEeK9W8-fmw0pUg _aY0FAJuYEeK9N-GZPkYBaQ"/>
-        <lifeline xmi:id="_e1Ol8JuYEeK9N-GZPkYBaQ" name="MessageServiceBA" coveredBy="_k3ax4JuYEeK9N-GZPkYBaQ _pzzzYJuYEeK9N-GZPkYBaQ _k3WgcJuYEeK9N-GZPkYBaQ"/>
+        <lifeline xmi:id="_e1Ol8JuYEeK9N-GZPkYBaQ" name="MessageServiceBA" coveredBy="_k3ax4JuYEeK9N-GZPkYBaQ _k3WgcJuYEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hK1V8JuZEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification15" covered="_H4wKgpuVEeK9W8-fmw0pUg" event="_hK2kEJuZEeK9N-GZPkYBaQ" message="_hK2kEZuZEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hK19AJuZEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification16" covered="_H4wKgpuVEeK9W8-fmw0pUg" event="_hK2kEJuZEeK9N-GZPkYBaQ" message="_hK2kEZuZEeK9N-GZPkYBaQ"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pzzzYJuYEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification13" covered="_e1Ol8JuYEeK9N-GZPkYBaQ" event="_pz1BgZuYEeK9N-GZPkYBaQ" message="_pz1okJuYEeK9N-GZPkYBaQ"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pz1BgJuYEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification14" covered="_H4wKgpuVEeK9W8-fmw0pUg" event="_pz1BgZuYEeK9N-GZPkYBaQ" message="_pz1okJuYEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_k3aK0JuYEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification11" covered="_H4wKgpuVEeK9W8-fmw0pUg" event="_k3bY8JuYEeK9N-GZPkYBaQ" message="_k3cAAJuYEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_k3ax4JuYEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification12" covered="_e1Ol8JuYEeK9N-GZPkYBaQ" event="_k3bY8JuYEeK9N-GZPkYBaQ" message="_k3cAAJuYEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CY_EQJuXEeK9W8-fmw0pUg" name="MessageOccurrenceSpecification9" covered="_H4wKgpuVEeK9W8-fmw0pUg" event="_CY_rUJuXEeK9W8-fmw0pUg" message="_CY_rUZuXEeK9W8-fmw0pUg"/>
@@ -27,7 +25,7 @@
         <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_TNyJEJuVEeK9W8-fmw0pUg" name="BehaviorExecutionSpecification1" covered="_H4wKgpuVEeK9W8-fmw0pUg" start="_TNywJJuVEeK9W8-fmw0pUg" finish="_CY_EQJuXEeK9W8-fmw0pUg"/>
         <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_hVse8JuVEeK9W8-fmw0pUg" name="BehaviorExecutionSpecification2" covered="_H4wKgpuVEeK9W8-fmw0pUg" start="_hVttEZuVEeK9W8-fmw0pUg" finish="_wcCL8JuVEeK9W8-fmw0pUg"/>
         <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_pgwb4JuVEeK9W8-fmw0pUg" name="BehaviorExecutionSpecification3" covered="_nSUOYJuVEeK9W8-fmw0pUg" start="_pgxqBJuVEeK9W8-fmw0pUg" finish="_wcBk5JuVEeK9W8-fmw0pUg"/>
-        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_k3WgcJuYEeK9N-GZPkYBaQ" name="BehaviorExecutionSpecification5" covered="_e1Ol8JuYEeK9N-GZPkYBaQ" start="_k3ax4JuYEeK9N-GZPkYBaQ" finish="_pzzzYJuYEeK9N-GZPkYBaQ"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_k3WgcJuYEeK9N-GZPkYBaQ" name="BehaviorExecutionSpecification5" covered="_e1Ol8JuYEeK9N-GZPkYBaQ" start="_k3ax4JuYEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_hKzgwJuZEeK9N-GZPkYBaQ" name="BehaviorExecutionSpecification6" covered="_H4wKgpuVEeK9W8-fmw0pUg" start="_hK19AJuZEeK9N-GZPkYBaQ" finish="_hK19AJuZEeK9N-GZPkYBaQ"/>
         <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_CY92IJuXEeK9W8-fmw0pUg" name="BehaviorExecutionSpecification4" covered="_H4wKgpuVEeK9W8-fmw0pUg" start="_CY_EQZuXEeK9W8-fmw0pUg" finish="_CY_EQZuXEeK9W8-fmw0pUg"/>
         <fragment xmi:type="uml:CombinedFragment" xmi:id="_aqt_QJuWEeK9W8-fmw0pUg" name="Input beinhaltet Kontodaten" covered="_H4wKgpuVEeK9W8-fmw0pUg _nSUOYJuVEeK9W8-fmw0pUg" interactionOperator="alt"/>
@@ -37,11 +35,10 @@
         <message xmi:id="_TNzXMZuVEeK9W8-fmw0pUg" name="createTeilname()" receiveEvent="_TNywJJuVEeK9W8-fmw0pUg"/>
         <message xmi:id="_hVttE5uVEeK9W8-fmw0pUg" name="checkInput()" receiveEvent="_hVttEZuVEeK9W8-fmw0pUg" sendEvent="_hVttEJuVEeK9W8-fmw0pUg"/>
         <message xmi:id="_pgyREJuVEeK9W8-fmw0pUg" name="doUeberweisung()" receiveEvent="_pgxqBJuVEeK9W8-fmw0pUg"/>
-        <message xmi:id="_wcCL8puVEeK9W8-fmw0pUg" name="isSucceed()" messageSort="reply" receiveEvent="_wcCL8JuVEeK9W8-fmw0pUg" sendEvent="_wcBk5JuVEeK9W8-fmw0pUg"/>
+        <message xmi:id="_wcCL8puVEeK9W8-fmw0pUg" name="return &quot;Bezahlung erfolgreich&quot;" messageSort="reply" receiveEvent="_wcCL8JuVEeK9W8-fmw0pUg" sendEvent="_wcBk5JuVEeK9W8-fmw0pUg"/>
         <message xmi:id="_CVm1kpuWEeK9W8-fmw0pUg" name="updateLauefer()" receiveEvent="_CVm1kJuWEeK9W8-fmw0pUg" sendEvent="_CVmOgpuWEeK9W8-fmw0pUg"/>
         <message xmi:id="_CY_rUZuXEeK9W8-fmw0pUg" name="updateLauefer()" receiveEvent="_CY_EQZuXEeK9W8-fmw0pUg" sendEvent="_CY_EQJuXEeK9W8-fmw0pUg"/>
         <message xmi:id="_k3cAAJuYEeK9N-GZPkYBaQ" name="ZurErinnerungsListeHinzufuegen()" messageSort="reply" receiveEvent="_k3ax4JuYEeK9N-GZPkYBaQ" sendEvent="_k3aK0JuYEeK9N-GZPkYBaQ"/>
-        <message xmi:id="_pz1okJuYEeK9N-GZPkYBaQ" name="isSucceed()" messageSort="reply" receiveEvent="_pz1BgJuYEeK9N-GZPkYBaQ" sendEvent="_pzzzYJuYEeK9N-GZPkYBaQ"/>
         <message xmi:id="_hK2kEZuZEeK9N-GZPkYBaQ" name="Startnummer vergeben()" receiveEvent="_hK19AJuZEeK9N-GZPkYBaQ" sendEvent="_hK1V8JuZEeK9N-GZPkYBaQ"/>
       </ownedBehavior>
     </packagedElement>
@@ -52,7 +49,6 @@
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_CVm1kZuWEeK9W8-fmw0pUg" name="CallEvent5"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_CY_rUJuXEeK9W8-fmw0pUg" name="CallEvent6"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_k3bY8JuYEeK9N-GZPkYBaQ" name="CallEvent7"/>
-    <packagedElement xmi:type="uml:CallEvent" xmi:id="_pz1BgZuYEeK9N-GZPkYBaQ" name="CallEvent8"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_hK2kEJuZEeK9N-GZPkYBaQ" name="CallEvent9"/>
   </packagedElement>
 </uml:Model>
