@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_psDdAJuBEeK9W8-fmw0pUg" activeDiagram="_psDdAZuBEeK9W8-fmw0pUg">
   <model href="schnittstellen.uml#_w8IxIM37EdqwVrslYOdUDA"/>
-  <diagrams xmi:id="_psDdAZuBEeK9W8-fmw0pUg" position="0,0" size="100,100" name="schnittstellen" viewport="0,88">
+  <diagrams xmi:id="_psDdAZuBEeK9W8-fmw0pUg" position="0,0" size="100,100" name="schnittstellen" viewport="0,0">
     <property xmi:id="_ptmVIJuBEeK9W8-fmw0pUg" key="pageFormatName" value=""/>
     <property xmi:id="_ptmVIZuBEeK9W8-fmw0pUg" key="diagramWidth" value="796"/>
     <property xmi:id="_ptmVIpuBEeK9W8-fmw0pUg" key="diagramHeight" value="793"/>
