@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_81J9YJuYEeK9N-GZPkYBaQ" activeDiagram="_81J9YZuYEeK9N-GZPkYBaQ">
+  <model href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#idInteraction"/>
+  <diagrams xmi:id="_81J9YZuYEeK9N-GZPkYBaQ" position="0,0" size="100,100" name="Gesamtstatsitik eine Laeufers anzeigen" viewport="0,0">
+    <property xmi:id="_81UVcJuYEeK9N-GZPkYBaQ" key="pageFormatName" value="A4"/>
+    <property xmi:id="_81UVcZuYEeK9N-GZPkYBaQ" key="diagramWidth" value="840"/>
+    <property xmi:id="_81UVcpuYEeK9N-GZPkYBaQ" key="diagramHeight" value="1188"/>
+    <property xmi:id="_81UVc5uYEeK9N-GZPkYBaQ" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_81UVdJuYEeK9N-GZPkYBaQ" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_81UVdZuYEeK9N-GZPkYBaQ" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_81UVdpuYEeK9N-GZPkYBaQ" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_81UVd5uYEeK9N-GZPkYBaQ" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_81UVeJuYEeK9N-GZPkYBaQ" key="orientation" value="portrait"/>
+    <anchorage xmi:id="__A_i0JuYEeK9N-GZPkYBaQ" position="58,128" graphEdge="__BAJ4ZuYEeK9N-GZPkYBaQ"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_81J9YpuYEeK9N-GZPkYBaQ" presentation="org.topcased.modeler.uml.sequencediagram">
+      <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#idInteraction"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_9POqQJuYEeK9N-GZPkYBaQ" position="164,40" size="157,300">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9POqQZuYEeK9N-GZPkYBaQ" presentation="default">
+        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_9PPRUJuYEeK9N-GZPkYBaQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="__A-UsJuYEeK9N-GZPkYBaQ" position="68,20" size="20,155">
+        <anchorage xmi:id="__BAJ4JuYEeK9N-GZPkYBaQ" position="12,10" graphEdge="__BAJ4ZuYEeK9N-GZPkYBaQ"/>
+        <anchorage xmi:id="_E8fQ4JuZEeK9N-GZPkYBaQ" position="10,32" graphEdge="_E8f38JuZEeK9N-GZPkYBaQ"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__A-UsZuYEeK9N-GZPkYBaQ" presentation="default">
+          <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#__A-7wJuYEeK9N-GZPkYBaQ"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphNode" xmi:id="_E8eCwJuZEeK9N-GZPkYBaQ" position="68,101" size="20,40">
+        <anchorage xmi:id="_E8fQ4ZuZEeK9N-GZPkYBaQ" position="3,10" graphEdge="_E8f38JuZEeK9N-GZPkYBaQ"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_E8eCwZuZEeK9N-GZPkYBaQ" presentation="default">
+          <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_E8ep0JuZEeK9N-GZPkYBaQ"/>
+        </semanticModel>
+      </contained>
+      <contained xsi:type="di:GraphEdge" xmi:id="_E8f38JuZEeK9N-GZPkYBaQ" anchor="_E8fQ4JuZEeK9N-GZPkYBaQ _E8fQ4ZuZEeK9N-GZPkYBaQ">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_E8f38ZuZEeK9N-GZPkYBaQ" presentation="default">
+          <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_E8gfApuZEeK9N-GZPkYBaQ"/>
+        </semanticModel>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_E8f38puZEeK9N-GZPkYBaQ" id="nameEdgeObject" offset="62,6"/>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="__BAJ4ZuYEeK9N-GZPkYBaQ" anchor="__A_i0JuYEeK9N-GZPkYBaQ __BAJ4JuYEeK9N-GZPkYBaQ">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="__BAJ4puYEeK9N-GZPkYBaQ" presentation="default">
+        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#__BAw8ZuYEeK9N-GZPkYBaQ"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="__BAJ45uYEeK9N-GZPkYBaQ" id="nameEdgeObject" offset="0,-10"/>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

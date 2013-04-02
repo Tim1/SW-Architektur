@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="Gesamtstatsitik eine Laeufers anzeigenModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="Gesamtstatsitik eine Laeufers anzeigenPackage">
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="idCollaboration" name="Gesamtstatsitik eine Laeufers anzeigenCollaboration">
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="idInteraction" name="Gesamtstatsitik eine Laeufers anzeigenInteraction">
+        <lifeline xmi:id="_9PPRUJuYEeK9N-GZPkYBaQ" name="LaueferBA" coveredBy="__BAJ5JuYEeK9N-GZPkYBaQ _E8gfAJuZEeK9N-GZPkYBaQ _E8f385uZEeK9N-GZPkYBaQ __A-7wJuYEeK9N-GZPkYBaQ _E8ep0JuZEeK9N-GZPkYBaQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E8f385uZEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification2" covered="_9PPRUJuYEeK9N-GZPkYBaQ" event="_E8gfAZuZEeK9N-GZPkYBaQ" message="_E8gfApuZEeK9N-GZPkYBaQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E8gfAJuZEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification3" covered="_9PPRUJuYEeK9N-GZPkYBaQ" event="_E8gfAZuZEeK9N-GZPkYBaQ" message="_E8gfApuZEeK9N-GZPkYBaQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__BAJ5JuYEeK9N-GZPkYBaQ" name="MessageOccurrenceSpecification1" covered="_9PPRUJuYEeK9N-GZPkYBaQ" event="__BAw8JuYEeK9N-GZPkYBaQ" message="__BAw8ZuYEeK9N-GZPkYBaQ"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="__A-7wJuYEeK9N-GZPkYBaQ" name="BehaviorExecutionSpecification1" covered="_9PPRUJuYEeK9N-GZPkYBaQ" start="__BAJ5JuYEeK9N-GZPkYBaQ" finish="_E8f385uZEeK9N-GZPkYBaQ"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_E8ep0JuZEeK9N-GZPkYBaQ" name="BehaviorExecutionSpecification2" covered="_9PPRUJuYEeK9N-GZPkYBaQ" start="_E8gfAJuZEeK9N-GZPkYBaQ" finish="_E8gfAJuZEeK9N-GZPkYBaQ"/>
+        <message xmi:id="__BAw8ZuYEeK9N-GZPkYBaQ" name="getGesamtStatistic()" receiveEvent="__BAJ5JuYEeK9N-GZPkYBaQ"/>
+        <message xmi:id="_E8gfApuZEeK9N-GZPkYBaQ" name="genGesamtStatistic" receiveEvent="_E8gfAJuZEeK9N-GZPkYBaQ" sendEvent="_E8f385uZEeK9N-GZPkYBaQ"/>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="__BAw8JuYEeK9N-GZPkYBaQ" name="CallEvent1"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_E8gfAZuZEeK9N-GZPkYBaQ" name="CallEvent2"/>
+  </packagedElement>
+</uml:Model>
