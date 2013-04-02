@@ -14,7 +14,7 @@
     <anchorage xmi:id="__A_i0JuYEeK9N-GZPkYBaQ" position="58,128" graphEdge="__BAJ4ZuYEeK9N-GZPkYBaQ"/>
     <anchorage xmi:id="_fkk4EJvAEeKLfc5tllaeJg" position="59,359" graphEdge="_fkk4EZvAEeKLfc5tllaeJg"/>
     <anchorage xmi:id="_VYluwJvMEeKaYNUjYNk0yA" position="259,195" graphEdge="_VZBMkZvMEeKaYNUjYNk0yA"/>
-    <anchorage xmi:id="_YyN9AZvMEeKaYNUjYNk0yA" position="258,262" graphEdge="_YyjUMJvMEeKaYNUjYNk0yA"/>
+    <anchorage xmi:id="_eQS50ZvNEeKaYNUjYNk0yA" position="263,259" graphEdge="_eQlNsJvNEeKaYNUjYNk0yA"/>
     <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_81J9YpuYEeK9N-GZPkYBaQ" presentation="org.topcased.modeler.uml.sequencediagram">
       <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#idInteraction"/>
     </semanticModel>
@@ -74,7 +74,7 @@
       </semanticModel>
       <contained xsi:type="di:GraphNode" xmi:id="_Tux4UJvMEeKaYNUjYNk0yA" position="90,87" size="20,84">
         <anchorage xmi:id="_VZBMkJvMEeKaYNUjYNk0yA" position="6,10" graphEdge="_VZBMkZvMEeKaYNUjYNk0yA"/>
-        <anchorage xmi:id="_YyN9AJvMEeKaYNUjYNk0yA" position="4,77" graphEdge="_YyjUMJvMEeKaYNUjYNk0yA"/>
+        <anchorage xmi:id="_eQS50JvNEeKaYNUjYNk0yA" position="2,74" graphEdge="_eQlNsJvNEeKaYNUjYNk0yA"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_Tux4UZvMEeKaYNUjYNk0yA" presentation="default">
           <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_Tux4UpvMEeKaYNUjYNk0yA"/>
         </semanticModel>
@@ -86,11 +86,11 @@
       </semanticModel>
       <contained xsi:type="di:EdgeObjectOffset" xmi:id="_VZBMk5vMEeKaYNUjYNk0yA" id="nameEdgeObject" offset="31,-12"/>
     </contained>
-    <contained xsi:type="di:GraphEdge" xmi:id="_YyjUMJvMEeKaYNUjYNk0yA" anchor="_YyN9AJvMEeKaYNUjYNk0yA _YyN9AZvMEeKaYNUjYNk0yA">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_YyjUMZvMEeKaYNUjYNk0yA" presentation="default">
-        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_YymXgpvMEeKaYNUjYNk0yA"/>
+    <contained xsi:type="di:GraphEdge" xmi:id="_eQlNsJvNEeKaYNUjYNk0yA" anchor="_eQS50JvNEeKaYNUjYNk0yA _eQS50ZvNEeKaYNUjYNk0yA">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_eQlNsZvNEeKaYNUjYNk0yA" presentation="default">
+        <element href="Gesamtstatsitik%20eine%20Laeufers%20anzeigen.uml#_eQrUUpvNEeKaYNUjYNk0yA"/>
       </semanticModel>
-      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_YyjUMpvMEeKaYNUjYNk0yA" id="nameEdgeObject" offset="2,-11"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_eQlNspvNEeKaYNUjYNk0yA" id="nameEdgeObject" offset="0,-10"/>
     </contained>
   </diagrams>
 </diagrams:Diagrams>
