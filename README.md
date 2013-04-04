@@ -15,7 +15,7 @@ Issuemanagement
 
 **Issue bearbeiten:** 
 * Commits mit _#123_ markieren
-* bei Bedarf auch Arbeitsvortschritt kommentieren (wenn nicht mit einem Commit erledigt)
+* bei Bedarf auch Arbeitsfortschritt kommentieren (wenn nicht mit einem Commit erledigt)
 
 **Issue erledigt:** 
 * RESOLVED-Label setzten
