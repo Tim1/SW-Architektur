@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="contextModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="contextPackage">
+    <packagedElement xmi:type="uml:Component" xmi:id="idComponent" name="contextComponent">
+      <ownedComment xmi:id="_EhyyQJ9lEeKpp9rVYZjaqg">
+        <body>Übernahme der Laufzeiten nach Zielschluss&#xD;
+</body>
+      </ownedComment>
+      <ownedComment xmi:id="_ODvpoJ9lEeKpp9rVYZjaqg">
+        <body>Bestätigung der Gebührüberweisung</body>
+      </ownedComment>
+      <ownedComment xmi:id="_Uc5kEJ9lEeKpp9rVYZjaqg">
+        <body>Import Daten aus Vorgängersystmen&#xD;
+</body>
+      </ownedComment>
+      <ownedComment xmi:id="_u6_zgJ9lEeKpp9rVYZjaqg">
+        <body>Anmeldung für Laufveranstaltung&#xD;
+&#xD;
+Ergebnislisten und Urkunden erstellen</body>
+      </ownedComment>
+      <ownedComment xmi:id="_HbfGwJ9mEeKpp9rVYZjaqg">
+        <body>Benachrichtigung von Platzierung&#xD;
+&#xD;
+Erinnerung an Stratgebührüberweisung</body>
+      </ownedComment>
+      <ownedRule xmi:id="_Kt0PoJ9lEeKpp9rVYZjaqg" name="Constraint1"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_AIwK4J9kEeKpp9rVYZjaqg" name="RunningEasy"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Yu298J9kEeKpp9rVYZjaqg" name="Laufdatenerfassung(extern)" clientDependency="_uUmXUJ9kEeKpp9rVYZjaqg">
+        <packageImport xmi:id="_Bn7pM59lEeKpp9rVYZjaqg" importedPackage="_AIwK4J9kEeKpp9rVYZjaqg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_aKrbsJ9kEeKpp9rVYZjaqg" name="Bankanwendung" clientDependency="_L-sos59lEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_bxjS4J9kEeKpp9rVYZjaqg" name="Datenimport" clientDependency="_Te98M59lEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_uUmXUJ9kEeKpp9rVYZjaqg" name="Dependency1" supplier="_AIwK4J9kEeKpp9rVYZjaqg" client="_Yu298J9kEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_L-sos59lEeKpp9rVYZjaqg" name="" supplier="_AIwK4J9kEeKpp9rVYZjaqg" client="_aKrbsJ9kEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Te98M59lEeKpp9rVYZjaqg" name="" supplier="_AIwK4J9kEeKpp9rVYZjaqg" client="_bxjS4J9kEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rJhF8J9lEeKpp9rVYZjaqg" name="Lauefer" clientDependency="_uENVc59lEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_uENVc59lEeKpp9rVYZjaqg" name="" supplier="_AIwK4J9kEeKpp9rVYZjaqg" client="_rJhF8J9lEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_C-2jYJ9mEeKpp9rVYZjaqg" name="SMS-EMail-Service" clientDependency="_GrwS8J9mEeKpp9rVYZjaqg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_GrwS8J9mEeKpp9rVYZjaqg" name="" supplier="_AIwK4J9kEeKpp9rVYZjaqg" client="_C-2jYJ9mEeKpp9rVYZjaqg"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
