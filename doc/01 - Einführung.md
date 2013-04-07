@@ -1,12 +1,12 @@
 1.Einführung und Ziele
 
-Im Folgendem wird das Softwaresystem "RunningEasy" als das "System" bezeichnet.
+Im Folgendem wird das zu erstellende Softwaresystem "RunningEasy" als "System" bezeichnet.
 
 1.1 Aufgabenstellung
 Zur Verwaltung von Laufveranstaltung soll ein neues Softwaresystem – RunningEasy – erstellt werden. 
 Es soll Veranstaltungen samt ihren Teilnehmern und Ergebnissen erfassen und auswerten. 
-Der Läufer kann sich ohne großen Aufwand an Veranstaltungen anmelden und Ergebnisse anschauen.
-Auch kann der Läufer per SMS oder Email benachrichtigt werden, sollte die Startgebühr noch nicht überwiesen worden sein. 
+Der Läufer kann sich an Veranstaltungen anmelden und Ergebnisse anschauen.
+Auch soll der Läufer per SMS oder Email benachrichtigt werden, falls die Startgebühr noch nicht überwiesen wurde. 
 Zudem sollen Schnittstellen zu externen Systemen wie Bankanwendugen, SMS/Email-Service und Datenimportierung vorhanden sein.
 
 1.2 Architekturziele
@@ -38,10 +38,19 @@ Nicht funktionale Anforderungen:
 - Datenimport von Vorgängersystemen in serialisierter Form
 
 1.3 Stakeholder
--Läufer/Teilnehmer: 
-	- fordern unkomplizierte Anmeldungen an Veranstaltungen und eine übersichtlihce Statistik der Veranstaltungen und Läufer bzw. Teilnehmer.
+- Läufer/Teilnehmer: 
+	- fordern unkomplizierte Anmeldungen an Veranstaltungen 
+	- fordern eine übersichtliche Statistik der Veranstaltungen und Läufer bzw. Teilnehmer.
 - Administrator: 
 	- Einfache Bedienung zur Änderung/Verwaltung von Informationen zu Läeufer, Laufzeiten, Vereinen, Teilnahen und Ergebnissen.
 	- Schnittstellen zu externen System leicht wartbar und erweiterbar
 - Veranstalter: 
 	- fordern Erstellung und Konfigurierung von Veranstatlungen, und Zahlungskontrolle der Teilnehmer.
+- Altdaten:
+	- müssen im vorhanden Format importiert werden können
+- externe Schnittstellen:
+	- müssen kompatibel zu dem System sein
+	- Dazu gehören u.A.
+		- Bankanwendung
+		- Laufzeitsystem
+		- Benachrichtigungsservice
