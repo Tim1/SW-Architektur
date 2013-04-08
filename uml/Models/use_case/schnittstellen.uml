@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
   <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="schnittstellen">
+    <ownedComment xmi:id="_8pLQYJ-JEeKpp9rVYZjaqg">
+      <body>SMS-EMAIL-Service</body>
+    </ownedComment>
+    <ownedComment xmi:id="_JICk0J-KEeKpp9rVYZjaqg">
+      <body>Laufzeitmesssystem&#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:id="_Ys9rQJ-KEeKpp9rVYZjaqg">
+      <body>Bankanwendung</body>
+    </ownedComment>
+    <ownedComment xmi:id="_khnlEJ-KEeKpp9rVYZjaqg">
+      <body>Datenimport&#xD;
+</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Actor" xmi:id="_0q_PwJuBEeK9W8-fmw0pUg" name="Laufzeitmesssystem"/>
     <packagedElement xmi:type="uml:Actor" xmi:id="_1vCtwJuBEeK9W8-fmw0pUg" name="Bankanwendung"/>
     <packagedElement xmi:type="uml:Actor" xmi:id="_2ZicQJuBEeK9W8-fmw0pUg" name="DB"/>
     <packagedElement xmi:type="uml:Actor" xmi:id="_3QnOMJuBEeK9W8-fmw0pUg" name="Smartphone/PC Lauefer"/>
     <packagedElement xmi:type="uml:Actor" xmi:id="_4eIKMJuBEeK9W8-fmw0pUg" name="SMS-EMAIL-Service"/>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_-zslIJuBEeK9W8-fmw0pUg" name="Datenimport"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_-zslIJuBEeK9W8-fmw0pUg" name=""/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_ApMuMJuCEeK9W8-fmw0pUg" name="Laufzeiten liefern"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_CdxDJZuCEeK9W8-fmw0pUg" name="A_&lt;laufzeitmesssystem>_&lt;laufzeitwerte importieren>" memberEnd="_CdxDJpuCEeK9W8-fmw0pUg _CdxDKZuCEeK9W8-fmw0pUg">
-      <ownedEnd xmi:id="_CdxDJpuCEeK9W8-fmw0pUg" name="laufzeitmesssystem" type="_0q_PwJuBEeK9W8-fmw0pUg" association="_CdxDJZuCEeK9W8-fmw0pUg">
+      <ownedEnd xmi:id="_CdxDJpuCEeK9W8-fmw0pUg" name="laufzeitmesssystem" type="_yaenwJ-JEeKpp9rVYZjaqg" association="_CdxDJZuCEeK9W8-fmw0pUg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CdxDJ5uCEeK9W8-fmw0pUg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CdxDKJuCEeK9W8-fmw0pUg" value="1"/>
       </ownedEnd>
@@ -30,7 +44,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_De2ssJuCEeK9W8-fmw0pUg" name="Erinnerung an Gebührbezahlung"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_FQiFtpuCEeK9W8-fmw0pUg" name="A_&lt;sMS-EMAIL-Service>_&lt;erinnerung an Gebuehrbezahlung>" memberEnd="_FQiFt5uCEeK9W8-fmw0pUg _FQiFupuCEeK9W8-fmw0pUg">
-      <ownedEnd xmi:id="_FQiFt5uCEeK9W8-fmw0pUg" name="sMS-EMAIL-Service" type="_4eIKMJuBEeK9W8-fmw0pUg" association="_FQiFtpuCEeK9W8-fmw0pUg">
+      <ownedEnd xmi:id="_FQiFt5uCEeK9W8-fmw0pUg" name="sMS-EMAIL-Service" type="_gxGWQJ-JEeKpp9rVYZjaqg" association="_FQiFtpuCEeK9W8-fmw0pUg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FQiFuJuCEeK9W8-fmw0pUg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FQiFuZuCEeK9W8-fmw0pUg" value="1"/>
       </ownedEnd>
@@ -52,7 +66,7 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_HxWcoJuCEeK9W8-fmw0pUg" name="Zahlungseingänge liefern"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_NWL-MJuCEeK9W8-fmw0pUg" name="Serialisierte Daten importieren"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_PerUtpuCEeK9W8-fmw0pUg" name="A_&lt;bankanwendung>_&lt;zahlungseingägne liefern>" memberEnd="_PerUt5uCEeK9W8-fmw0pUg _PerUupuCEeK9W8-fmw0pUg">
-      <ownedEnd xmi:id="_PerUt5uCEeK9W8-fmw0pUg" name="bankanwendung" type="_1vCtwJuBEeK9W8-fmw0pUg" association="_PerUtpuCEeK9W8-fmw0pUg">
+      <ownedEnd xmi:id="_PerUt5uCEeK9W8-fmw0pUg" name="bankanwendung" type="_285qEJ-JEeKpp9rVYZjaqg" association="_PerUtpuCEeK9W8-fmw0pUg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PerUuJuCEeK9W8-fmw0pUg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PerUuZuCEeK9W8-fmw0pUg" value="1"/>
       </ownedEnd>
@@ -72,7 +86,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_QHV3NpuCEeK9W8-fmw0pUg" name="A_&lt;datenimport>_&lt;serialisierte Daten importieren>" memberEnd="_QHV3N5uCEeK9W8-fmw0pUg _QHV3OpuCEeK9W8-fmw0pUg">
-      <ownedEnd xmi:id="_QHV3N5uCEeK9W8-fmw0pUg" name="datenimport" type="_-zslIJuBEeK9W8-fmw0pUg" association="_QHV3NpuCEeK9W8-fmw0pUg">
+      <ownedEnd xmi:id="_QHV3N5uCEeK9W8-fmw0pUg" name="datenimport" type="_3Ol3AJ-JEeKpp9rVYZjaqg" association="_QHV3NpuCEeK9W8-fmw0pUg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QHV3OJuCEeK9W8-fmw0pUg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QHV3OZuCEeK9W8-fmw0pUg" value="1"/>
       </ownedEnd>
@@ -93,7 +107,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_hMKDEJuCEeK9W8-fmw0pUg" name="Laufwerte senden"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_klO3tpuCEeK9W8-fmw0pUg" name="A_&lt;sMS-EMAIL-Service>_&lt;laufwerte senden>" memberEnd="_klO3t5uCEeK9W8-fmw0pUg _klO3upuCEeK9W8-fmw0pUg">
-      <ownedEnd xmi:id="_klO3t5uCEeK9W8-fmw0pUg" name="sMS-EMAIL-Service" type="_4eIKMJuBEeK9W8-fmw0pUg" association="_klO3tpuCEeK9W8-fmw0pUg">
+      <ownedEnd xmi:id="_klO3t5uCEeK9W8-fmw0pUg" name="sMS-EMAIL-Service" type="_gxGWQJ-JEeKpp9rVYZjaqg" association="_klO3tpuCEeK9W8-fmw0pUg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_klO3uJuCEeK9W8-fmw0pUg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_klO3uZuCEeK9W8-fmw0pUg" value="1"/>
       </ownedEnd>
@@ -110,6 +124,45 @@
       <ownedEnd xmi:id="_lnciqpuCEeK9W8-fmw0pUg" name="smartphone/PC Lauefer" type="_3QnOMJuBEeK9W8-fmw0pUg" association="_lncippuCEeK9W8-fmw0pUg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lnciq5uCEeK9W8-fmw0pUg" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lncirJuCEeK9W8-fmw0pUg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_gxGWQJ-JEeKpp9rVYZjaqg" name="System"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_yaenwJ-JEeKpp9rVYZjaqg" name="System"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_285qEJ-JEeKpp9rVYZjaqg" name="System"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_3Ol3AJ-JEeKpp9rVYZjaqg" name="System"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FJGqEJ-KEeKpp9rVYZjaqg" name="Laufzeiten liefern"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_IGoyMJ-KEeKpp9rVYZjaqg" name="" memberEnd="_IGoyMZ-KEeKpp9rVYZjaqg _IGoyNJ-KEeKpp9rVYZjaqg">
+      <ownedEnd xmi:id="_IGoyMZ-KEeKpp9rVYZjaqg" name="system" type="_yaenwJ-JEeKpp9rVYZjaqg" association="_IGoyMJ-KEeKpp9rVYZjaqg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IGoyMp-KEeKpp9rVYZjaqg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGoyM5-KEeKpp9rVYZjaqg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_IGoyNJ-KEeKpp9rVYZjaqg" name="laufzeiten liefern" type="_FJGqEJ-KEeKpp9rVYZjaqg" association="_IGoyMJ-KEeKpp9rVYZjaqg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IGoyNZ-KEeKpp9rVYZjaqg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGoyNp-KEeKpp9rVYZjaqg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_PXKZgJ-KEeKpp9rVYZjaqg" name="System"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_QEYr4J-KEeKpp9rVYZjaqg" name="System"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Tqeo0J-KEeKpp9rVYZjaqg" name="Zahlungseingänge liefern"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_U54bNp-KEeKpp9rVYZjaqg" name="" memberEnd="_U54bN5-KEeKpp9rVYZjaqg _U54bOp-KEeKpp9rVYZjaqg">
+      <ownedEnd xmi:id="_U54bN5-KEeKpp9rVYZjaqg" name="system" type="_285qEJ-JEeKpp9rVYZjaqg" association="_U54bNp-KEeKpp9rVYZjaqg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U54bOJ-KEeKpp9rVYZjaqg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U54bOZ-KEeKpp9rVYZjaqg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_U54bOp-KEeKpp9rVYZjaqg" name="zahlungseingänge liefern" type="_Tqeo0J-KEeKpp9rVYZjaqg" association="_U54bNp-KEeKpp9rVYZjaqg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U54bO5-KEeKpp9rVYZjaqg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U54bPJ-KEeKpp9rVYZjaqg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_nXWcEJ-KEeKpp9rVYZjaqg" name="Serialisierte Daten importieren"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ouU2Fp-KEeKpp9rVYZjaqg" name="" memberEnd="_ouU2F5-KEeKpp9rVYZjaqg _ouU2Gp-KEeKpp9rVYZjaqg">
+      <ownedEnd xmi:id="_ouU2F5-KEeKpp9rVYZjaqg" name="system" type="_3Ol3AJ-JEeKpp9rVYZjaqg" association="_ouU2Fp-KEeKpp9rVYZjaqg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ouU2GJ-KEeKpp9rVYZjaqg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ouU2GZ-KEeKpp9rVYZjaqg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ouU2Gp-KEeKpp9rVYZjaqg" name="serialisierte Daten importieren" type="_nXWcEJ-KEeKpp9rVYZjaqg" association="_ouU2Fp-KEeKpp9rVYZjaqg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ouU2G5-KEeKpp9rVYZjaqg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ouU2HJ-KEeKpp9rVYZjaqg" value="1"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>

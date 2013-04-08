@@ -12,11 +12,10 @@
     <property xmi:id="_HXw9V5uVEeK9W8-fmw0pUg" key="diagramRightMargin" value="20"/>
     <property xmi:id="_HXw9WJuVEeK9W8-fmw0pUg" key="orientation" value="portrait"/>
     <anchorage xmi:id="_TNyJEZuVEeK9W8-fmw0pUg" position="75,129" graphEdge="_TNywIZuVEeK9W8-fmw0pUg"/>
-    <anchorage xmi:id="_pgxC8JuVEeK9W8-fmw0pUg" position="259,188" graphEdge="_pgxqAZuVEeK9W8-fmw0pUg"/>
     <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_HXl-MpuVEeK9W8-fmw0pUg" presentation="org.topcased.modeler.uml.sequencediagram">
       <element href="Lauefer%20anmelden.uml#idInteraction"/>
     </semanticModel>
-    <contained xsi:type="di:GraphNode" xmi:id="_aYulcJuYEeK9N-GZPkYBaQ" position="182,212" size="613,88">
+    <contained xsi:type="di:GraphNode" xmi:id="_aYulcJuYEeK9N-GZPkYBaQ" position="182,236" size="613,96">
       <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aYulcZuYEeK9N-GZPkYBaQ" presentation="default">
         <element href="Lauefer%20anmelden.uml#_aY0FAJuYEeK9N-GZPkYBaQ"/>
       </semanticModel>
@@ -33,68 +32,74 @@
         </contained>
       </contained>
     </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_aqofsJuWEeK9W8-fmw0pUg" position="183,138" size="550,66">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aqofsZuWEeK9W8-fmw0pUg" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_aqt_QJuWEeK9W8-fmw0pUg"/>
-      </semanticModel>
-      <contained xsi:type="di:GraphNode" xmi:id="_aqofspuWEeK9W8-fmw0pUg">
-        <property xmi:id="_aqofs5uWEeK9W8-fmw0pUg" key="eStructuralFeatureID" value="15"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_aqoftJuWEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_aqt_QJuWEeK9W8-fmw0pUg"/>
-        </semanticModel>
-      </contained>
-    </contained>
     <contained xsi:type="di:GraphNode" xmi:id="_H4wKgJuVEeK9W8-fmw0pUg" position="192,40" size="100,543">
       <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_H4wKgZuVEeK9W8-fmw0pUg" presentation="default">
         <element href="Lauefer%20anmelden.uml#_H4wKgpuVEeK9W8-fmw0pUg"/>
       </semanticModel>
       <contained xsi:type="di:GraphNode" xmi:id="_TNxiAJuVEeK9W8-fmw0pUg" position="40,21" size="20,467">
+        <anchorage xmi:id="_-MKqIJ-qEeKn2r3PMrMnTw" position="19,173" graphEdge="_-MMfUJ-qEeKn2r3PMrMnTw"/>
         <anchorage xmi:id="_TNywIJuVEeK9W8-fmw0pUg" position="10,10" graphEdge="_TNywIZuVEeK9W8-fmw0pUg"/>
-        <anchorage xmi:id="_hVtGAJuVEeK9W8-fmw0pUg" position="13,17" graphEdge="_hVtGApuVEeK9W8-fmw0pUg"/>
-        <anchorage xmi:id="_CY-dMJuXEeK9W8-fmw0pUg" position="10,351" graphEdge="_CY-dMpuXEeK9W8-fmw0pUg"/>
-        <anchorage xmi:id="_k3YVoJuYEeK9N-GZPkYBaQ" position="12,151" graphEdge="_k3Y8sJuYEeK9N-GZPkYBaQ"/>
-        <anchorage xmi:id="_hK0H0JuZEeK9N-GZPkYBaQ" position="12,260" graphEdge="_hK0u4JuZEeK9N-GZPkYBaQ"/>
+        <anchorage xmi:id="_Ume7EJ-rEeKn2r3PMrMnTw" position="15,274" graphEdge="_UmgJMZ-rEeKn2r3PMrMnTw"/>
+        <anchorage xmi:id="_ZdcqAJ-rEeKn2r3PMrMnTw" position="15,374" graphEdge="_Zdd4IZ-rEeKn2r3PMrMnTw"/>
+        <anchorage xmi:id="_hEwZoJ-rEeKn2r3PMrMnTw" position="8,75" graphEdge="_hExAsZ-rEeKn2r3PMrMnTw"/>
+        <anchorage xmi:id="_qJwPQJ-rEeKn2r3PMrMnTw" position="11,118" graphEdge="_qJw2UJ-rEeKn2r3PMrMnTw"/>
         <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_TNxiAZuVEeK9W8-fmw0pUg" presentation="default">
           <element href="Lauefer%20anmelden.uml#_TNyJEJuVEeK9W8-fmw0pUg"/>
         </semanticModel>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_hVr34JuVEeK9W8-fmw0pUg" position="53,50" size="20,89">
-        <anchorage xmi:id="_hVtGAZuVEeK9W8-fmw0pUg" position="-1,10" graphEdge="_hVtGApuVEeK9W8-fmw0pUg"/>
-        <anchorage xmi:id="_wcBk4JuVEeK9W8-fmw0pUg" position="6,79" graphEdge="_wcBk4ZuVEeK9W8-fmw0pUg"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hVr34ZuVEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_hVse8JuVEeK9W8-fmw0pUg"/>
+      <contained xsi:type="di:GraphNode" xmi:id="_UmbQsJ-rEeKn2r3PMrMnTw" position="40,339" size="20,40">
+        <anchorage xmi:id="_UmgJMJ-rEeKn2r3PMrMnTw" position="3,10" graphEdge="_UmgJMZ-rEeKn2r3PMrMnTw"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UmbQsZ-rEeKn2r3PMrMnTw" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_Umce0J-rEeKn2r3PMrMnTw"/>
         </semanticModel>
       </contained>
-      <contained xsi:type="di:GraphEdge" xmi:id="_hVtGApuVEeK9W8-fmw0pUg" anchor="_hVtGAJuVEeK9W8-fmw0pUg _hVtGAZuVEeK9W8-fmw0pUg">
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hVtGA5uVEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_hVttE5uVEeK9W8-fmw0pUg"/>
+      <contained xsi:type="di:GraphEdge" xmi:id="_UmgJMZ-rEeKn2r3PMrMnTw" anchor="_Ume7EJ-rEeKn2r3PMrMnTw _UmgJMJ-rEeKn2r3PMrMnTw">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UmgJMp-rEeKn2r3PMrMnTw" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_UmjMgJ-rEeKn2r3PMrMnTw"/>
         </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_hVtGBJuVEeK9W8-fmw0pUg" id="nameEdgeObject" offset="42,0"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_UmgJM5-rEeKn2r3PMrMnTw" id="nameEdgeObject" offset="74,-10"/>
       </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_CY9PEJuXEeK9W8-fmw0pUg" position="40,424" size="20,40">
-        <anchorage xmi:id="_CY-dMZuXEeK9W8-fmw0pUg" position="1,10" graphEdge="_CY-dMpuXEeK9W8-fmw0pUg"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CY9PEZuXEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_CY92IJuXEeK9W8-fmw0pUg"/>
-        </semanticModel>
-      </contained>
-      <contained xsi:type="di:GraphEdge" xmi:id="_CY-dMpuXEeK9W8-fmw0pUg" anchor="_CY-dMJuXEeK9W8-fmw0pUg _CY-dMZuXEeK9W8-fmw0pUg">
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_CY-dM5uXEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_CY_rUZuXEeK9W8-fmw0pUg"/>
-        </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_CY-dNJuXEeK9W8-fmw0pUg" id="nameEdgeObject" offset="62,6"/>
-      </contained>
-      <contained xsi:type="di:GraphNode" xmi:id="_hKySoJuZEeK9N-GZPkYBaQ" position="40,304" size="20,40">
-        <anchorage xmi:id="_hK0H0ZuZEeK9N-GZPkYBaQ" position="0,32" graphEdge="_hK0u4JuZEeK9N-GZPkYBaQ"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hKySoZuZEeK9N-GZPkYBaQ" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_hKzgwJuZEeK9N-GZPkYBaQ"/>
+      <contained xsi:type="di:GraphNode" xmi:id="_ZdZmsJ-rEeKn2r3PMrMnTw" position="40,436" size="20,40">
+        <anchorage xmi:id="_Zdd4IJ-rEeKn2r3PMrMnTw" position="0,10" graphEdge="_Zdd4IZ-rEeKn2r3PMrMnTw"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ZdZmsZ-rEeKn2r3PMrMnTw" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_Zda00J-rEeKn2r3PMrMnTw"/>
         </semanticModel>
       </contained>
-      <contained xsi:type="di:GraphEdge" xmi:id="_hK0u4JuZEeK9N-GZPkYBaQ" anchor="_hK0H0JuZEeK9N-GZPkYBaQ _hK0H0ZuZEeK9N-GZPkYBaQ">
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hK0u4ZuZEeK9N-GZPkYBaQ" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_hK2kEZuZEeK9N-GZPkYBaQ"/>
+      <contained xsi:type="di:GraphEdge" xmi:id="_Zdd4IZ-rEeKn2r3PMrMnTw" anchor="_ZdcqAJ-rEeKn2r3PMrMnTw _Zdd4IJ-rEeKn2r3PMrMnTw">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_ZdefMJ-rEeKn2r3PMrMnTw" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_ZdiJkJ-rEeKn2r3PMrMnTw"/>
         </semanticModel>
-        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_hK0u4puZEeK9N-GZPkYBaQ" id="nameEdgeObject" offset="0,-10"/>
+        <contained xsi:type="di:EdgeObjectOffset" xmi:id="_ZdefMZ-rEeKn2r3PMrMnTw" id="nameEdgeObject" offset="51,-9"/>
       </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_nSTnUJuVEeK9W8-fmw0pUg" position="468,40" size="100,546">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nSTnUZuVEeK9W8-fmw0pUg" presentation="default">
+        <element href="Lauefer%20anmelden.uml#_nSUOYJuVEeK9W8-fmw0pUg"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_pgv00JuVEeK9W8-fmw0pUg" position="40,80" size="20,63">
+        <anchorage xmi:id="_hExAsJ-rEeKn2r3PMrMnTw" position="5,16" graphEdge="_hExAsZ-rEeKn2r3PMrMnTw"/>
+        <anchorage xmi:id="_qJvBIJ-rEeKn2r3PMrMnTw" position="7,59" graphEdge="_qJw2UJ-rEeKn2r3PMrMnTw"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_pgv00ZuVEeK9W8-fmw0pUg" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_pgwb4JuVEeK9W8-fmw0pUg"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphNode" xmi:id="_e1NX0JuYEeK9N-GZPkYBaQ" position="619,40" size="156,541">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e1NX0ZuYEeK9N-GZPkYBaQ" presentation="default">
+        <element href="Lauefer%20anmelden.uml#_e1Ol8JuYEeK9N-GZPkYBaQ"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_k3VSUJuYEeK9N-GZPkYBaQ" position="68,197" size="20,40">
+        <anchorage xmi:id="_-ML4QJ-qEeKn2r3PMrMnTw" position="5,-3" graphEdge="_-MMfUJ-qEeKn2r3PMrMnTw"/>
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_k3VSUZuYEeK9N-GZPkYBaQ" presentation="default">
+          <element href="Lauefer%20anmelden.uml#_k3WgcJuYEeK9N-GZPkYBaQ"/>
+        </semanticModel>
+      </contained>
+    </contained>
+    <contained xsi:type="di:GraphEdge" xmi:id="_-MMfUJ-qEeKn2r3PMrMnTw" anchor="_-MKqIJ-qEeKn2r3PMrMnTw _-ML4QJ-qEeKn2r3PMrMnTw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_-MMfUZ-qEeKn2r3PMrMnTw" presentation="default">
+        <element href="Lauefer%20anmelden.uml#_-MhPcJ-qEeKn2r3PMrMnTw"/>
+      </semanticModel>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_-MMfUp-qEeKn2r3PMrMnTw" id="nameEdgeObject" offset="-65,-11"/>
     </contained>
     <contained xsi:type="di:GraphEdge" xmi:id="_TNywIZuVEeK9W8-fmw0pUg" anchor="_TNyJEZuVEeK9W8-fmw0pUg _TNywIJuVEeK9W8-fmw0pUg">
       <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_TNywIpuVEeK9W8-fmw0pUg" presentation="default">
@@ -102,50 +107,17 @@
       </semanticModel>
       <contained xsi:type="di:EdgeObjectOffset" xmi:id="_TNywI5uVEeK9W8-fmw0pUg" id="nameEdgeObject" offset="0,-10"/>
     </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_nSTnUJuVEeK9W8-fmw0pUg" position="468,40" size="100,546">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_nSTnUZuVEeK9W8-fmw0pUg" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_nSUOYJuVEeK9W8-fmw0pUg"/>
+    <contained xsi:type="di:GraphEdge" xmi:id="_hExAsZ-rEeKn2r3PMrMnTw" anchor="_hEwZoJ-rEeKn2r3PMrMnTw _hExAsJ-rEeKn2r3PMrMnTw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_hExAsp-rEeKn2r3PMrMnTw" presentation="default">
+        <element href="Lauefer%20anmelden.uml#_hE5jkJ-rEeKn2r3PMrMnTw"/>
       </semanticModel>
-      <contained xsi:type="di:GraphNode" xmi:id="_pgv00JuVEeK9W8-fmw0pUg" position="40,69" size="20,63">
-        <anchorage xmi:id="_pgxqAJuVEeK9W8-fmw0pUg" position="18,21" graphEdge="_pgxqAZuVEeK9W8-fmw0pUg"/>
-        <anchorage xmi:id="_wcA90JuVEeK9W8-fmw0pUg" position="4,60" graphEdge="_wcBk4ZuVEeK9W8-fmw0pUg"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_pgv00ZuVEeK9W8-fmw0pUg" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_pgwb4JuVEeK9W8-fmw0pUg"/>
-        </semanticModel>
-      </contained>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_hExAs5-rEeKn2r3PMrMnTw" id="nameEdgeObject" offset="-8,-14"/>
     </contained>
-    <contained xsi:type="di:GraphEdge" xmi:id="_pgxqAZuVEeK9W8-fmw0pUg" anchor="_pgxC8JuVEeK9W8-fmw0pUg _pgxqAJuVEeK9W8-fmw0pUg">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_pgxqApuVEeK9W8-fmw0pUg" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_pgyREJuVEeK9W8-fmw0pUg"/>
+    <contained xsi:type="di:GraphEdge" xmi:id="_qJw2UJ-rEeKn2r3PMrMnTw" anchor="_qJvBIJ-rEeKn2r3PMrMnTw _qJwPQJ-rEeKn2r3PMrMnTw">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_qJw2UZ-rEeKn2r3PMrMnTw" presentation="default">
+        <element href="Lauefer%20anmelden.uml#_qKPXcJ-rEeKn2r3PMrMnTw"/>
       </semanticModel>
-      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_pgxqA5uVEeK9W8-fmw0pUg" id="nameEdgeObject" offset="0,-10"/>
-    </contained>
-    <contained xsi:type="di:GraphEdge" xmi:id="_wcBk4ZuVEeK9W8-fmw0pUg" anchor="_wcA90JuVEeK9W8-fmw0pUg _wcBk4JuVEeK9W8-fmw0pUg">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_wcBk4puVEeK9W8-fmw0pUg" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_wcCL8puVEeK9W8-fmw0pUg"/>
-      </semanticModel>
-      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_wcBk45uVEeK9W8-fmw0pUg" id="nameEdgeObject" offset="-1,-14"/>
-    </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_lbCHMJuWEeK9W8-fmw0pUg" position="21,591" size="236,118">
-      <property xmi:id="_lbCHMZuWEeK9W8-fmw0pUg" key="noteValue" value="Wenn Input Kontodaten schon beinhaltet und sofort bezahlt werden möchte."/>
-      <semanticModel xsi:type="di:SimpleSemanticModelElement" xmi:id="_lbCHMpuWEeK9W8-fmw0pUg" presentation="default" typeInfo="Note"/>
-    </contained>
-    <contained xsi:type="di:GraphNode" xmi:id="_e1NX0JuYEeK9N-GZPkYBaQ" position="619,40" size="156,541">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_e1NX0ZuYEeK9N-GZPkYBaQ" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_e1Ol8JuYEeK9N-GZPkYBaQ"/>
-      </semanticModel>
-      <contained xsi:type="di:GraphNode" xmi:id="_k3VSUJuYEeK9N-GZPkYBaQ" position="68,162" size="20,40">
-        <anchorage xmi:id="_k3YVoZuYEeK9N-GZPkYBaQ" position="11,10" graphEdge="_k3Y8sJuYEeK9N-GZPkYBaQ"/>
-        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_k3VSUZuYEeK9N-GZPkYBaQ" presentation="default">
-          <element href="Lauefer%20anmelden.uml#_k3WgcJuYEeK9N-GZPkYBaQ"/>
-        </semanticModel>
-      </contained>
-    </contained>
-    <contained xsi:type="di:GraphEdge" xmi:id="_k3Y8sJuYEeK9N-GZPkYBaQ" anchor="_k3YVoJuYEeK9N-GZPkYBaQ _k3YVoZuYEeK9N-GZPkYBaQ">
-      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_k3Y8sZuYEeK9N-GZPkYBaQ" presentation="default">
-        <element href="Lauefer%20anmelden.uml#_k3cAAJuYEeK9N-GZPkYBaQ"/>
-      </semanticModel>
-      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_k3Y8spuYEeK9N-GZPkYBaQ" id="nameEdgeObject" offset="0,-10"/>
+      <contained xsi:type="di:EdgeObjectOffset" xmi:id="_qJw2Up-rEeKn2r3PMrMnTw" id="nameEdgeObject" offset="0,-10"/>
     </contained>
   </diagrams>
 </diagrams:Diagrams>
