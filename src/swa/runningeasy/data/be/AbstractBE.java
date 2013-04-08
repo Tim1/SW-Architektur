@@ -1,4 +1,4 @@
-package swa.runningeasy.bes;
+package swa.runningeasy.data.be;
 
 public abstract class AbstractBE {
 
