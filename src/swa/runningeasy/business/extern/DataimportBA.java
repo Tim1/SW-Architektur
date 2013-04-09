@@ -19,8 +19,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 
 	}
 
-	@Override
-	public void init() {
+	public static void init() {
 		instance = new DataimportBA();
 	}
 

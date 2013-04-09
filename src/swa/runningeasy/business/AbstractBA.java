@@ -3,14 +3,18 @@
  */
 package swa.runningeasy.business;
 
-import swa.runningeasy.db.ObjectManager;
+import swa.runningeasy.db.IObjectReader;
+import swa.runningeasy.db.IObjectWriter;
+import swa.runningeasy.db.ObjectReader;
+import swa.runningeasy.db.ObjectWriter;
 
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
  */
 public abstract class AbstractBA {
-	protected final static ObjectManager	om	= new ObjectManager();
+	protected final static IObjectReader	objectReader	= new ObjectReader();
+	protected final static IObjectWriter	objectWriter	= new ObjectWriter();
 	protected static AbstractBA				instance;
 
 	/**
@@ -27,5 +31,7 @@ public abstract class AbstractBA {
 		return instance;
 	}
 
-	public abstract void init();
+	public static void init() {
+
+	}
 }

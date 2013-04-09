@@ -22,8 +22,7 @@ public class MessageServiceBA extends AbstractBA implements IMessageService {
 
 	}
 
-	@Override
-	public void init() {
+	public static void init() {
 		instance = new MessageServiceBA();
 	}
 

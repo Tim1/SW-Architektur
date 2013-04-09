@@ -10,8 +10,7 @@ package swa.runningeasy.business;
 // TODO: Methods from "stammdatenverwaltung.umldi"
 public class TeilnahmeBA extends AbstractBA {
 
-	@Override
-	public void init() {
+	public static void init() {
 		instance = new TeilnahmeBA();
 	}
 

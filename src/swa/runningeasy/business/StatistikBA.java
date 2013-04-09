@@ -9,8 +9,7 @@ package swa.runningeasy.business;
  */
 public class StatistikBA extends AbstractBA {
 
-	@Override
-	public void init() {
+	public static void init() {
 		instance = new StatistikBA();
 	}
 

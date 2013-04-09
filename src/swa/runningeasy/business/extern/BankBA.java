@@ -17,8 +17,7 @@ public class BankBA extends AbstractBA implements IBank {
 
 	}
 
-	@Override
-	public void init() {
+	public static void init() {
 		instance = new BankBA();
 	}
 

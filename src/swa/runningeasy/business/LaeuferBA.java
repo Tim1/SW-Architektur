@@ -3,7 +3,7 @@ package swa.runningeasy.business;
 import java.util.List;
 
 import swa.runningeasy.data.be.LaeuferBE;
-import swa.runningeasy.db.ObjectManager;
+import swa.runningeasy.db.IObjectReader;
 
 public class LaeuferBA extends AbstractBA {
 
@@ -16,6 +16,8 @@ public class LaeuferBA extends AbstractBA {
 	 *             if laeufer is null or has illegal arguments
 	 */
 	public void createLaeufer(final LaeuferBE laeufer) throws IllegalArgumentException {
+		if (laeufer == null)
+			throw new IllegalArgumentException("Argument must not be NULL");
 
 	}
 
@@ -38,12 +40,12 @@ public class LaeuferBA extends AbstractBA {
 
 	}
 
+	@SuppressWarnings("unused")
 	private List<LaeuferBE> getAllLauefer() {
-		return om.getObjectByWhereClause(LaeuferBE.class, ObjectManager.CLAUSE_ALL);
+		return objectReader.getObjectByWhereClause(LaeuferBE.class, IObjectReader.CLAUSE_ALL);
 	}
 
-	@Override
-	public void init() {
+	public static void init() {
 		instance = new LaeuferBA();
 	}
 }
