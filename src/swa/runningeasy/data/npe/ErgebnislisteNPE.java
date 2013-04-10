@@ -17,17 +17,17 @@ public abstract class ErgebnislisteNPE extends AbstractNPE {
 	private Map<LaeuferBE, ErgebnisBE>	ergebnisMap	= null;
 
 	/**
-	 * @return the lauefer
+	 * @return the ergebnisMap
 	 */
-	public synchronized Map<LaeuferBE, ErgebnisBE> getLauefer() {
+	public synchronized Map<LaeuferBE, ErgebnisBE> getErgebnisMap() {
 		return ergebnisMap;
 	}
 
 	/**
-	 * @param lauefer
-	 *            the lauefer to set
+	 * @param ergebnisMap
+	 *            the ergebnisMap to set
 	 */
-	public synchronized void setLauefer(final Map<LaeuferBE, ErgebnisBE> ergebnisMap) {
+	public synchronized void setErgebnisMap(final Map<LaeuferBE, ErgebnisBE> ergebnisMap) {
 		this.ergebnisMap = ergebnisMap;
 	}
 }
