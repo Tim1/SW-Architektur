@@ -1,5 +1,7 @@
 package swa.runningeasy.data.be;
 
+import java.math.BigDecimal;
+
 /**
  * 
  * @author Tim Schmiedl (Cyboot)
@@ -7,11 +9,11 @@ package swa.runningeasy.data.be;
  */
 public class VeranstaltungBE extends AbstractBE {
 
-	private String	name			= null;
-	private int		distanz			= 0;
-	private float	startgebuehr	= 0;
-	private String	termin			= null;
-	private String	anmeldeschluss	= null;
+	private String		name			= null;
+	private float		distanz			= 0;
+	private BigDecimal	startgebuehr	= null;
+	private String		termin			= null;
+	private String		anmeldeschluss	= null;
 
 
 	/**
@@ -34,7 +36,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the distanz
 	 */
-	public synchronized int getDistanz() {
+	public synchronized float getDistanz() {
 		return distanz;
 	}
 
@@ -43,7 +45,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param distanz
 	 *            the distanz to set
 	 */
-	public synchronized void setDistanz(final int distanz) {
+	public synchronized void setDistanz(final float distanz) {
 		this.distanz = distanz;
 	}
 
@@ -51,7 +53,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the startgebuehr
 	 */
-	public synchronized float getStartgebuehr() {
+	public synchronized BigDecimal getStartgebuehr() {
 		return startgebuehr;
 	}
 
@@ -60,7 +62,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param startgebuehr
 	 *            the startgebuehr to set
 	 */
-	public synchronized void setStartgebuehr(final float startgebuehr) {
+	public synchronized void setStartgebuehr(final BigDecimal startgebuehr) {
 		this.startgebuehr = startgebuehr;
 	}
 

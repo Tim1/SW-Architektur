@@ -8,7 +8,7 @@ package swa.runningeasy.data.be;
 public class LaeuferBE extends AbstractBE {
 
 	private int			jahrgang;
-	private int			telefonNummer;
+	private String		telefonNummer;
 	private String		name		= null;
 	private String		adresse		= null;
 	private String		geschlecht	= null;
@@ -36,7 +36,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the telefonNummer
 	 */
-	public synchronized int getTelefonNummer() {
+	public synchronized String getTelefonNummer() {
 		return telefonNummer;
 	}
 
@@ -45,7 +45,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param telefonNummer
 	 *            the telefonNummer to set
 	 */
-	public synchronized void setTelefonNummer(final int telefonNummer) {
+	public synchronized void setTelefonNummer(final String telefonNummer) {
 		this.telefonNummer = telefonNummer;
 	}
 

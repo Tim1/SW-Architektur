@@ -4,6 +4,7 @@
 package swa.runningeasy.data.be;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -11,17 +12,17 @@ import java.util.ArrayList;
  */
 public class ErgebnisBE extends AbstractBE {
 
-	private int					endzeit			= 0;
-	private String				status			= null;
-	private ArrayList<String>	zwischenzeiten	= null;
-	private ArrayList<String>	bruttoZeiten	= null;
-	private ArrayList<String>	nettoZeiten		= null;
+	private String			endzeit			= null;
+	private String			status			= null;
+	private List<String>	zwischenzeiten	= null;
+	private List<String>	bruttoZeiten	= null;
+	private List<String>	nettoZeiten		= null;
 
 
 	/**
 	 * @return the endzeit
 	 */
-	public synchronized int getEndzeit() {
+	public synchronized String getEndzeit() {
 		return endzeit;
 	}
 
@@ -29,7 +30,7 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param endzeit
 	 *            the endzeit to set
 	 */
-	public synchronized void setEndzeit(final int endzeit) {
+	public synchronized void setEndzeit(final String endzeit) {
 		this.endzeit = endzeit;
 	}
 
@@ -51,7 +52,7 @@ public class ErgebnisBE extends AbstractBE {
 	/**
 	 * @return the zwischenzeiten
 	 */
-	public synchronized ArrayList<String> getZwischenzeiten() {
+	public synchronized List<String> getZwischenzeiten() {
 		return zwischenzeiten;
 	}
 
@@ -74,7 +75,7 @@ public class ErgebnisBE extends AbstractBE {
 	/**
 	 * @return the bruttoZeiten
 	 */
-	public synchronized ArrayList<String> getBruttoZeiten() {
+	public synchronized List<String> getBruttoZeiten() {
 		return bruttoZeiten;
 	}
 
@@ -97,7 +98,7 @@ public class ErgebnisBE extends AbstractBE {
 	/**
 	 * @return the nettoZeiten
 	 */
-	public synchronized ArrayList<String> getNettoZeiten() {
+	public synchronized List<String> getNettoZeiten() {
 		return nettoZeiten;
 	}
 
