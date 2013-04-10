@@ -5,7 +5,6 @@ package swa.runningeasy.data.npe;
 
 import java.util.ArrayList;
 
-import swa.runningeasy.business.extern.LaufzeitsystemBA;
 import swa.runningeasy.data.be.LaeuferBE;
 
 /**

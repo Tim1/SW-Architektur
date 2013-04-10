@@ -5,8 +5,6 @@ package swa.runningeasy.data.be;
 
 import java.util.ArrayList;
 
-import swa.runningeasy.data.npe.ErgebnislisteNPE;
-
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
