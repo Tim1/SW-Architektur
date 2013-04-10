@@ -9,5 +9,9 @@ package swa.runningeasy.extern;
  */
 public interface IBank {
 	// TODO: what return Value?
-	public void getKontoData();
+	//TODO: das wird laut anforderung nie verlangt dass wir die kontodaten wissen, nur die Buchungen, die eingegangen sind?
+//	public void getKontoData();
+
+	// TODO: what return Value?
+	public void liefereZalungseingaenge();
 }

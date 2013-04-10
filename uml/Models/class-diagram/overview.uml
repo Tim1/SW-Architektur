@@ -134,6 +134,9 @@
         </ownedAttribute>
         <ownedAttribute xmi:id="_ir1bsJfVEeKxQIlTReX7-Q" name="getKontoData"/>
         <ownedOperation xmi:id="_ml_kIJfVEeKxQIlTReX7-Q" name="getKontoData"/>
+        <ownedOperation xmi:id="_LzOSUKHzEeKpp9rVYZjaqg" name="liefereZahlungseingaenge"/>
+        <ownedOperation xmi:id="_YGVCsKHzEeKpp9rVYZjaqg" name="getKontoData"/>
+        <ownedOperation xmi:id="_ZO-FwKHzEeKpp9rVYZjaqg" name="liefereZahlungseingaenge"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Q0OdAJTMEeKAE4Eo82P5ew" name="Datenimport">
         <ownedOperation xmi:id="_2nfR0pfVEeKxQIlTReX7-Q" name="readImportFile"/>
@@ -351,9 +354,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="__cZScJfUEeKxQIlTReX7-Q" name="Business Logik">
-      <packagedElement xmi:type="uml:Class" xmi:id="_DRfUsJfVEeKxQIlTReX7-Q" name="BankBA">
-        <ownedOperation xmi:id="_kYAoopVvEeKn95o17-kmTQ" name="doUeberweisung"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DRfUsJfVEeKxQIlTReX7-Q" name="BankBA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_FfNJeJfVEeKxQIlTReX7-Q" name="LaufzeitBA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_Jvw_sJfVEeKxQIlTReX7-Q" name="DatenimportBA">
         <ownedOperation xmi:id="_ESpOspVvEeKn95o17-kmTQ" name="importLaeufer"/>

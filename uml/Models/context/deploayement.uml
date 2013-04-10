@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="deploayementModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="deploayementPackage">
+    <packagedElement xmi:type="uml:Node" xmi:id="_Wd7KcJ7SEeKpp9rVYZjaqg" name="Node1"/>
+    <packagedElement xmi:type="uml:Device" xmi:id="_Wut_gJ7SEeKpp9rVYZjaqg" name="Device1"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_XAj9cJ7SEeKpp9rVYZjaqg" name="Artifact1"/>
+    <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_XMT6cJ7SEeKpp9rVYZjaqg" name="ExecutionEnvironment1"/>
+    <packagedElement xmi:type="uml:DeploymentSpecification" xmi:id="_XYmC8J7SEeKpp9rVYZjaqg" name="DeploymentSpecification1"/>
+  </packagedElement>
+</uml:Model>

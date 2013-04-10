@@ -12,13 +12,19 @@ import swa.runningeasy.extern.IBank;
  */
 public class BankBA extends AbstractBA implements IBank {
 
+
+//	@Override
+//	public synchronized void getKontoData() {
+//
+//	}
+
+
 	@Override
-	public void getKontoData() {
+	public void liefereZalungseingaenge() {
 
 	}
 
-	public static void init() {
+	public synchronized static void init() {
 		instance = new BankBA();
 	}
-
 }
