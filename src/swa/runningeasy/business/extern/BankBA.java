@@ -13,10 +13,15 @@ import swa.runningeasy.extern.IBank;
 public class BankBA extends AbstractBA implements IBank {
 
 
-//	@Override
-//	public synchronized void getKontoData() {
-//
-//	}
+	// TODO: what return value?
+	/**
+	 * Should only be called intern.<br/>
+	 * Gets the Information about the Konto as it was the last time <i>
+	 * liefereZalungseingaenge()</i> was called from the Bankanwendung
+	 */
+	public synchronized void getKontoData() {
+
+	}
 
 
 	@Override
