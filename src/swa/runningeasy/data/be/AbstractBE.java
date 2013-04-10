@@ -1,5 +1,5 @@
 package swa.runningeasy.data.be;
 
-public abstract class AbstractBE {
+public abstract class AbstractBE implements ISerializable {
 
 }
