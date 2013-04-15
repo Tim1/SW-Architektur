@@ -40,8 +40,7 @@ public class LaeuferBA extends AbstractBA {
 
 	}
 
-	@SuppressWarnings("unused")
-	private List<LaeuferBE> getAllLauefer() {
+	public List<LaeuferBE> getAllLauefer() {
 		return objectReader.getObjectByWhereClause(LaeuferBE.class, IObjectReader.CLAUSE_ALL);
 	}
 

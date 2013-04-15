@@ -3,6 +3,8 @@
  */
 package swa.runningeasy.business;
 
+import java.util.List;
+
 import swa.runningeasy.data.be.TeilnahmeBE;
 
 /**
@@ -93,5 +95,12 @@ public class TeilnahmeBA extends AbstractBA {
 
 	}
 
+	/**
+	 * 
+	 * @return List of all Teilnahmen
+	 */
+	public List<TeilnahmeBE> getAllTeilnahmen() {
+		return null;
+	}
 
 }

@@ -3,6 +3,8 @@
  */
 package swa.runningeasy.business;
 
+import java.util.List;
+
 import swa.runningeasy.data.be.VeranstaltungBE;
 
 /**
@@ -40,4 +42,11 @@ public class VeranstaltungBA extends AbstractBA {
 
 	}
 
+
+	/**
+	 * @return List of all Veranstaltungen
+	 */
+	public List<VeranstaltungBE> getAllVeranstaltungen() {
+		return null;
+	}
 }

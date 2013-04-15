@@ -3,6 +3,8 @@
  */
 package swa.runningeasy.business;
 
+import java.util.List;
+
 import swa.runningeasy.data.be.ErgebnisBE;
 
 /**
@@ -47,5 +49,13 @@ public class ErgebnisBA extends AbstractBA {
 	 */
 	public void editTime() {
 
+	}
+
+	/**
+	 * 
+	 * @return List of all Ergebnisse
+	 */
+	public List<ErgebnisBE> getAllErgebnisse() {
+		return null;
 	}
 }
