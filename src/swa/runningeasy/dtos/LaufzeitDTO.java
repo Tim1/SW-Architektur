@@ -51,6 +51,4 @@ public class LaufzeitDTO {
 		return "LaufzeitDTO [Startnummer=" + Startnummer + ", laufzeit=" + laufzeit + ", veranstaltung="
 				+ veranstaltung + "]";
 	}
-
-
 }
