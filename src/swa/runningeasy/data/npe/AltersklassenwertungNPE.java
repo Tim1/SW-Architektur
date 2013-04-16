@@ -14,7 +14,7 @@ public class AltersklassenwertungNPE extends ErgebnislisteNPE {
 	/**
 	 * @return the alter
 	 */
-	public synchronized String getAlter() {
+	public String getAlter() {
 		return alter;
 	}
 
@@ -22,7 +22,7 @@ public class AltersklassenwertungNPE extends ErgebnislisteNPE {
 	 * @param alter
 	 *            the alter to set
 	 */
-	public synchronized void setAlter(final String alter) {
+	public void setAlter(final String alter) {
 		this.alter = alter;
 	}
 

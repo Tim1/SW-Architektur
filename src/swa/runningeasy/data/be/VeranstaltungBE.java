@@ -19,7 +19,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the name
 	 */
-	public synchronized String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -28,7 +28,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param name
 	 *            the name to set
 	 */
-	public synchronized void setName(final String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -36,7 +36,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the distanz
 	 */
-	public synchronized float getDistanz() {
+	public float getDistanz() {
 		return distanz;
 	}
 
@@ -45,7 +45,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param distanz
 	 *            the distanz to set
 	 */
-	public synchronized void setDistanz(final float distanz) {
+	public void setDistanz(final float distanz) {
 		this.distanz = distanz;
 	}
 
@@ -53,7 +53,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the startgebuehr
 	 */
-	public synchronized BigDecimal getStartgebuehr() {
+	public BigDecimal getStartgebuehr() {
 		return startgebuehr;
 	}
 
@@ -62,7 +62,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param startgebuehr
 	 *            the startgebuehr to set
 	 */
-	public synchronized void setStartgebuehr(final BigDecimal startgebuehr) {
+	public void setStartgebuehr(final BigDecimal startgebuehr) {
 		this.startgebuehr = startgebuehr;
 	}
 
@@ -70,7 +70,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the termin
 	 */
-	public synchronized String getTermin() {
+	public String getTermin() {
 		return termin;
 	}
 
@@ -79,7 +79,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param termin
 	 *            the termin to set
 	 */
-	public synchronized void setTermin(final String termin) {
+	public void setTermin(final String termin) {
 		this.termin = termin;
 	}
 
@@ -87,7 +87,7 @@ public class VeranstaltungBE extends AbstractBE {
 	/**
 	 * @return the anmeldeschluss
 	 */
-	public synchronized String getAnmeldeschluss() {
+	public String getAnmeldeschluss() {
 		return anmeldeschluss;
 	}
 
@@ -96,7 +96,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @param anmeldeschluss
 	 *            the anmeldeschluss to set
 	 */
-	public synchronized void setAnmeldeschluss(final String anmeldeschluss) {
+	public void setAnmeldeschluss(final String anmeldeschluss) {
 		this.anmeldeschluss = anmeldeschluss;
 	}
 
@@ -107,7 +107,7 @@ public class VeranstaltungBE extends AbstractBE {
 	 * @see swa.runningeasy.data.be.ISerializable#toSerializable()
 	 */
 	@Override
-	public synchronized byte[] toSerializable() {
+	public byte[] toSerializable() {
 		// TODO Auto-generated method stub
 		return null;
 	}

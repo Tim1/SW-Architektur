@@ -14,7 +14,7 @@ public class VereinBE extends AbstractBE {
 	/**
 	 * @return the name
 	 */
-	public synchronized String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -23,14 +23,14 @@ public class VereinBE extends AbstractBE {
 	 * @param name
 	 *            the name to set
 	 */
-	public synchronized void setName(final String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
 	/**
 	 * @return the ort
 	 */
-	public synchronized String getOrt() {
+	public String getOrt() {
 		return ort;
 	}
 
@@ -39,7 +39,7 @@ public class VereinBE extends AbstractBE {
 	 * @param ort
 	 *            the ort to set
 	 */
-	public synchronized void setOrt(final String ort) {
+	public void setOrt(final String ort) {
 		this.ort = ort;
 	}
 
@@ -47,7 +47,7 @@ public class VereinBE extends AbstractBE {
 	/**
 	 * @return the website
 	 */
-	public synchronized String getWebsite() {
+	public String getWebsite() {
 		return website;
 	}
 
@@ -56,7 +56,7 @@ public class VereinBE extends AbstractBE {
 	 * @param website
 	 *            the website to set
 	 */
-	public synchronized void setWebsite(final String website) {
+	public void setWebsite(final String website) {
 		this.website = website;
 	}
 
@@ -67,7 +67,7 @@ public class VereinBE extends AbstractBE {
 	 * @see swa.runningeasy.data.be.ISerializable#toSerializable()
 	 */
 	@Override
-	public synchronized byte[] toSerializable() {
+	public byte[] toSerializable() {
 		// TODO Auto-generated method stub
 		return null;
 	}

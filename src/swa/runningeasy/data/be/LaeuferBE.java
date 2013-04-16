@@ -19,7 +19,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the jahrgang
 	 */
-	public synchronized int getJahrgang() {
+	public int getJahrgang() {
 		return jahrgang;
 	}
 
@@ -28,7 +28,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param jahrgang
 	 *            the jahrgang to set
 	 */
-	public synchronized void setJahrgang(final int jahrgang) {
+	public void setJahrgang(final int jahrgang) {
 		this.jahrgang = jahrgang;
 	}
 
@@ -36,7 +36,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the telefonNummer
 	 */
-	public synchronized String getTelefonNummer() {
+	public String getTelefonNummer() {
 		return telefonNummer;
 	}
 
@@ -45,7 +45,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param telefonNummer
 	 *            the telefonNummer to set
 	 */
-	public synchronized void setTelefonNummer(final String telefonNummer) {
+	public void setTelefonNummer(final String telefonNummer) {
 		this.telefonNummer = telefonNummer;
 	}
 
@@ -53,7 +53,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the name
 	 */
-	public synchronized String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -62,7 +62,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param name
 	 *            the name to set
 	 */
-	public synchronized void setName(final String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -70,7 +70,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the adresse
 	 */
-	public synchronized String getAdresse() {
+	public String getAdresse() {
 		return adresse;
 	}
 
@@ -79,7 +79,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param adresse
 	 *            the adresse to set
 	 */
-	public synchronized void setAdresse(final String adresse) {
+	public void setAdresse(final String adresse) {
 		this.adresse = adresse;
 	}
 
@@ -87,7 +87,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the geschlecht
 	 */
-	public synchronized String getGeschlecht() {
+	public String getGeschlecht() {
 		return geschlecht;
 	}
 
@@ -96,7 +96,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param geschlecht
 	 *            the geschlecht to set
 	 */
-	public synchronized void setGeschlecht(final String geschlecht) {
+	public void setGeschlecht(final String geschlecht) {
 		this.geschlecht = geschlecht;
 	}
 
@@ -104,7 +104,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the email
 	 */
-	public synchronized String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
@@ -113,7 +113,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param email
 	 *            the email to set
 	 */
-	public synchronized void setEmail(final String email) {
+	public void setEmail(final String email) {
 		this.email = email;
 	}
 
@@ -121,7 +121,7 @@ public class LaeuferBE extends AbstractBE {
 	/**
 	 * @return the verein
 	 */
-	public synchronized VereinBE getVerein() {
+	public VereinBE getVerein() {
 		return verein;
 	}
 
@@ -130,7 +130,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @param verein
 	 *            the verein to set
 	 */
-	public synchronized void setVerein(final VereinBE verein) {
+	public void setVerein(final VereinBE verein) {
 		this.verein = verein;
 	}
 
@@ -141,7 +141,7 @@ public class LaeuferBE extends AbstractBE {
 	 * @see swa.runningeasy.data.be.ISerializable#toSerializable()
 	 */
 	@Override
-	public synchronized byte[] toSerializable() {
+	public byte[] toSerializable() {
 		// TODO Auto-generated method stub
 		return null;
 	}

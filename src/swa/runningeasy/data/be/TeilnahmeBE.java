@@ -19,7 +19,7 @@ public class TeilnahmeBE extends AbstractBE {
 	/**
 	 * @return the anmeldestatus
 	 */
-	public synchronized String getAnmeldestatus() {
+	public String getAnmeldestatus() {
 		return anmeldestatus;
 	}
 
@@ -28,7 +28,7 @@ public class TeilnahmeBE extends AbstractBE {
 	 * @param anmeldestatus
 	 *            the anmeldestatus to set
 	 */
-	public synchronized void setAnmeldestatus(final String anmeldestatus) {
+	public void setAnmeldestatus(final String anmeldestatus) {
 		this.anmeldestatus = anmeldestatus;
 	}
 
@@ -36,7 +36,7 @@ public class TeilnahmeBE extends AbstractBE {
 	/**
 	 * @return the startnummer
 	 */
-	public synchronized String getStartnummer() {
+	public String getStartnummer() {
 		return startnummer;
 	}
 
@@ -45,7 +45,7 @@ public class TeilnahmeBE extends AbstractBE {
 	 * @param startnummer
 	 *            the startnummer to set
 	 */
-	public synchronized void setStartnummer(final String startnummer) {
+	public void setStartnummer(final String startnummer) {
 		this.startnummer = startnummer;
 	}
 
@@ -53,7 +53,7 @@ public class TeilnahmeBE extends AbstractBE {
 	/**
 	 * @return the lauefer
 	 */
-	public synchronized LaeuferBE getLauefer() {
+	public LaeuferBE getLauefer() {
 		return lauefer;
 	}
 
@@ -62,7 +62,7 @@ public class TeilnahmeBE extends AbstractBE {
 	 * @param lauefer
 	 *            the lauefer to set
 	 */
-	public synchronized void setLauefer(final LaeuferBE lauefer) {
+	public void setLauefer(final LaeuferBE lauefer) {
 		this.lauefer = lauefer;
 	}
 
@@ -70,7 +70,7 @@ public class TeilnahmeBE extends AbstractBE {
 	/**
 	 * @return the veranstaltung
 	 */
-	public synchronized VereinBE getVeranstaltung() {
+	public VereinBE getVeranstaltung() {
 		return veranstaltung;
 	}
 
@@ -79,7 +79,7 @@ public class TeilnahmeBE extends AbstractBE {
 	 * @param veranstaltung
 	 *            the veranstaltung to set
 	 */
-	public synchronized void setVeranstaltung(final VereinBE veranstaltung) {
+	public void setVeranstaltung(final VereinBE veranstaltung) {
 		this.veranstaltung = veranstaltung;
 	}
 
@@ -87,7 +87,7 @@ public class TeilnahmeBE extends AbstractBE {
 	/**
 	 * @return the ergebnis
 	 */
-	public synchronized ErgebnisBE getErgebnis() {
+	public ErgebnisBE getErgebnis() {
 		return ergebnis;
 	}
 
@@ -96,7 +96,7 @@ public class TeilnahmeBE extends AbstractBE {
 	 * @param ergebnis
 	 *            the ergebnis to set
 	 */
-	public synchronized void setErgebnis(final ErgebnisBE ergebnis) {
+	public void setErgebnis(final ErgebnisBE ergebnis) {
 		this.ergebnis = ergebnis;
 	}
 
@@ -107,7 +107,7 @@ public class TeilnahmeBE extends AbstractBE {
 	 * @see swa.runningeasy.data.be.ISerializable#toSerializable()
 	 */
 	@Override
-	public synchronized byte[] toSerializable() {
+	public byte[] toSerializable() {
 		// TODO Auto-generated method stub
 		return null;
 	}

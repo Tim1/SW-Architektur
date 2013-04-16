@@ -19,7 +19,7 @@ public abstract class ErgebnislisteNPE extends AbstractNPE {
 	/**
 	 * @return the ergebnisMap
 	 */
-	public synchronized Map<LaeuferBE, ErgebnisBE> getErgebnisMap() {
+	public Map<LaeuferBE, ErgebnisBE> getErgebnisMap() {
 		return ergebnisMap;
 	}
 
@@ -27,7 +27,7 @@ public abstract class ErgebnislisteNPE extends AbstractNPE {
 	 * @param ergebnisMap
 	 *            the ergebnisMap to set
 	 */
-	public synchronized void setErgebnisMap(final Map<LaeuferBE, ErgebnisBE> ergebnisMap) {
+	public void setErgebnisMap(final Map<LaeuferBE, ErgebnisBE> ergebnisMap) {
 		this.ergebnisMap = ergebnisMap;
 	}
 }

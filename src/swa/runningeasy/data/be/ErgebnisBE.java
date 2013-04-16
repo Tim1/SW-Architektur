@@ -22,7 +22,7 @@ public class ErgebnisBE extends AbstractBE {
 	/**
 	 * @return the endzeit
 	 */
-	public synchronized String getEndzeit() {
+	public String getEndzeit() {
 		return endzeit;
 	}
 
@@ -30,14 +30,14 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param endzeit
 	 *            the endzeit to set
 	 */
-	public synchronized void setEndzeit(final String endzeit) {
+	public void setEndzeit(final String endzeit) {
 		this.endzeit = endzeit;
 	}
 
 	/**
 	 * @return the status
 	 */
-	public synchronized String getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
@@ -45,14 +45,14 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param status
 	 *            the status to set
 	 */
-	public synchronized void setStatus(final String status) {
+	public void setStatus(final String status) {
 		this.status = status;
 	}
 
 	/**
 	 * @return the zwischenzeiten
 	 */
-	public synchronized List<String> getZwischenzeiten() {
+	public List<String> getZwischenzeiten() {
 		return zwischenzeiten;
 	}
 
@@ -60,7 +60,7 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param zwischenzeiten
 	 *            the zwischenzeiten to set
 	 */
-	public synchronized void setZwischenzeiten(final ArrayList<String> zwischenzeiten) {
+	public void setZwischenzeiten(final ArrayList<String> zwischenzeiten) {
 		this.zwischenzeiten = zwischenzeiten;
 	}
 
@@ -68,14 +68,14 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param zwischenzeit
 	 *            the zwischenzeit to add
 	 */
-	public synchronized void addZwischenzeit(final String zwischenzeit) {
+	public void addZwischenzeit(final String zwischenzeit) {
 		zwischenzeiten.add(zwischenzeit);
 	}
 
 	/**
 	 * @return the bruttoZeiten
 	 */
-	public synchronized List<String> getBruttoZeiten() {
+	public List<String> getBruttoZeiten() {
 		return bruttoZeiten;
 	}
 
@@ -83,7 +83,7 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param bruttoZeiten
 	 *            the bruttoZeiten to set
 	 */
-	public synchronized void setBruttoZeiten(final ArrayList<String> bruttoZeiten) {
+	public void setBruttoZeiten(final ArrayList<String> bruttoZeiten) {
 		this.bruttoZeiten = bruttoZeiten;
 	}
 
@@ -91,14 +91,14 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param bruttoZeit
 	 *            the bruttoZeit to add
 	 */
-	public synchronized void addBruttoZeiten(final String bruttoZeit) {
+	public void addBruttoZeiten(final String bruttoZeit) {
 		bruttoZeiten.add(bruttoZeit);
 	}
 
 	/**
 	 * @return the nettoZeiten
 	 */
-	public synchronized List<String> getNettoZeiten() {
+	public List<String> getNettoZeiten() {
 		return nettoZeiten;
 	}
 
@@ -106,7 +106,7 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param nettoZeiten
 	 *            the nettoZeiten to set
 	 */
-	public synchronized void setNettoZeiten(final ArrayList<String> nettoZeiten) {
+	public void setNettoZeiten(final ArrayList<String> nettoZeiten) {
 		this.nettoZeiten = nettoZeiten;
 	}
 
@@ -114,7 +114,7 @@ public class ErgebnisBE extends AbstractBE {
 	 * @param nettoZeit
 	 *            the nettoZeit to add
 	 */
-	public synchronized void addNettoZeiten(final String nettoZeit) {
+	public void addNettoZeiten(final String nettoZeit) {
 		nettoZeiten.add(nettoZeit);
 	}
 
@@ -125,7 +125,7 @@ public class ErgebnisBE extends AbstractBE {
 	 * @see swa.runningeasy.data.be.ISerializable#toSerializable()
 	 */
 	@Override
-	public synchronized byte[] toSerializable() {
+	public byte[] toSerializable() {
 		// TODO Auto-generated method stub
 		return null;
 	}
