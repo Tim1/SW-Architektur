@@ -19,7 +19,7 @@ public class BankBA extends AbstractBA implements IBank {
 	 * Gets the Information about the Konto as it was the last time <i>
 	 * liefereZalungseingaenge()</i> was called from the Bankanwendung
 	 */
-	public synchronized void getKontoData() {
+	public void getKontoData() {
 
 	}
 
@@ -29,7 +29,4 @@ public class BankBA extends AbstractBA implements IBank {
 
 	}
 
-	public synchronized static void init() {
-		instance = new BankBA();
-	}
 }

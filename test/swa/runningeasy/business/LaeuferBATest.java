@@ -22,8 +22,7 @@ public class LaeuferBATest extends AbstractBATest {
 	@Before
 	public void setUp() {
 		super.setUp();
-		LaeuferBA.init();
-		laeufer = (LaeuferBA) LaeuferBA.getInstance();
+		laeufer = BAFactory.getLaeuferBA();
 	}
 
 	@Test

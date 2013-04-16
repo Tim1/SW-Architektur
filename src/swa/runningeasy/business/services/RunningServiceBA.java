@@ -6,6 +6,7 @@ package swa.runningeasy.business.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import swa.runningeasy.business.BAFactory;
 import swa.runningeasy.business.ErgebnisBA;
 import swa.runningeasy.business.LaeuferBA;
 import swa.runningeasy.business.TeilnahmeBA;
@@ -31,31 +32,31 @@ import swa.runningeasy.util.TransformerFactory;
  * 
  */
 public class RunningServiceBA implements RunningServices {
-	private final TransformerFactory	transformerFactory	= TransformerFactory.getInstance();
-	private final VeranstaltungBA		veranstaltungBA		= (VeranstaltungBA) VeranstaltungBA.getInstance();
-	private final VereinBA				vereinBA			= (VereinBA) VeranstaltungBA.getInstance();
-	private final TeilnahmeBA			teilnahmeBA			= (TeilnahmeBA) TeilnahmeBA.getInstance();
-	private final LaeuferBA				laeuferBA			= (LaeuferBA) LaeuferBA.getInstance();
-	private final ErgebnisBA			ergebnisBA			= (ErgebnisBA) ErgebnisBA.getInstance();
+	private TransformerFactory	transformerFactory;
+	private VeranstaltungBA		veranstaltungBA;
+	private VereinBA			vereinBA;
+	private TeilnahmeBA			teilnahmeBA;
+	private LaeuferBA			laeuferBA;
+	private ErgebnisBA			ergebnisBA;
 
 	@Override
 	public void erzeugeVeranstaltung(final VeranstaltungDTO v) {
-		veranstaltungBA.createVeranstaltung((VeranstaltungBE) transformerFactory.transformToBE(v));
+		veranstaltungBA.createVeranstaltung(transformerFactory.transformToBE(v, VeranstaltungBE.class));
 	}
 
 	@Override
 	public void erzeugeVerein(final VereinDTO v) {
-		vereinBA.createVerein((VereinBE) transformerFactory.transformToBE(v));
+		vereinBA.createVerein(transformerFactory.transformToBE(v, VereinBE.class));
 	}
 
 	@Override
 	public void erzeugeAnmeldung(final AnmeldungDTO a) {
-		teilnahmeBA.createTeilnahme((TeilnahmeBE) transformerFactory.transformToBE(a));
+		teilnahmeBA.createTeilnahme(transformerFactory.transformToBE(a, TeilnahmeBE.class));
 	}
 
 	@Override
 	public void erzeugeLaeufer(final LaeuferDTO a) {
-		laeuferBA.createLaeufer(null);
+		laeuferBA.createLaeufer(transformerFactory.transformToBE(a, LaeuferBE.class));
 	}
 
 	@Override
@@ -66,61 +67,36 @@ public class RunningServiceBA implements RunningServices {
 	@Override
 	public List<VeranstaltungDTO> getVeranstaltungen() {
 		List<VeranstaltungBE> listBEs = veranstaltungBA.getAllVeranstaltungen();
-		List<VeranstaltungDTO> listDTOs = new ArrayList<>(listBEs.size());
 
-		for (VeranstaltungBE be : listBEs) {
-			listDTOs.add((VeranstaltungDTO) transformerFactory.transformToDTO(be));
-		}
-
-		return listDTOs;
+		return transformerFactory.transformToDTOList(listBEs, VeranstaltungDTO.class);
 	}
 
 	@Override
 	public List<VereinDTO> getVereine() {
 		List<VereinBE> listBEs = vereinBA.getAllVereine();
-		List<VereinDTO> listDTOs = new ArrayList<>(listBEs.size());
 
-		for (VereinBE be : listBEs) {
-			listDTOs.add((VereinDTO) transformerFactory.transformToDTO(be));
-		}
-
-		return listDTOs;
+		return transformerFactory.transformToDTOList(listBEs, VereinDTO.class);
 	}
 
 	@Override
 	public List<LaeuferDTO> getLaeufer() {
 		List<LaeuferBE> listBEs = laeuferBA.getAllLauefer();
-		List<LaeuferDTO> listDTOs = new ArrayList<>(listBEs.size());
 
-		for (LaeuferBE be : listBEs) {
-			listDTOs.add((LaeuferDTO) transformerFactory.transformToDTO(be));
-		}
-
-		return listDTOs;
+		return transformerFactory.transformToDTOList(listBEs, LaeuferDTO.class);
 	}
 
 	@Override
 	public List<AnmeldungDTO> getAnmeldungen(final String Veranstaltung) {
 		List<TeilnahmeBE> listBEs = teilnahmeBA.getAllTeilnahmen();
-		List<AnmeldungDTO> listDTOs = new ArrayList<>(listBEs.size());
 
-		for (TeilnahmeBE be : listBEs) {
-			listDTOs.add((AnmeldungDTO) transformerFactory.transformToDTO(be));
-		}
-
-		return listDTOs;
+		return transformerFactory.transformToDTOList(listBEs, AnmeldungDTO.class);
 	}
 
 	@Override
 	public List<LaufzeitDTO> getLaufzeiten(final String Veranstaltung) {
 		List<ErgebnisBE> listBEs = ergebnisBA.getAllErgebnisse();
-		List<LaufzeitDTO> listDTOs = new ArrayList<>(listBEs.size());
 
-		for (ErgebnisBE be : listBEs) {
-			listDTOs.add((LaufzeitDTO) transformerFactory.transformToDTO(be));
-		}
-
-		return listDTOs;
+		return transformerFactory.transformToDTOList(listBEs, LaufzeitDTO.class);
 	}
 
 	@Override
@@ -143,7 +119,15 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
+		BAFactory.init();
+
+		veranstaltungBA = BAFactory.getVeranstaltungBA();
+		vereinBA = BAFactory.getVereinBA();
+		teilnahmeBA = BAFactory.getTeilnahmeBA();
+		laeuferBA = BAFactory.getLaeuferBA();
+		ergebnisBA = BAFactory.getErgebnisBA();
+
+		transformerFactory = TransformerFactory.getInstance();
 	}
 
 }

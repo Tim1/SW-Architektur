@@ -44,7 +44,4 @@ public class LaeuferBA extends AbstractBA {
 		return objectReader.getObjectByWhereClause(LaeuferBE.class, IObjectReader.CLAUSE_ALL);
 	}
 
-	public static void init() {
-		instance = new LaeuferBA();
-	}
 }

@@ -15,7 +15,6 @@ import swa.runningeasy.db.ObjectWriter;
 public abstract class AbstractBA {
 	protected final static IObjectReader	objectReader	= new ObjectReader();
 	protected final static IObjectWriter	objectWriter	= new ObjectWriter();
-	protected static AbstractBA				instance;
 
 	/**
 	 * Private Construktor
@@ -24,14 +23,10 @@ public abstract class AbstractBA {
 
 	}
 
+
 	/**
-	 * @return the instance
+	 * initialize the BA, should be overriden for each BA
 	 */
-	public static AbstractBA getInstance() {
-		return instance;
-	}
-
-	public static void init() {
-
+	public void init() {
 	}
 }

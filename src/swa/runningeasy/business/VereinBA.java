@@ -13,10 +13,6 @@ import swa.runningeasy.data.be.VereinBE;
  */
 public class VereinBA extends AbstractBA {
 
-	public static void init() {
-		instance = new VereinBA();
-	}
-
 
 	/**
 	 * Creates a new Verein and saves

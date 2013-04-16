@@ -3,6 +3,7 @@
  */
 package swa.runningeasy.business;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import swa.runningeasy.data.be.VeranstaltungBE;
@@ -12,10 +13,6 @@ import swa.runningeasy.data.be.VeranstaltungBE;
  * 
  */
 public class VeranstaltungBA extends AbstractBA {
-
-	public static void init() {
-		instance = new VeranstaltungBA();
-	}
 
 
 	/**
@@ -47,6 +44,6 @@ public class VeranstaltungBA extends AbstractBA {
 	 * @return List of all Veranstaltungen
 	 */
 	public List<VeranstaltungBE> getAllVeranstaltungen() {
-		return null;
+		return new ArrayList<>();
 	}
 }

@@ -13,10 +13,6 @@ import swa.runningeasy.data.be.ErgebnisBE;
  */
 public class ErgebnisBA extends AbstractBA {
 
-	public static void init() {
-		instance = new ErgebnisBA();
-	}
-
 	/**
 	 * Creates a new Ergebnis and saves
 	 * 

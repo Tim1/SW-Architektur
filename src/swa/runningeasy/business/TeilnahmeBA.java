@@ -14,10 +14,6 @@ import swa.runningeasy.data.be.TeilnahmeBE;
 // TODO: Methods from "stammdatenverwaltung.umldi"
 public class TeilnahmeBA extends AbstractBA {
 
-	public static void init() {
-		instance = new TeilnahmeBA();
-	}
-
 
 	/**
 	 * Creates a new Teilnahme and saves

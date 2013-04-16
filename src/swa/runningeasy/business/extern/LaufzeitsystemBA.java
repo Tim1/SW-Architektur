@@ -22,8 +22,4 @@ public class LaufzeitsystemBA extends AbstractBA implements ILaufzeitsystem {
 
 	}
 
-	public static void init() {
-		instance = new LaufzeitsystemBA();
-	}
-
 }

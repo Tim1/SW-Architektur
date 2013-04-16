@@ -12,7 +12,7 @@ import swa.runningeasy.data.be.AbstractBE;
  * @author Tim Schmiedl (Cyboot)
  * 
  */
-public class TransformerFactory {
+public final class TransformerFactory {
 	private static final TransformerFactory	instance	= new TransformerFactory();
 
 	/**
@@ -22,7 +22,7 @@ public class TransformerFactory {
 	 *            to be transformed
 	 * @return transformed DTO
 	 */
-	public Object transformToDTO(final AbstractBE be) {
+	public <C> C transformToDTO(final AbstractBE be, final Class<C> clazz) {
 		return null;
 	}
 
@@ -33,7 +33,7 @@ public class TransformerFactory {
 	 *            to be transformed
 	 * @return transformed BE
 	 */
-	public AbstractBE transformToBE(final Object dto) {
+	public <C extends AbstractBE> C transformToBE(final Object dto, final Class<C> clazz) {
 		return null;
 	}
 
@@ -44,11 +44,11 @@ public class TransformerFactory {
 	 *            to be transformed
 	 * @return transformed DTO-List
 	 */
-	public List<Object> transformToDTOList(final List<? extends AbstractBE> bes) {
-		List<Object> list = new ArrayList<>();
+	public <C> List<C> transformToDTOList(final List<? extends AbstractBE> bes, final Class<C> clazz) {
+		List<C> list = new ArrayList<>();
 
 		for (AbstractBE be : bes) {
-			list.add(transformToDTO(be));
+			list.add(transformToDTO(be, clazz));
 		}
 
 		return list;
@@ -61,11 +61,11 @@ public class TransformerFactory {
 	 *            to be transformed
 	 * @return transformed BE-List
 	 */
-	public List<AbstractBE> transformToBEList(final List<Object> dtos) {
-		List<AbstractBE> list = new ArrayList<>();
+	public <C extends AbstractBE> List<C> transformToBEList(final List<Object> dtos, final Class<C> clazz) {
+		List<C> list = new ArrayList<>();
 
 		for (Object dto : dtos) {
-			list.add(transformToBE(dto));
+			list.add(transformToBE(dto, clazz));
 		}
 
 		return list;

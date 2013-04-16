@@ -9,13 +9,8 @@ package swa.runningeasy.business;
  */
 public class StatistikBA extends AbstractBA {
 
-	public static void init() {
-		instance = new StatistikBA();
+	public void generateErgebnisliste() {
+
 	}
 
-	//TODO: nicht gerafft.
-	public void genErgebnisliste(){
-		
-	}
-	
 }

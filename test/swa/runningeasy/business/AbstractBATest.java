@@ -13,7 +13,6 @@ public class AbstractBATest {
 
 	@Before
 	public void setUp() {
-
+		BAFactory.init();
 	}
-
 }
