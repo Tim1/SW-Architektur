@@ -13,9 +13,9 @@ public class StatistikBA extends AbstractBA {
 		instance = new StatistikBA();
 	}
 
-	//TODO: nicht gerafft.
-	public void genErgebnisliste(){
-		
+	// TODO: nicht gerafft.
+	public void genErgebnisliste() {
+
 	}
-	
+
 }

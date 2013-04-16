@@ -17,37 +17,41 @@ public class LaufzeitDTO {
 		this.laufzeit = laufzeit;
 		this.veranstaltung = veranstaltung;
 	}
-	
+
 	public int getStartnummer() {
 		return Startnummer;
 	}
+
 	public void setStartnummer(int startnummer) {
 		Startnummer = startnummer;
 	}
+
 	public Date getLaufzeit() {
 		return laufzeit;
 	}
+
 	public void setLaufzeit(Date laufzeit) {
 		this.laufzeit = laufzeit;
 	}
+
 	public String getVeranstaltung() {
 		return veranstaltung;
 	}
+
 	public void setVeranstaltung(String veranstaltung) {
 		this.veranstaltung = veranstaltung;
 	}
-	
-	
+
+
 	@Override
 	public String toString() {
-		return "LaufzeitDTO [Startnummer=" + Startnummer + ", laufzeit="
-				+ laufzeit + ", veranstaltung=" + veranstaltung + "]";
+		return "LaufzeitDTO [Startnummer=" + Startnummer + ", laufzeit=" + laufzeit + ", veranstaltung="
+				+ veranstaltung + "]";
 	}
 
 
+	private int		Startnummer;
+	private Date	laufzeit;
+	private String	veranstaltung;
 
-	private int Startnummer;
-	private Date laufzeit;
-	private String veranstaltung;
-	
 }

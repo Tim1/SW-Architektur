@@ -31,7 +31,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 	 * 
 	 * @param lauefer
 	 */
-	public synchronized void importLauefer(LaeuferBE lauefer) {
+	public void importLauefer(LaeuferBE lauefer) {
 
 	}
 
@@ -40,7 +40,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 	 * 
 	 * @param verein
 	 */
-	public synchronized void importVerein(VereinBE verein) {
+	public void importVerein(VereinBE verein) {
 
 	}
 
@@ -49,7 +49,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 	 * 
 	 * @param veranstaltung
 	 */
-	public synchronized void importVeranstaltung(VeranstaltungBE veranstaltung) {
+	public void importVeranstaltung(VeranstaltungBE veranstaltung) {
 
 	}
 
