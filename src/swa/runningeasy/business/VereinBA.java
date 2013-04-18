@@ -3,6 +3,7 @@
  */
 package swa.runningeasy.business;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import swa.runningeasy.data.be.VereinBE;
@@ -43,7 +44,7 @@ public class VereinBA extends AbstractBA {
 	 * @return List of all Vereine
 	 */
 	public List<VereinBE> getAllVereine() {
-		return null;
+		return new ArrayList<>();
 	}
 
 }
