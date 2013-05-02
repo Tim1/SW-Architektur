@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="factories">
+    <packagedElement xmi:type="uml:Class" xmi:id="_FLs70LL2EeKmkJJU_QJT5A" name="BAFactory">
+      <ownedAttribute xmi:id="_K3DVELL2EeKmkJJU_QJT5A" name="ergebnisBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_3mJtkLJwEeKZwOciDc4yrQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_LyBvkLL2EeKmkJJU_QJT5A" name="laeuferBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_4v2gkLJwEeKZwOciDc4yrQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_NIiPgLL2EeKmkJJU_QJT5A" name="statistikBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_6EOSgLJwEeKZwOciDc4yrQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_QSLhALL2EeKmkJJU_QJT5A" name="teilnahmeBA">
+        <type xmi:type="uml:Class" href="business_activities.uml#_7S5sILJwEeKZwOciDc4yrQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Rr5tALL2EeKmkJJU_QJT5A" name="veranstaltungBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_-YkckLJwEeKZwOciDc4yrQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TOe6ELL2EeKmkJJU_QJT5A" name="vereinBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_AossILJxEeKZwOciDc4yrQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_UFLRgLL2EeKmkJJU_QJT5A" name="bankBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_TMuj2LJ4EeKmkJJU_QJT5A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_UvR-cLL2EeKmkJJU_QJT5A" name="datenimportBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_T8Vb2LJ4EeKmkJJU_QJT5A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_V4dNALL2EeKmkJJU_QJT5A" name="laufzeitsystemBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_U3jG6LJ4EeKmkJJU_QJT5A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_XC1VcLL2EeKmkJJU_QJT5A" name="messageServiceBA" visibility="private">
+        <type xmi:type="uml:Class" href="business_activities.uml#_V_aG2LJ4EeKmkJJU_QJT5A"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_2atXQLL2EeKmkJJU_QJT5A" name="init"/>
+      <ownedOperation xmi:id="_3VY20LL2EeKmkJJU_QJT5A" name="getErgebnisBA"/>
+      <ownedOperation xmi:id="_4jMtwLL2EeKmkJJU_QJT5A" name="getLaeuferBA"/>
+      <ownedOperation xmi:id="_5j0dQLL2EeKmkJJU_QJT5A" name="getStatistikBA"/>
+      <ownedOperation xmi:id="_6ptHQLL2EeKmkJJU_QJT5A" name="getTeilnahmeBA"/>
+      <ownedOperation xmi:id="_8FP4MLL2EeKmkJJU_QJT5A" name="getVeranstaltungBA"/>
+      <ownedOperation xmi:id="_9D5RwLL2EeKmkJJU_QJT5A" name="getVereinBA"/>
+      <ownedOperation xmi:id="_9zMnwLL2EeKmkJJU_QJT5A" name="getBankBA"/>
+      <ownedOperation xmi:id="_-7NYsLL2EeKmkJJU_QJT5A" name="getDatenimportBA"/>
+      <ownedOperation xmi:id="__sgSwLL2EeKmkJJU_QJT5A" name="getLaufzeitsystemBA"/>
+      <ownedOperation xmi:id="_A3Z_oLL3EeKmkJJU_QJT5A" name="getMessageServiceBA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_HZJDwLL2EeKmkJJU_QJT5A" name="TransformerFactory">
+      <ownedAttribute xmi:id="_IliTgLL4EeKmkJJU_QJT5A" name="instance" visibility="private" type="_HZJDwLL2EeKmkJJU_QJT5A"/>
+      <ownedOperation xmi:id="_LlQM8LL4EeKmkJJU_QJT5A" name="transfrotmToDTO"/>
+      <ownedOperation xmi:id="_NLjcYLL4EeKmkJJU_QJT5A" name="transformtToBE"/>
+      <ownedOperation xmi:id="_OSl88LL4EeKmkJJU_QJT5A" name="transformToDTOList"/>
+      <ownedOperation xmi:id="_PzoR4LL4EeKmkJJU_QJT5A" name="transformtToBEList"/>
+      <ownedOperation xmi:id="_Q7Wu8LL4EeKmkJJU_QJT5A" name="getInstance"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

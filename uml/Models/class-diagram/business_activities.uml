@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <elementImport xmi:id="_nS6TILJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8IULJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8IUbJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8IUrJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8vYLJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8vYbJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8vYrJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8vY7JxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+  </elementImport>
+  <elementImport xmi:id="_nS8vZLJxEeKZwOciDc4yrQ">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="business_activities">
+    <packagedElement xmi:type="uml:Class" xmi:id="_2hUMcLJwEeKZwOciDc4yrQ" name="AbstractBA">
+      <ownedAttribute xmi:id="_c5foQLJxEeKZwOciDc4yrQ" name="objectReader" visibility="private"/>
+      <ownedAttribute xmi:id="_ef0F0LJxEeKZwOciDc4yrQ" name="objectWriter" visibility="private"/>
+      <ownedAttribute xmi:id="_gK7j0LJxEeKZwOciDc4yrQ" name="Property1"/>
+      <ownedOperation xmi:id="_hYjNgLJxEeKZwOciDc4yrQ" name="init"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3mJtkLJwEeKZwOciDc4yrQ" name="ErgebnisBA">
+      <generalization xmi:id="_Karjk7JxEeKZwOciDc4yrQ" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <ownedOperation xmi:id="_-cjvQLJxEeKZwOciDc4yrQ" name=""/>
+      <ownedOperation xmi:id="_9cHwgLJyEeKZwOciDc4yrQ" name="createErgebnis">
+        <ownedParameter xmi:id="_EHW5cLJzEeKZwOciDc4yrQ" name="ergebnis">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_9ufiALBFEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_HyuX8LJzEeKZwOciDc4yrQ" name="updateErgebnis">
+        <ownedParameter xmi:id="_JFxUMLJzEeKZwOciDc4yrQ" name="ergebnis">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_9ufiALBFEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_MJHJYLJzEeKZwOciDc4yrQ" name="editTime"/>
+      <ownedOperation xmi:id="_OBbV4LJzEeKZwOciDc4yrQ" name="getAllErgebnisse">
+        <ownedParameter xmi:id="_PziMsLJzEeKZwOciDc4yrQ" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4v2gkLJwEeKZwOciDc4yrQ" name="LaeuferBA">
+      <generalization xmi:id="_Kt1JELJxEeKZwOciDc4yrQ" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <ownedOperation xmi:id="_WG_u0LJzEeKZwOciDc4yrQ" name="createLaeufer">
+        <ownedParameter xmi:id="_bS7BILJzEeKZwOciDc4yrQ" name="laeufer">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_aKNUsLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_XTv10LJzEeKZwOciDc4yrQ" name="updateLaeufer">
+        <ownedParameter xmi:id="_c7EDoLJzEeKZwOciDc4yrQ" name="laeufer">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_aKNUsLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_YZjnULJzEeKZwOciDc4yrQ" name="generategesamtStatistik">
+        <ownedParameter xmi:id="_fJu6oLJzEeKZwOciDc4yrQ" name="laeufer">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_aKNUsLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Z5Ti0LJzEeKZwOciDc4yrQ" name="getAllLaeufer">
+        <ownedParameter xmi:id="_hBlNELJzEeKZwOciDc4yrQ" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6EOSgLJwEeKZwOciDc4yrQ" name="StatistikBA">
+      <generalization xmi:id="_K-OVgLJxEeKZwOciDc4yrQ" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <ownedOperation xmi:id="_mZ2SQLJzEeKZwOciDc4yrQ" name="generateErgebnisliste"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7S5sILJwEeKZwOciDc4yrQ" name="TeilnahmeBA">
+      <generalization xmi:id="_Lrz0Q7JxEeKZwOciDc4yrQ" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <ownedOperation xmi:id="_qMigwLJzEeKZwOciDc4yrQ" name="createTeilnahme">
+        <ownedParameter xmi:id="_6VwAALJzEeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rIlSQLJzEeKZwOciDc4yrQ" name="updateTeilnahme">
+        <ownedParameter xmi:id="_99_SALJzEeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_sSI7ULJzEeKZwOciDc4yrQ" name="deleteTeilnahme">
+        <ownedParameter xmi:id="__MaM8LJzEeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_tOoYwLJzEeKZwOciDc4yrQ" name="generateStartListe">
+        <ownedParameter xmi:id="_A123ALJ0EeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vt20QLJzEeKZwOciDc4yrQ" name="getActualAnzahlZTeilnehmer">
+        <ownedParameter xmi:id="_CSd-8LJ0EeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_yhcWMLJzEeKZwOciDc4yrQ" name="generateUnpayedLaeuferListe">
+        <ownedParameter xmi:id="_DRKb0LJ0EeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0jdRQLJzEeKZwOciDc4yrQ" name="disqualifiquateLaeufer">
+        <ownedParameter xmi:id="_ErNX8LJ0EeKZwOciDc4yrQ" name="teilnahme">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_n162wLBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_2iLnwLJzEeKZwOciDc4yrQ" name="getAllTeilnahmen">
+        <ownedParameter xmi:id="_HMCV8LJ0EeKZwOciDc4yrQ" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-YkckLJwEeKZwOciDc4yrQ" name="VeranstaltungBA">
+      <generalization xmi:id="_LS5lA7JxEeKZwOciDc4yrQ" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <ownedOperation xmi:id="_eLGLUrJ3EeKmkJJU_QJT5A" name="createVeranstaltung">
+        <ownedParameter xmi:id="_jxTl4LJ3EeKmkJJU_QJT5A" name="veranstaltung">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_pjkEULBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_fWYSsrJ3EeKmkJJU_QJT5A" name="updateVeranstaltung">
+        <ownedParameter xmi:id="_lm-uELJ3EeKmkJJU_QJT5A" name="veranstaltung">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_pjkEULBGEeKbJPneFoDWnA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_hb08QrJ3EeKmkJJU_QJT5A" name="getAllVeranstaltungen">
+        <ownedParameter xmi:id="_m-KjcLJ3EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AossILJxEeKZwOciDc4yrQ" name="VereinBA">
+      <generalization xmi:id="_MHTdc7JxEeKZwOciDc4yrQ" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <ownedOperation xmi:id="_98fgYrJ3EeKmkJJU_QJT5A" name="createVerein">
+        <ownedParameter xmi:id="_Dh1_ULJ4EeKmkJJU_QJT5A" name="verein" type="_0BQYkLJyEeKZwOciDc4yrQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="__CthkrJ3EeKmkJJU_QJT5A" name="updateVerein">
+        <ownedParameter xmi:id="_FAK-gLJ4EeKmkJJU_QJT5A" name="verein" type="_0BQYkLJyEeKZwOciDc4yrQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_A9mg8rJ4EeKmkJJU_QJT5A" name="getAllVereine">
+        <ownedParameter xmi:id="_GILIYLJ4EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y6Q7ULJyEeKZwOciDc4yrQ" name="VereinBE">
+      <ownedAttribute xmi:id="_y6Q7UrJyEeKZwOciDc4yrQ" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_y6Q7U7JyEeKZwOciDc4yrQ" name="ort" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_y6Q7VLJyEeKZwOciDc4yrQ" name="webseite" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0BQYkLJyEeKZwOciDc4yrQ" name="VereinBE">
+      <ownedAttribute xmi:id="_0BQYkrJyEeKZwOciDc4yrQ" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0BQYk7JyEeKZwOciDc4yrQ" name="ort" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0BQYlLJyEeKZwOciDc4yrQ" name="webseite" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TMuj2LJ4EeKmkJJU_QJT5A" name="BankBA" clientDependency="__BKMgLLyEeKmkJJU_QJT5A">
+      <generalization xmi:id="_2Bep0LL0EeKmkJJU_QJT5A" general="_ogTj0LL0EeKmkJJU_QJT5A"/>
+      <interfaceRealization xmi:id="__BKMgLLyEeKmkJJU_QJT5A" name="InterfaceRealization1" supplier="_5T4goLLyEeKmkJJU_QJT5A" client="_TMuj2LJ4EeKmkJJU_QJT5A" contract="_5T4goLLyEeKmkJJU_QJT5A"/>
+      <ownedOperation xmi:id="_sUkKgLLyEeKmkJJU_QJT5A" name="getKontoData"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_T8Vb2LJ4EeKmkJJU_QJT5A" name="DataimportBA">
+      <generalization xmi:id="_kvjPALL0EeKmkJJU_QJT5A" general="_2hUMcLJwEeKZwOciDc4yrQ"/>
+      <generalization xmi:id="_20LSELL0EeKmkJJU_QJT5A" general="_ogTj0LL0EeKmkJJU_QJT5A"/>
+      <ownedOperation xmi:id="_A0aS0LLzEeKmkJJU_QJT5A" name="readImportFile"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_U3jG6LJ4EeKmkJJU_QJT5A" name="LaufzeitsystemBA" clientDependency="_QyybELLzEeKmkJJU_QJT5A">
+      <generalization xmi:id="_3GtzkLL0EeKmkJJU_QJT5A" general="_ogTj0LL0EeKmkJJU_QJT5A"/>
+      <interfaceRealization xmi:id="_QyybELLzEeKmkJJU_QJT5A" name="InterfaceRealization1" supplier="_KQdWgLLzEeKmkJJU_QJT5A" client="_U3jG6LJ4EeKmkJJU_QJT5A" contract="_KQdWgLLzEeKmkJJU_QJT5A"/>
+      <ownedOperation xmi:id="_IKIjMLLzEeKmkJJU_QJT5A" name="Operation1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_V_aG2LJ4EeKmkJJU_QJT5A" name="MessageServiceBA" clientDependency="_YQtlMLLzEeKmkJJU_QJT5A">
+      <generalization xmi:id="_3cLtQLL0EeKmkJJU_QJT5A" general="_ogTj0LL0EeKmkJJU_QJT5A"/>
+      <interfaceRealization xmi:id="_YQtlMLLzEeKmkJJU_QJT5A" name="InterfaceRealization1" supplier="_TNPEQLLzEeKmkJJU_QJT5A" client="_V_aG2LJ4EeKmkJJU_QJT5A" contract="_TNPEQLLzEeKmkJJU_QJT5A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XiMIOLJ4EeKmkJJU_QJT5A" name="RunningServiceBA" clientDependency="_2AJpkLLzEeKmkJJU_QJT5A">
+      <generalization xmi:id="_2bXwgLL0EeKmkJJU_QJT5A" general="_ogTj0LL0EeKmkJJU_QJT5A"/>
+      <ownedAttribute xmi:id="_6nJNYLL0EeKmkJJU_QJT5A" name="transformerFactory" visibility="private"/>
+      <ownedAttribute xmi:id="_9iAcALL0EeKmkJJU_QJT5A" name="veranstaltungBA" visibility="private" type="_-YkckLJwEeKZwOciDc4yrQ"/>
+      <ownedAttribute xmi:id="_BwOv8LL1EeKmkJJU_QJT5A" name="vereinBA" visibility="private" type="_AossILJxEeKZwOciDc4yrQ"/>
+      <ownedAttribute xmi:id="_D2qQ8LL1EeKmkJJU_QJT5A" name="teilnahmeBA" visibility="private" type="_7S5sILJwEeKZwOciDc4yrQ"/>
+      <ownedAttribute xmi:id="_GanbcLL1EeKmkJJU_QJT5A" name="laeuferBA" visibility="private" type="_4v2gkLJwEeKZwOciDc4yrQ"/>
+      <ownedAttribute xmi:id="_KLed8LL1EeKmkJJU_QJT5A" name="ergebnisBA" visibility="private" type="_3mJtkLJwEeKZwOciDc4yrQ"/>
+      <interfaceRealization xmi:id="_2AJpkLLzEeKmkJJU_QJT5A" name="InterfaceRealization1" supplier="_gq0DsLLzEeKmkJJU_QJT5A" client="_XiMIOLJ4EeKmkJJU_QJT5A" contract="_gq0DsLLzEeKmkJJU_QJT5A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_5T4goLLyEeKmkJJU_QJT5A" name="IBank">
+      <ownedOperation xmi:id="_6kLD0LLyEeKmkJJU_QJT5A" name="liefereZahlungseingaenge"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_KQdWgLLzEeKmkJJU_QJT5A" name="ILaufzeitsystem">
+      <ownedOperation xmi:id="_MBt4wLLzEeKmkJJU_QJT5A" name="pushZwischenzeitForLaeufer"/>
+      <ownedOperation xmi:id="_OoaOMLLzEeKmkJJU_QJT5A" name="pushEndzeitForLaeufer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_TNPEQLLzEeKmkJJU_QJT5A" name="IMessageService">
+      <ownedOperation xmi:id="_VWyKsLLzEeKmkJJU_QJT5A" name="sendSMS"/>
+      <ownedOperation xmi:id="_Whx-MLLzEeKmkJJU_QJT5A" name="sendEmail"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_gq0DsLLzEeKmkJJU_QJT5A" name="RunningServices">
+      <ownedOperation xmi:id="_iIfioLLzEeKmkJJU_QJT5A" name="erzeugeVeranstaltung">
+        <ownedParameter xmi:id="_41h7QLLzEeKmkJJU_QJT5A" name="veranstaltung">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_2kMQILCVEeKxUf1xucHEIQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_nj2YELLzEeKmkJJU_QJT5A" name="erzeugeVerein"/>
+      <ownedOperation xmi:id="_o_AugLLzEeKmkJJU_QJT5A" name="erzeugeAnmeldung">
+        <ownedParameter xmi:id="_7PifkLLzEeKmkJJU_QJT5A" name="anmeldung">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_1QRKILCVEeKxUf1xucHEIQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_p9z5ELLzEeKmkJJU_QJT5A" name="erzeugeLaeufer">
+        <ownedParameter xmi:id="_9KBPQLLzEeKmkJJU_QJT5A" name="lauefer">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_aKY-ELBKEeKOncVajJTcsg"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rCisgLLzEeKmkJJU_QJT5A" name="erzeugeLaufzeit">
+        <ownedParameter xmi:id="__CaUQLLzEeKmkJJU_QJT5A" name="laufzeit">
+          <type xmi:type="uml:Class" href="datenstrukturen.uml#_42JrsLCVEeKxUf1xucHEIQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_sb0MkLLzEeKmkJJU_QJT5A" name="getVeranstaltungen">
+        <ownedParameter xmi:id="_Ay8dwLL0EeKmkJJU_QJT5A" name=""/>
+        <ownedParameter xmi:id="_CasesLL0EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uQdaALLzEeKmkJJU_QJT5A" name="getGVereine">
+        <ownedParameter xmi:id="_Ed66sLL0EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vOa3ELLzEeKmkJJU_QJT5A" name="getLaeufer">
+        <ownedParameter xmi:id="_FhIEILL0EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_wP3tALLzEeKmkJJU_QJT5A" name="getAnmeldungen">
+        <ownedParameter xmi:id="_HCZpoLL0EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_x9RC8LLzEeKmkJJU_QJT5A" name="getLaufzeiten">
+        <ownedParameter xmi:id="_H91XILL0EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_y_CpALLzEeKmkJJU_QJT5A" name="getAuswertung">
+        <ownedParameter xmi:id="_I_r1sLL0EeKmkJJU_QJT5A" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0dkcgLLzEeKmkJJU_QJT5A" name="init"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ogTj0LL0EeKmkJJU_QJT5A" name="AbstractBA">
+      <ownedAttribute xmi:id="_ogTj0bL0EeKmkJJU_QJT5A" name="objectReader" visibility="private"/>
+      <ownedAttribute xmi:id="_ogTj0rL0EeKmkJJU_QJT5A" name="objectWriter" visibility="private"/>
+      <ownedAttribute xmi:id="_ogTj07L0EeKmkJJU_QJT5A" name="Property1"/>
+      <ownedOperation xmi:id="_ogTj1LL0EeKmkJJU_QJT5A" name="init"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBaAkLJ0EeKZwOciDc4yrQ" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBanoLJ0EeKZwOciDc4yrQ" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBanobJ0EeKZwOciDc4yrQ" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBbOsLJ0EeKZwOciDc4yrQ" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBbOsbJ0EeKZwOciDc4yrQ" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBbOsrJ0EeKZwOciDc4yrQ" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBb1wLJ0EeKZwOciDc4yrQ" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBb1wbJ0EeKZwOciDc4yrQ" name="short"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaKJgLJ0EeKZwOciDc4yrQ" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaKJgbJ0EeKZwOciDc4yrQ" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaKwkLJ0EeKZwOciDc4yrQ" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaKwkbJ0EeKZwOciDc4yrQ" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaLXoLJ0EeKZwOciDc4yrQ" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaLXobJ0EeKZwOciDc4yrQ" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaLXorJ0EeKZwOciDc4yrQ" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_OaL-sLJ0EeKZwOciDc4yrQ" name="short"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_hbALJ0EeKmkJJU_QJT5A" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_mTgLJ0EeKmkJJU_QJT5A" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_mTgbJ0EeKmkJJU_QJT5A" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_mTgrJ0EeKmkJJU_QJT5A" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_m6kLJ0EeKmkJJU_QJT5A" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_m6kbJ0EeKmkJJU_QJT5A" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_m6krJ0EeKmkJJU_QJT5A" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w_m6k7J0EeKmkJJU_QJT5A" name="short"/>
+</uml:Model>
