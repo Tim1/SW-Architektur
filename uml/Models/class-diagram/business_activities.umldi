@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_1C4fkLJwEeKZwOciDc4yrQ" activeDiagram="_1C4fkbJwEeKZwOciDc4yrQ">
   <model href="business_activities.uml#_w8IxIM37EdqwVrslYOdUDA"/>
-  <diagrams xmi:id="_1C4fkbJwEeKZwOciDc4yrQ" position="0,0" size="100,100" name="business_activities" viewport="0,372">
-    <property xmi:id="_1DJlULJwEeKZwOciDc4yrQ" key="pageFormatName" value="A4"/>
-    <property xmi:id="_1DJlUbJwEeKZwOciDc4yrQ" key="diagramWidth" value="840"/>
-    <property xmi:id="_1DJlUrJwEeKZwOciDc4yrQ" key="diagramHeight" value="1188"/>
-    <property xmi:id="_1DJlU7JwEeKZwOciDc4yrQ" key="pageMarginName" value="Small Margin"/>
+  <diagrams xmi:id="_1C4fkbJwEeKZwOciDc4yrQ" position="0,0" size="100,100" name="business_activities" viewport="0,529">
+    <property xmi:id="_1DJlULJwEeKZwOciDc4yrQ" key="pageFormatName" value=""/>
+    <property xmi:id="_1DJlUbJwEeKZwOciDc4yrQ" key="diagramWidth" value="842"/>
+    <property xmi:id="_1DJlUrJwEeKZwOciDc4yrQ" key="diagramHeight" value="1193"/>
+    <property xmi:id="_1DJlU7JwEeKZwOciDc4yrQ" key="pageMarginName" value="A4"/>
     <property xmi:id="_1DJlVLJwEeKZwOciDc4yrQ" key="diagramTopMargin" value="20"/>
     <property xmi:id="_1DJlVbJwEeKZwOciDc4yrQ" key="diagramBottomMargin" value="20"/>
     <property xmi:id="_1DJlVrJwEeKZwOciDc4yrQ" key="diagramLeftMargin" value="20"/>

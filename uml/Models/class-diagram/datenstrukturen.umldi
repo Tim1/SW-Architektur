@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_fV4JMK9SEeK194u19CEoVA" activeDiagram="_fWQjsK9SEeK194u19CEoVA">
   <model href="datenstrukturen.uml#_w8IxIM37EdqwVrslYOdUDA"/>
-  <diagrams xmi:id="_fWQjsK9SEeK194u19CEoVA" position="0,0" size="100,100" name="datenstrukturen" zoom="0.75" viewport="0,0">
-    <property xmi:id="_fomQ4K9SEeK194u19CEoVA" key="pageFormatName" value="A4"/>
-    <property xmi:id="_fom38K9SEeK194u19CEoVA" key="diagramWidth" value="840"/>
-    <property xmi:id="_fom38a9SEeK194u19CEoVA" key="diagramHeight" value="1188"/>
-    <property xmi:id="_fom38q9SEeK194u19CEoVA" key="pageMarginName" value="Small Margin"/>
+  <diagrams xmi:id="_fWQjsK9SEeK194u19CEoVA" position="0,0" size="100,100" name="datenstrukturen" zoom="0.75" viewport="0,198">
+    <property xmi:id="_fomQ4K9SEeK194u19CEoVA" key="pageFormatName" value=""/>
+    <property xmi:id="_fom38K9SEeK194u19CEoVA" key="diagramWidth" value="819"/>
+    <property xmi:id="_fom38a9SEeK194u19CEoVA" key="diagramHeight" value="1135"/>
+    <property xmi:id="_fom38q9SEeK194u19CEoVA" key="pageMarginName" value="A4"/>
     <property xmi:id="_fom3869SEeK194u19CEoVA" key="diagramTopMargin" value="20"/>
     <property xmi:id="_fom39K9SEeK194u19CEoVA" key="diagramBottomMargin" value="20"/>
     <property xmi:id="_fom39a9SEeK194u19CEoVA" key="diagramLeftMargin" value="20"/>
