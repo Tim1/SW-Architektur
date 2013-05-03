@@ -27,6 +27,8 @@ public class VereinBA extends AbstractBA {
 		if (verein == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		objectWriter.save(VereinBE.class, verein);
+
 	}
 
 	/**

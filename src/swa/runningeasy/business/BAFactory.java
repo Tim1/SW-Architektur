@@ -13,6 +13,8 @@ import swa.runningeasy.business.extern.MessageServiceBA;
  * 
  */
 public class BAFactory {
+	public static boolean			asdf	= false;
+
 	private static ErgebnisBA		ergebnisBA;
 	private static LaeuferBA		laeuferBA;
 	private static StatistikBA		statistikBA;
@@ -25,6 +27,8 @@ public class BAFactory {
 	private static MessageServiceBA	messageServiceBA;
 
 	public static void init() {
+		asdf = true;
+
 		ergebnisBA = new ErgebnisBA();
 		laeuferBA = new LaeuferBA();
 		statistikBA = new StatistikBA();

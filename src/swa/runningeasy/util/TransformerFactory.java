@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import swa.runningeasy.data.be.AbstractBE;
+import swa.runningeasy.data.be.VereinBE;
+import swa.runningeasy.dtos.VereinDTO;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -34,6 +36,14 @@ public final class TransformerFactory {
 	 * @return transformed BE
 	 */
 	public <C extends AbstractBE> C transformToBE(final Object dto, final Class<C> clazz) {
+		if (dto instanceof VereinDTO) {
+			VereinBE result = new VereinBE();
+
+			result.setName(((VereinDTO) dto).getName());
+			result.setOrt(((VereinDTO) dto).getOrt());
+			return (C) result;
+		}
+
 		return null;
 	}
 

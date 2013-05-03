@@ -8,9 +8,20 @@ package swa.runningeasy.dtos;
 
 
 public class LaeuferDTO {
+	private String	name;
+	private String	vorname;
+	private int		geburtsjahr;
+	private char	geschlecht;
+	private String	email;
+	private String	sms;
+	private String	strasse;
+	private String	plz;
+	private String	ort;
+	private String	land;
 
-	public LaeuferDTO(String name, String vorname, int geburtsjahr, char geschlecht, String email, String sms,
-			String strasse, String plz, String ort, String land) {
+	public LaeuferDTO(final String name, final String vorname, final int geburtsjahr, final char geschlecht,
+			final String email, final String sms, final String strasse, final String plz, final String ort,
+			final String land) {
 		super();
 		this.name = name;
 		this.vorname = vorname;
@@ -28,7 +39,7 @@ public class LaeuferDTO {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -36,7 +47,7 @@ public class LaeuferDTO {
 		return vorname;
 	}
 
-	public void setVorname(String vorname) {
+	public void setVorname(final String vorname) {
 		this.vorname = vorname;
 	}
 
@@ -44,7 +55,7 @@ public class LaeuferDTO {
 		return geburtsjahr;
 	}
 
-	public void setGeburtsjahr(int geburtsjahr) {
+	public void setGeburtsjahr(final int geburtsjahr) {
 		this.geburtsjahr = geburtsjahr;
 	}
 
@@ -52,7 +63,7 @@ public class LaeuferDTO {
 		return geschlecht;
 	}
 
-	public void setGeschlecht(char geschlecht) {
+	public void setGeschlecht(final char geschlecht) {
 		this.geschlecht = geschlecht;
 	}
 
@@ -60,7 +71,7 @@ public class LaeuferDTO {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail(final String email) {
 		this.email = email;
 	}
 
@@ -68,7 +79,7 @@ public class LaeuferDTO {
 		return sms;
 	}
 
-	public void setSms(String sms) {
+	public void setSms(final String sms) {
 		this.sms = sms;
 	}
 
@@ -76,7 +87,7 @@ public class LaeuferDTO {
 		return strasse;
 	}
 
-	public void setStrasse(String strasse) {
+	public void setStrasse(final String strasse) {
 		this.strasse = strasse;
 	}
 
@@ -84,7 +95,7 @@ public class LaeuferDTO {
 		return plz;
 	}
 
-	public void setPlz(String plz) {
+	public void setPlz(final String plz) {
 		this.plz = plz;
 	}
 
@@ -92,7 +103,7 @@ public class LaeuferDTO {
 		return ort;
 	}
 
-	public void setOrt(String ort) {
+	public void setOrt(final String ort) {
 		this.ort = ort;
 	}
 
@@ -100,19 +111,7 @@ public class LaeuferDTO {
 		return land;
 	}
 
-	public void setLand(String land) {
+	public void setLand(final String land) {
 		this.land = land;
 	}
-
-	private String	name;
-	private String	vorname;
-	private int		geburtsjahr;
-	private char	geschlecht;
-	private String	email;
-	private String	sms;
-	private String	strasse;
-	private String	plz;
-	private String	ort;
-	private String	land;
-
 }

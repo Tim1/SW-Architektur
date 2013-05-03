@@ -8,8 +8,13 @@ package swa.runningeasy.dtos;
  */
 
 public class VereinDTO {
+	private String	name;
+	private String	strasse;
+	private String	plz;
+	private String	ort;
+	private String	land;
 
-	public VereinDTO(String name) {
+	public VereinDTO(final String name) {
 		this.name = name;
 	}
 
@@ -17,7 +22,7 @@ public class VereinDTO {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -25,7 +30,7 @@ public class VereinDTO {
 		return strasse;
 	}
 
-	public void setStrasse(String strasse) {
+	public void setStrasse(final String strasse) {
 		this.strasse = strasse;
 	}
 
@@ -33,7 +38,7 @@ public class VereinDTO {
 		return plz;
 	}
 
-	public void setPlz(String plz) {
+	public void setPlz(final String plz) {
 		this.plz = plz;
 	}
 
@@ -41,7 +46,7 @@ public class VereinDTO {
 		return ort;
 	}
 
-	public void setOrt(String ort) {
+	public void setOrt(final String ort) {
 		this.ort = ort;
 	}
 
@@ -49,19 +54,12 @@ public class VereinDTO {
 		return land;
 	}
 
-	public void setLand(String land) {
+	public void setLand(final String land) {
 		this.land = land;
 	}
 
+	@Override
 	public String toString() {
 		return name;
 	}
-
-	private String	name;
-	private String	strasse;
-	private String	plz;
-	private String	ort;
-	private String	land;
-
-
 }
