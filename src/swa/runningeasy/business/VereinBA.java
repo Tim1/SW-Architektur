@@ -3,7 +3,6 @@
  */
 package swa.runningeasy.business;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import swa.runningeasy.dtos.VereinDTO;
@@ -46,7 +45,7 @@ public class VereinBA extends AbstractBA {
 	 * @return List of all Vereine
 	 */
 	public List<VereinDTO> getAllVereine() {
-		return new ArrayList<>();
+		return objectReader.getAllObjects(VereinDTO.class);
 	}
 
 }

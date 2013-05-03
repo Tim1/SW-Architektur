@@ -55,7 +55,7 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public void erzeugeLaufzeit(final LaufzeitDTO l) {
-
+		ergebnisBA.createErgebnis(l);
 	}
 
 	@Override

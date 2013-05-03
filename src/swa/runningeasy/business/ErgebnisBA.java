@@ -26,6 +26,7 @@ public class ErgebnisBA extends AbstractBA {
 		if (ergebnis == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		objectWriter.save(LaufzeitDTO.class, ergebnis);
 	}
 
 	/**
@@ -53,6 +54,6 @@ public class ErgebnisBA extends AbstractBA {
 	 * @return List of all Ergebnisse
 	 */
 	public List<LaufzeitDTO> getAllErgebnisse() {
-		return null;
+		return objectReader.getAllObjects(LaufzeitDTO.class);
 	}
 }

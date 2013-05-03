@@ -3,7 +3,6 @@
  */
 package swa.runningeasy.business;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import swa.runningeasy.dtos.VeranstaltungDTO;
@@ -27,6 +26,7 @@ public class VeranstaltungBA extends AbstractBA {
 		if (veranstaltung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		objectWriter.save(VeranstaltungDTO.class, veranstaltung);
 	}
 
 	/**
@@ -44,6 +44,6 @@ public class VeranstaltungBA extends AbstractBA {
 	 * @return List of all Veranstaltungen
 	 */
 	public List<VeranstaltungDTO> getAllVeranstaltungen() {
-		return new ArrayList<>();
+		return objectReader.getAllObjects(VeranstaltungDTO.class);
 	}
 }

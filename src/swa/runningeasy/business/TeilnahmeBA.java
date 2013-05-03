@@ -27,6 +27,7 @@ public class TeilnahmeBA extends AbstractBA {
 		if (teilnahme == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		objectWriter.save(AnmeldungDTO.class, teilnahme);
 	}
 
 	/**
@@ -96,7 +97,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @return List of all Teilnahmen
 	 */
 	public List<AnmeldungDTO> getAllTeilnahmen() {
-		return null;
+		return objectReader.getAllObjects(AnmeldungDTO.class);
 	}
 
 }
