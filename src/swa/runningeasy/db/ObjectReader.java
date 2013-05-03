@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import swa.runningeasy.data.be.AbstractBE;
-
 /**
  * 
  * @author Tim Schmiedl (Cyboot)
@@ -16,12 +14,17 @@ public class ObjectReader implements IObjectReader {
 	private EntityManager	em;
 
 	@Override
-	public <C extends AbstractBE> C getObjectById(final Class<C> clazz, final Long id) {
+	public <C> C getObjectById(final Class<C> clazz, final Long id) {
 		return null;
 	}
 
 	@Override
-	public <C extends AbstractBE> List<C> getObjectByWhereClause(final Class<C> clazz, final String clause) {
+	public <C> List<C> getObjectByValues(final Class<C> clazz, final Object dto) {
+		return null;
+	}
+
+	@Override
+	public <C> List<C> getAllObjects(final Class<C> clazz) {
 		return null;
 	}
 }

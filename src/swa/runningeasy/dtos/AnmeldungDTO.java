@@ -8,8 +8,14 @@ package swa.runningeasy.dtos;
 
 
 public class AnmeldungDTO {
+	private LaeuferDTO	laeufer;
+	private boolean		bezahlt;
+	private String		veranstaltung;
+	private String		verein;
+	private int			startnummer;
 
-	public AnmeldungDTO(LaeuferDTO laeufer, boolean bezahlt, String veranstaltung, String verein, int startnummer) {
+	public AnmeldungDTO(final LaeuferDTO laeufer, final boolean bezahlt, final String veranstaltung,
+			final String verein, final int startnummer) {
 		super();
 		this.laeufer = laeufer;
 		this.bezahlt = bezahlt;
@@ -22,7 +28,7 @@ public class AnmeldungDTO {
 		return laeufer;
 	}
 
-	public void setLaeufer(LaeuferDTO laeufer) {
+	public void setLaeufer(final LaeuferDTO laeufer) {
 		this.laeufer = laeufer;
 	}
 
@@ -30,7 +36,7 @@ public class AnmeldungDTO {
 		return bezahlt;
 	}
 
-	public void setBezahlt(boolean bezahlt) {
+	public void setBezahlt(final boolean bezahlt) {
 		this.bezahlt = bezahlt;
 	}
 
@@ -38,7 +44,7 @@ public class AnmeldungDTO {
 		return veranstaltung;
 	}
 
-	public void setVeranstaltung(String veranstaltung) {
+	public void setVeranstaltung(final String veranstaltung) {
 		this.veranstaltung = veranstaltung;
 	}
 
@@ -46,7 +52,7 @@ public class AnmeldungDTO {
 		return verein;
 	}
 
-	public void setVerein(String verein) {
+	public void setVerein(final String verein) {
 		this.verein = verein;
 	}
 
@@ -54,7 +60,7 @@ public class AnmeldungDTO {
 		return startnummer;
 	}
 
-	public void setStartnummer(int startnummer) {
+	public void setStartnummer(final int startnummer) {
 		this.startnummer = startnummer;
 	}
 
@@ -64,10 +70,5 @@ public class AnmeldungDTO {
 				+ ", verein=" + verein + ", startnummer=" + startnummer + "]";
 	}
 
-	private LaeuferDTO	laeufer;
-	private boolean		bezahlt;
-	private String		veranstaltung;
-	private String		verein;
-	private int			startnummer;
 
 }

@@ -6,7 +6,6 @@ package swa.runningeasy.business;
 import swa.runningeasy.db.EmulatedDB;
 import swa.runningeasy.db.IObjectReader;
 import swa.runningeasy.db.IObjectWriter;
-import swa.runningeasy.util.TransformerFactory;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -14,9 +13,8 @@ import swa.runningeasy.util.TransformerFactory;
  */
 public abstract class AbstractBA {
 	// TODO: Emulated DB for Testing
-	protected final static IObjectReader		objectReader	= EmulatedDB.getInstance();
-	protected final static IObjectWriter		objectWriter	= EmulatedDB.getInstance();
-	protected final static TransformerFactory	tmFactory		= TransformerFactory.getInstance();
+	protected final static IObjectReader	objectReader	= EmulatedDB.getInstance();
+	protected final static IObjectWriter	objectWriter	= EmulatedDB.getInstance();
 
 	/**
 	 * Private Construktor

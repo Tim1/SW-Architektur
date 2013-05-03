@@ -10,12 +10,16 @@ package swa.runningeasy.dtos;
 import java.util.Date;
 
 public class VeranstaltungDTO {
+	private String	name;
+	private Date	datum;
+	private Date	anmeldeschluss;
+	private int		startgebuehr;
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -23,7 +27,7 @@ public class VeranstaltungDTO {
 		return datum;
 	}
 
-	public void setDatum(Date datum) {
+	public void setDatum(final Date datum) {
 		this.datum = datum;
 	}
 
@@ -31,7 +35,7 @@ public class VeranstaltungDTO {
 		return anmeldeschluss;
 	}
 
-	public void setAnmeldeschluss(Date anmeldeschluss) {
+	public void setAnmeldeschluss(final Date anmeldeschluss) {
 		this.anmeldeschluss = anmeldeschluss;
 	}
 
@@ -39,17 +43,12 @@ public class VeranstaltungDTO {
 		return startgebuehr;
 	}
 
-	public void setStartgebuehr(int startgebuehr) {
+	public void setStartgebuehr(final int startgebuehr) {
 		this.startgebuehr = startgebuehr;
 	}
 
-	private String	name;
-	private Date	datum;
-	private Date	anmeldeschluss;
-	private int		startgebuehr;
 
-
-	public VeranstaltungDTO(String name, Date datum, Date anmeldeschluss, int startgebuehr) {
+	public VeranstaltungDTO(final String name, final Date datum, final Date anmeldeschluss, final int startgebuehr) {
 		super();
 		this.name = name;
 		this.datum = datum;

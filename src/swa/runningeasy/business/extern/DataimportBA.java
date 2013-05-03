@@ -6,9 +6,9 @@ package swa.runningeasy.business.extern;
 import java.io.File;
 
 import swa.runningeasy.business.AbstractBA;
-import swa.runningeasy.data.be.LaeuferBE;
-import swa.runningeasy.data.be.VeranstaltungBE;
-import swa.runningeasy.data.be.VereinBE;
+import swa.runningeasy.dtos.LaeuferDTO;
+import swa.runningeasy.dtos.VeranstaltungDTO;
+import swa.runningeasy.dtos.VereinDTO;
 import swa.runningeasy.extern.IDataimport;
 
 /**
@@ -27,7 +27,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 	 * 
 	 * @param lauefer
 	 */
-	public void importLauefer(final LaeuferBE lauefer) {
+	public void importLauefer(final LaeuferDTO lauefer) {
 
 	}
 
@@ -36,7 +36,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 	 * 
 	 * @param verein
 	 */
-	public void importVerein(final VereinBE verein) {
+	public void importVerein(final VereinDTO verein) {
 
 	}
 
@@ -45,7 +45,7 @@ public class DataimportBA extends AbstractBA implements IDataimport {
 	 * 
 	 * @param veranstaltung
 	 */
-	public void importVeranstaltung(final VeranstaltungBE veranstaltung) {
+	public void importVeranstaltung(final VeranstaltungDTO veranstaltung) {
 
 	}
 

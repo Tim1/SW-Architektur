@@ -5,13 +5,13 @@ package swa.runningeasy.business;
 
 import java.util.List;
 
-import swa.runningeasy.data.be.TeilnahmeBE;
+import swa.runningeasy.dtos.AnmeldungDTO;
 
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
  */
-// TODO: Methods from "stammdatenverwaltung.umldi"
+// FIXME: rename to AnmeldungBA as it works with AnmeldungDTO now
 public class TeilnahmeBA extends AbstractBA {
 
 
@@ -23,7 +23,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if teilnahme is null or has illegal arguments
 	 */
-	public void createTeilnahme(final TeilnahmeBE teilnahme) throws IllegalArgumentException {
+	public void createTeilnahme(final AnmeldungDTO teilnahme) throws IllegalArgumentException {
 		if (teilnahme == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
@@ -35,7 +35,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @param teilnahme
 	 *            to update
 	 */
-	public void updateTeilnahme(final TeilnahmeBE teilnahme) {
+	public void updateTeilnahme(final AnmeldungDTO teilnahme) {
 
 	}
 
@@ -46,7 +46,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @param teilnahme
 	 *            to delete
 	 */
-	public void deleteTeilnahme(final TeilnahmeBE teilnahme) {
+	public void deleteTeilnahme(final AnmeldungDTO teilnahme) {
 
 	}
 
@@ -56,7 +56,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @param teilnahme
 	 *            to generate from database
 	 */
-	public void generateStartListe(final TeilnahmeBE teilnahme) {
+	public void generateStartListe(final AnmeldungDTO teilnahme) {
 
 	}
 
@@ -67,7 +67,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @param teilnahme
 	 *            to generate from database
 	 */
-	public void generateUnpayedLaueferListe(final TeilnahmeBE teilnahme) {
+	public void generateUnpayedLaueferListe(final AnmeldungDTO teilnahme) {
 
 	}
 
@@ -78,7 +78,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * @param teilnahme
 	 *            from which you want to get the actual anzahl Teilnehmer
 	 */
-	public void getActualAnzahlTeilnehmer(final TeilnahmeBE teilnahme) {
+	public void getActualAnzahlTeilnehmer(final AnmeldungDTO teilnahme) {
 
 	}
 
@@ -87,7 +87,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * 
 	 * @param teilnahme
 	 */
-	public void disqualifiquateLauefer(final TeilnahmeBE teilnahme) {
+	public void disqualifiquateLauefer(final AnmeldungDTO teilnahme) {
 
 	}
 
@@ -95,7 +95,7 @@ public class TeilnahmeBA extends AbstractBA {
 	 * 
 	 * @return List of all Teilnahmen
 	 */
-	public List<TeilnahmeBE> getAllTeilnahmen() {
+	public List<AnmeldungDTO> getAllTeilnahmen() {
 		return null;
 	}
 

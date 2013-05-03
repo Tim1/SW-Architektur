@@ -16,7 +16,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/swa_runningeasy_junit_testdriver.jar" sourcepath="lib/swa_runningeasy_junit_testdriver_src.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/SW-Architektur/lib/swa_runningeasy_junit_testdriver.src.zip!/"/>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SW-Architektur/lib/swa_runningeasy_junit_testdriver.jar!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>

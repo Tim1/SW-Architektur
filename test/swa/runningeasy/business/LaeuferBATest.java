@@ -8,7 +8,7 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
-import swa.runningeasy.data.be.LaeuferBE;
+import swa.runningeasy.TestData;
 
 
 /**
@@ -27,13 +27,13 @@ public class LaeuferBATest extends AbstractBATest {
 
 	@Test
 	public void testgenerateGesamtStatistik() {
-		laeufer.generateGesamtStatistik(new LaeuferBE());
+		laeufer.generateGesamtStatistik(TestData.getLaeuferDTO());
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testupdateLaeufer() {
 		try {
-			laeufer.createLaeufer(new LaeuferBE());
+			laeufer.createLaeufer(TestData.getLaeuferDTO());
 		} catch (Throwable t) {
 			fail();
 		}

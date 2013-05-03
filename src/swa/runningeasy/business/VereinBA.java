@@ -6,7 +6,7 @@ package swa.runningeasy.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import swa.runningeasy.data.be.VereinBE;
+import swa.runningeasy.dtos.VereinDTO;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -23,11 +23,11 @@ public class VereinBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if verein is null or has illegal arguments
 	 */
-	public void createVerein(final VereinBE verein) throws IllegalArgumentException {
+	public void createVerein(final VereinDTO verein) throws IllegalArgumentException {
 		if (verein == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		objectWriter.save(VereinBE.class, verein);
+		objectWriter.save(VereinDTO.class, verein);
 
 	}
 
@@ -37,7 +37,7 @@ public class VereinBA extends AbstractBA {
 	 * @param verein
 	 *            to update
 	 */
-	public void updateVerein(final VereinBE verein) {
+	public void updateVerein(final VereinDTO verein) {
 
 	}
 
@@ -45,7 +45,7 @@ public class VereinBA extends AbstractBA {
 	 * 
 	 * @return List of all Vereine
 	 */
-	public List<VereinBE> getAllVereine() {
+	public List<VereinDTO> getAllVereine() {
 		return new ArrayList<>();
 	}
 

@@ -11,9 +11,17 @@ package swa.runningeasy.dtos;
 import java.util.Date;
 
 public class ListeneintragDTO {
+	private String	name;
+	private String	vorname;
+	private int		geburtsjahr;
+	private char	geschlecht;
+	private String	verein;
+	private int		startnummer;
+	private int		platzierung;
+	private Date	laufzeit;
 
-	public ListeneintragDTO(String name, String vorname, int geburtsjahr, char geschlecht, String verein,
-			int startnummer, int platzierung, Date laufzeit) {
+	public ListeneintragDTO(final String name, final String vorname, final int geburtsjahr, final char geschlecht,
+			final String verein, final int startnummer, final int platzierung, final Date laufzeit) {
 		super();
 		this.name = name;
 		this.vorname = vorname;
@@ -29,7 +37,7 @@ public class ListeneintragDTO {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -37,7 +45,7 @@ public class ListeneintragDTO {
 		return vorname;
 	}
 
-	public void setVorname(String vorname) {
+	public void setVorname(final String vorname) {
 		this.vorname = vorname;
 	}
 
@@ -45,7 +53,7 @@ public class ListeneintragDTO {
 		return geburtsjahr;
 	}
 
-	public void setGeburtsjahr(int geburtsjahr) {
+	public void setGeburtsjahr(final int geburtsjahr) {
 		this.geburtsjahr = geburtsjahr;
 	}
 
@@ -53,7 +61,7 @@ public class ListeneintragDTO {
 		return geschlecht;
 	}
 
-	public void setGeschlecht(char geschlecht) {
+	public void setGeschlecht(final char geschlecht) {
 		this.geschlecht = geschlecht;
 	}
 
@@ -61,7 +69,7 @@ public class ListeneintragDTO {
 		return verein;
 	}
 
-	public void setVerein(String verein) {
+	public void setVerein(final String verein) {
 		this.verein = verein;
 	}
 
@@ -69,7 +77,7 @@ public class ListeneintragDTO {
 		return startnummer;
 	}
 
-	public void setStartnummer(int startnummer) {
+	public void setStartnummer(final int startnummer) {
 		this.startnummer = startnummer;
 	}
 
@@ -77,7 +85,7 @@ public class ListeneintragDTO {
 		return platzierung;
 	}
 
-	public void setPlatzierung(int platzierung) {
+	public void setPlatzierung(final int platzierung) {
 		this.platzierung = platzierung;
 	}
 
@@ -85,7 +93,7 @@ public class ListeneintragDTO {
 		return laufzeit;
 	}
 
-	public void setLaufzeit(Date laufzeit) {
+	public void setLaufzeit(final Date laufzeit) {
 		this.laufzeit = laufzeit;
 	}
 
@@ -95,16 +103,6 @@ public class ListeneintragDTO {
 				+ ", geschlecht=" + geschlecht + ", verein=" + verein + ", startnummer=" + startnummer
 				+ ", platzierung=" + platzierung + ", laufzeit=" + laufzeit + "]";
 	}
-
-
-	private String	name;
-	private String	vorname;
-	private int		geburtsjahr;
-	private char	geschlecht;
-	private String	verein;
-	private int		startnummer;
-	private int		platzierung;
-	private Date	laufzeit;
 
 
 }

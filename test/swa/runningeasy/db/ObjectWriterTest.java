@@ -6,8 +6,9 @@ package swa.runningeasy.db;
 import org.junit.Before;
 import org.junit.Test;
 
+import swa.runningeasy.TestData;
 import swa.runningeasy.business.AbstractBATest;
-import swa.runningeasy.data.be.LaeuferBE;
+import swa.runningeasy.dtos.LaeuferDTO;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -25,7 +26,7 @@ public class ObjectWriterTest extends AbstractBATest {
 
 	@Test
 	public void testsave() {
-		objectWriter.save(LaeuferBE.class, new LaeuferBE());
+		objectWriter.save(LaeuferDTO.class, TestData.getLaeuferDTO());
 	}
 
 }

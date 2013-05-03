@@ -6,7 +6,7 @@ package swa.runningeasy.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import swa.runningeasy.data.be.VeranstaltungBE;
+import swa.runningeasy.dtos.VeranstaltungDTO;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -23,7 +23,7 @@ public class VeranstaltungBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if veranstaltung is null or has illegal arguments
 	 */
-	public void createVeranstaltung(final VeranstaltungBE veranstaltung) throws IllegalArgumentException {
+	public void createVeranstaltung(final VeranstaltungDTO veranstaltung) throws IllegalArgumentException {
 		if (veranstaltung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
@@ -35,7 +35,7 @@ public class VeranstaltungBA extends AbstractBA {
 	 * @param veranstaltung
 	 *            to update
 	 */
-	public void updateVeranstaltung(final VeranstaltungBE veranstaltung) {
+	public void updateVeranstaltung(final VeranstaltungDTO veranstaltung) {
 
 	}
 
@@ -43,7 +43,7 @@ public class VeranstaltungBA extends AbstractBA {
 	/**
 	 * @return List of all Veranstaltungen
 	 */
-	public List<VeranstaltungBE> getAllVeranstaltungen() {
+	public List<VeranstaltungDTO> getAllVeranstaltungen() {
 		return new ArrayList<>();
 	}
 }

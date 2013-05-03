@@ -3,31 +3,29 @@
  */
 package swa.runningeasy.data.npe;
 
-import java.util.Map;
-
-import swa.runningeasy.data.be.ErgebnisBE;
-import swa.runningeasy.data.be.LaeuferBE;
 
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
  */
+// FIXME: is this class still necessary?
 public abstract class ErgebnislisteNPE extends AbstractNPE {
-
-	private Map<LaeuferBE, ErgebnisBE>	ergebnisMap	= null;
-
-	/**
-	 * @return the ergebnisMap
-	 */
-	public Map<LaeuferBE, ErgebnisBE> getErgebnisMap() {
-		return ergebnisMap;
-	}
-
-	/**
-	 * @param ergebnisMap
-	 *            the ergebnisMap to set
-	 */
-	public void setErgebnisMap(final Map<LaeuferBE, ErgebnisBE> ergebnisMap) {
-		this.ergebnisMap = ergebnisMap;
-	}
+	//
+	// private Map<LaeuferBE, ErgebnisBE> ergebnisMap = null;
+	//
+	// /**
+	// * @return the ergebnisMap
+	// */
+	// public Map<LaeuferBE, ErgebnisBE> getErgebnisMap() {
+	// return ergebnisMap;
+	// }
+	//
+	// /**
+	// * @param ergebnisMap
+	// * the ergebnisMap to set
+	// */
+	// public void setErgebnisMap(final Map<LaeuferBE, ErgebnisBE> ergebnisMap)
+	// {
+	// this.ergebnisMap = ergebnisMap;
+	// }
 }
