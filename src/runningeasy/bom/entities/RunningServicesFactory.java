@@ -13,7 +13,7 @@ import swa.runningeasy.services.RunningServices;
 public class RunningServicesFactory {
 	private static RunningServices	instance;
 
-	public static RunningServices getInstance() {
+	public static synchronized RunningServices getInstance() {
 		if (instance == null) {
 			instance = new RunningServiceBA();
 			instance.init();
