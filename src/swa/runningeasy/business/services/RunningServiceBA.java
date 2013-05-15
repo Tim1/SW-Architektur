@@ -5,11 +5,11 @@ package swa.runningeasy.business.services;
 
 import java.util.List;
 
+import swa.runningeasy.business.AnmeldungBA;
 import swa.runningeasy.business.BAFactory;
-import swa.runningeasy.business.ErgebnisBA;
 import swa.runningeasy.business.LaeuferBA;
-import swa.runningeasy.business.StatistikBA;
-import swa.runningeasy.business.TeilnahmeBA;
+import swa.runningeasy.business.LaufzeitBA;
+import swa.runningeasy.business.ListeneintragBA;
 import swa.runningeasy.business.VeranstaltungBA;
 import swa.runningeasy.business.VereinBA;
 import swa.runningeasy.dtos.AnmeldungDTO;
@@ -28,10 +28,10 @@ import swa.runningeasy.services.RunningServices;
 public class RunningServiceBA implements RunningServices {
 	private VeranstaltungBA	veranstaltungBA;
 	private VereinBA		vereinBA;
-	private TeilnahmeBA		teilnahmeBA;
+	private AnmeldungBA		teilnahmeBA;
 	private LaeuferBA		laeuferBA;
-	private ErgebnisBA		ergebnisBA;
-	private StatistikBA		statistikBA;
+	private LaufzeitBA		ergebnisBA;
+	private ListeneintragBA	statistikBA;
 
 	@Override
 	public void erzeugeVeranstaltung(final VeranstaltungDTO v) {
@@ -45,7 +45,7 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public void erzeugeAnmeldung(final AnmeldungDTO a) {
-		teilnahmeBA.createTeilnahme(a);
+		teilnahmeBA.createAnmeldung(a);
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public void erzeugeLaufzeit(final LaufzeitDTO l) {
-		ergebnisBA.createErgebnis(l);
+		ergebnisBA.createLaufzeit(l);
 	}
 
 	@Override
@@ -75,17 +75,17 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public List<AnmeldungDTO> getAnmeldungen(final String Veranstaltung) {
-		return teilnahmeBA.getAllTeilnahmen();
+		return teilnahmeBA.getAllAnmeldungen();
 	}
 
 	@Override
 	public List<LaufzeitDTO> getLaufzeiten(final String Veranstaltung) {
-		return ergebnisBA.getAllErgebnisse();
+		return ergebnisBA.getAllLaufzeiten();
 	}
 
 	@Override
 	public List<ListeneintragDTO> getAuswertung(final Auswertung a, final String Veranstaltung) {
-		return statistikBA.generateErgebnisliste(a, Veranstaltung);
+		return statistikBA.generateListeneintrag(a, Veranstaltung);
 	}
 
 	@Override

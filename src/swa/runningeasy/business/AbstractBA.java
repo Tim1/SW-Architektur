@@ -12,7 +12,7 @@ import swa.runningeasy.db.IObjectWriter;
  * 
  */
 public abstract class AbstractBA {
-	// TODO: Emulated DB for Testing
+	// TODO-Reminder Emulated DB for Testing
 	protected final static IObjectReader	objectReader	= EmulatedDB.getInstance();
 	protected final static IObjectWriter	objectWriter	= EmulatedDB.getInstance();
 

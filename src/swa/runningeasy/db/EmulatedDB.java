@@ -29,6 +29,7 @@ public class EmulatedDB implements IObjectReader, IObjectWriter {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public <C> List<C> getAllObjects(final Class<C> clazz) {
 		List<C> result = new ArrayList<>();

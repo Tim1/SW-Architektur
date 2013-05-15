@@ -11,14 +11,14 @@ package swa.runningeasy.services;
  *
  */
 
+import java.util.List;
+
 import swa.runningeasy.dtos.AnmeldungDTO;
+import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
+import swa.runningeasy.dtos.ListeneintragDTO;
 import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
-import swa.runningeasy.dtos.LaeuferDTO;
-import swa.runningeasy.dtos.ListeneintragDTO;
-
-import java.util.List;
 
 
 public interface RunningServices {

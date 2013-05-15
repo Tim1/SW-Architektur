@@ -4,7 +4,6 @@
 package swa.runningeasy.db;
 
 
-
 /**
  * @author Tim Schmiedl (Cyboot)
  * 

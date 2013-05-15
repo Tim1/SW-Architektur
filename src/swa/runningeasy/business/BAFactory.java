@@ -13,12 +13,10 @@ import swa.runningeasy.business.extern.MessageServiceBA;
  * 
  */
 public class BAFactory {
-	public static boolean			asdf	= false;
-
-	private static ErgebnisBA		ergebnisBA;
+	private static LaufzeitBA		ergebnisBA;
 	private static LaeuferBA		laeuferBA;
-	private static StatistikBA		statistikBA;
-	private static TeilnahmeBA		teilnahmeBA;
+	private static ListeneintragBA	statistikBA;
+	private static AnmeldungBA		teilnahmeBA;
 	private static VeranstaltungBA	veranstaltungBA;
 	private static VereinBA			vereinBA;
 	private static BankBA			bankBA;
@@ -27,12 +25,10 @@ public class BAFactory {
 	private static MessageServiceBA	messageServiceBA;
 
 	public static void init() {
-		asdf = true;
-
-		ergebnisBA = new ErgebnisBA();
+		ergebnisBA = new LaufzeitBA();
 		laeuferBA = new LaeuferBA();
-		statistikBA = new StatistikBA();
-		teilnahmeBA = new TeilnahmeBA();
+		statistikBA = new ListeneintragBA();
+		teilnahmeBA = new AnmeldungBA();
 		veranstaltungBA = new VeranstaltungBA();
 		vereinBA = new VereinBA();
 		bankBA = new BankBA();
@@ -52,7 +48,7 @@ public class BAFactory {
 		messageServiceBA.init();
 	}
 
-	public static ErgebnisBA getErgebnisBA() {
+	public static LaufzeitBA getErgebnisBA() {
 		return ergebnisBA;
 	}
 
@@ -60,11 +56,11 @@ public class BAFactory {
 		return laeuferBA;
 	}
 
-	public static StatistikBA getStatistikBA() {
+	public static ListeneintragBA getStatistikBA() {
 		return statistikBA;
 	}
 
-	public static TeilnahmeBA getTeilnahmeBA() {
+	public static AnmeldungBA getTeilnahmeBA() {
 		return teilnahmeBA;
 	}
 

@@ -17,10 +17,9 @@ import swa.runningeasy.services.Auswertung;
  * @author Tim Schmiedl (Cyboot)
  * 
  */
-// FIXME: rename to ListeneintragBA as it works with ListeneintragDTO now
-public class StatistikBA extends AbstractBA {
+public class ListeneintragBA extends AbstractBA {
 
-	public List<ListeneintragDTO> generateErgebnisliste(final Auswertung auswertung, final String veranstaltung) {
+	public List<ListeneintragDTO> generateListeneintrag(final Auswertung auswertung, final String veranstaltung) {
 		// TODO: whats about auswertung? It seems to be unused
 
 		List<AnmeldungDTO> anmeldungen = getAllAnmeldungen(veranstaltung);
