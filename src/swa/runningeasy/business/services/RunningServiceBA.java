@@ -28,10 +28,10 @@ import swa.runningeasy.services.RunningServices;
 public class RunningServiceBA implements RunningServices {
 	private VeranstaltungBA	veranstaltungBA;
 	private VereinBA		vereinBA;
-	private AnmeldungBA		teilnahmeBA;
+	private AnmeldungBA		anmeldungBA;
 	private LaeuferBA		laeuferBA;
 	private LaufzeitBA		ergebnisBA;
-	private ListeneintragBA	statistikBA;
+	private ListeneintragBA	listeneintragBA;
 
 	@Override
 	public void erzeugeVeranstaltung(final VeranstaltungDTO v) {
@@ -45,7 +45,7 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public void erzeugeAnmeldung(final AnmeldungDTO a) {
-		teilnahmeBA.createAnmeldung(a);
+		anmeldungBA.createAnmeldung(a);
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public List<AnmeldungDTO> getAnmeldungen(final String Veranstaltung) {
-		return teilnahmeBA.getAllAnmeldungen();
+		return anmeldungBA.getAllAnmeldungen();
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public List<ListeneintragDTO> getAuswertung(final Auswertung a, final String Veranstaltung) {
-		return statistikBA.generateListeneintrag(a, Veranstaltung);
+		return listeneintragBA.generateListeneintrag(a, Veranstaltung);
 	}
 
 	@Override
@@ -94,10 +94,10 @@ public class RunningServiceBA implements RunningServices {
 
 		veranstaltungBA = BAFactory.getVeranstaltungBA();
 		vereinBA = BAFactory.getVereinBA();
-		teilnahmeBA = BAFactory.getTeilnahmeBA();
+		anmeldungBA = BAFactory.getTeilnahmeBA();
 		laeuferBA = BAFactory.getLaeuferBA();
 		ergebnisBA = BAFactory.getErgebnisBA();
-		statistikBA = BAFactory.getStatistikBA();
+		listeneintragBA = BAFactory.getStatistikBA();
 	}
 
 }
