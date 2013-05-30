@@ -5,6 +5,8 @@ package swa.runningeasy.business;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import swa.runningeasy.dtos.VeranstaltungDTO;
 
 /**
@@ -12,7 +14,7 @@ import swa.runningeasy.dtos.VeranstaltungDTO;
  * 
  */
 public class VeranstaltungBA extends AbstractBA {
-
+	private static Logger	logger	= Logger.getLogger(VeranstaltungBA.class);
 
 	/**
 	 * Creates a new Veranstaltung and saves
@@ -23,6 +25,7 @@ public class VeranstaltungBA extends AbstractBA {
 	 *             if veranstaltung is null or has illegal arguments
 	 */
 	public void createVeranstaltung(final VeranstaltungDTO veranstaltung) throws IllegalArgumentException {
+		logger.debug("call createVeranstaltung()-method");
 		if (veranstaltung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
@@ -36,7 +39,7 @@ public class VeranstaltungBA extends AbstractBA {
 	 *            to update
 	 */
 	public void updateVeranstaltung(final VeranstaltungDTO veranstaltung) {
-
+		logger.debug("call updateVeranstaltung()-method");
 	}
 
 
@@ -44,6 +47,7 @@ public class VeranstaltungBA extends AbstractBA {
 	 * @return List of all Veranstaltungen
 	 */
 	public List<VeranstaltungDTO> getAllVeranstaltungen() {
+		logger.debug("call getAllVeranstaltungen()-method");
 		return objectReader.getAllObjects(VeranstaltungDTO.class);
 	}
 }

@@ -5,6 +5,8 @@ package swa.runningeasy.business;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import swa.runningeasy.dtos.LaufzeitDTO;
 
 /**
@@ -12,6 +14,7 @@ import swa.runningeasy.dtos.LaufzeitDTO;
  * 
  */
 public class LaufzeitBA extends AbstractBA {
+	private static Logger	logger	= Logger.getLogger(LaufzeitBA.class);
 
 	/**
 	 * Creates a new Laufzeit and saves
@@ -22,6 +25,7 @@ public class LaufzeitBA extends AbstractBA {
 	 *             if Laufzeit is null or has illegal arguments
 	 */
 	public void createLaufzeit(final LaufzeitDTO Laufzeit) throws IllegalArgumentException {
+		logger.debug("call createLaufzeit()-Method");
 		if (Laufzeit == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
@@ -35,7 +39,7 @@ public class LaufzeitBA extends AbstractBA {
 	 *            to update
 	 */
 	public void updateLaufzeit(final LaufzeitDTO Laufzeit) {
-
+		logger.debug("call updateLaufzeit()-Method");
 	}
 
 
@@ -43,6 +47,7 @@ public class LaufzeitBA extends AbstractBA {
 	 * TODO: to implement (editTime)
 	 */
 	public void editTime() {
+		logger.debug("call editTime()-Method");
 
 	}
 
@@ -51,6 +56,7 @@ public class LaufzeitBA extends AbstractBA {
 	 * @return List of all Laufzeitse
 	 */
 	public List<LaufzeitDTO> getAllLaufzeiten() {
+		logger.debug("call getAllLaufzeiten()-Method");
 		return objectReader.getAllObjects(LaufzeitDTO.class);
 	}
 }
