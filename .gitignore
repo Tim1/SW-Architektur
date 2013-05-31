@@ -8,6 +8,7 @@ desktop.ini
 *.jar
 *.war
 *.ear
+*.log
 
 # include lib and doc folder (even if jars)#
 !lib/*
