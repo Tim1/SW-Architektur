@@ -12,8 +12,6 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import swa.runningeasy.db.ObjectWriter;
-
 public class ListeneintragDTO {
 	private String			name;
 	private String			vorname;

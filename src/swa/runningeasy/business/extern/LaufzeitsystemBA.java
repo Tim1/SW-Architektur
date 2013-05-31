@@ -6,7 +6,6 @@ package swa.runningeasy.business.extern;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.business.AbstractBA;
-import swa.runningeasy.business.VereinBA;
 import swa.runningeasy.extern.ILaufzeitsystem;
 
 /**

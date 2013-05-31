@@ -6,8 +6,6 @@ import javax.persistence.EntityManager;
 
 import org.apache.log4j.Logger;
 
-import swa.runningeasy.business.extern.MessageServiceBA;
-
 /**
  * 
  * @author Tim Schmiedl (Cyboot)

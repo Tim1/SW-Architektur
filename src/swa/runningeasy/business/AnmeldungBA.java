@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import runningeasy.bom.entities.RunningServicesFactory;
 import swa.runningeasy.dtos.AnmeldungDTO;
 
 /**

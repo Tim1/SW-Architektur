@@ -11,8 +11,6 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-import swa.runningeasy.db.ObjectWriter;
-
 public class LaufzeitDTO {
 	private int				Startnummer;
 	private Date			laufzeit;

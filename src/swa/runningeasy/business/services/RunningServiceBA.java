@@ -22,7 +22,6 @@ import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
 import swa.runningeasy.services.Auswertung;
 import swa.runningeasy.services.RunningServices;
-import swa.runningeasy.util.DummyUtils;
 
 /**
  * @author Tim Schmiedl (Cyboot)

@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import swa.runningeasy.business.extern.MessageServiceBA;
-
 public class EmulatedDB implements IObjectReader, IObjectWriter {
 	private static EmulatedDB	instance	= new EmulatedDB();
 

@@ -8,7 +8,6 @@ import java.io.File;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.business.AbstractBA;
-import swa.runningeasy.business.VereinBA;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
