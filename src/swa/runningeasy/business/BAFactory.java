@@ -3,6 +3,8 @@
  */
 package swa.runningeasy.business;
 
+import org.apache.log4j.Logger;
+
 import swa.runningeasy.business.extern.BankBA;
 import swa.runningeasy.business.extern.DataimportBA;
 import swa.runningeasy.business.extern.LaufzeitsystemBA;
@@ -13,6 +15,7 @@ import swa.runningeasy.business.extern.MessageServiceBA;
  * 
  */
 public class BAFactory {
+	private static Logger			logger	= Logger.getLogger(BAFactory.class);
 	private static LaufzeitBA		ergebnisBA;
 	private static LaeuferBA		laeuferBA;
 	private static ListeneintragBA	statistikBA;
@@ -25,6 +28,7 @@ public class BAFactory {
 	private static MessageServiceBA	messageServiceBA;
 
 	public static void init() {
+		logger.info("Initializing BAs...");
 		ergebnisBA = new LaufzeitBA();
 		laeuferBA = new LaeuferBA();
 		statistikBA = new ListeneintragBA();
@@ -46,6 +50,7 @@ public class BAFactory {
 		datenimportBA.init();
 		laufzeitsystemBA.init();
 		messageServiceBA.init();
+		logger.info("Done initializing BAs.");
 	}
 
 	public static LaufzeitBA getErgebnisBA() {

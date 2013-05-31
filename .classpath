@@ -19,5 +19,6 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/SW-Architektur/lib/swa_runningeasy_junit_testdriver.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar" sourcepath="lib/log4j-1.2.14-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

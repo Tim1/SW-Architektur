@@ -25,7 +25,7 @@ public abstract class AbstractBA {
 
 
 	/**
-	 * initialize the BA, should be overriden for each BA
+	 * initialize the BA, can be overriden in each BA to initialize things
 	 */
 	public void init() {
 	}
