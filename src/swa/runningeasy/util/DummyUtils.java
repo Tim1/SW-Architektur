@@ -4,6 +4,7 @@ package swa.runningeasy.util;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import runningeasy.bom.entities.RunningServicesFactory;
 import swa.runningeasy.business.BAFactory;
 
 /**
@@ -22,5 +23,6 @@ public class DummyUtils {
 	public static void main(final String[] args) {
 		PropertyConfigurator.configureAndWatch("log4j.properties", 10 * 1000);
 		new DummyUtils();
+		RunningServicesFactory.getInstance();
 	}
 }

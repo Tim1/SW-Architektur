@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
@@ -18,8 +20,10 @@ import swa.runningeasy.services.Auswertung;
  * 
  */
 public class ListeneintragBA extends AbstractBA {
+	private static Logger	logger	= Logger.getLogger(ListeneintragBA.class);
 
 	public List<ListeneintragDTO> generateListeneintrag(final Auswertung auswertung, final String veranstaltung) {
+		logger.trace("call generateListeneintrag()-method");
 		// TODO: whats about auswertung? It seems to be unused
 
 		List<AnmeldungDTO> anmeldungen = getAllAnmeldungen(veranstaltung);
@@ -45,6 +49,7 @@ public class ListeneintragBA extends AbstractBA {
 	 * @return
 	 */
 	private LaufzeitDTO getLaufzeit(final int startnummer, final String veranstaltung) {
+		logger.trace("call getLaufzeit()-method");
 		List<LaufzeitDTO> list = objectReader.getAllObjects(LaufzeitDTO.class);
 
 		for (LaufzeitDTO l : list) {
@@ -56,6 +61,7 @@ public class ListeneintragBA extends AbstractBA {
 	}
 
 	private List<AnmeldungDTO> getAllAnmeldungen(final String veranstaltung) {
+		logger.trace("call getAllAnmeldungen()-method");
 		List<AnmeldungDTO> result = objectReader.getAllObjects(AnmeldungDTO.class);
 
 		Iterator<AnmeldungDTO> it = result.iterator();

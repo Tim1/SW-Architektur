@@ -54,42 +54,52 @@ public class BAFactory {
 	}
 
 	public static LaufzeitBA getErgebnisBA() {
+		logger.trace("call getErgebnisBA()-Method");
 		return ergebnisBA;
 	}
 
 	public static LaeuferBA getLaeuferBA() {
+		logger.trace("call getLaeuferBA()-Method");
 		return laeuferBA;
 	}
 
 	public static ListeneintragBA getStatistikBA() {
+		logger.trace("call getStatistikBA()-Method");
 		return statistikBA;
 	}
 
 	public static AnmeldungBA getTeilnahmeBA() {
+		logger.trace("call getTeilnahmeBA()-Method");
 		return teilnahmeBA;
 	}
 
 	public static VeranstaltungBA getVeranstaltungBA() {
+		logger.trace("call getVeranstaltungBA()-Method");
 		return veranstaltungBA;
 	}
 
 	public static VereinBA getVereinBA() {
+		logger.trace("call getVereinBA()-Method");
 		return vereinBA;
 	}
 
 	public static BankBA getBankBA() {
+		logger.trace("call getBankBA()-Method");
 		return bankBA;
 	}
 
 	public static DataimportBA getDatenimportBA() {
+		logger.trace("call getDatenimportBA()-Method");
 		return datenimportBA;
 	}
 
 	public static LaufzeitsystemBA getLaufzeitsystemBA() {
+		logger.trace("call getLaufzeitsystemBA()-Method");
 		return laufzeitsystemBA;
 	}
 
 	public static MessageServiceBA getMessageServiceBA() {
+		logger.trace("call getMessageServiceBA()-Method");
 		return messageServiceBA;
 	}
 }

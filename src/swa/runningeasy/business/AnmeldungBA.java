@@ -5,6 +5,9 @@ package swa.runningeasy.business;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
+import runningeasy.bom.entities.RunningServicesFactory;
 import swa.runningeasy.dtos.AnmeldungDTO;
 
 /**
@@ -13,6 +16,7 @@ import swa.runningeasy.dtos.AnmeldungDTO;
  */
 public class AnmeldungBA extends AbstractBA {
 
+	private static Logger	logger	= Logger.getLogger(AnmeldungBA.class);
 
 	/**
 	 * Creates a new Anmeldung and saves
@@ -23,6 +27,7 @@ public class AnmeldungBA extends AbstractBA {
 	 *             if Anmeldung is null or has illegal arguments
 	 */
 	public void createAnmeldung(final AnmeldungDTO Anmeldung) throws IllegalArgumentException {
+		logger.trace("call createAnmeldung-method");
 		if (Anmeldung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
@@ -36,6 +41,7 @@ public class AnmeldungBA extends AbstractBA {
 	 *            to update
 	 */
 	public void updateAnmeldung(final AnmeldungDTO Anmeldung) {
+		logger.trace("call updateAnmeldung()-method");
 
 	}
 
@@ -47,6 +53,7 @@ public class AnmeldungBA extends AbstractBA {
 	 *            to delete
 	 */
 	public void deleteAnmeldung(final AnmeldungDTO Anmeldung) {
+		logger.trace("call deleteAnmeldung()-method");
 
 	}
 
@@ -57,6 +64,7 @@ public class AnmeldungBA extends AbstractBA {
 	 *            to generate from database
 	 */
 	public void generateStartListe(final AnmeldungDTO Anmeldung) {
+		logger.trace("call generateStartListe()-method");
 
 	}
 
@@ -68,6 +76,7 @@ public class AnmeldungBA extends AbstractBA {
 	 *            to generate from database
 	 */
 	public void generateUnpayedLaueferListe(final AnmeldungDTO Anmeldung) {
+		logger.trace("call generateUnpayedLaueferListe()-method");
 
 	}
 
@@ -79,6 +88,7 @@ public class AnmeldungBA extends AbstractBA {
 	 *            from which you want to get the actual anzahl Teilnehmer
 	 */
 	public void getActualAnzahlTeilnehmer(final AnmeldungDTO Anmeldung) {
+		logger.trace("call getActualAnzahlTeilnehmer()-method");
 
 	}
 
@@ -88,6 +98,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @param Anmeldung
 	 */
 	public void disqualifiquateLauefer(final AnmeldungDTO Anmeldung) {
+		logger.trace("call disqualifiquateLauefer()-method");
 
 	}
 
@@ -96,6 +107,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @return List of all Anmeldungn
 	 */
 	public List<AnmeldungDTO> getAllAnmeldungen() {
+		logger.trace("call getAllAnmeldungen()-method");
 		return objectReader.getAllObjects(AnmeldungDTO.class);
 	}
 

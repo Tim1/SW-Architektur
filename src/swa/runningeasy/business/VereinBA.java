@@ -5,6 +5,8 @@ package swa.runningeasy.business;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import swa.runningeasy.dtos.VereinDTO;
 
 /**
@@ -12,7 +14,7 @@ import swa.runningeasy.dtos.VereinDTO;
  * 
  */
 public class VereinBA extends AbstractBA {
-
+	private static Logger	logger	= Logger.getLogger(VereinBA.class);
 
 	/**
 	 * Creates a new Verein and saves
@@ -23,6 +25,7 @@ public class VereinBA extends AbstractBA {
 	 *             if verein is null or has illegal arguments
 	 */
 	public void createVerein(final VereinDTO verein) throws IllegalArgumentException {
+		logger.trace("call createVerein()-method");
 		if (verein == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
@@ -37,6 +40,7 @@ public class VereinBA extends AbstractBA {
 	 *            to update
 	 */
 	public void updateVerein(final VereinDTO verein) {
+		logger.trace("call updateVerein()-method");
 
 	}
 
@@ -45,6 +49,7 @@ public class VereinBA extends AbstractBA {
 	 * @return List of all Vereine
 	 */
 	public List<VereinDTO> getAllVereine() {
+		logger.trace("call getAllVereine()-method");
 		return objectReader.getAllObjects(VereinDTO.class);
 	}
 
