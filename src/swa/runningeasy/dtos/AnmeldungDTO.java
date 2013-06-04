@@ -1,8 +1,5 @@
 package swa.runningeasy.dtos;
 
-import org.apache.log4j.Logger;
-
-import swa.runningeasy.db.ObjectWriter;
 
 /**
  * @author Bernhard Hollunder

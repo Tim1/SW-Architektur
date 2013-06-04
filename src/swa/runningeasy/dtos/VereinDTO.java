@@ -1,6 +1,5 @@
 package swa.runningeasy.dtos;
 
-import org.apache.log4j.Logger;
 
 /**
  * @author Bernhard Hollunder
@@ -10,11 +9,11 @@ import org.apache.log4j.Logger;
  */
 
 public class VereinDTO {
-	private String			name;
-	private String			strasse;
-	private String			plz;
-	private String			ort;
-	private String			land;
+	private String	name;
+	private String	strasse;
+	private String	plz;
+	private String	ort;
+	private String	land;
 
 	public VereinDTO(final String name) {
 		this.name = name;
@@ -62,6 +61,7 @@ public class VereinDTO {
 
 	@Override
 	public String toString() {
-		return name;
+		return "VereinDTO [name=" + name + ", strasse=" + strasse + ", plz=" + plz + ", ort=" + ort + ", land=" + land
+				+ "]";
 	}
 }

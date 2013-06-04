@@ -1,6 +1,5 @@
 package swa.runningeasy.dtos;
 
-import org.apache.log4j.Logger;
 
 /**
  * @author Bernhard Hollunder
@@ -10,16 +9,16 @@ import org.apache.log4j.Logger;
 
 
 public class LaeuferDTO {
-	private String			name;
-	private String			vorname;
-	private int				geburtsjahr;
-	private char			geschlecht;
-	private String			email;
-	private String			sms;
-	private String			strasse;
-	private String			plz;
-	private String			ort;
-	private String			land;
+	private String	name;
+	private String	vorname;
+	private int		geburtsjahr;
+	private char	geschlecht;
+	private String	email;
+	private String	sms;
+	private String	strasse;
+	private String	plz;
+	private String	ort;
+	private String	land;
 
 	public LaeuferDTO(final String name, final String vorname, final int geburtsjahr, final char geschlecht,
 			final String email, final String sms, final String strasse, final String plz, final String ort,
@@ -116,4 +115,11 @@ public class LaeuferDTO {
 	public void setLand(final String land) {
 		this.land = land;
 	}
+
+	@Override
+	public String toString() {
+		return "LaeuferDTO [name=" + name + ", vorname=" + vorname + ", geburtsjahr=" + geburtsjahr + ", geschlecht="
+				+ geschlecht + ", email=" + email + ", land=" + land + "]";
+	}
+
 }
