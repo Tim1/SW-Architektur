@@ -1,24 +1,22 @@
 package swa.runningeasy.dtos;
 
+import java.util.Date;
+
 /**
  * @author Bernhard Hollunder
  * 
- * Represents an entry in a starter and result list.
+ *         Represents an entry in a starter and result list.
  * 
  */
-
-
-import java.util.Date;
-
 public class ListeneintragDTO {
-	private String			name;
-	private String			vorname;
-	private int				geburtsjahr;
-	private char			geschlecht;
-	private String			verein;
-	private int				startnummer;
-	private int				platzierung;
-	private Date			laufzeit;
+	private String	name;
+	private String	vorname;
+	private int		geburtsjahr;
+	private char	geschlecht;
+	private String	verein;
+	private int		startnummer;
+	private int		platzierung;
+	private Date	laufzeit;
 
 	public ListeneintragDTO(final String name, final String vorname, final int geburtsjahr, final char geschlecht,
 			final String verein, final int startnummer, final int platzierung, final Date laufzeit) {
@@ -103,6 +101,4 @@ public class ListeneintragDTO {
 				+ ", geschlecht=" + geschlecht + ", verein=" + verein + ", startnummer=" + startnummer
 				+ ", platzierung=" + platzierung + ", laufzeit=" + laufzeit + "]";
 	}
-
-
 }

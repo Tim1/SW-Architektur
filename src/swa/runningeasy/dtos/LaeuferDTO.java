@@ -1,13 +1,10 @@
 package swa.runningeasy.dtos;
 
-
 /**
  * @author Bernhard Hollunder
  * 
  *         Represents a human being participating at a running event.
  */
-
-
 public class LaeuferDTO {
 	private String	name;
 	private String	vorname;
@@ -121,5 +118,4 @@ public class LaeuferDTO {
 		return "LaeuferDTO [name=" + name + ", vorname=" + vorname + ", geburtsjahr=" + geburtsjahr + ", geschlecht="
 				+ geschlecht + ", email=" + email + ", land=" + land + "]";
 	}
-
 }

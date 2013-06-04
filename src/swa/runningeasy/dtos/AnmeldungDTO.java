@@ -6,14 +6,12 @@ package swa.runningeasy.dtos;
  * 
  *         Represents a registration for a running event.
  */
-
-
 public class AnmeldungDTO {
-	private LaeuferDTO		laeufer;
-	private boolean			bezahlt;
-	private String			veranstaltung;
-	private String			verein;
-	private int				startnummer;
+	private LaeuferDTO	laeufer;
+	private boolean		bezahlt;
+	private String		veranstaltung;
+	private String		verein;
+	private int			startnummer;
 
 	public AnmeldungDTO(final LaeuferDTO laeufer, final boolean bezahlt, final String veranstaltung,
 			final String verein, final int startnummer) {
@@ -70,6 +68,4 @@ public class AnmeldungDTO {
 		return "AnmeldungDTO [laeufer=" + laeufer + ", bezahlt=" + bezahlt + ", veranstaltung=" + veranstaltung
 				+ ", verein=" + verein + ", startnummer=" + startnummer + "]";
 	}
-
-
 }

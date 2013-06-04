@@ -1,14 +1,13 @@
 package swa.runningeasy.dtos;
 
+import java.util.Date;
+
 /**
  * @author Bernhard Hollunder
  * 
- * Represents a running event.
+ *         Represents a running event.
  * 
  */
-
-import java.util.Date;
-
 public class VeranstaltungDTO {
 	private String	name;
 	private Date	datum;
@@ -60,5 +59,4 @@ public class VeranstaltungDTO {
 		return "VeranstaltungDTO [name=" + name + ", datum=" + datum + ", anmeldeschluss=" + anmeldeschluss
 				+ ", startgebuehr=" + startgebuehr + "]";
 	}
-
 }

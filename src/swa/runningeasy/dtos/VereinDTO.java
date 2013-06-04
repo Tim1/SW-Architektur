@@ -7,7 +7,6 @@ package swa.runningeasy.dtos;
  *         Represents a club a participant is starting for.
  * 
  */
-
 public class VereinDTO {
 	private String	name;
 	private String	strasse;

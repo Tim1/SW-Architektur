@@ -1,18 +1,18 @@
 package swa.runningeasy.dtos;
 
+import java.util.Date;
+
 /**
  * @author Bernhard Hollunder
  * 
- * Represents the finishing time for a given runner at a particular running event.
+ *         Represents the finishing time for a given runner at a particular
+ *         running event.
  * 
  */
-
-import java.util.Date;
-
 public class LaufzeitDTO {
-	private int				Startnummer;
-	private Date			laufzeit;
-	private String			veranstaltung;
+	private int		Startnummer;
+	private Date	laufzeit;
+	private String	veranstaltung;
 
 	public LaufzeitDTO(final int startnummer, final Date laufzeit, final String veranstaltung) {
 		super();
@@ -44,7 +44,6 @@ public class LaufzeitDTO {
 	public void setVeranstaltung(final String veranstaltung) {
 		this.veranstaltung = veranstaltung;
 	}
-
 
 	@Override
 	public String toString() {
