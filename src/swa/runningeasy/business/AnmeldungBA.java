@@ -20,17 +20,18 @@ public class AnmeldungBA extends AbstractBA {
 	/**
 	 * Creates a new Anmeldung and saves
 	 * 
-	 * @param Anmeldung
+	 * @param anmeldung
 	 *            to create
 	 * @throws IllegalArgumentException
 	 *             if Anmeldung is null or has illegal arguments
 	 */
-	public void createAnmeldung(final AnmeldungDTO Anmeldung) throws IllegalArgumentException {
+	public void createAnmeldung(final AnmeldungDTO anmeldung) throws IllegalArgumentException {
 		logger.trace("call createAnmeldung-method");
-		if (Anmeldung == null)
+		if (anmeldung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		objectWriter.save(AnmeldungDTO.class, Anmeldung);
+		logger.debug("creating: " + anmeldung);
+		objectWriter.save(AnmeldungDTO.class, anmeldung);
 	}
 
 	/**
@@ -39,7 +40,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @param Anmeldung
 	 *            to update
 	 */
-	public void updateAnmeldung(final AnmeldungDTO Anmeldung) {
+	public void updateAnmeldung(final AnmeldungDTO anmeldung) {
 		logger.trace("call updateAnmeldung()-method");
 
 	}
@@ -51,7 +52,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @param Anmeldung
 	 *            to delete
 	 */
-	public void deleteAnmeldung(final AnmeldungDTO Anmeldung) {
+	public void deleteAnmeldung(final AnmeldungDTO anmeldung) {
 		logger.trace("call deleteAnmeldung()-method");
 
 	}
@@ -62,7 +63,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @param Anmeldung
 	 *            to generate from database
 	 */
-	public void generateStartListe(final AnmeldungDTO Anmeldung) {
+	public void generateStartListe(final AnmeldungDTO anmeldung) {
 		logger.trace("call generateStartListe()-method");
 
 	}
@@ -74,7 +75,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @param Anmeldung
 	 *            to generate from database
 	 */
-	public void generateUnpayedLaueferListe(final AnmeldungDTO Anmeldung) {
+	public void generateUnpayedLaueferListe(final AnmeldungDTO anmeldung) {
 		logger.trace("call generateUnpayedLaueferListe()-method");
 
 	}
@@ -86,7 +87,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * @param Anmeldung
 	 *            from which you want to get the actual anzahl Teilnehmer
 	 */
-	public void getActualAnzahlTeilnehmer(final AnmeldungDTO Anmeldung) {
+	public void getActualAnzahlTeilnehmer(final AnmeldungDTO anmeldung) {
 		logger.trace("call getActualAnzahlTeilnehmer()-method");
 
 	}
@@ -96,7 +97,7 @@ public class AnmeldungBA extends AbstractBA {
 	 * 
 	 * @param Anmeldung
 	 */
-	public void disqualifiquateLauefer(final AnmeldungDTO Anmeldung) {
+	public void disqualifiquateLauefer(final AnmeldungDTO anmeldung) {
 		logger.trace("call disqualifiquateLauefer()-method");
 
 	}

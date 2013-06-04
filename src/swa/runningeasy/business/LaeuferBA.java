@@ -22,6 +22,7 @@ public class LaeuferBA extends AbstractBA {
 		if (laeufer == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		logger.debug("creating: " + laeufer);
 		objectWriter.save(LaeuferDTO.class, laeufer);
 	}
 

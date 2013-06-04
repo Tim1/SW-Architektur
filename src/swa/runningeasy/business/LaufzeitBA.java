@@ -19,17 +19,18 @@ public class LaufzeitBA extends AbstractBA {
 	/**
 	 * Creates a new Laufzeit and saves
 	 * 
-	 * @param Laufzeit
+	 * @param laufzeit
 	 *            to create
 	 * @throws IllegalArgumentException
 	 *             if Laufzeit is null or has illegal arguments
 	 */
-	public void createLaufzeit(final LaufzeitDTO Laufzeit) throws IllegalArgumentException {
+	public void createLaufzeit(final LaufzeitDTO laufzeit) throws IllegalArgumentException {
 		logger.trace("call createLaufzeit()-Method");
-		if (Laufzeit == null)
+		if (laufzeit == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		objectWriter.save(LaufzeitDTO.class, Laufzeit);
+		logger.debug("creating: " + laufzeit);
+		objectWriter.save(LaufzeitDTO.class, laufzeit);
 	}
 
 	/**

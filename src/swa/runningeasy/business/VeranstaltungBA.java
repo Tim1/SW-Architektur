@@ -29,6 +29,7 @@ public class VeranstaltungBA extends AbstractBA {
 		if (veranstaltung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		logger.debug("creating: " + veranstaltung);
 		objectWriter.save(VeranstaltungDTO.class, veranstaltung);
 	}
 

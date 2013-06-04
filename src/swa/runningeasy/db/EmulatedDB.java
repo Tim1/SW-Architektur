@@ -13,13 +13,13 @@ public class EmulatedDB implements IObjectReader, IObjectWriter {
 
 	@Override
 	public <C> void save(final Class<C> clazz, final C objectToSave) {
-		logger.trace("call save()-method");
+		logger.trace("saving: " + objectToSave);
 		values.add(objectToSave);
 	}
 
 	@Override
 	public <C> void delete(final Class<C> clazz, final C objectToDelete) {
-		logger.trace("call delete()-method");
+		logger.trace("deleting: " + objectToDelete);
 		values.remove(objectToDelete);
 	}
 
