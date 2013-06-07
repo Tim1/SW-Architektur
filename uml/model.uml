@@ -1,0 +1,2276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_8_z1YLPaEeKHpbbVWYMqww">
+  <name xsi:nil="true"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9AiOILPaEeKHpbbVWYMqww" name="runningeasy">
+    <packagedElement xmi:type="uml:Package" xmi:id="_9Ai1MLPaEeKHpbbVWYMqww" name="bom">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9Ai1MbPaEeKHpbbVWYMqww" name="entities" clientDependency="_9LqgEbPaEeKHpbbVWYMqww _9LqgErPaEeKHpbbVWYMqww">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9BgegLPaEeKHpbbVWYMqww" name="RunningServicesFactory">
+          <eAnnotations xmi:id="_9BgegbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9BgegrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9DOVwLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B7VQLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9DO80LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CQFYLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9De0cLPaEeKHpbbVWYMqww" name="getInstance" specification="_9Dc_QLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9De0cbPaEeKHpbbVWYMqww" type="_9CQFYLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		if (instance == null) {&#xD;
+			instance = new RunningServiceBA();&#xD;
+			instance.init();&#xD;
+		}&#xD;
+&#xD;
+		return instance;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9Dc_QLPaEeKHpbbVWYMqww" name="getInstance" visibility="public" isStatic="true" method="_9De0cLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Dc_QbPaEeKHpbbVWYMqww" type="_9CQFYLPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgEbPaEeKHpbbVWYMqww" supplier="_9B45A7PaEeKHpbbVWYMqww" client="_9Ai1MbPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgErPaEeKHpbbVWYMqww" supplier="_9CO3Q7PaEeKHpbbVWYMqww" client="_9Ai1MbPaEeKHpbbVWYMqww"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9BhFkLPaEeKHpbbVWYMqww" name="swa">
+    <packagedElement xmi:type="uml:Package" xmi:id="_9BhFkbPaEeKHpbbVWYMqww" name="runningeasy" clientDependency="_9LruNLPaEeKHpbbVWYMqww _9LruNbPaEeKHpbbVWYMqww _9LruNrPaEeKHpbbVWYMqww _9LruN7PaEeKHpbbVWYMqww">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9BhFkrPaEeKHpbbVWYMqww" name="business" clientDependency="_9LqgE7PaEeKHpbbVWYMqww _9LqgFLPaEeKHpbbVWYMqww _9LqgFbPaEeKHpbbVWYMqww _9LqgFrPaEeKHpbbVWYMqww _9LqgF7PaEeKHpbbVWYMqww _9LqgGLPaEeKHpbbVWYMqww _9LqgGbPaEeKHpbbVWYMqww _9LrHILPaEeKHpbbVWYMqww _9LruOLPaEeKHpbbVWYMqww _9LruObPaEeKHpbbVWYMqww _9LruOrPaEeKHpbbVWYMqww _9LruO7PaEeKHpbbVWYMqww _9LruPLPaEeKHpbbVWYMqww _9LruPbPaEeKHpbbVWYMqww _9LruPrPaEeKHpbbVWYMqww _9LruP7PaEeKHpbbVWYMqww">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9BlXALPaEeKHpbbVWYMqww" name="TeilnahmeBA">
+          <eAnnotations xmi:id="_9BlXAbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9BlXArPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9DmJM7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9DmJNLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CMbALPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9DliILPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9DpMhLPaEeKHpbbVWYMqww" name="createTeilnahme" specification="_9DpMgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9DpMhbPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		if (teilnahme == null)&#xD;
+			throw new IllegalArgumentException(&quot;Argument must not be NULL&quot;);&#xD;
+&#xD;
+		objectWriter.save(AnmeldungDTO.class, teilnahme);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9DsP1LPaEeKHpbbVWYMqww" name="updateTeilnahme" specification="_9DsP0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9DsP1bPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9DusFLPaEeKHpbbVWYMqww" name="deleteTeilnahme" specification="_9DusELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9DusFbPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9DxvYLPaEeKHpbbVWYMqww" name="generateStartListe" specification="_9DxIULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9DxvYbPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9D0LpLPaEeKHpbbVWYMqww" name="generateUnpayedLaueferListe" specification="_9D0LoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9D0LpbPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9D2n5LPaEeKHpbbVWYMqww" name="getActualAnzahlTeilnehmer" specification="_9D2n4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9D2n5bPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9D5rMLPaEeKHpbbVWYMqww" name="disqualifiquateLauefer" specification="_9D5EILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9D5rMbPaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9D65VLPaEeKHpbbVWYMqww" name="getAllTeilnahmen" specification="_9D65ULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9D65VbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return objectReader.getAllObjects(AnmeldungDTO.class);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9DpMgLPaEeKHpbbVWYMqww" name="createTeilnahme" visibility="public" method="_9DpMhLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9DpMgbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9DpMgrPaEeKHpbbVWYMqww" key="documentation" value=" Creates a new Teilnahme and saves&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;            to create&#xD;&#xA; @throws IllegalArgumentException&#xD;&#xA;             if teilnahme is null or has illegal arguments&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9DpMg7PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9DsP0LPaEeKHpbbVWYMqww" name="updateTeilnahme" visibility="public" method="_9DsP1LPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9DsP0bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9DsP0rPaEeKHpbbVWYMqww" key="documentation" value=" Saves the updated teilnahme to the database&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;            to update&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9DsP07PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9DusELPaEeKHpbbVWYMqww" name="deleteTeilnahme" visibility="public" method="_9DusFLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9DusEbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9DusErPaEeKHpbbVWYMqww" key="documentation" value=" Delete the teilnahme from the database&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;            to delete&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9DusE7PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9DxIULPaEeKHpbbVWYMqww" name="generateStartListe" visibility="public" method="_9DxvYLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9DxIUbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9DxIUrPaEeKHpbbVWYMqww" key="documentation" value=" Generate the StartListe from the database&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;            to generate from database&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9DxIU7PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9D0LoLPaEeKHpbbVWYMqww" name="generateUnpayedLaueferListe" visibility="public" method="_9D0LpLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9D0LobPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9D0LorPaEeKHpbbVWYMqww" key="documentation" value=" Generate the UnpayedLaueferListe from the database&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;            to generate from database&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9D0Lo7PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9D2n4LPaEeKHpbbVWYMqww" name="getActualAnzahlTeilnehmer" visibility="public" method="_9D2n5LPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9D2n4bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9D2n4rPaEeKHpbbVWYMqww" key="documentation" value=" Gets the actual Anzahl Teilnehmer from the database&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;            from which you want to get the actual anzahl Teilnehmer&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9D2n47PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9D5EILPaEeKHpbbVWYMqww" name="disqualifiquateLauefer" visibility="public" method="_9D5rMLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9D5EIbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9D5EIrPaEeKHpbbVWYMqww" key="documentation" value=" diqualificates the Lauefer from the teilnahme from the database&#xD;&#xA; &#xD;&#xA; @param teilnahme&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9D5EI7PaEeKHpbbVWYMqww" name="teilnahme" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9D65ULPaEeKHpbbVWYMqww" name="getAllTeilnahmen" visibility="public" method="_9D65VLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9D65UbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9D65UrPaEeKHpbbVWYMqww" key="documentation" value=" &#xD;&#xA; @return List of all Teilnahmen&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9D65U7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9BvIALPaEeKHpbbVWYMqww" name="StatistikBA">
+          <eAnnotations xmi:id="_9BvIAbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9BvIArPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9EGfgrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9EGfgbPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EGfhLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9EGfg7PaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EHGkLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EHGkbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CMbALPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EHGkrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CLM4LPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EHGk7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9CIwoLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EHGlLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CIJkLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EHGlbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CPeULPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9EGfgLPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EWXILPaEeKHpbbVWYMqww" name="generateErgebnisliste" specification="_9EVJALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EWXIbPaEeKHpbbVWYMqww" name="auswertung" type="_9CPeULPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9EWXIrPaEeKHpbbVWYMqww" name="veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9EWXI7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		// TODO: whats about auswertung? It seems to be unused&#xD;
+&#xD;
+		List&lt;AnmeldungDTO&amp;gt; anmeldungen = getAllAnmeldungen(veranstaltung);&#xD;
+&#xD;
+		List&lt;ListeneintragDTO&amp;gt; result = new ArrayList&lt;&amp;gt;();&#xD;
+&#xD;
+		// TODO: whats the Platzierung? is not checked&#xD;
+		for (AnmeldungDTO anmeldung : anmeldungen) {&#xD;
+			LaeuferDTO laeufer = anmeldung.getLaeufer();&#xD;
+			LaufzeitDTO zeit = getLaufzeit(anmeldung.getStartnummer(), veranstaltung);&#xD;
+&#xD;
+			result.add(new ListeneintragDTO(laeufer.getName(), laeufer.getVorname(), laeufer.getGeburtsjahr(), laeufer&#xD;
+					.getGeschlecht(), anmeldung.getVerein(), anmeldung.getStartnummer(), 0, zeit.getLaufzeit()));&#xD;
+		}&#xD;
+&#xD;
+&#xD;
+		return result;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9EVJALPaEeKHpbbVWYMqww" name="generateErgebnisliste" visibility="public" method="_9EWXILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EVJAbPaEeKHpbbVWYMqww" name="auswertung" type="_9CPeULPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9EVJArPaEeKHpbbVWYMqww" name="veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9EVJA7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9BwWILPaEeKHpbbVWYMqww" name="VereinBA">
+          <eAnnotations xmi:id="_9BwWIbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9BwWIrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9EXlQbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EXlQrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CGUYLPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9EXlQLPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EaBgLPaEeKHpbbVWYMqww" name="createVerein" specification="_9EZacLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EaBgbPaEeKHpbbVWYMqww" name="verein" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		if (verein == null)&#xD;
+			throw new IllegalArgumentException(&quot;Argument must not be NULL&quot;);&#xD;
+&#xD;
+		objectWriter.save(VereinDTO.class, verein);&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Eb2tLPaEeKHpbbVWYMqww" name="updateVerein" specification="_9Eb2sLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Eb2tbPaEeKHpbbVWYMqww" name="verein" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EcdxLPaEeKHpbbVWYMqww" name="getAllVereine" specification="_9EcdwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EcdxbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return objectReader.getAllObjects(VereinDTO.class);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9EZacLPaEeKHpbbVWYMqww" name="createVerein" visibility="public" method="_9EaBgLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EZacbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EZacrPaEeKHpbbVWYMqww" key="documentation" value=" Creates a new Verein and saves&#xD;&#xA; &#xD;&#xA; @param verein&#xD;&#xA;            to create&#xD;&#xA; @throws IllegalArgumentException&#xD;&#xA;             if verein is null or has illegal arguments&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9EZac7PaEeKHpbbVWYMqww" name="verein" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Eb2sLPaEeKHpbbVWYMqww" name="updateVerein" visibility="public" method="_9Eb2tLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9Eb2sbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9Eb2srPaEeKHpbbVWYMqww" key="documentation" value=" Saves the updated verein to the database&#xD;&#xA; &#xD;&#xA; @param verein&#xD;&#xA;            to update&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9Eb2s7PaEeKHpbbVWYMqww" name="verein" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9EcdwLPaEeKHpbbVWYMqww" name="getAllVereine" visibility="public" method="_9EcdxLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EcdwbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EcdwrPaEeKHpbbVWYMqww" key="documentation" value=" &#xD;&#xA; @return List of all Vereine&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9Ecdw7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9BxkQLPaEeKHpbbVWYMqww" name="VeranstaltungBA">
+          <eAnnotations xmi:id="_9BxkQbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9BxkQrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9Edr4bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9Edr4rPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CJ-wLPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9Edr4LPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EfhFLPaEeKHpbbVWYMqww" name="createVeranstaltung" specification="_9EfhELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EfhFbPaEeKHpbbVWYMqww" name="veranstaltung" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		if (veranstaltung == null)&#xD;
+			throw new IllegalArgumentException(&quot;Argument must not be NULL&quot;);&#xD;
+&#xD;
+		objectWriter.save(VeranstaltungDTO.class, veranstaltung);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EhWRLPaEeKHpbbVWYMqww" name="updateVeranstaltung" specification="_9EhWQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EhWRbPaEeKHpbbVWYMqww" name="veranstaltung" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EikZLPaEeKHpbbVWYMqww" name="getAllVeranstaltungen" specification="_9EikYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EikZbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return objectReader.getAllObjects(VeranstaltungDTO.class);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9EfhELPaEeKHpbbVWYMqww" name="createVeranstaltung" visibility="public" method="_9EfhFLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EfhEbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EfhErPaEeKHpbbVWYMqww" key="documentation" value=" Creates a new Veranstaltung and saves&#xD;&#xA; &#xD;&#xA; @param veranstaltung&#xD;&#xA;            to create&#xD;&#xA; @throws IllegalArgumentException&#xD;&#xA;             if veranstaltung is null or has illegal arguments&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9EfhE7PaEeKHpbbVWYMqww" name="veranstaltung" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9EhWQLPaEeKHpbbVWYMqww" name="updateVeranstaltung" visibility="public" method="_9EhWRLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EhWQbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EhWQrPaEeKHpbbVWYMqww" key="documentation" value=" Saves the updated veranstaltung to the database&#xD;&#xA; &#xD;&#xA; @param veranstaltung&#xD;&#xA;            to update&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9EhWQ7PaEeKHpbbVWYMqww" name="veranstaltung" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9EikYLPaEeKHpbbVWYMqww" name="getAllVeranstaltungen" visibility="public" method="_9EikZLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EikYbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EikYrPaEeKHpbbVWYMqww" key="documentation" value=" @return List of all Veranstaltungen&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9EikY7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9ByLULPaEeKHpbbVWYMqww" name="ErgebnisBA">
+          <eAnnotations xmi:id="_9ByLUbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9ByLUrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9EjygLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EjygbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CIwoLPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9EjLcLPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9ElnsLPaEeKHpbbVWYMqww" name="createErgebnis" specification="_9ElAoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9ElnsbPaEeKHpbbVWYMqww" name="ergebnis" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		if (ergebnis == null)&#xD;
+			throw new IllegalArgumentException(&quot;Argument must not be NULL&quot;);&#xD;
+&#xD;
+		objectWriter.save(LaufzeitDTO.class, ergebnis);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Enc4LPaEeKHpbbVWYMqww" name="updateErgebnis" specification="_9Em10LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Enc4bPaEeKHpbbVWYMqww" name="ergebnis" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EoD87PaEeKHpbbVWYMqww" name="editTime" specification="_9EoD8LPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EpSELPaEeKHpbbVWYMqww" name="getAllErgebnisse" specification="_9EorALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EpSEbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return objectReader.getAllObjects(LaufzeitDTO.class);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9ElAoLPaEeKHpbbVWYMqww" name="createErgebnis" visibility="public" method="_9ElnsLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9ElAobPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9ElAorPaEeKHpbbVWYMqww" key="documentation" value=" Creates a new Ergebnis and saves&#xD;&#xA; &#xD;&#xA; @param ergebnis&#xD;&#xA;            to create&#xD;&#xA; @throws IllegalArgumentException&#xD;&#xA;             if ergebnis is null or has illegal arguments&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9ElAo7PaEeKHpbbVWYMqww" name="ergebnis" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Em10LPaEeKHpbbVWYMqww" name="updateErgebnis" visibility="public" method="_9Enc4LPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9Em10bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9Em10rPaEeKHpbbVWYMqww" key="documentation" value=" Saves the updated ergebnis to the database&#xD;&#xA; &#xD;&#xA; @param ergebnis&#xD;&#xA;            to update&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9Em107PaEeKHpbbVWYMqww" name="ergebnis" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9EoD8LPaEeKHpbbVWYMqww" name="editTime" visibility="public" method="_9EoD87PaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EoD8bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EoD8rPaEeKHpbbVWYMqww" key="documentation" value=" TODO: man kann viele zeiten ändern, evtl muss das noch mal ganz verändert&#xD;&#xA; werden(parameter, in mehrere methoden splitten etc) edit manually the&#xD;&#xA; time&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9EorALPaEeKHpbbVWYMqww" name="getAllErgebnisse" visibility="public" method="_9EpSELPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9EorAbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9EorArPaEeKHpbbVWYMqww" key="documentation" value=" &#xD;&#xA; @return List of all Ergebnisse&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9EorA7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9BzZcLPaEeKHpbbVWYMqww" name="BAFactory">
+          <eAnnotations xmi:id="_9BzZcbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9BzZcrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9Ep5ILPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B2cwLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EqgMLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B45ALPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EqgMbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B3q4LPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9EqgMrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B3D0LPaEeKHpbbVWYMqww"/>
+          <ownedAttribute xmi:id="_9EruUbPaEeKHpbbVWYMqww" name="asdf" visibility="public" isStatic="true" type="_9EruULPaEeKHpbbVWYMqww">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_9EruUrPaEeKHpbbVWYMqww" name="" type="_9EruULPaEeKHpbbVWYMqww" value="false"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EvYsLPaEeKHpbbVWYMqww" name="init" specification="_9EuKkLPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		asdf = true;&#xD;
+&#xD;
+		ergebnisBA = new ErgebnisBA();&#xD;
+		laeuferBA = new LaeuferBA();&#xD;
+		statistikBA = new StatistikBA();&#xD;
+		teilnahmeBA = new TeilnahmeBA();&#xD;
+		veranstaltungBA = new VeranstaltungBA();&#xD;
+		vereinBA = new VereinBA();&#xD;
+		bankBA = new BankBA();&#xD;
+		datenimportBA = new DataimportBA();&#xD;
+		laufzeitsystemBA = new LaufzeitsystemBA();&#xD;
+		messageServiceBA = new MessageServiceBA();&#xD;
+&#xD;
+		ergebnisBA.init();&#xD;
+		laeuferBA.init();&#xD;
+		statistikBA.init();&#xD;
+		teilnahmeBA.init();&#xD;
+		veranstaltungBA.init();&#xD;
+		vereinBA.init();&#xD;
+		bankBA.init();&#xD;
+		datenimportBA.init();&#xD;
+		laufzeitsystemBA.init();&#xD;
+		messageServiceBA.init();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EzDELPaEeKHpbbVWYMqww" name="getErgebnisBA" specification="_9Ex08LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9EzDEbPaEeKHpbbVWYMqww" type="_9ByLULPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return ergebnisBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FDhwLPaEeKHpbbVWYMqww" name="getLaeuferBA" specification="_9E04QLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FDhwbPaEeKHpbbVWYMqww" type="_9B0AgLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return laeuferBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FHMILPaEeKHpbbVWYMqww" name="getStatistikBA" specification="_9FF-ALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FHMIbPaEeKHpbbVWYMqww" type="_9BvIALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return statistikBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FHzMrPaEeKHpbbVWYMqww" name="getTeilnahmeBA" specification="_9FHzMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FHzM7PaEeKHpbbVWYMqww" type="_9BlXALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return teilnahmeBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FN50LPaEeKHpbbVWYMqww" name="getVeranstaltungBA" specification="_9FHzNLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FN50bPaEeKHpbbVWYMqww" type="_9BxkQLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return veranstaltungBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FN51LPaEeKHpbbVWYMqww" name="getVereinBA" specification="_9FN50rPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FN51bPaEeKHpbbVWYMqww" type="_9BwWILPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return vereinBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FUAcrPaEeKHpbbVWYMqww" name="getBankBA" specification="_9FUAcLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FUAc7PaEeKHpbbVWYMqww" type="_9B2cwLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return bankBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FUAdrPaEeKHpbbVWYMqww" name="getDatenimportBA" specification="_9FUAdLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FUAd7PaEeKHpbbVWYMqww" type="_9B45ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return datenimportBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FbVMLPaEeKHpbbVWYMqww" name="getLaufzeitsystemBA" specification="_9FaHELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FbVMbPaEeKHpbbVWYMqww" type="_9B3q4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return laufzeitsystemBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FeYgLPaEeKHpbbVWYMqww" name="getMessageServiceBA" specification="_9FdKYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FeYgbPaEeKHpbbVWYMqww" type="_9B3D0LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return messageServiceBA;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9EuKkLPaEeKHpbbVWYMqww" name="init" visibility="public" isStatic="true" method="_9EvYsLPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9Ex08LPaEeKHpbbVWYMqww" name="getErgebnisBA" visibility="public" isStatic="true" method="_9EzDELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Ex08bPaEeKHpbbVWYMqww" type="_9ByLULPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9E04QLPaEeKHpbbVWYMqww" name="getLaeuferBA" visibility="public" isStatic="true" method="_9FDhwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9E04QbPaEeKHpbbVWYMqww" type="_9B0AgLPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FF-ALPaEeKHpbbVWYMqww" name="getStatistikBA" visibility="public" isStatic="true" method="_9FHMILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FF-AbPaEeKHpbbVWYMqww" type="_9BvIALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FHzMLPaEeKHpbbVWYMqww" name="getTeilnahmeBA" visibility="public" isStatic="true" method="_9FHzMrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FHzMbPaEeKHpbbVWYMqww" type="_9BlXALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FHzNLPaEeKHpbbVWYMqww" name="getVeranstaltungBA" visibility="public" isStatic="true" method="_9FN50LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FHzNbPaEeKHpbbVWYMqww" type="_9BxkQLPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FN50rPaEeKHpbbVWYMqww" name="getVereinBA" visibility="public" isStatic="true" method="_9FN51LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FN507PaEeKHpbbVWYMqww" type="_9BwWILPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FUAcLPaEeKHpbbVWYMqww" name="getBankBA" visibility="public" isStatic="true" method="_9FUAcrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FUAcbPaEeKHpbbVWYMqww" type="_9B2cwLPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FUAdLPaEeKHpbbVWYMqww" name="getDatenimportBA" visibility="public" isStatic="true" method="_9FUAdrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FUAdbPaEeKHpbbVWYMqww" type="_9B45ALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FaHELPaEeKHpbbVWYMqww" name="getLaufzeitsystemBA" visibility="public" isStatic="true" method="_9FbVMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FaHEbPaEeKHpbbVWYMqww" type="_9B3q4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FdKYLPaEeKHpbbVWYMqww" name="getMessageServiceBA" visibility="public" isStatic="true" method="_9FeYgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FdKYbPaEeKHpbbVWYMqww" type="_9B3D0LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9B0AgLPaEeKHpbbVWYMqww" name="LaeuferBA">
+          <elementImport xmi:id="_9Fe_kbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9Fe_krPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CLM4LPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9Fe_kLPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Fg0wLPaEeKHpbbVWYMqww" name="createLaeufer" specification="_9FgNsLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Fg0wbPaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		if (laeufer == null)&#xD;
+			throw new IllegalArgumentException(&quot;Argument must not be NULL&quot;);&#xD;
+&#xD;
+		objectWriter.save(LaeuferDTO.class, laeufer);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FiC5LPaEeKHpbbVWYMqww" name="updateLaeufer" specification="_9FiC4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FiC5bPaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FjRBLPaEeKHpbbVWYMqww" name="generateGesamtStatistik" specification="_9FjRALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FjRBbPaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FnicLPaEeKHpbbVWYMqww" name="getAllLauefer" specification="_9FmUULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FnicbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return objectReader.getAllObjects(LaeuferDTO.class);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9FgNsLPaEeKHpbbVWYMqww" name="createLaeufer" visibility="public" method="_9Fg0wLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9FgNsbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9FgNsrPaEeKHpbbVWYMqww" key="documentation" value=" Creates a new Laeufer and saves&#xD;&#xA; &#xD;&#xA; @param laeufer&#xD;&#xA;            to create&#xD;&#xA; @throws IllegalArgumentException&#xD;&#xA;             if laeufer is null or has illegal arguments&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9FgNs7PaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FiC4LPaEeKHpbbVWYMqww" name="updateLaeufer" visibility="public" method="_9FiC5LPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9FiC4bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9FiC4rPaEeKHpbbVWYMqww" key="documentation" value=" Saves the updated laeufer to the database&#xD;&#xA; &#xD;&#xA; @param laeufer&#xD;&#xA;            to update&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9FiC47PaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FjRALPaEeKHpbbVWYMqww" name="generateGesamtStatistik" visibility="public" method="_9FjRBLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9FjRAbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9FjRArPaEeKHpbbVWYMqww" key="documentation" value=" Generates the GesamtStatistik for the given Laeufer&#xD;&#xA; &#xD;&#xA; @param laeufer&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_9FjRA7PaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9FmUULPaEeKHpbbVWYMqww" name="getAllLauefer" visibility="public" method="_9FnicLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9FmUUbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9B1OoLPaEeKHpbbVWYMqww" name="AbstractBA" isAbstract="true">
+          <eAnnotations xmi:id="_9B1OobPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9B1OorPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9FoJgLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CDRELPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9FoJgbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CEfMLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9FoJgrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B9KcLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Fowk7PaEeKHpbbVWYMqww" name="init" specification="_9FowkLPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9FowkLPaEeKHpbbVWYMqww" name="init" visibility="public" method="_9Fowk7PaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9FowkbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9FowkrPaEeKHpbbVWYMqww" key="documentation" value=" initialize the BA, should be overriden for each BA&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9B1Oo7PaEeKHpbbVWYMqww" name="extern" clientDependency="_9LrHIbPaEeKHpbbVWYMqww _9LrHIrPaEeKHpbbVWYMqww _9LrHI7PaEeKHpbbVWYMqww _9LrHJLPaEeKHpbbVWYMqww">
+          <packagedElement xmi:type="uml:Class" xmi:id="_9B2cwLPaEeKHpbbVWYMqww" name="BankBA" clientDependency="_9FpXoLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9B2cwbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9B2cwrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+            </eAnnotations>
+            <elementImport xmi:id="_9Fp-sbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9FqlwLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CNCELPaEeKHpbbVWYMqww"/>
+            <generalization xmi:id="_9Fp-sLPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FrM07PaEeKHpbbVWYMqww" name="getKontoData" specification="_9FrM0LPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>
+
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FuQILPaEeKHpbbVWYMqww" name="liefereZalungseingaenge" specification="_9FtpELPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>
+
+	</body>
+            </ownedBehavior>
+            <interfaceRealization xmi:id="_9FpXoLPaEeKHpbbVWYMqww" name="swa.runningeasy.extern.IBank" supplier="_9CNCELPaEeKHpbbVWYMqww" client="_9B2cwLPaEeKHpbbVWYMqww" contract="_9CNCELPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9FrM0LPaEeKHpbbVWYMqww" name="getKontoData" visibility="public" method="_9FrM07PaEeKHpbbVWYMqww">
+              <eAnnotations xmi:id="_9FrM0bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+                <details xmi:id="_9FrM0rPaEeKHpbbVWYMqww" key="documentation" value=" Should only be called intern.&lt;br/>&#xD;&#xA; Gets the Information about the Konto as it was the last time &lt;i>&#xD;&#xA; liefereZalungseingaenge()&lt;/i> was called from the Bankanwendung&#xD;&#xA;&#x9;"/>
+              </eAnnotations>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9FtpELPaEeKHpbbVWYMqww" name="liefereZalungseingaenge" visibility="public" method="_9FuQILPaEeKHpbbVWYMqww">
+              <eAnnotations xmi:id="_9FtpEbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+                <details xmi:id="_9FtpErPaEeKHpbbVWYMqww" key="documentation" value=" Bankanwendung will call this Method to give Information about the&#xD;&#xA; Kontostatus&#xD;&#xA;&#x9;"/>
+              </eAnnotations>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9B3D0LPaEeKHpbbVWYMqww" name="MessageServiceBA" clientDependency="_9Fu3MLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9B3D0bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9B3D0rPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+            </eAnnotations>
+            <elementImport xmi:id="_9FveQbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9FveQrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CNpILPaEeKHpbbVWYMqww"/>
+            <generalization xmi:id="_9FveQLPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FwsYLPaEeKHpbbVWYMqww" name="sendSMS" specification="_9FwFULPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9FyhkLPaEeKHpbbVWYMqww" name="sendEmail" specification="_9Fx6gLPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <interfaceRealization xmi:id="_9Fu3MLPaEeKHpbbVWYMqww" name="swa.runningeasy.extern.IMessageService" supplier="_9CNpILPaEeKHpbbVWYMqww" client="_9B3D0LPaEeKHpbbVWYMqww" contract="_9CNpILPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9FwFULPaEeKHpbbVWYMqww" name="sendSMS" visibility="public" method="_9FwsYLPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9Fx6gLPaEeKHpbbVWYMqww" name="sendEmail" visibility="public" method="_9FyhkLPaEeKHpbbVWYMqww"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9B3q4LPaEeKHpbbVWYMqww" name="LaufzeitsystemBA" clientDependency="_9FzvsLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9B3q4bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9B3q4rPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+            </eAnnotations>
+            <elementImport xmi:id="_9FzvsrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9Fzvs7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9COQMLPaEeKHpbbVWYMqww"/>
+            <generalization xmi:id="_9FzvsbPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9F1k4LPaEeKHpbbVWYMqww" name="pushZwischenzeitForLaeufer" specification="_9F090LPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9F3aELPaEeKHpbbVWYMqww" name="pushEndzeitForLaeufer" specification="_9F2zALPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <interfaceRealization xmi:id="_9FzvsLPaEeKHpbbVWYMqww" name="swa.runningeasy.extern.ILaufzeitsystem" supplier="_9COQMLPaEeKHpbbVWYMqww" client="_9B3q4LPaEeKHpbbVWYMqww" contract="_9COQMLPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9F090LPaEeKHpbbVWYMqww" name="pushZwischenzeitForLaeufer" visibility="public" method="_9F1k4LPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9F2zALPaEeKHpbbVWYMqww" name="pushEndzeitForLaeufer" visibility="public" method="_9F3aELPaEeKHpbbVWYMqww"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9B45ALPaEeKHpbbVWYMqww" name="DataimportBA" clientDependency="_9F5PQLPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9B45AbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9B45ArPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+            </eAnnotations>
+            <elementImport xmi:id="_9F52U7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9F52UrPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9F52VLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9F52VbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9F52VrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9F52V7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9CGUYLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9F52WLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CO3QLPaEeKHpbbVWYMqww"/>
+            <generalization xmi:id="_9F52ULPaEeKHpbbVWYMqww" general="_9B1OoLPaEeKHpbbVWYMqww"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9F-HwLPaEeKHpbbVWYMqww" name="readImportFile" specification="_9F85oLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9F-HwbPaEeKHpbbVWYMqww" name="file" type="_9F52UrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GAkALPaEeKHpbbVWYMqww" name="importLauefer" specification="_9F_88LPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GAkAbPaEeKHpbbVWYMqww" name="lauefer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GCZNLPaEeKHpbbVWYMqww" name="importVerein" specification="_9GCZMLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GCZNbPaEeKHpbbVWYMqww" name="verein" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GE1dLPaEeKHpbbVWYMqww" name="importVeranstaltung" specification="_9GE1cLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GE1dbPaEeKHpbbVWYMqww" name="veranstaltung" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <interfaceRealization xmi:id="_9F5PQLPaEeKHpbbVWYMqww" name="swa.runningeasy.extern.IDataimport" supplier="_9CO3QLPaEeKHpbbVWYMqww" client="_9B45ALPaEeKHpbbVWYMqww" contract="_9CO3QLPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9F85oLPaEeKHpbbVWYMqww" name="readImportFile" visibility="public" method="_9F-HwLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9F85obPaEeKHpbbVWYMqww" name="file" type="_9F52UrPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9F_88LPaEeKHpbbVWYMqww" name="importLauefer" visibility="public" method="_9GAkALPaEeKHpbbVWYMqww">
+              <eAnnotations xmi:id="_9F_88bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+                <details xmi:id="_9F_88rPaEeKHpbbVWYMqww" key="documentation" value=" imports lauefer in the data base&#xD;&#xA; &#xD;&#xA; @param lauefer&#xD;&#xA;&#x9;"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_9F_887PaEeKHpbbVWYMqww" name="lauefer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9GCZMLPaEeKHpbbVWYMqww" name="importVerein" visibility="public" method="_9GCZNLPaEeKHpbbVWYMqww">
+              <eAnnotations xmi:id="_9GCZMbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+                <details xmi:id="_9GCZMrPaEeKHpbbVWYMqww" key="documentation" value=" imports verein in the data base&#xD;&#xA; &#xD;&#xA; @param verein&#xD;&#xA;&#x9;"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_9GCZM7PaEeKHpbbVWYMqww" name="verein" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9GE1cLPaEeKHpbbVWYMqww" name="importVeranstaltung" visibility="public" method="_9GE1dLPaEeKHpbbVWYMqww">
+              <eAnnotations xmi:id="_9GE1cbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+                <details xmi:id="_9GE1crPaEeKHpbbVWYMqww" key="documentation" value=" imports veranstaltung in the data base&#xD;&#xA; &#xD;&#xA; @param veranstaltung&#xD;&#xA;&#x9;"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_9GE1c7PaEeKHpbbVWYMqww" name="veranstaltung" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHIbPaEeKHpbbVWYMqww" supplier="_9BhFkrPaEeKHpbbVWYMqww" client="_9B1Oo7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHIrPaEeKHpbbVWYMqww" supplier="_9CMbA7PaEeKHpbbVWYMqww" client="_9B1Oo7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHI7PaEeKHpbbVWYMqww" supplier="_9F52UbPaEeKHpbbVWYMqww" client="_9B1Oo7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHJLPaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9B1Oo7PaEeKHpbbVWYMqww"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CWMALPaEeKHpbbVWYMqww" name="LaeuferBATest">
+          <eAnnotations xmi:id="_9CWMAbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CWMArPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9LObM7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9LObNbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9LObN7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9LObOLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CShoLPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9LObMLPaEeKHpbbVWYMqww" general="_9CWzELPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LQ3cLPaEeKHpbbVWYMqww" name="setUp" specification="_9LQQYLPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		super.setUp();&#xD;
+		laeufer = BAFactory.getLaeuferBA();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LTTsLPaEeKHpbbVWYMqww" name="testgenerateGesamtStatistik" specification="_9LSsoLPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		laeufer.generateGesamtStatistik(TestData.getLaeuferDTO());&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LaBYLPaEeKHpbbVWYMqww" name="testupdateLaeufer" specification="_9LZaULPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		try {&#xD;
+			laeufer.createLaeufer(TestData.getLaeuferDTO());&#xD;
+		} catch (Throwable t) {&#xD;
+			fail();&#xD;
+		}&#xD;
+&#xD;
+		// should fail with IllegalArgumentException&#xD;
+		laeufer.createLaeufer(null);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9LQQYLPaEeKHpbbVWYMqww" name="setUp" visibility="public" method="_9LQ3cLPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9LSsoLPaEeKHpbbVWYMqww" name="testgenerateGesamtStatistik" visibility="public" method="_9LTTsLPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9LZaULPaEeKHpbbVWYMqww" name="testupdateLaeufer" visibility="public" method="_9LaBYLPaEeKHpbbVWYMqww"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CWzELPaEeKHpbbVWYMqww" name="AbstractBATest">
+          <eAnnotations xmi:id="_9CWzEbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CWzErPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9LaocLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LbPgbPaEeKHpbbVWYMqww" name="setUp" specification="_9LbPgLPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		BAFactory.init();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9LbPgLPaEeKHpbbVWYMqww" name="setUp" visibility="public" method="_9LbPgbPaEeKHpbbVWYMqww"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgE7PaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgFLPaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgFbPaEeKHpbbVWYMqww" supplier="_9CO3Q7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgFrPaEeKHpbbVWYMqww" supplier="_9B1Oo7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgF7PaEeKHpbbVWYMqww" supplier="_9B7VQ7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgGLPaEeKHpbbVWYMqww" supplier="_9LObMbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LqgGbPaEeKHpbbVWYMqww" supplier="_9LKJwbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHILPaEeKHpbbVWYMqww" supplier="_9BhFkbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruOLPaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruObPaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruOrPaEeKHpbbVWYMqww" supplier="_9CO3Q7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruO7PaEeKHpbbVWYMqww" supplier="_9B1Oo7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruPLPaEeKHpbbVWYMqww" supplier="_9B7VQ7PaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruPbPaEeKHpbbVWYMqww" supplier="_9LObMbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruPrPaEeKHpbbVWYMqww" supplier="_9LKJwbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruP7PaEeKHpbbVWYMqww" supplier="_9BhFkbPaEeKHpbbVWYMqww" client="_9BhFkrPaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_9B45A7PaEeKHpbbVWYMqww" name="services" clientDependency="_9LrHJbPaEeKHpbbVWYMqww _9LrHJrPaEeKHpbbVWYMqww _9LrHJ7PaEeKHpbbVWYMqww _9LrHKLPaEeKHpbbVWYMqww _9LrHKbPaEeKHpbbVWYMqww _9LrHKrPaEeKHpbbVWYMqww _9LsVQLPaEeKHpbbVWYMqww _9LsVQbPaEeKHpbbVWYMqww _9LsVQrPaEeKHpbbVWYMqww _9LsVQ7PaEeKHpbbVWYMqww _9LsVRLPaEeKHpbbVWYMqww _9LsVRbPaEeKHpbbVWYMqww">
+          <packagedElement xmi:type="uml:Class" xmi:id="_9B7VQLPaEeKHpbbVWYMqww" name="RunningServiceBA" clientDependency="_9GIf0LPaEeKHpbbVWYMqww">
+            <eAnnotations xmi:id="_9B7VQbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9B7VQrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+            </eAnnotations>
+            <elementImport xmi:id="_9GIf0bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf0rPaEeKHpbbVWYMqww" visibility="private" importedElement="_9BzZcLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf07PaEeKHpbbVWYMqww" visibility="private" importedElement="_9ByLULPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf1LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9B0AgLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf1bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9BvIALPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf1rPaEeKHpbbVWYMqww" visibility="private" importedElement="_9BlXALPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf17PaEeKHpbbVWYMqww" visibility="private" importedElement="_9BxkQLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf2LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9BwWILPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf2bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CMbALPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf2rPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf27PaEeKHpbbVWYMqww" visibility="private" importedElement="_9CIwoLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf3LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CIJkLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf3bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf3rPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CGUYLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf37PaEeKHpbbVWYMqww" visibility="private" importedElement="_9CPeULPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9GIf4LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CQFYLPaEeKHpbbVWYMqww"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GQboLPaEeKHpbbVWYMqww" name="erzeugeVeranstaltung" specification="_9GOmcLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GQbobPaEeKHpbbVWYMqww" name="v" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		veranstaltungBA.createVeranstaltung(v);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GXwYLPaEeKHpbbVWYMqww" name="erzeugeVerein" specification="_9GWiQLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GXwYbPaEeKHpbbVWYMqww" name="v" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		vereinBA.createVerein(v);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GfFILPaEeKHpbbVWYMqww" name="erzeugeAnmeldung" specification="_9Gd3ALPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GfFIbPaEeKHpbbVWYMqww" name="a" type="_9CMbALPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		teilnahmeBA.createTeilnahme(a);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GmZ4LPaEeKHpbbVWYMqww" name="erzeugeLaeufer" specification="_9GlLwLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GmZ4bPaEeKHpbbVWYMqww" name="a" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		laeuferBA.createLaeufer(a);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GtuoLPaEeKHpbbVWYMqww" name="erzeugeLaufzeit" specification="_9Gr5cLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GtuobPaEeKHpbbVWYMqww" name="l" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		ergebnisBA.createErgebnis(l);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9GyAELPaEeKHpbbVWYMqww" name="getVeranstaltungen" specification="_9Gwx8LPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GyAEbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		return veranstaltungBA.getAllVeranstaltungen();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9G2RgLPaEeKHpbbVWYMqww" name="getVereine" specification="_9G1DYLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9G2RgbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		return vereinBA.getAllVereine();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9G6i8LPaEeKHpbbVWYMqww" name="getLaeufer" specification="_9G4twLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9G6i8bPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		return laeuferBA.getAllLauefer();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HBQoLPaEeKHpbbVWYMqww" name="getAnmeldungen" specification="_9HACgLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9HBQobPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HBQorPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		return teilnahmeBA.getAllTeilnahmen();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HH-ULPaEeKHpbbVWYMqww" name="getLaufzeiten" specification="_9HGwMLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9HH-UbPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HH-UrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		return ergebnisBA.getAllErgebnisse();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HRIQLPaEeKHpbbVWYMqww" name="getAuswertung" specification="_9HPTELPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9HRIQbPaEeKHpbbVWYMqww" name="a" type="_9CPeULPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HRIQrPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HRIQ7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+              <language>JAVA</language>
+              <body>&#xD;
+		return statistikBA.generateErgebnisliste(a, Veranstaltung);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HUyoLPaEeKHpbbVWYMqww" name="init" specification="_9HTkgLPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+		BAFactory.init();&#xD;
+&#xD;
+		veranstaltungBA = BAFactory.getVeranstaltungBA();&#xD;
+		vereinBA = BAFactory.getVereinBA();&#xD;
+		teilnahmeBA = BAFactory.getTeilnahmeBA();&#xD;
+		laeuferBA = BAFactory.getLaeuferBA();&#xD;
+		ergebnisBA = BAFactory.getErgebnisBA();&#xD;
+		statistikBA = BAFactory.getStatistikBA();&#xD;
+	</body>
+            </ownedBehavior>
+            <interfaceRealization xmi:id="_9GIf0LPaEeKHpbbVWYMqww" name="swa.runningeasy.services.RunningServices" supplier="_9CQFYLPaEeKHpbbVWYMqww" client="_9B7VQLPaEeKHpbbVWYMqww" contract="_9CQFYLPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9GOmcLPaEeKHpbbVWYMqww" name="erzeugeVeranstaltung" visibility="public" method="_9GQboLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GOmcbPaEeKHpbbVWYMqww" name="v" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9GWiQLPaEeKHpbbVWYMqww" name="erzeugeVerein" visibility="public" method="_9GXwYLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GWiQbPaEeKHpbbVWYMqww" name="v" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9Gd3ALPaEeKHpbbVWYMqww" name="erzeugeAnmeldung" visibility="public" method="_9GfFILPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9Gd3AbPaEeKHpbbVWYMqww" name="a" type="_9CMbALPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9GlLwLPaEeKHpbbVWYMqww" name="erzeugeLaeufer" visibility="public" method="_9GmZ4LPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9GlLwbPaEeKHpbbVWYMqww" name="a" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9Gr5cLPaEeKHpbbVWYMqww" name="erzeugeLaufzeit" visibility="public" method="_9GtuoLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9Gr5cbPaEeKHpbbVWYMqww" name="l" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9Gwx8LPaEeKHpbbVWYMqww" name="getVeranstaltungen" visibility="public" method="_9GyAELPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9Gwx8bPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9G1DYLPaEeKHpbbVWYMqww" name="getVereine" visibility="public" method="_9G2RgLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9G1DYbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9G4twLPaEeKHpbbVWYMqww" name="getLaeufer" visibility="public" method="_9G6i8LPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9G4twbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9HACgLPaEeKHpbbVWYMqww" name="getAnmeldungen" visibility="public" method="_9HBQoLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9HACgbPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HACgrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9HGwMLPaEeKHpbbVWYMqww" name="getLaufzeiten" visibility="public" method="_9HH-ULPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9HGwMbPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HGwMrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9HPTELPaEeKHpbbVWYMqww" name="getAuswertung" visibility="public" method="_9HRIQLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:id="_9HPTEbPaEeKHpbbVWYMqww" name="a" type="_9CPeULPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HP6ILPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+              <ownedParameter xmi:id="_9HP6IbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_9HTkgLPaEeKHpbbVWYMqww" name="init" visibility="public" method="_9HUyoLPaEeKHpbbVWYMqww"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_9CYBMLPaEeKHpbbVWYMqww" name="RunningServiceBATest">
+            <eAnnotations xmi:id="_9CYBMbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9CYBMrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+            </eAnnotations>
+            <elementImport xmi:id="_9LdEsLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LcdobPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9LdEsbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9LdEsrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9LdEs7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNLPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9LdEtLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNrPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9LdEtbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CWzELPaEeKHpbbVWYMqww"/>
+            <elementImport xmi:id="_9LdEtrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CJ-wLPaEeKHpbbVWYMqww"/>
+            <generalization xmi:id="_9LcdoLPaEeKHpbbVWYMqww" general="_9CWzELPaEeKHpbbVWYMqww"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LgIALPaEeKHpbbVWYMqww" name="setUp" specification="_9Le54LPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+		super.setUp();&#xD;
+		runningServiceBA = new RunningServiceBA();&#xD;
+		runningServiceBA.init();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LikQLPaEeKHpbbVWYMqww" name="erzeugeVeranstaltung" specification="_9LhWILPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+		VeranstaltungDTO dto = new VeranstaltungDTO(&quot;&quot;, new Date(), new Date(), 10);&#xD;
+&#xD;
+		runningServiceBA.erzeugeVeranstaltung(dto);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LlnkLPaEeKHpbbVWYMqww" name="testgetVeranstaltungen" specification="_9LkZcLPaEeKHpbbVWYMqww">
+              <language>JAVA</language>
+              <body>&#xD;
+		List&lt;VeranstaltungDTO&amp;gt; list = runningServiceBA.getVeranstaltungen();&#xD;
+&#xD;
+		assertNotNull(list);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_9Le54LPaEeKHpbbVWYMqww" name="setUp" visibility="public" method="_9LgIALPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9LhWILPaEeKHpbbVWYMqww" name="erzeugeVeranstaltung" visibility="public" method="_9LikQLPaEeKHpbbVWYMqww"/>
+            <ownedOperation xmi:id="_9LkZcLPaEeKHpbbVWYMqww" name="testgetVeranstaltungen" visibility="public" method="_9LlnkLPaEeKHpbbVWYMqww"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHJbPaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHJrPaEeKHpbbVWYMqww" supplier="_9BhFkrPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHJ7PaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHKLPaEeKHpbbVWYMqww" supplier="_9CO3Q7PaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHKbPaEeKHpbbVWYMqww" supplier="_9LObMbPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHKrPaEeKHpbbVWYMqww" supplier="_9LKJwbPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVQLPaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVQbPaEeKHpbbVWYMqww" supplier="_9BhFkrPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVQrPaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVQ7PaEeKHpbbVWYMqww" supplier="_9CO3Q7PaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVRLPaEeKHpbbVWYMqww" supplier="_9LObMbPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVRbPaEeKHpbbVWYMqww" supplier="_9LKJwbPaEeKHpbbVWYMqww" client="_9B45A7PaEeKHpbbVWYMqww"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9B7VQ7PaEeKHpbbVWYMqww" name="db" clientDependency="_9LrHK7PaEeKHpbbVWYMqww _9LrHLLPaEeKHpbbVWYMqww _9LrHLbPaEeKHpbbVWYMqww _9LrHLrPaEeKHpbbVWYMqww _9LrHL7PaEeKHpbbVWYMqww _9LrHMLPaEeKHpbbVWYMqww _9LsVRrPaEeKHpbbVWYMqww _9LsVR7PaEeKHpbbVWYMqww _9LsVSLPaEeKHpbbVWYMqww _9LsVSbPaEeKHpbbVWYMqww _9LsVSrPaEeKHpbbVWYMqww _9LsVS7PaEeKHpbbVWYMqww">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9B9KcLPaEeKHpbbVWYMqww" name="IObjectWriter">
+          <eAnnotations xmi:id="_9B9KcbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9B9KcrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedOperation xmi:id="_9HaSMLPaEeKHpbbVWYMqww" name="save" visibility="public">
+            <ownedParameter xmi:id="_9HaSMbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HaSMrPaEeKHpbbVWYMqww" name="objectToSave" type="_9HYdALPaEeKHpbbVWYMqww"/>
+            <ownedTemplateSignature xmi:id="_9HaSM7PaEeKHpbbVWYMqww" parameter="_9HaSNLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9HaSNLPaEeKHpbbVWYMqww" parameteredElement="_9HaSNbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9HaSNbPaEeKHpbbVWYMqww" name="C" templateParameter="_9HaSNLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9HcHYLPaEeKHpbbVWYMqww" name="delete" visibility="public">
+            <ownedParameter xmi:id="_9HcHYbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HcHYrPaEeKHpbbVWYMqww" name="objectToDelete" type="_9HaSNbPaEeKHpbbVWYMqww"/>
+            <ownedTemplateSignature xmi:id="_9HcHY7PaEeKHpbbVWYMqww" parameter="_9HcHZLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9HcHZLPaEeKHpbbVWYMqww" parameteredElement="_9HcHZbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9HcHZbPaEeKHpbbVWYMqww" name="C" templateParameter="_9HcHZLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9B_msLPaEeKHpbbVWYMqww" name="ObjectWriter" clientDependency="_9HcucLPaEeKHpbbVWYMqww">
+          <eAnnotations xmi:id="_9B_msbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9B_msrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HgY0LPaEeKHpbbVWYMqww" name="save" specification="_9HfxwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HgY0bPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HgY0rPaEeKHpbbVWYMqww" name="objectToSave" type="_9HYdALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HjcILPaEeKHpbbVWYMqww" name="delete" specification="_9Hi1ELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HjcIbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HjcIrPaEeKHpbbVWYMqww" name="objectToDelete" type="_9HfxxbPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <interfaceRealization xmi:id="_9HcucLPaEeKHpbbVWYMqww" name="swa.runningeasy.db.IObjectWriter" supplier="_9B9KcLPaEeKHpbbVWYMqww" client="_9B_msLPaEeKHpbbVWYMqww" contract="_9B9KcLPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9HfxwLPaEeKHpbbVWYMqww" name="save" visibility="public" method="_9HgY0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HfxwbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HfxwrPaEeKHpbbVWYMqww" name="objectToSave" type="_9HYdALPaEeKHpbbVWYMqww"/>
+            <ownedTemplateSignature xmi:id="_9Hfxw7PaEeKHpbbVWYMqww" parameter="_9HfxxLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9HfxxLPaEeKHpbbVWYMqww" parameteredElement="_9HfxxbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9HfxxbPaEeKHpbbVWYMqww" name="C" templateParameter="_9HfxxLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Hi1ELPaEeKHpbbVWYMqww" name="delete" visibility="public" method="_9HjcILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Hi1EbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9Hi1ErPaEeKHpbbVWYMqww" name="objectToDelete" type="_9HfxxbPaEeKHpbbVWYMqww"/>
+            <ownedTemplateSignature xmi:id="_9Hi1E7PaEeKHpbbVWYMqww" parameter="_9Hi1FLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9Hi1FLPaEeKHpbbVWYMqww" parameteredElement="_9Hi1FbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9Hi1FbPaEeKHpbbVWYMqww" name="C" templateParameter="_9Hi1FLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CBb4LPaEeKHpbbVWYMqww" name="ObjectReader" clientDependency="_9HnGgLPaEeKHpbbVWYMqww">
+          <eAnnotations xmi:id="_9CBb4bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CBb4rPaEeKHpbbVWYMqww" key="documentation" value=" &#xD;&#xA; @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9HnGgbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9HnGhbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9HnGhLPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HubQLPaEeKHpbbVWYMqww" name="getObjectById" specification="_9HtNILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HubQbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HubQrPaEeKHpbbVWYMqww" name="id" type="_9Ho7sLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HubQ7PaEeKHpbbVWYMqww" type="_9HtNJrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return null;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9HzTwLPaEeKHpbbVWYMqww" name="getObjectByValues" specification="_9HyFoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HzTwbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HzTwrPaEeKHpbbVWYMqww" name="dto" type="_9HvpYLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HzTw7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return null;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9H2-ILPaEeKHpbbVWYMqww" name="getAllObjects" specification="_9H1wALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9H2-IbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9H2-IrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return null;&#xD;
+	</body>
+          </ownedBehavior>
+          <interfaceRealization xmi:id="_9HnGgLPaEeKHpbbVWYMqww" name="swa.runningeasy.db.IObjectReader" supplier="_9CEfMLPaEeKHpbbVWYMqww" client="_9CBb4LPaEeKHpbbVWYMqww" contract="_9CEfMLPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9HtNILPaEeKHpbbVWYMqww" name="getObjectById" visibility="public" method="_9HubQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HtNIbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HtNIrPaEeKHpbbVWYMqww" name="id" type="_9Ho7sLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HtNI7PaEeKHpbbVWYMqww" type="_9HtNJrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9HtNJLPaEeKHpbbVWYMqww" parameter="_9HtNJbPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9HtNJbPaEeKHpbbVWYMqww" parameteredElement="_9HtNJrPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9HtNJrPaEeKHpbbVWYMqww" name="C" templateParameter="_9HtNJbPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9HyFoLPaEeKHpbbVWYMqww" name="getObjectByValues" visibility="public" method="_9HzTwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9HyFobPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HyForPaEeKHpbbVWYMqww" name="dto" type="_9HvpYLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9HyFo7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9HyFpLPaEeKHpbbVWYMqww" parameter="_9HyFpbPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9HyFpbPaEeKHpbbVWYMqww" parameteredElement="_9HyFprPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9HyFprPaEeKHpbbVWYMqww" name="C" templateParameter="_9HyFpbPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9H1wALPaEeKHpbbVWYMqww" name="getAllObjects" visibility="public" method="_9H2-ILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9H1wAbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9H1wArPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9H1wA7PaEeKHpbbVWYMqww" parameter="_9H1wBLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9H1wBLPaEeKHpbbVWYMqww" parameteredElement="_9H1wBbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9H1wBbPaEeKHpbbVWYMqww" name="C" templateParameter="_9H1wBLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CDRELPaEeKHpbbVWYMqww" name="EmulatedDB" clientDependency="_9H3lMLPaEeKHpbbVWYMqww _9H4MQLPaEeKHpbbVWYMqww">
+          <elementImport xmi:id="_9H4MQbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9EGfgbPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9H4MQrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9DmJMrPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9H9EwLPaEeKHpbbVWYMqww" name="save" specification="_9H72oLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9H9EwbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9H9EwrPaEeKHpbbVWYMqww" name="objectToSave" type="_9HYdALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		values.add(objectToSave);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IBWMLPaEeKHpbbVWYMqww" name="delete" specification="_9IAIELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IBWMbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IBWMrPaEeKHpbbVWYMqww" name="objectToDelete" type="_9H72pbPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		values.remove(objectToDelete);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IFnoLPaEeKHpbbVWYMqww" name="getObjectById" specification="_9IEZgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IFnobPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IFnorPaEeKHpbbVWYMqww" name="id" type="_9Ho7sLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IFno7PaEeKHpbbVWYMqww" type="_9H72pbPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return null;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IJ5ELPaEeKHpbbVWYMqww" name="getObjectByValues" specification="_9IJSALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IJ5EbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IJ5ErPaEeKHpbbVWYMqww" name="dto" type="_9HvpYLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IJ5E7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return null;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IOKgLPaEeKHpbbVWYMqww" name="getAllObjects" specification="_9IM8YLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IOKgbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IOKgrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		List&lt;C&amp;gt; result = new ArrayList&lt;&amp;gt;();&#xD;
+&#xD;
+		for (Object o : values) {&#xD;
+			if (o.getClass().equals(clazz)) {&#xD;
+				result.add((C) o);&#xD;
+			}&#xD;
+		}&#xD;
+&#xD;
+		return result;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IQmwLPaEeKHpbbVWYMqww" name="getInstance" specification="_9IPYoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IQmwbPaEeKHpbbVWYMqww" type="_9CDRELPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return instance;&#xD;
+	</body>
+          </ownedBehavior>
+          <interfaceRealization xmi:id="_9H3lMLPaEeKHpbbVWYMqww" name="swa.runningeasy.db.IObjectReader" supplier="_9CEfMLPaEeKHpbbVWYMqww" client="_9CDRELPaEeKHpbbVWYMqww" contract="_9CEfMLPaEeKHpbbVWYMqww"/>
+          <interfaceRealization xmi:id="_9H4MQLPaEeKHpbbVWYMqww" name="swa.runningeasy.db.IObjectWriter" supplier="_9B9KcLPaEeKHpbbVWYMqww" client="_9CDRELPaEeKHpbbVWYMqww" contract="_9B9KcLPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9H72oLPaEeKHpbbVWYMqww" name="save" visibility="public" method="_9H9EwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9H72obPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9H72orPaEeKHpbbVWYMqww" name="objectToSave" type="_9HYdALPaEeKHpbbVWYMqww"/>
+            <ownedTemplateSignature xmi:id="_9H72o7PaEeKHpbbVWYMqww" parameter="_9H72pLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9H72pLPaEeKHpbbVWYMqww" parameteredElement="_9H72pbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9H72pbPaEeKHpbbVWYMqww" name="C" templateParameter="_9H72pLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IAIELPaEeKHpbbVWYMqww" name="delete" visibility="public" method="_9IBWMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IAIEbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IAIErPaEeKHpbbVWYMqww" name="objectToDelete" type="_9H72pbPaEeKHpbbVWYMqww"/>
+            <ownedTemplateSignature xmi:id="_9IAIE7PaEeKHpbbVWYMqww" parameter="_9IAIFLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9IAIFLPaEeKHpbbVWYMqww" parameteredElement="_9IAIFbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9IAIFbPaEeKHpbbVWYMqww" name="C" templateParameter="_9IAIFLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IEZgLPaEeKHpbbVWYMqww" name="getObjectById" visibility="public" method="_9IFnoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IEZgbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IEZgrPaEeKHpbbVWYMqww" name="id" type="_9Ho7sLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IEZg7PaEeKHpbbVWYMqww" type="_9H72pbPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9IEZhLPaEeKHpbbVWYMqww" parameter="_9IEZhbPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9IEZhbPaEeKHpbbVWYMqww" parameteredElement="_9IEZhrPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9IEZhrPaEeKHpbbVWYMqww" name="C" templateParameter="_9IEZhbPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IJSALPaEeKHpbbVWYMqww" name="getObjectByValues" visibility="public" method="_9IJ5ELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IJSAbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IJSArPaEeKHpbbVWYMqww" name="dto" type="_9HvpYLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IJSA7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9IJSBLPaEeKHpbbVWYMqww" parameter="_9IJSBbPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9IJSBbPaEeKHpbbVWYMqww" parameteredElement="_9IJSBrPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9IJSBrPaEeKHpbbVWYMqww" name="C" templateParameter="_9IJSBbPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IM8YLPaEeKHpbbVWYMqww" name="getAllObjects" visibility="public" method="_9IOKgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IM8YbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IM8YrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9IM8Y7PaEeKHpbbVWYMqww" parameter="_9IM8ZLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9IM8ZLPaEeKHpbbVWYMqww" parameteredElement="_9IM8ZbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9IM8ZbPaEeKHpbbVWYMqww" name="C" templateParameter="_9IM8ZLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IPYoLPaEeKHpbbVWYMqww" name="getInstance" visibility="public" isStatic="true" method="_9IQmwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IPYobPaEeKHpbbVWYMqww" type="_9CDRELPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9CEfMLPaEeKHpbbVWYMqww" name="IObjectReader">
+          <eAnnotations xmi:id="_9CEfMbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CEfMrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedAttribute xmi:id="_9IRN0LPaEeKHpbbVWYMqww" name="CLAUSE_ALL" visibility="public" isStatic="true" type="_9EKJ4bPaEeKHpbbVWYMqww">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_9IRN0bPaEeKHpbbVWYMqww" name="" type="_9EKJ4bPaEeKHpbbVWYMqww" value="&quot;1 = 1&quot;"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_9ITDALPaEeKHpbbVWYMqww" name="getObjectById" visibility="public">
+            <ownedParameter xmi:id="_9ITDAbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9ITDArPaEeKHpbbVWYMqww" name="id" type="_9Ho7sLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9ITDA7PaEeKHpbbVWYMqww" type="_9ITDBrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9ITDBLPaEeKHpbbVWYMqww" parameter="_9ITDBbPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9ITDBbPaEeKHpbbVWYMqww" parameteredElement="_9ITDBrPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9ITDBrPaEeKHpbbVWYMqww" name="C" templateParameter="_9ITDBbPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IVfQLPaEeKHpbbVWYMqww" name="getObjectByValues" visibility="public">
+            <ownedParameter xmi:id="_9IVfQbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IVfQrPaEeKHpbbVWYMqww" name="dto" type="_9HvpYLPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IVfQ7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9IVfRLPaEeKHpbbVWYMqww" parameter="_9IVfRbPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9IVfRbPaEeKHpbbVWYMqww" parameteredElement="_9IVfRrPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9IVfRrPaEeKHpbbVWYMqww" name="C" templateParameter="_9IVfRbPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IXUcLPaEeKHpbbVWYMqww" name="getAllObjects" visibility="public">
+            <ownedParameter xmi:id="_9IXUcbPaEeKHpbbVWYMqww" name="clazz" type="_9HWn0LPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9IXUcrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+            <ownedTemplateSignature xmi:id="_9IXUc7PaEeKHpbbVWYMqww" parameter="_9IXUdLPaEeKHpbbVWYMqww">
+              <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_9IXUdLPaEeKHpbbVWYMqww" parameteredElement="_9IXUdbPaEeKHpbbVWYMqww">
+                <ownedParameteredElement xmi:type="uml:Class" xmi:id="_9IXUdbPaEeKHpbbVWYMqww" name="C" templateParameter="_9IXUdLPaEeKHpbbVWYMqww"/>
+              </ownedParameter>
+            </ownedTemplateSignature>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CYoQLPaEeKHpbbVWYMqww" name="ObjectWriterTest">
+          <eAnnotations xmi:id="_9CYoQbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CYoQrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <elementImport xmi:id="_9Lm1sbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9Lm1srPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LObNrPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9Lm1s7PaEeKHpbbVWYMqww" visibility="private" importedElement="_9CShoLPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9Lm1tLPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CWzELPaEeKHpbbVWYMqww"/>
+          <elementImport xmi:id="_9Lm1tbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CLM4LPaEeKHpbbVWYMqww"/>
+          <generalization xmi:id="_9Lm1sLPaEeKHpbbVWYMqww" general="_9CWzELPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Loq4LPaEeKHpbbVWYMqww" name="setUp" specification="_9LoD0LPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		super.setUp();&#xD;
+		objectWriter = new ObjectWriter();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LqgELPaEeKHpbbVWYMqww" name="testsave" specification="_9LpR8LPaEeKHpbbVWYMqww">
+            <language>JAVA</language>
+            <body>&#xD;
+		objectWriter.save(LaeuferDTO.class, TestData.getLaeuferDTO());&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9LoD0LPaEeKHpbbVWYMqww" name="setUp" visibility="public" method="_9Loq4LPaEeKHpbbVWYMqww"/>
+          <ownedOperation xmi:id="_9LpR8LPaEeKHpbbVWYMqww" name="testsave" visibility="public" method="_9LqgELPaEeKHpbbVWYMqww"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHK7PaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHLLPaEeKHpbbVWYMqww" supplier="_9HnGg7PaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHLbPaEeKHpbbVWYMqww" supplier="_9LKJwbPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHLrPaEeKHpbbVWYMqww" supplier="_9BhFkbPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHL7PaEeKHpbbVWYMqww" supplier="_9BhFkrPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LrHMLPaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVRrPaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVR7PaEeKHpbbVWYMqww" supplier="_9HnGg7PaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVSLPaEeKHpbbVWYMqww" supplier="_9LKJwbPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVSbPaEeKHpbbVWYMqww" supplier="_9BhFkbPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVSrPaEeKHpbbVWYMqww" supplier="_9BhFkrPaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LsVS7PaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9B7VQ7PaEeKHpbbVWYMqww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9CEfM7PaEeKHpbbVWYMqww" name="dtos" clientDependency="_9LruMLPaEeKHpbbVWYMqww">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CGUYLPaEeKHpbbVWYMqww" name="VereinDTO">
+          <eAnnotations xmi:id="_9CGUYbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CGUYrPaEeKHpbbVWYMqww" key="documentation" value=" @author Bernhard Hollunder&#xD;&#xA; &#xD;&#xA;         Represents a club a participant is starting for.&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IZJoLPaEeKHpbbVWYMqww" name="getName" specification="_9IYikLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IZJobPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Ia-0LPaEeKHpbbVWYMqww" name="setName" specification="_9IaXwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Ia-0bPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.name = name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IcM8LPaEeKHpbbVWYMqww" name="getStrasse" specification="_9Ibl4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IcM8bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return strasse;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IepMLPaEeKHpbbVWYMqww" name="setStrasse" specification="_9IeCILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IepMbPaEeKHpbbVWYMqww" name="strasse" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.strasse = strasse;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9If3ULPaEeKHpbbVWYMqww" name="getPlz" specification="_9IfQQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9If3UbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return plz;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IhsgLPaEeKHpbbVWYMqww" name="setPlz" specification="_9IhFcLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IhsgbPaEeKHpbbVWYMqww" name="plz" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.plz = plz;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IjhsLPaEeKHpbbVWYMqww" name="getOrt" specification="_9Ii6oLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IjhsbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return ort;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9IsEkLPaEeKHpbbVWYMqww" name="setOrt" specification="_9Ikv0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IsEkbPaEeKHpbbVWYMqww" name="ort" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.ort = ort;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9It5wLPaEeKHpbbVWYMqww" name="getLand" specification="_9ItSsLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9It5wbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return land;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Ivu8LPaEeKHpbbVWYMqww" name="setLand" specification="_9IvH4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Ivu8bPaEeKHpbbVWYMqww" name="land" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.land = land;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JDQ8LPaEeKHpbbVWYMqww" name="toString" specification="_9JCp4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JDQ8bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9IYikLPaEeKHpbbVWYMqww" name="getName" visibility="public" method="_9IZJoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IYikbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IaXwLPaEeKHpbbVWYMqww" name="setName" visibility="public" method="_9Ia-0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IaXwbPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Ibl4LPaEeKHpbbVWYMqww" name="getStrasse" visibility="public" method="_9IcM8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Ibl4bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IeCILPaEeKHpbbVWYMqww" name="setStrasse" visibility="public" method="_9IepMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IeCIbPaEeKHpbbVWYMqww" name="strasse" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IfQQLPaEeKHpbbVWYMqww" name="getPlz" visibility="public" method="_9If3ULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IfQQbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IhFcLPaEeKHpbbVWYMqww" name="setPlz" visibility="public" method="_9IhsgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IhFcbPaEeKHpbbVWYMqww" name="plz" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Ii6oLPaEeKHpbbVWYMqww" name="getOrt" visibility="public" method="_9IjhsLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Ii6obPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Ikv0LPaEeKHpbbVWYMqww" name="setOrt" visibility="public" method="_9IsEkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Ikv0bPaEeKHpbbVWYMqww" name="ort" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9ItSsLPaEeKHpbbVWYMqww" name="getLand" visibility="public" method="_9It5wLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9ItSsbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9IvH4LPaEeKHpbbVWYMqww" name="setLand" visibility="public" method="_9Ivu8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9IvH4bPaEeKHpbbVWYMqww" name="land" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JCp4LPaEeKHpbbVWYMqww" name="toString" visibility="public" method="_9JDQ8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JCp4bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CIJkLPaEeKHpbbVWYMqww" name="ListeneintragDTO">
+          <elementImport xmi:id="_9JD4AbPaEeKHpbbVWYMqww" visibility="private" importedElement="_9JD4ALPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JFtMLPaEeKHpbbVWYMqww" name="getName" specification="_9JFGILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JFtMbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JIJcLPaEeKHpbbVWYMqww" name="setName" specification="_9JHiYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JIJcbPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.name = name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JJXkLPaEeKHpbbVWYMqww" name="getVorname" specification="_9JIwgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JJXkbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return vorname;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JLz0LPaEeKHpbbVWYMqww" name="setVorname" specification="_9JLMwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JLz0bPaEeKHpbbVWYMqww" name="vorname" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.vorname = vorname;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JNB8LPaEeKHpbbVWYMqww" name="getGeburtsjahr" specification="_9JMa4bPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JNB8bPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return geburtsjahr;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JO3ILPaEeKHpbbVWYMqww" name="setGeburtsjahr" specification="_9JOQELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JO3IbPaEeKHpbbVWYMqww" name="geburtsjahr" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.geburtsjahr = geburtsjahr;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JQFQLPaEeKHpbbVWYMqww" name="getGeschlecht" specification="_9JPeMbPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JQFQbPaEeKHpbbVWYMqww" type="_9JPeMLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return geschlecht;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JRTYLPaEeKHpbbVWYMqww" name="setGeschlecht" specification="_9JQsULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JRTYbPaEeKHpbbVWYMqww" name="geschlecht" type="_9JPeMLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.geschlecht = geschlecht;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JTIkLPaEeKHpbbVWYMqww" name="getVerein" specification="_9JShgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JTIkbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return verein;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JVk0LPaEeKHpbbVWYMqww" name="setVerein" specification="_9JU9wLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JVk0bPaEeKHpbbVWYMqww" name="verein" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.verein = verein;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JWy8LPaEeKHpbbVWYMqww" name="getStartnummer" specification="_9JWL4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JWy8bPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return startnummer;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JYoILPaEeKHpbbVWYMqww" name="setStartnummer" specification="_9JYBELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JYoIbPaEeKHpbbVWYMqww" name="startnummer" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.startnummer = startnummer;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JZ2QLPaEeKHpbbVWYMqww" name="getPlatzierung" specification="_9JZPMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JZ2QbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return platzierung;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JbEYLPaEeKHpbbVWYMqww" name="setPlatzierung" specification="_9JadULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JbEYbPaEeKHpbbVWYMqww" name="platzierung" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.platzierung = platzierung;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Jc5kLPaEeKHpbbVWYMqww" name="getLaufzeit" specification="_9JcSgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jc5kbPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return laufzeit;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JfV0LPaEeKHpbbVWYMqww" name="setLaufzeit" specification="_9JeuwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JfV0bPaEeKHpbbVWYMqww" name="laufzeit" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.laufzeit = laufzeit;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Jgj8LPaEeKHpbbVWYMqww" name="toString" specification="_9Jf84LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jgj8bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return &quot;Listeneintrag [name=&quot; + name + &quot;, vorname=&quot; + vorname + &quot;, geburtsjahr=&quot; + geburtsjahr&#xD;
+				+ &quot;, geschlecht=&quot; + geschlecht + &quot;, verein=&quot; + verein + &quot;, startnummer=&quot; + startnummer&#xD;
+				+ &quot;, platzierung=&quot; + platzierung + &quot;, laufzeit=&quot; + laufzeit + &quot;]&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9JFGILPaEeKHpbbVWYMqww" name="getName" visibility="public" method="_9JFtMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JFGIbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JHiYLPaEeKHpbbVWYMqww" name="setName" visibility="public" method="_9JIJcLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JHiYbPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JIwgLPaEeKHpbbVWYMqww" name="getVorname" visibility="public" method="_9JJXkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JIwgbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JLMwLPaEeKHpbbVWYMqww" name="setVorname" visibility="public" method="_9JLz0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JLMwbPaEeKHpbbVWYMqww" name="vorname" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JMa4bPaEeKHpbbVWYMqww" name="getGeburtsjahr" visibility="public" method="_9JNB8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JMa4rPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JOQELPaEeKHpbbVWYMqww" name="setGeburtsjahr" visibility="public" method="_9JO3ILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JOQEbPaEeKHpbbVWYMqww" name="geburtsjahr" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JPeMbPaEeKHpbbVWYMqww" name="getGeschlecht" visibility="public" method="_9JQFQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JPeMrPaEeKHpbbVWYMqww" type="_9JPeMLPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JQsULPaEeKHpbbVWYMqww" name="setGeschlecht" visibility="public" method="_9JRTYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JQsUbPaEeKHpbbVWYMqww" name="geschlecht" type="_9JPeMLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JShgLPaEeKHpbbVWYMqww" name="getVerein" visibility="public" method="_9JTIkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JShgbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JU9wLPaEeKHpbbVWYMqww" name="setVerein" visibility="public" method="_9JVk0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JU9wbPaEeKHpbbVWYMqww" name="verein" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JWL4LPaEeKHpbbVWYMqww" name="getStartnummer" visibility="public" method="_9JWy8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JWL4bPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JYBELPaEeKHpbbVWYMqww" name="setStartnummer" visibility="public" method="_9JYoILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JYBEbPaEeKHpbbVWYMqww" name="startnummer" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JZPMLPaEeKHpbbVWYMqww" name="getPlatzierung" visibility="public" method="_9JZ2QLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JZPMbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JadULPaEeKHpbbVWYMqww" name="setPlatzierung" visibility="public" method="_9JbEYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JadUbPaEeKHpbbVWYMqww" name="platzierung" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JcSgLPaEeKHpbbVWYMqww" name="getLaufzeit" visibility="public" method="_9Jc5kLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JcSgbPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JeuwLPaEeKHpbbVWYMqww" name="setLaufzeit" visibility="public" method="_9JfV0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JeuwbPaEeKHpbbVWYMqww" name="laufzeit" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Jf84LPaEeKHpbbVWYMqww" name="toString" visibility="public" method="_9Jgj8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jf84bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CIwoLPaEeKHpbbVWYMqww" name="LaufzeitDTO">
+          <elementImport xmi:id="_9JhLALPaEeKHpbbVWYMqww" visibility="private" importedElement="_9JD4ALPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JiZILPaEeKHpbbVWYMqww" name="getStartnummer" specification="_9JhyELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JiZIbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		return Startnummer;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JjnQLPaEeKHpbbVWYMqww" name="setStartnummer" specification="_9JjAMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JjnQbPaEeKHpbbVWYMqww" name="startnummer" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		Startnummer = startnummer;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Jk1YLPaEeKHpbbVWYMqww" name="getLaufzeit" specification="_9JkOULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jk1YbPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		return laufzeit;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JmqkLPaEeKHpbbVWYMqww" name="setLaufzeit" specification="_9JmDgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JmqkbPaEeKHpbbVWYMqww" name="laufzeit" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		this.laufzeit = laufzeit;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JofwLPaEeKHpbbVWYMqww" name="getVeranstaltung" specification="_9Jn4sLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JofwbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		return veranstaltung;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JqU8LPaEeKHpbbVWYMqww" name="setVeranstaltung" specification="_9Jpt4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JqU8bPaEeKHpbbVWYMqww" name="veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		this.veranstaltung = veranstaltung;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JsKILPaEeKHpbbVWYMqww" name="toString" specification="_9JrjELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JsKIbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>
+		return &quot;LaufzeitDTO [Startnummer=&quot; + Startnummer + &quot;, laufzeit=&quot; + laufzeit + &quot;, veranstaltung=&quot;
+				+ veranstaltung + &quot;]&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9JhyELPaEeKHpbbVWYMqww" name="getStartnummer" visibility="public" method="_9JiZILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JhyEbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JjAMLPaEeKHpbbVWYMqww" name="setStartnummer" visibility="public" method="_9JjnQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JjAMbPaEeKHpbbVWYMqww" name="startnummer" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JkOULPaEeKHpbbVWYMqww" name="getLaufzeit" visibility="public" method="_9Jk1YLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JkOUbPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JmDgLPaEeKHpbbVWYMqww" name="setLaufzeit" visibility="public" method="_9JmqkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JmDgbPaEeKHpbbVWYMqww" name="laufzeit" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Jn4sLPaEeKHpbbVWYMqww" name="getVeranstaltung" visibility="public" method="_9JofwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jn4sbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Jpt4LPaEeKHpbbVWYMqww" name="setVeranstaltung" visibility="public" method="_9JqU8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jpt4bPaEeKHpbbVWYMqww" name="veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JrjELPaEeKHpbbVWYMqww" name="toString" visibility="public" method="_9JsKILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JrjEbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CJ-wLPaEeKHpbbVWYMqww" name="VeranstaltungDTO">
+          <elementImport xmi:id="_9JsKIrPaEeKHpbbVWYMqww" visibility="private" importedElement="_9JD4ALPaEeKHpbbVWYMqww"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JtYQrPaEeKHpbbVWYMqww" name="getName" specification="_9JtYQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JtYQ7PaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Jv0gLPaEeKHpbbVWYMqww" name="setName" specification="_9JvNcLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jv0gbPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.name = name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9JxCoLPaEeKHpbbVWYMqww" name="getDatum" specification="_9JwbkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JxCobPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return datum;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Jy30LPaEeKHpbbVWYMqww" name="setDatum" specification="_9JyQwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jy30bPaEeKHpbbVWYMqww" name="datum" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.datum = datum;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J0F8LPaEeKHpbbVWYMqww" name="getAnmeldeschluss" specification="_9Jze4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J0F8bPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return anmeldeschluss;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J2iMLPaEeKHpbbVWYMqww" name="setAnmeldeschluss" specification="_9J17ILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J2iMbPaEeKHpbbVWYMqww" name="anmeldeschluss" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.anmeldeschluss = anmeldeschluss;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J3JQrPaEeKHpbbVWYMqww" name="getStartgebuehr" specification="_9J3JQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J3JQ7PaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return startgebuehr;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J4-cLPaEeKHpbbVWYMqww" name="setStartgebuehr" specification="_9J4XYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J4-cbPaEeKHpbbVWYMqww" name="startgebuehr" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.startgebuehr = startgebuehr;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J6MkLPaEeKHpbbVWYMqww" name="toString" specification="_9J5lgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J6MkbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return &quot;VeranstaltungDTO [name=&quot; + name + &quot;, datum=&quot; + datum + &quot;, anmeldeschluss=&quot; + anmeldeschluss&#xD;
+				+ &quot;, startgebuehr=&quot; + startgebuehr + &quot;]&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9JtYQLPaEeKHpbbVWYMqww" name="getName" visibility="public" method="_9JtYQrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JtYQbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JvNcLPaEeKHpbbVWYMqww" name="setName" visibility="public" method="_9Jv0gLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JvNcbPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JwbkLPaEeKHpbbVWYMqww" name="getDatum" visibility="public" method="_9JxCoLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JwbkbPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9JyQwLPaEeKHpbbVWYMqww" name="setDatum" visibility="public" method="_9Jy30LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9JyQwbPaEeKHpbbVWYMqww" name="datum" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Jze4LPaEeKHpbbVWYMqww" name="getAnmeldeschluss" visibility="public" method="_9J0F8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Jze4bPaEeKHpbbVWYMqww" type="_9JD4ALPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J17ILPaEeKHpbbVWYMqww" name="setAnmeldeschluss" visibility="public" method="_9J2iMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J17IbPaEeKHpbbVWYMqww" name="anmeldeschluss" type="_9JD4ALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J3JQLPaEeKHpbbVWYMqww" name="getStartgebuehr" visibility="public" method="_9J3JQrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J3JQbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J4XYLPaEeKHpbbVWYMqww" name="setStartgebuehr" visibility="public" method="_9J4-cLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J4XYbPaEeKHpbbVWYMqww" name="startgebuehr" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J5lgLPaEeKHpbbVWYMqww" name="toString" visibility="public" method="_9J6MkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J5lgbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CLM4LPaEeKHpbbVWYMqww" name="LaeuferDTO">
+          <eAnnotations xmi:id="_9CLM4bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CLM4rPaEeKHpbbVWYMqww" key="documentation" value=" @author Bernhard Hollunder&#xD;&#xA; &#xD;&#xA;         Represents a human being participating at a running event.&#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J7asrPaEeKHpbbVWYMqww" name="getName" specification="_9J7asLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J7as7PaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J9P4LPaEeKHpbbVWYMqww" name="setName" specification="_9J8o0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J9P4bPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.name = name;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9J-eALPaEeKHpbbVWYMqww" name="getVorname" specification="_9J928LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J-eAbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return vorname;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KATMLPaEeKHpbbVWYMqww" name="setVorname" specification="_9J_sILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KATMbPaEeKHpbbVWYMqww" name="vorname" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.vorname = vorname;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KA6QLPaEeKHpbbVWYMqww" name="getGeburtsjahr" specification="_9KATMrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KA6QbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return geburtsjahr;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KCIYLPaEeKHpbbVWYMqww" name="setGeburtsjahr" specification="_9KBhULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KCIYbPaEeKHpbbVWYMqww" name="geburtsjahr" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.geburtsjahr = geburtsjahr;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KDWgLPaEeKHpbbVWYMqww" name="getGeschlecht" specification="_9KCvcLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KDWgbPaEeKHpbbVWYMqww" type="_9JPeMLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return geschlecht;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KD9krPaEeKHpbbVWYMqww" name="setGeschlecht" specification="_9KD9kLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KD9k7PaEeKHpbbVWYMqww" name="geschlecht" type="_9JPeMLPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.geschlecht = geschlecht;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KFLsrPaEeKHpbbVWYMqww" name="getEmail" specification="_9KFLsLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KFLs7PaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return email;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KHA4LPaEeKHpbbVWYMqww" name="setEmail" specification="_9KGZ0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KHA4bPaEeKHpbbVWYMqww" name="email" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.email = email;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KIPALPaEeKHpbbVWYMqww" name="getSms" specification="_9KHn8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KIPAbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return sms;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KKEMLPaEeKHpbbVWYMqww" name="setSms" specification="_9KJdILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KKEMbPaEeKHpbbVWYMqww" name="sms" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.sms = sms;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KLSULPaEeKHpbbVWYMqww" name="getStrasse" specification="_9KKrQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KLSUbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return strasse;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KMgcrPaEeKHpbbVWYMqww" name="setStrasse" specification="_9KMgcLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KMgc7PaEeKHpbbVWYMqww" name="strasse" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.strasse = strasse;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KNukrPaEeKHpbbVWYMqww" name="getPlz" specification="_9KNukLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KNuk7PaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return plz;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KPjwLPaEeKHpbbVWYMqww" name="setPlz" specification="_9KO8sLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KPjwbPaEeKHpbbVWYMqww" name="plz" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.plz = plz;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KQx4LPaEeKHpbbVWYMqww" name="getOrt" specification="_9KQK0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KQx4bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return ort;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KSnELPaEeKHpbbVWYMqww" name="setOrt" specification="_9KSAALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KSnEbPaEeKHpbbVWYMqww" name="ort" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.ort = ort;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KT1MLPaEeKHpbbVWYMqww" name="getLand" specification="_9KTOILPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KT1MbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return land;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KVqYLPaEeKHpbbVWYMqww" name="setLand" specification="_9KVDULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KVqYbPaEeKHpbbVWYMqww" name="land" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.land = land;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9J7asLPaEeKHpbbVWYMqww" name="getName" visibility="public" method="_9J7asrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J7asbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J8o0LPaEeKHpbbVWYMqww" name="setName" visibility="public" method="_9J9P4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J8o0bPaEeKHpbbVWYMqww" name="name" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J928LPaEeKHpbbVWYMqww" name="getVorname" visibility="public" method="_9J-eALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J928bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9J_sILPaEeKHpbbVWYMqww" name="setVorname" visibility="public" method="_9KATMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9J_sIbPaEeKHpbbVWYMqww" name="vorname" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KATMrPaEeKHpbbVWYMqww" name="getGeburtsjahr" visibility="public" method="_9KA6QLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KATM7PaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KBhULPaEeKHpbbVWYMqww" name="setGeburtsjahr" visibility="public" method="_9KCIYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KBhUbPaEeKHpbbVWYMqww" name="geburtsjahr" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KCvcLPaEeKHpbbVWYMqww" name="getGeschlecht" visibility="public" method="_9KDWgLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KCvcbPaEeKHpbbVWYMqww" type="_9JPeMLPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KD9kLPaEeKHpbbVWYMqww" name="setGeschlecht" visibility="public" method="_9KD9krPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KD9kbPaEeKHpbbVWYMqww" name="geschlecht" type="_9JPeMLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KFLsLPaEeKHpbbVWYMqww" name="getEmail" visibility="public" method="_9KFLsrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KFLsbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KGZ0LPaEeKHpbbVWYMqww" name="setEmail" visibility="public" method="_9KHA4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KGZ0bPaEeKHpbbVWYMqww" name="email" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KHn8LPaEeKHpbbVWYMqww" name="getSms" visibility="public" method="_9KIPALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KHn8bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KJdILPaEeKHpbbVWYMqww" name="setSms" visibility="public" method="_9KKEMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KJdIbPaEeKHpbbVWYMqww" name="sms" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KKrQLPaEeKHpbbVWYMqww" name="getStrasse" visibility="public" method="_9KLSULPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KKrQbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KMgcLPaEeKHpbbVWYMqww" name="setStrasse" visibility="public" method="_9KMgcrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KMgcbPaEeKHpbbVWYMqww" name="strasse" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KNukLPaEeKHpbbVWYMqww" name="getPlz" visibility="public" method="_9KNukrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KNukbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KO8sLPaEeKHpbbVWYMqww" name="setPlz" visibility="public" method="_9KPjwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KO8sbPaEeKHpbbVWYMqww" name="plz" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KQK0LPaEeKHpbbVWYMqww" name="getOrt" visibility="public" method="_9KQx4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KQK0bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KSAALPaEeKHpbbVWYMqww" name="setOrt" visibility="public" method="_9KSnELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KSAAbPaEeKHpbbVWYMqww" name="ort" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KTOILPaEeKHpbbVWYMqww" name="getLand" visibility="public" method="_9KT1MLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KTOIbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KVDULPaEeKHpbbVWYMqww" name="setLand" visibility="public" method="_9KVqYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KVDUbPaEeKHpbbVWYMqww" name="land" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CMbALPaEeKHpbbVWYMqww" name="AnmeldungDTO">
+          <eAnnotations xmi:id="_9CMbAbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CMbArPaEeKHpbbVWYMqww" key="documentation" value=" @author Bernhard Hollunder&#xD;&#xA; &#xD;&#xA;         Represents a registration for a running event.&#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KW4grPaEeKHpbbVWYMqww" name="getLaeufer" specification="_9KW4gLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KW4g7PaEeKHpbbVWYMqww" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return laeufer;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KYtsrPaEeKHpbbVWYMqww" name="setLaeufer" specification="_9KYtsLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KYts7PaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.laeufer = laeufer;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KZ70LPaEeKHpbbVWYMqww" name="isBezahlt" specification="_9KZUwLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KZ70bPaEeKHpbbVWYMqww" type="_9EruULPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return bezahlt;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KbJ8LPaEeKHpbbVWYMqww" name="setBezahlt" specification="_9Kai4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KbJ8bPaEeKHpbbVWYMqww" name="bezahlt" type="_9EruULPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.bezahlt = bezahlt;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KcYELPaEeKHpbbVWYMqww" name="getVeranstaltung" specification="_9KbxALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KcYEbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return veranstaltung;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KeNQLPaEeKHpbbVWYMqww" name="setVeranstaltung" specification="_9KdmMLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KeNQbPaEeKHpbbVWYMqww" name="veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.veranstaltung = veranstaltung;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KfbYrPaEeKHpbbVWYMqww" name="getVerein" specification="_9KfbYLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KfbY7PaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return verein;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Kh3oLPaEeKHpbbVWYMqww" name="setVerein" specification="_9KhQkLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Kh3obPaEeKHpbbVWYMqww" name="verein" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.verein = verein;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KiesLPaEeKHpbbVWYMqww" name="getStartnummer" specification="_9Kh3orPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KiesbPaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return startnummer;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KkT4LPaEeKHpbbVWYMqww" name="setStartnummer" specification="_9Kjs0LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KkT4bPaEeKHpbbVWYMqww" name="startnummer" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		this.startnummer = startnummer;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9KliALPaEeKHpbbVWYMqww" name="toString" specification="_9Kk68LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KliAbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <language>JAVA</language>
+            <body>&#xD;
+		return &quot;AnmeldungDTO [laeufer=&quot; + laeufer + &quot;, bezahlt=&quot; + bezahlt + &quot;, veranstaltung=&quot; + veranstaltung&#xD;
+				+ &quot;, verein=&quot; + verein + &quot;, startnummer=&quot; + startnummer + &quot;]&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_9KW4gLPaEeKHpbbVWYMqww" name="getLaeufer" visibility="public" method="_9KW4grPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KW4gbPaEeKHpbbVWYMqww" type="_9CLM4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KYtsLPaEeKHpbbVWYMqww" name="setLaeufer" visibility="public" method="_9KYtsrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KYtsbPaEeKHpbbVWYMqww" name="laeufer" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KZUwLPaEeKHpbbVWYMqww" name="isBezahlt" visibility="public" method="_9KZ70LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KZUwbPaEeKHpbbVWYMqww" type="_9EruULPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Kai4LPaEeKHpbbVWYMqww" name="setBezahlt" visibility="public" method="_9KbJ8LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Kai4bPaEeKHpbbVWYMqww" name="bezahlt" type="_9EruULPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KbxALPaEeKHpbbVWYMqww" name="getVeranstaltung" visibility="public" method="_9KcYELPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KbxAbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KdmMLPaEeKHpbbVWYMqww" name="setVeranstaltung" visibility="public" method="_9KeNQLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KdmMbPaEeKHpbbVWYMqww" name="veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KfbYLPaEeKHpbbVWYMqww" name="getVerein" visibility="public" method="_9KfbYrPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KfbYbPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KhQkLPaEeKHpbbVWYMqww" name="setVerein" visibility="public" method="_9Kh3oLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9KhQkbPaEeKHpbbVWYMqww" name="verein" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Kh3orPaEeKHpbbVWYMqww" name="getStartnummer" visibility="public" method="_9KiesLPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Kh3o7PaEeKHpbbVWYMqww" type="_9JMa4LPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Kjs0LPaEeKHpbbVWYMqww" name="setStartnummer" visibility="public" method="_9KkT4LPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Kjs0bPaEeKHpbbVWYMqww" name="startnummer" type="_9JMa4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Kk68LPaEeKHpbbVWYMqww" name="toString" visibility="public" method="_9KliALPaEeKHpbbVWYMqww">
+            <ownedParameter xmi:id="_9Kk68bPaEeKHpbbVWYMqww" type="_9EKJ4bPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruMLPaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9CEfM7PaEeKHpbbVWYMqww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9CMbA7PaEeKHpbbVWYMqww" name="extern" clientDependency="_9LruMbPaEeKHpbbVWYMqww">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9CNCELPaEeKHpbbVWYMqww" name="IBank">
+          <eAnnotations xmi:id="_9CNCEbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CNCErPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedOperation xmi:id="_9KmJELPaEeKHpbbVWYMqww" name="liefereZalungseingaenge" visibility="public">
+            <eAnnotations xmi:id="_9KmJEbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+              <details xmi:id="_9KmJErPaEeKHpbbVWYMqww" key="documentation" value=" Bankanwendung will call this Method to give Information about the&#xD;&#xA; Kontostatus&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9CNpILPaEeKHpbbVWYMqww" name="IMessageService">
+          <eAnnotations xmi:id="_9CNpIbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CNpIrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedOperation xmi:id="_9KmwILPaEeKHpbbVWYMqww" name="sendSMS" visibility="public"/>
+          <ownedOperation xmi:id="_9KnXMLPaEeKHpbbVWYMqww" name="sendEmail" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9COQMLPaEeKHpbbVWYMqww" name="ILaufzeitsystem">
+          <eAnnotations xmi:id="_9COQMbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9COQMrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedOperation xmi:id="_9Kn-QLPaEeKHpbbVWYMqww" name="pushZwischenzeitForLaeufer" visibility="public"/>
+          <ownedOperation xmi:id="_9Kn-QbPaEeKHpbbVWYMqww" name="pushEndzeitForLaeufer" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9CO3QLPaEeKHpbbVWYMqww" name="IDataimport">
+          <eAnnotations xmi:id="_9CO3QbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CO3QrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedOperation xmi:id="_9KpMYLPaEeKHpbbVWYMqww" name="readImportFile" visibility="public">
+            <ownedParameter xmi:id="_9KpMYbPaEeKHpbbVWYMqww" name="file" type="_9F52UrPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruMbPaEeKHpbbVWYMqww" supplier="_9F52UbPaEeKHpbbVWYMqww" client="_9CMbA7PaEeKHpbbVWYMqww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9CO3Q7PaEeKHpbbVWYMqww" name="services" clientDependency="_9LruMrPaEeKHpbbVWYMqww _9LruM7PaEeKHpbbVWYMqww">
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_9CPeULPaEeKHpbbVWYMqww" name="Auswertung">
+          <eAnnotations xmi:id="_9CPeUbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CPeUrPaEeKHpbbVWYMqww" key="documentation" value=" @author Bernhard Hollunder&#xD;&#xA; &#xD;&#xA;         Defines the type of the statistic for a running event.&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+          <ownedLiteral xmi:id="_9KpzcLPaEeKHpbbVWYMqww" name="STARTLISTE"/>
+          <ownedLiteral xmi:id="_9KpzcbPaEeKHpbbVWYMqww" name="GESAMTERGEBNISLISTE"/>
+          <ownedLiteral xmi:id="_9KpzcrPaEeKHpbbVWYMqww" name="NICHTSTARTER"/>
+          <ownedLiteral xmi:id="_9Kpzc7PaEeKHpbbVWYMqww" name="ABBRECHER"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_9CQFYLPaEeKHpbbVWYMqww" name="RunningServices">
+          <ownedOperation xmi:id="_9Ktd0LPaEeKHpbbVWYMqww" name="erzeugeVeranstaltung">
+            <ownedParameter xmi:id="_9Ktd0bPaEeKHpbbVWYMqww" name="v" type="_9CJ-wLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9Kv6ELPaEeKHpbbVWYMqww" name="erzeugeVerein">
+            <ownedParameter xmi:id="_9Kv6EbPaEeKHpbbVWYMqww" name="v" type="_9CGUYLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9KyWULPaEeKHpbbVWYMqww" name="erzeugeAnmeldung">
+            <ownedParameter xmi:id="_9KyWUbPaEeKHpbbVWYMqww" name="a" type="_9CMbALPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K0ykLPaEeKHpbbVWYMqww" name="erzeugeLaeufer">
+            <ownedParameter xmi:id="_9K0ykbPaEeKHpbbVWYMqww" name="a" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K2nwLPaEeKHpbbVWYMqww" name="erzeugeLaufzeit">
+            <ownedParameter xmi:id="_9K2nwbPaEeKHpbbVWYMqww" name="l" type="_9CIwoLPaEeKHpbbVWYMqww"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K4c8LPaEeKHpbbVWYMqww" name="getVeranstaltungen">
+            <ownedParameter xmi:id="_9K4c8bPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K5rELPaEeKHpbbVWYMqww" name="getVereine">
+            <ownedParameter xmi:id="_9K5rEbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K65MLPaEeKHpbbVWYMqww" name="getLaeufer">
+            <ownedParameter xmi:id="_9K65MbPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K9VcLPaEeKHpbbVWYMqww" name="getAnmeldungen">
+            <ownedParameter xmi:id="_9K9VcbPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9K9VcrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9K_xsLPaEeKHpbbVWYMqww" name="getLaufzeiten">
+            <ownedParameter xmi:id="_9K_xsbPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9K_xsrPaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9LEDILPaEeKHpbbVWYMqww" name="getAuswertung">
+            <ownedParameter xmi:id="_9LEDIbPaEeKHpbbVWYMqww" name="a" type="_9CPeULPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9LEDIrPaEeKHpbbVWYMqww" name="Veranstaltung" type="_9EKJ4bPaEeKHpbbVWYMqww"/>
+            <ownedParameter xmi:id="_9LEDI7PaEeKHpbbVWYMqww" type="_9DmJMrPaEeKHpbbVWYMqww" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_9LFRQLPaEeKHpbbVWYMqww" name="init"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruMrPaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9CO3Q7PaEeKHpbbVWYMqww"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9LruM7PaEeKHpbbVWYMqww" supplier="_9DmJMbPaEeKHpbbVWYMqww" client="_9CO3Q7PaEeKHpbbVWYMqww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9CQFYbPaEeKHpbbVWYMqww" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_9CQscLPaEeKHpbbVWYMqww" name="DummyUtils">
+          <eAnnotations xmi:id="_9CQscbPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9CQscrPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+          </eAnnotations>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_9CR6kLPaEeKHpbbVWYMqww" name="AllTests">
+        <elementImport xmi:id="_9LKw0bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw0LPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LKw1LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw07PaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LKw17PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw1rPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LKw2bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw2LPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LKw27PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw2rPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LKw3bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw3LPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LKw37PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LKw3rPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LLX4bPaEeKHpbbVWYMqww" visibility="private" importedElement="_9LLX4LPaEeKHpbbVWYMqww"/>
+        <elementImport xmi:id="_9LLX47PaEeKHpbbVWYMqww" visibility="private" importedElement="_9LLX4rPaEeKHpbbVWYMqww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_9CShoLPaEeKHpbbVWYMqww" name="TestData">
+        <eAnnotations xmi:id="_9CShobPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+          <details xmi:id="_9CShorPaEeKHpbbVWYMqww" key="documentation" value=" @author Tim Schmiedl (Cyboot)&#xD;&#xA; &#xD;&#xA;"/>
+        </eAnnotations>
+        <elementImport xmi:id="_9LLX5LPaEeKHpbbVWYMqww" visibility="private" importedElement="_9CLM4LPaEeKHpbbVWYMqww"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9LL-9LPaEeKHpbbVWYMqww" name="getLaeuferDTO" specification="_9LL-8LPaEeKHpbbVWYMqww">
+          <ownedParameter xmi:id="_9LL-9bPaEeKHpbbVWYMqww" type="_9CLM4LPaEeKHpbbVWYMqww"/>
+          <language>JAVA</language>
+          <body>&#xD;
+		return laeuferDTO;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_9LL-8LPaEeKHpbbVWYMqww" name="getLaeuferDTO" visibility="public" isStatic="true" method="_9LL-9LPaEeKHpbbVWYMqww">
+          <eAnnotations xmi:id="_9LL-8bPaEeKHpbbVWYMqww" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9LL-8rPaEeKHpbbVWYMqww" key="documentation" value=" @return the laeuferdto&#xD;&#xA;&#x9;"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_9LL-87PaEeKHpbbVWYMqww" type="_9CLM4LPaEeKHpbbVWYMqww" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9LKw1bPaEeKHpbbVWYMqww" name="junit">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw1rPaEeKHpbbVWYMqww" name="Application"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw2LPaEeKHpbbVWYMqww" name="Duration"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw2rPaEeKHpbbVWYMqww" name="Initialize"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw3LPaEeKHpbbVWYMqww" name="Organization"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw3rPaEeKHpbbVWYMqww" name="Resultlist"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LLX4LPaEeKHpbbVWYMqww" name="Runner"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LLX4rPaEeKHpbbVWYMqww" name="RunningEvent"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9LruNLPaEeKHpbbVWYMqww" supplier="_9LKJwrPaEeKHpbbVWYMqww" client="_9BhFkbPaEeKHpbbVWYMqww"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9LruNbPaEeKHpbbVWYMqww" supplier="_9LKw0rPaEeKHpbbVWYMqww" client="_9BhFkbPaEeKHpbbVWYMqww"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9LruNrPaEeKHpbbVWYMqww" supplier="_9LKw1bPaEeKHpbbVWYMqww" client="_9BhFkbPaEeKHpbbVWYMqww"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9LruN7PaEeKHpbbVWYMqww" supplier="_9CEfM7PaEeKHpbbVWYMqww" client="_9BhFkbPaEeKHpbbVWYMqww"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9DmJMLPaEeKHpbbVWYMqww" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_9DmJMbPaEeKHpbbVWYMqww" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9DmJMrPaEeKHpbbVWYMqww" name="List"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9EGfgbPaEeKHpbbVWYMqww" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9EGfg7PaEeKHpbbVWYMqww" name="Iterator"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9JD4ALPaEeKHpbbVWYMqww" name="Date"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9EKJ4LPaEeKHpbbVWYMqww" name="lang">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9EKJ4bPaEeKHpbbVWYMqww" name="String"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9HWn0LPaEeKHpbbVWYMqww" name="Class"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9Ho7sLPaEeKHpbbVWYMqww" name="Long"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9HvpYLPaEeKHpbbVWYMqww" name="Object"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9F52UbPaEeKHpbbVWYMqww" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9F52UrPaEeKHpbbVWYMqww" name="File"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_9EruULPaEeKHpbbVWYMqww" name="boolean"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_9HYdALPaEeKHpbbVWYMqww" name="C"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9HnGgrPaEeKHpbbVWYMqww" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_9HnGg7PaEeKHpbbVWYMqww" name="persistence">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9HnGhLPaEeKHpbbVWYMqww" name="EntityManager"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_9JMa4LPaEeKHpbbVWYMqww" name="int"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_9JPeMLPaEeKHpbbVWYMqww" name="char"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9LKJwLPaEeKHpbbVWYMqww" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_9LKJwbPaEeKHpbbVWYMqww" name="junit">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9LKJwrPaEeKHpbbVWYMqww" name="runner">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw0LPaEeKHpbbVWYMqww" name="RunWith"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9LKw0rPaEeKHpbbVWYMqww" name="runners">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LKw07PaEeKHpbbVWYMqww" name="Suite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9LObMbPaEeKHpbbVWYMqww" name="Assert">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LObMrPaEeKHpbbVWYMqww" name="fail"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_9LcdobPaEeKHpbbVWYMqww" name="assertNotNull"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9LObNLPaEeKHpbbVWYMqww" name="Before"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9LObNrPaEeKHpbbVWYMqww" name="Test"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
