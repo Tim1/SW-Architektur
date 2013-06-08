@@ -11,5 +11,5 @@ desktop.ini
 *.log
 
 # include lib and doc folder (even if jars)#
-!lib/*
+!/SWA-Main/lib/*
 !doc/*
