@@ -2,7 +2,7 @@
 
 bin/
 logs/
-db/
+/db/
 
 # include lib and doc folder (even otherwise ignored)#
 !lib/*
