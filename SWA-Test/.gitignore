@@ -1,0 +1,4 @@
+#SWA-Test gitignore
+
+bin/
+logs/

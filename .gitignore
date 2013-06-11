@@ -1,15 +1,14 @@
-bin/
-logs/
+#global gitignore
 
-*.class
 desktop.ini
 
-# Package Files #
+# some file types #
+*.class
+*.dat
 *.jar
 *.war
 *.ear
 *.log
 
 # include lib and doc folder (even if jars)#
-!lib/*
 !doc/*

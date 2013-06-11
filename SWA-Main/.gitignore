@@ -1,0 +1,9 @@
+#SWA-Main gitignore
+
+bin/
+logs/
+db/
+
+# include lib and doc folder (even otherwise ignored)#
+!lib/*
+!db/derby.properties
