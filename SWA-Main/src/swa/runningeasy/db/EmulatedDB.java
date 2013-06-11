@@ -54,4 +54,12 @@ public class EmulatedDB implements IObjectReader, IObjectWriter {
 		return instance;
 	}
 
+	@Override
+	public void begin() {
+	}
+
+	@Override
+	public void commit() {
+	}
+
 }
