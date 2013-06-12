@@ -9,14 +9,19 @@ import java.util.Date;
  * 
  */
 public class ListeneintragDTO {
+	// Laufer
 	private String	name;
 	private String	vorname;
 	private int		geburtsjahr;
 	private char	geschlecht;
+	// vereinbe
 	private String	verein;
+	// laufzeitbe
+	private Date	laufzeit;
+
 	private int		startnummer;
 	private int		platzierung;
-	private Date	laufzeit;
+
 
 	public ListeneintragDTO(final String name, final String vorname, final int geburtsjahr, final char geschlecht,
 			final String verein, final int startnummer, final int platzierung, final Date laufzeit) {
