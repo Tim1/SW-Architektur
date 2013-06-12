@@ -1,5 +1,5 @@
 /**
- * 
+ * The class RunningServicesFactory 
  */
 package runningeasy.bom.entities;
 
