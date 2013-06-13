@@ -33,6 +33,14 @@ public class LaufzeitBE {
 
 	private int				startnummer;
 
+	public int getStartnummer() {
+		return startnummer;
+	}
+
+	public void setStartnummer(final int startnummer) {
+		this.startnummer = startnummer;
+	}
+
 	public LaufzeitBE() {
 
 	}
