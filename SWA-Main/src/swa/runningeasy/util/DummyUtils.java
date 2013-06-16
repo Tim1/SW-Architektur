@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import runningeasy.bom.entities.RunningServicesFactory;
-import swa.runningeasy.business.BAFactory;
+import swa.runningeasy.init.BAFactory;
 
 /**
  * @author Tim Schmiedl (Cyboot)

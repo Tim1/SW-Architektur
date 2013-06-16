@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import swa.runningeasy.bes.TestBE;
 import swa.runningeasy.business.AbstractBATest;
+import swa.runningeasy.init.DBInit;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -27,7 +28,7 @@ public class DerbyDBTest extends AbstractBATest {
 	@Before
 	public void setUp() {
 		super.setUp();
-		DerbyDB.init();
+		DBInit.init();
 		derbyDB = new DerbyDB();
 	}
 

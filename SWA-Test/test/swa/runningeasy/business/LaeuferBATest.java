@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swa.runningeasy.TestData;
+import swa.runningeasy.init.BAFactory;
 
 
 /**

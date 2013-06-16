@@ -8,7 +8,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.business.AnmeldungBA;
-import swa.runningeasy.business.BAFactory;
 import swa.runningeasy.business.LaeuferBA;
 import swa.runningeasy.business.LaufzeitBA;
 import swa.runningeasy.business.ListeneintragBA;
@@ -20,6 +19,7 @@ import swa.runningeasy.dtos.LaufzeitDTO;
 import swa.runningeasy.dtos.ListeneintragDTO;
 import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
+import swa.runningeasy.init.BAFactory;
 import swa.runningeasy.services.Auswertung;
 import swa.runningeasy.services.RunningServices;
 

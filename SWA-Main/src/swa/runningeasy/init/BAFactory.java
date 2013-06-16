@@ -1,10 +1,16 @@
 /**
  * 
  */
-package swa.runningeasy.business;
+package swa.runningeasy.init;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.business.AnmeldungBA;
+import swa.runningeasy.business.LaeuferBA;
+import swa.runningeasy.business.LaufzeitBA;
+import swa.runningeasy.business.ListeneintragBA;
+import swa.runningeasy.business.VeranstaltungBA;
+import swa.runningeasy.business.VereinBA;
 import swa.runningeasy.business.extern.BankBA;
 import swa.runningeasy.business.extern.DataimportBA;
 import swa.runningeasy.business.extern.LaufzeitsystemBA;
@@ -28,6 +34,10 @@ public class BAFactory {
 	private static MessageServiceBA	messageServiceBA;
 
 	public static void init() {
+		// only initialize one time!
+		if (laeuferBA != null)
+			return;
+
 		logger.info("Initializing BAs...");
 		ergebnisBA = new LaufzeitBA();
 		laeuferBA = new LaeuferBA();
