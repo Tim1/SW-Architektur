@@ -4,7 +4,6 @@
 package swa.runningeasy.bes;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,15 +20,12 @@ public class ListeneintragBE {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long		id;
-
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne
 	private LaeuferBE	laeufer;
-
-	@OneToOne(fetch = FetchType.LAZY)
-	private VereinBE	verein;
+	@OneToOne
+	private LaufzeitBE	laufzeit;
 
 	private int			platzierung;
-	private LaufzeitBE	laufzeit;
 
 
 	public ListeneintragBE() {
@@ -42,9 +38,6 @@ public class ListeneintragBE {
 		laeufer.setVorname(listeneintragDTO.getVorname());
 		laeufer.setGeburtsjahr(listeneintragDTO.getGeburtsjahr());
 		laeufer.setGeschlecht(listeneintragDTO.getGeschlecht());
-
-		verein = new VereinBE();
-		verein.setName(listeneintragDTO.getVerein());
 
 		laufzeit = new LaufzeitBE();
 		laufzeit.setLaufzeit(listeneintragDTO.getLaufzeit());
@@ -76,26 +69,17 @@ public class ListeneintragBE {
 		this.laeufer = laeufer;
 	}
 
-	public final VereinBE getVerein() {
-		return verein;
-	}
-
-
-	public final void setVerein(final VereinBE verein) {
-		this.verein = verein;
-	}
-
 	public ListeneintragDTO aDTO() {
 		ListeneintragDTO listeneintragDTO = new ListeneintragDTO(laeufer.getName(), laeufer.getVorname(),
-				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), verein.getName(), laufzeit.getStartnummer(),
-				platzierung, laufzeit.getLaufzeit());
+				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), laeufer.getVerein().getName(),
+				laufzeit.getStartnummer(), platzierung, laufzeit.getLaufzeit());
 		return listeneintragDTO;
 	}
 
 	@Override
 	public String toString() {
-		return "ListeneintragBE [id=" + id + ", laeufer=" + laeufer + ", verein=" + verein + ", platzierung="
-				+ platzierung + ", laufzeit=" + laufzeit + "]";
+		return "ListeneintragBE [id=" + id + ", laeufer=" + laeufer + ", platzierung=" + platzierung + ", laufzeit="
+				+ laufzeit + "]";
 	}
 
 }

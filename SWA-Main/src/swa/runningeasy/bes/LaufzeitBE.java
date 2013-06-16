@@ -5,11 +5,10 @@ package swa.runningeasy.bes;
 
 import java.util.Date;
 
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -20,17 +19,14 @@ import swa.runningeasy.dtos.LaufzeitDTO;
  * 
  */
 public class LaufzeitBE {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long			id;
+	@ManyToOne
+	private VeranstaltungBE	veranstaltung;
 
 	@Temporal(TemporalType.DATE)
 	private Date			laufzeit;
-
-	@OneToOne(fetch = FetchType.LAZY)
-	private VeranstaltungBE	veranstaltung;
-
 	private int				startnummer;
 
 	public int getStartnummer() {
