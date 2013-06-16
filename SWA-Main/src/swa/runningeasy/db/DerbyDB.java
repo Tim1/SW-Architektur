@@ -15,12 +15,17 @@ import org.apache.log4j.Logger;
  * 
  */
 public class DerbyDB implements IObjectReader, IObjectWriter {
-	private static Logger			logger	= Logger.getLogger(DerbyDB.class);
+	private static Logger		logger	= Logger.getLogger(DerbyDB.class);
+	private static DerbyDB		instance;
 
-	private static EntityManager	em;
+	private final EntityManager	em;
+
+	private DerbyDB(final EntityManager em) {
+		this.em = em;
+	}
 
 	public static void init(final EntityManager em) {
-		DerbyDB.em = em;
+		instance = new DerbyDB(em);
 	}
 
 	@Override
@@ -70,6 +75,10 @@ public class DerbyDB implements IObjectReader, IObjectWriter {
 	}
 
 	public static void close() {
-		em.close();
+		instance.em.close();
+	}
+
+	public static DerbyDB getInstance() {
+		return instance;
 	}
 }

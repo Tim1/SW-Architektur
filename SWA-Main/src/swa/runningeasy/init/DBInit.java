@@ -22,8 +22,20 @@ public class DBInit {
 	private static final String	PERSISTENCE_UNIT_NAME	= "runningeasy";
 	private static final Logger	logger					= Logger.getLogger(DBInit.class);
 
+	private static boolean		forceRealDB				= false;
+
+	/**
+	 * Forces that the real DB is used. Can be useful for JUnit-Test where real
+	 * DB is necessary
+	 * 
+	 * @param forceRealDB
+	 */
+	public static void forceRealDB(final boolean forceRealDB) {
+		DBInit.forceRealDB = forceRealDB;
+	}
+
 	public static void init() {
-		if (!isRealDB()) {
+		if (!isRealDB() && !forceRealDB) {
 			logger.info("You are on an emulated Database!");
 			return;
 		}

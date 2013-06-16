@@ -11,6 +11,10 @@ public class EmulatedDB implements IObjectReader, IObjectWriter {
 	private final List<Object>	values		= new ArrayList<>();
 	private static Logger		logger		= Logger.getLogger(EmulatedDB.class);
 
+	// private Constructor
+	private EmulatedDB() {
+	}
+
 	@Override
 	public <C> void save(final Class<C> clazz, final C objectToSave) {
 		logger.trace("saving: " + objectToSave);

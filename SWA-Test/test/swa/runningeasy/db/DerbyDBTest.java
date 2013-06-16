@@ -28,8 +28,9 @@ public class DerbyDBTest extends AbstractBATest {
 	@Before
 	public void setUp() {
 		super.setUp();
+		DBInit.forceRealDB(true);
 		DBInit.init();
-		derbyDB = new DerbyDB();
+		derbyDB = DerbyDB.getInstance();
 	}
 
 	@Test
