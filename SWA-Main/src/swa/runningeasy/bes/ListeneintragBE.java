@@ -9,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import swa.runningeasy.dtos.ListeneintragDTO;
 
@@ -31,10 +29,8 @@ public class ListeneintragBE {
 	private VereinBE	verein;
 
 	private int			platzierung;
-	@Temporal(TemporalType.DATE)
 	private LaufzeitBE	laufzeit;
 
-	private int			startnummer;
 
 	public ListeneintragBE() {
 
@@ -52,8 +48,6 @@ public class ListeneintragBE {
 
 		laufzeit = new LaufzeitBE();
 		laufzeit.setLaufzeit(listeneintragDTO.getLaufzeit());
-
-		startnummer = listeneintragDTO.getStartnummer();
 	}
 
 
@@ -93,8 +87,8 @@ public class ListeneintragBE {
 
 	public ListeneintragDTO aDTO() {
 		ListeneintragDTO listeneintragDTO = new ListeneintragDTO(laeufer.getName(), laeufer.getVorname(),
-				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), verein.getName(), startnummer, platzierung,
-				laufzeit.getLaufzeit());
+				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), verein.getName(), laufzeit.getStartnummer(),
+				platzierung, laufzeit.getLaufzeit());
 		return listeneintragDTO;
 	}
 
