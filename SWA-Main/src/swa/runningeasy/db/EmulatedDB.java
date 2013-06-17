@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-public class EmulatedDB implements IObjectReader, IObjectWriter {
+public class EmulatedDB implements IDatabase {
 	private static EmulatedDB	instance	= new EmulatedDB();
 
 	private final List<Object>	values		= new ArrayList<>();

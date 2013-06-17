@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.bes.AnmeldungBE;
 import swa.runningeasy.dtos.AnmeldungDTO;
+import swa.runningeasy.init.TransformerFactory;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -31,7 +33,9 @@ public class AnmeldungBA extends AbstractBA {
 			throw new IllegalArgumentException("Argument must not be NULL");
 
 		logger.debug("creating: " + anmeldung);
-		objectWriter.save(AnmeldungDTO.class, anmeldung);
+		objectWriter.begin();
+		objectWriter.save(AnmeldungBE.class, new AnmeldungBE(anmeldung));
+		objectWriter.commit();
 	}
 
 	/**
@@ -108,7 +112,6 @@ public class AnmeldungBA extends AbstractBA {
 	 */
 	public List<AnmeldungDTO> getAllAnmeldungen() {
 		logger.trace("call getAllAnmeldungen()-method");
-		return objectReader.getAllObjects(AnmeldungDTO.class);
+		return TransformerFactory.toDTOList(AnmeldungDTO.class, objectReader.getAllObjects(AnmeldungBE.class));
 	}
-
 }

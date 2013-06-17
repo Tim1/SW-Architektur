@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  * @author Tim Schmiedl (Cyboot)
  * 
  */
-public class DerbyDB implements IObjectReader, IObjectWriter {
+public class DerbyDB implements IDatabase {
 	private static Logger		logger	= Logger.getLogger(DerbyDB.class);
 	private static DerbyDB		instance;
 

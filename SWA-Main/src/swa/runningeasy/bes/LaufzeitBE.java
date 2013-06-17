@@ -5,6 +5,8 @@ package swa.runningeasy.bes;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,11 +20,12 @@ import swa.runningeasy.dtos.LaufzeitDTO;
  * @author Whopper
  * 
  */
-public class LaufzeitBE {
+@Entity
+public class LaufzeitBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long			id;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private VeranstaltungBE	veranstaltung;
 
 	@Temporal(TemporalType.DATE)

@@ -1,9 +1,11 @@
 package swa.runningeasy.business;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.bes.LaeuferBE;
 import swa.runningeasy.dtos.LaeuferDTO;
 
 public class LaeuferBA extends AbstractBA {
@@ -23,7 +25,11 @@ public class LaeuferBA extends AbstractBA {
 			throw new IllegalArgumentException("Argument must not be NULL");
 
 		logger.debug("creating: " + laeufer);
-		objectWriter.save(LaeuferDTO.class, laeufer);
+		LaeuferBE be = new LaeuferBE(laeufer);
+
+		objectWriter.begin();
+		objectWriter.save(LaeuferBE.class, be);
+		objectWriter.commit();
 	}
 
 	/**
@@ -49,7 +55,13 @@ public class LaeuferBA extends AbstractBA {
 
 	public List<LaeuferDTO> getAllLauefer() {
 		logger.trace("call getAllLauefer()-method");
-		return objectReader.getAllObjects(LaeuferDTO.class);
+		List<LaeuferBE> objects = objectReader.getAllObjects(LaeuferBE.class);
+		List<LaeuferDTO> result = new ArrayList<>(objects.size());
+
+		for (LaeuferBE be : objects)
+			result.add(be.asDTO());
+
+		return result;
 	}
 
 }

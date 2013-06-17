@@ -3,13 +3,10 @@
  */
 package swa.runningeasy.bes;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 import swa.runningeasy.dtos.VereinDTO;
 
@@ -18,18 +15,16 @@ import swa.runningeasy.dtos.VereinDTO;
  * 
  */
 @Entity
-public class VereinBE {
+public class VereinBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long					id;
-	@OneToMany(mappedBy = "verein")
-	private Collection<LaeuferBE>	laeufer;
+	private Long	id;
 
-	private String					name;
-	private String					strasse;
-	private String					plz;
-	private String					ort;
-	private String					land;
+	private String	name;
+	private String	strasse;
+	private String	plz;
+	private String	ort;
+	private String	land;
 
 	public VereinBE() {
 
@@ -81,14 +76,6 @@ public class VereinBE {
 
 	public final void setLand(final String land) {
 		this.land = land;
-	}
-
-	public Collection<LaeuferBE> getLaeufer() {
-		return laeufer;
-	}
-
-	public void setLaeufer(final Collection<LaeuferBE> laeufer) {
-		this.laeufer = laeufer;
 	}
 
 	public VereinDTO asDTO() {

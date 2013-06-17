@@ -22,10 +22,10 @@ import swa.runningeasy.business.extern.MessageServiceBA;
  */
 public class BAFactory {
 	private static Logger			logger	= Logger.getLogger(BAFactory.class);
-	private static LaufzeitBA		ergebnisBA;
+	private static LaufzeitBA		laufzeitBA;
 	private static LaeuferBA		laeuferBA;
-	private static ListeneintragBA	statistikBA;
-	private static AnmeldungBA		teilnahmeBA;
+	private static ListeneintragBA	listeneintragBA;
+	private static AnmeldungBA		anmeldungBA;
 	private static VeranstaltungBA	veranstaltungBA;
 	private static VereinBA			vereinBA;
 	private static BankBA			bankBA;
@@ -39,10 +39,10 @@ public class BAFactory {
 			return;
 
 		logger.info("Initializing BAs...");
-		ergebnisBA = new LaufzeitBA();
+		laufzeitBA = new LaufzeitBA();
 		laeuferBA = new LaeuferBA();
-		statistikBA = new ListeneintragBA();
-		teilnahmeBA = new AnmeldungBA();
+		listeneintragBA = new ListeneintragBA();
+		anmeldungBA = new AnmeldungBA();
 		veranstaltungBA = new VeranstaltungBA();
 		vereinBA = new VereinBA();
 		bankBA = new BankBA();
@@ -50,10 +50,10 @@ public class BAFactory {
 		laufzeitsystemBA = new LaufzeitsystemBA();
 		messageServiceBA = new MessageServiceBA();
 
-		ergebnisBA.init();
+		laufzeitBA.init();
 		laeuferBA.init();
-		statistikBA.init();
-		teilnahmeBA.init();
+		listeneintragBA.init();
+		anmeldungBA.init();
 		veranstaltungBA.init();
 		vereinBA.init();
 		bankBA.init();
@@ -63,9 +63,9 @@ public class BAFactory {
 		logger.info("Done initializing BAs.");
 	}
 
-	public static LaufzeitBA getErgebnisBA() {
+	public static LaufzeitBA getLaufzeitBA() {
 		logger.trace("call getErgebnisBA()-Method");
-		return ergebnisBA;
+		return laufzeitBA;
 	}
 
 	public static LaeuferBA getLaeuferBA() {
@@ -73,14 +73,14 @@ public class BAFactory {
 		return laeuferBA;
 	}
 
-	public static ListeneintragBA getStatistikBA() {
+	public static ListeneintragBA getListeneintragBA() {
 		logger.trace("call getStatistikBA()-Method");
-		return statistikBA;
+		return listeneintragBA;
 	}
 
-	public static AnmeldungBA getTeilnahmeBA() {
+	public static AnmeldungBA getAnmeldungBA() {
 		logger.trace("call getTeilnahmeBA()-Method");
-		return teilnahmeBA;
+		return anmeldungBA;
 	}
 
 	public static VeranstaltungBA getVeranstaltungBA() {

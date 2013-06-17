@@ -3,6 +3,7 @@
  */
 package swa.runningeasy.bes;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,13 +17,13 @@ import swa.runningeasy.dtos.AnmeldungDTO;
  * 
  */
 @Entity
-public class AnmeldungBE {
+public class AnmeldungBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long			id;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private LaeuferBE		laeufer;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private VeranstaltungBE	veranstaltung;
 
 	private int				startnummer;
@@ -37,10 +38,11 @@ public class AnmeldungBE {
 		bezahlt = anmeldungDTO.isBezahlt();
 		startnummer = anmeldungDTO.getStartnummer();
 		laeufer = new LaeuferBE(anmeldungDTO.getLaeufer());
-		// verein = new VereinBE();
-		// verein.setName(anmeldungDTO.getVerein());
 		veranstaltung = new VeranstaltungBE();
 		veranstaltung.setName(anmeldungDTO.getVeranstaltung());
+
+		// TODO: there must be a better solution, or?
+		laeufer.getVerein().setName(anmeldungDTO.getVerein());
 	}
 
 	public LaeuferBE getLaeufer() {

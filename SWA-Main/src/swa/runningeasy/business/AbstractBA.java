@@ -3,7 +3,6 @@
  */
 package swa.runningeasy.business;
 
-import swa.runningeasy.db.EmulatedDB;
 import swa.runningeasy.db.IObjectReader;
 import swa.runningeasy.db.IObjectWriter;
 
@@ -12,9 +11,9 @@ import swa.runningeasy.db.IObjectWriter;
  * 
  */
 public abstract class AbstractBA {
-	// TODO-Reminder Emulated DB for Testing
-	protected final static IObjectReader	objectReader	= EmulatedDB.getInstance();
-	protected final static IObjectWriter	objectWriter	= EmulatedDB.getInstance();
+	// are initialized by DBInit class
+	protected static IObjectReader	objectReader;
+	protected static IObjectWriter	objectWriter;
 
 	/**
 	 * Private Construktor

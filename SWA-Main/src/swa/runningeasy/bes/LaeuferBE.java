@@ -3,14 +3,12 @@
  */
 package swa.runningeasy.bes;
 
-import java.util.Collection;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import swa.runningeasy.dtos.LaeuferDTO;
 
@@ -19,25 +17,23 @@ import swa.runningeasy.dtos.LaeuferDTO;
  * 
  */
 @Entity
-public class LaeuferBE {
+public class LaeuferBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long					id;
-	@ManyToOne
-	private VereinBE				verein;
-	@OneToMany(mappedBy = "laeufer")
-	private Collection<AnmeldungBE>	anmeldung;
+	private Long		id;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private VereinBE	verein;
 
-	private String					name;
-	private String					vorname;
-	private int						geburtsjahr;
-	private char					geschlecht;
-	private String					email;
-	private String					sms;
-	private String					strasse;
-	private String					plz;
-	private String					ort;
-	private String					land;
+	private String		name;
+	private String		vorname;
+	private int			geburtsjahr;
+	private char		geschlecht;
+	private String		email;
+	private String		sms;
+	private String		strasse;
+	private String		plz;
+	private String		ort;
+	private String		land;
 
 
 	public LaeuferBE() {
@@ -55,22 +51,17 @@ public class LaeuferBE {
 		plz = laeuferDTO.getPlz();
 		ort = laeuferDTO.getOrt();
 		land = laeuferDTO.getLand();
+
+		// TODO: check where to find the right verein
+		verein = new VereinBE();
 	}
 
 	public VereinBE getVerein() {
 		return verein;
 	}
 
-	public Collection<AnmeldungBE> getAnmeldung() {
-		return anmeldung;
-	}
-
 	public void setVerein(final VereinBE verein) {
 		this.verein = verein;
-	}
-
-	public void setAnmeldung(final Collection<AnmeldungBE> anmeldung) {
-		this.anmeldung = anmeldung;
 	}
 
 	public String getName() {

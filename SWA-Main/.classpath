@@ -6,7 +6,7 @@
 	<classpathentry kind="lib" path="lib/derby.jar"/>
 	<classpathentry kind="lib" path="lib/eclipselink.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
-	<classpathentry kind="lib" path="lib/swa_runningeasy_junit_testdriver.jar"/>
+	<classpathentry kind="lib" path="lib/swa_runningeasy_junit_testdriver.jar" sourcepath="lib/swa_runningeasy_junit_testdriver_src.jar"/>
 	<classpathentry kind="lib" path="lib/javax.persistence_2.0.4.v201112161009.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:platform:/resource/SWA-Main/lib/eclipselink-javadocs.zip!/"/>

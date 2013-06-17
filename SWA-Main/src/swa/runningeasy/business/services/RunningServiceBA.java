@@ -20,6 +20,7 @@ import swa.runningeasy.dtos.ListeneintragDTO;
 import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
 import swa.runningeasy.init.BAFactory;
+import swa.runningeasy.init.DBInit;
 import swa.runningeasy.services.Auswertung;
 import swa.runningeasy.services.RunningServices;
 
@@ -109,12 +110,16 @@ public class RunningServiceBA implements RunningServices {
 		logger.trace("call init()-method");
 		BAFactory.init();
 
+		// TODO: set Database
+		DBInit.setRealDB(false);
+		DBInit.init();
+
 		veranstaltungBA = BAFactory.getVeranstaltungBA();
 		vereinBA = BAFactory.getVereinBA();
-		anmeldungBA = BAFactory.getTeilnahmeBA();
+		anmeldungBA = BAFactory.getAnmeldungBA();
 		laeuferBA = BAFactory.getLaeuferBA();
-		ergebnisBA = BAFactory.getErgebnisBA();
-		listeneintragBA = BAFactory.getStatistikBA();
+		ergebnisBA = BAFactory.getLaufzeitBA();
+		listeneintragBA = BAFactory.getListeneintragBA();
 	}
 
 }

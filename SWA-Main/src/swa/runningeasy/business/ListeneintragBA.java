@@ -9,10 +9,13 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.bes.AnmeldungBE;
+import swa.runningeasy.bes.LaufzeitBE;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
 import swa.runningeasy.dtos.ListeneintragDTO;
+import swa.runningeasy.init.TransformerFactory;
 import swa.runningeasy.services.Auswertung;
 
 /**
@@ -50,7 +53,8 @@ public class ListeneintragBA extends AbstractBA {
 	 */
 	private LaufzeitDTO getLaufzeit(final int startnummer, final String veranstaltung) {
 		logger.trace("call getLaufzeit()-method");
-		List<LaufzeitDTO> list = objectReader.getAllObjects(LaufzeitDTO.class);
+		List<LaufzeitDTO> list = TransformerFactory.toDTOList(LaufzeitDTO.class,
+				objectReader.getAllObjects(LaufzeitBE.class));
 
 		for (LaufzeitDTO l : list) {
 			if (l.getStartnummer() == startnummer && l.getVeranstaltung().equals(veranstaltung))
@@ -62,13 +66,17 @@ public class ListeneintragBA extends AbstractBA {
 
 	private List<AnmeldungDTO> getAllAnmeldungen(final String veranstaltung) {
 		logger.trace("call getAllAnmeldungen()-method");
-		List<AnmeldungDTO> result = objectReader.getAllObjects(AnmeldungDTO.class);
+		List<AnmeldungDTO> result = TransformerFactory.toDTOList(AnmeldungDTO.class,
+				objectReader.getAllObjects(AnmeldungBE.class));
 
 		Iterator<AnmeldungDTO> it = result.iterator();
-		for (AnmeldungDTO dto = it.next(); it.hasNext(); dto = it.next()) {
-			if (!dto.getVeranstaltung().equals(veranstaltung))
-				it.remove();
+		if (it.hasNext()) {
+			for (AnmeldungDTO dto = it.next(); it.hasNext(); dto = it.next()) {
+				if (!dto.getVeranstaltung().equals(veranstaltung))
+					it.remove();
+			}
 		}
+
 
 		return result;
 	}

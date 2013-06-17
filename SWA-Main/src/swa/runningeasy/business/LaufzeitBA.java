@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.bes.LaufzeitBE;
 import swa.runningeasy.dtos.LaufzeitDTO;
+import swa.runningeasy.init.TransformerFactory;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -30,7 +32,9 @@ public class LaufzeitBA extends AbstractBA {
 			throw new IllegalArgumentException("Argument must not be NULL");
 
 		logger.debug("creating: " + laufzeit);
-		objectWriter.save(LaufzeitDTO.class, laufzeit);
+		objectWriter.begin();
+		objectWriter.save(LaufzeitBE.class, new LaufzeitBE(laufzeit));
+		objectWriter.commit();
 	}
 
 	/**
@@ -58,6 +62,6 @@ public class LaufzeitBA extends AbstractBA {
 	 */
 	public List<LaufzeitDTO> getAllLaufzeiten() {
 		logger.trace("call getAllLaufzeiten()-Method");
-		return objectReader.getAllObjects(LaufzeitDTO.class);
+		return TransformerFactory.toDTOList(LaufzeitDTO.class, objectReader.getAllObjects(LaufzeitBE.class));
 	}
 }

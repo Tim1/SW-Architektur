@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.bes.VereinBE;
 import swa.runningeasy.dtos.VereinDTO;
+import swa.runningeasy.init.TransformerFactory;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -30,8 +32,9 @@ public class VereinBA extends AbstractBA {
 			throw new IllegalArgumentException("Argument must not be NULL");
 
 		logger.debug("creating: " + verein);
-		objectWriter.save(VereinDTO.class, verein);
-
+		objectWriter.begin();
+		objectWriter.save(VereinBE.class, new VereinBE(verein));
+		objectWriter.commit();
 	}
 
 	/**
@@ -51,7 +54,7 @@ public class VereinBA extends AbstractBA {
 	 */
 	public List<VereinDTO> getAllVereine() {
 		logger.trace("call getAllVereine()-method");
-		return objectReader.getAllObjects(VereinDTO.class);
+		return TransformerFactory.toDTOList(VereinDTO.class, objectReader.getAllObjects(VereinBE.class));
 	}
 
 }

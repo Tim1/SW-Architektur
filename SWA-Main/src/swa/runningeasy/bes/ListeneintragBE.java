@@ -16,7 +16,7 @@ import swa.runningeasy.dtos.ListeneintragDTO;
  * 
  */
 @Entity
-public class ListeneintragBE {
+public class ListeneintragBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long		id;
@@ -69,7 +69,7 @@ public class ListeneintragBE {
 		this.laeufer = laeufer;
 	}
 
-	public ListeneintragDTO aDTO() {
+	public ListeneintragDTO asDTO() {
 		ListeneintragDTO listeneintragDTO = new ListeneintragDTO(laeufer.getName(), laeufer.getVorname(),
 				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), laeufer.getVerein().getName(),
 				laufzeit.getStartnummer(), platzierung, laufzeit.getLaufzeit());

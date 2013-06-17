@@ -3,7 +3,13 @@
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="runningeasy" transaction-type="RESOURCE_LOCAL">
+		<class>swa.runningeasy.bes.AnmeldungBE</class>
+		<class>swa.runningeasy.bes.LaeuferBE</class>
+		<class>swa.runningeasy.bes.LaufzeitBE</class>
+		<class>swa.runningeasy.bes.ListeneintragBE</class>
 		<class>swa.runningeasy.bes.TestBE</class>
+		<class>swa.runningeasy.bes.VeranstaltungBE</class>
+		<class>swa.runningeasy.bes.VereinBE</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
 			<property name="javax.persistence.jdbc.url"
