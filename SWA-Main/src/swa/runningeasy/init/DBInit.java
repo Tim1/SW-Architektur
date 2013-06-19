@@ -51,21 +51,17 @@ public class DBInit {
 
 		try {
 			BAFactory.init();
-			AbstractBA[] abstractBAArray = new AbstractBA[] { BAFactory.getLaeuferBA(), BAFactory.getLaufzeitBA(),
-					BAFactory.getAnmeldungBA(), BAFactory.getVeranstaltungBA(), BAFactory.getVereinBA(),
-					BAFactory.getListeneintragBA() };
+			AbstractBA abstractBA = BAFactory.getListeneintragBA();
 
-			for (AbstractBA abstractBA : abstractBAArray) {
-				Field field = AbstractBA.class.getDeclaredField("objectReader");
-				Field field2 = AbstractBA.class.getDeclaredField("objectWriter");
+			Field field = AbstractBA.class.getDeclaredField("objectReader");
+			Field field2 = AbstractBA.class.getDeclaredField("objectWriter");
 
-				field.setAccessible(true);
-				field2.setAccessible(true);
-				field.set(abstractBA, db);
-				field2.set(abstractBA, db);
-				field.setAccessible(false);
-				field2.setAccessible(false);
-			}
+			field.setAccessible(true);
+			field2.setAccessible(true);
+			field.set(abstractBA, db);
+			field2.set(abstractBA, db);
+			field.setAccessible(false);
+			field2.setAccessible(false);
 
 		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
 		}

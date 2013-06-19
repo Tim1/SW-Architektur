@@ -8,6 +8,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.bes.LaufzeitBE;
+import swa.runningeasy.bes.VeranstaltungBE;
 import swa.runningeasy.dtos.LaufzeitDTO;
 import swa.runningeasy.init.TransformerFactory;
 
@@ -33,7 +34,13 @@ public class LaufzeitBA extends AbstractBA {
 
 		logger.debug("creating: " + laufzeit);
 		objectWriter.begin();
-		objectWriter.save(LaufzeitBE.class, new LaufzeitBE(laufzeit));
+
+		LaufzeitBE laufzeitBE = new LaufzeitBE(laufzeit);
+		VeranstaltungBE veranstaltungBE = objectReader.getObjectByQuery(VeranstaltungBE.class, "WHERE name is = "
+				+ laufzeit.getVeranstaltung());
+		laufzeitBE.setVeranstaltung(veranstaltungBE);
+
+		objectWriter.save(LaufzeitBE.class, laufzeitBE);
 		objectWriter.commit();
 	}
 

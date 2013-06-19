@@ -33,7 +33,20 @@ public class VeranstaltungBA extends AbstractBA {
 
 		logger.debug("creating: " + veranstaltung);
 		objectWriter.begin();
-		objectWriter.save(VeranstaltungBE.class, new VeranstaltungBE(veranstaltung));
+		// @formatter:off
+		// check if veranstaltung ist already in db
+		VeranstaltungBE veranstaltungBE =  objectReader.getObjectByQuery(VeranstaltungBE.class, 
+				"WHERE " + "(anmeldeschluss is = " + veranstaltung.getName()	+ ")" + "AND " 
+						//TODO: date format?
+						 + "(datum is = " + veranstaltung.getDatum() + ")" + "AND " 
+						 + "(name is = " + veranstaltung.getName() + ")" + "AND " 
+						 + "(startgebuehr is = " + veranstaltung.getStartgebuehr() + ")"
+				);
+		// @formatter:on
+		if (veranstaltungBE == null)
+			veranstaltungBE = new VeranstaltungBE(veranstaltung);
+
+		objectWriter.save(VeranstaltungBE.class, veranstaltungBE);
 		objectWriter.commit();
 	}
 

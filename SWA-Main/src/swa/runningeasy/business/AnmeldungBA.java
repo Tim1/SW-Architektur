@@ -8,6 +8,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.bes.AnmeldungBE;
+import swa.runningeasy.bes.LaeuferBE;
+import swa.runningeasy.bes.VeranstaltungBE;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.init.TransformerFactory;
 
@@ -34,7 +36,16 @@ public class AnmeldungBA extends AbstractBA {
 
 		logger.debug("creating: " + anmeldung);
 		objectWriter.begin();
-		objectWriter.save(AnmeldungBE.class, new AnmeldungBE(anmeldung));
+
+		AnmeldungBE anmledungBE = new AnmeldungBE(anmeldung);
+		LaeuferBE laeuferBE = objectReader.getObjectByQuery(LaeuferBE.class, "WHERE name = " + anmeldung.getLaeufer());
+		VeranstaltungBE veranstatlungBE = objectReader.getObjectByQuery(VeranstaltungBE.class, "WHERE name = "
+				+ anmeldung.getVerein());
+
+		anmledungBE.setLaeufer(laeuferBE);
+		anmledungBE.setVeranstaltung(veranstatlungBE);
+
+		objectWriter.save(AnmeldungBE.class, anmledungBE);
 		objectWriter.commit();
 	}
 

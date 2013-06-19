@@ -25,10 +25,15 @@ public class LaeuferBA extends AbstractBA {
 			throw new IllegalArgumentException("Argument must not be NULL");
 
 		logger.debug("creating: " + laeufer);
-		LaeuferBE be = new LaeuferBE(laeufer);
-
 		objectWriter.begin();
-		objectWriter.save(LaeuferBE.class, be);
+
+		LaeuferBE laeuferBE = new LaeuferBE(laeufer);
+		// geht nicht, da man den verin in der dto schon nicht setzen kann...
+		// VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class,
+		// "WHERE name = " + laeufer.getVerein());
+		// laeuferBE.setVerein(vereinBE);
+
+		objectWriter.save(LaeuferBE.class, laeuferBE);
 		objectWriter.commit();
 	}
 
@@ -41,6 +46,7 @@ public class LaeuferBA extends AbstractBA {
 	public void updateLaeufer(final LaeuferDTO laeufer) {
 		logger.trace("call updateLaeufer()-method");
 
+		// merge, interface erweitern.
 	}
 
 	/**

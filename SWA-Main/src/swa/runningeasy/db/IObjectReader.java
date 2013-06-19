@@ -18,4 +18,6 @@ public interface IObjectReader {
 
 	public <C> List<C> getAllObjects(Class<C> clazz);
 
+	public <C> C getObjectByQuery(Class<C> clazz, String StrQuery);
+
 }

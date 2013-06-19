@@ -54,6 +54,12 @@ public class EmulatedDB implements IDatabase {
 		return result;
 	}
 
+	@Override
+	public <C> C getObjectByQuery(final Class<C> clazz, final String StrQuery) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public static EmulatedDB getInstance() {
 		return instance;
 	}

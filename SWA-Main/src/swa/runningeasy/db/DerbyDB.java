@@ -51,6 +51,19 @@ public class DerbyDB implements IDatabase {
 	}
 
 	@Override
+	public <C> C getObjectByQuery(final Class<C> clazz, final String StrQuery) {
+		logger.trace("call getObjectByQuery()-method");
+		Query query = em.createQuery("select x from " + clazz.getSimpleName() + StrQuery);
+
+		@SuppressWarnings("unchecked")
+		List<C> resultList = query.getResultList();
+		if (resultList.isEmpty())
+			return null;
+		else
+			return resultList.get(0);
+	}
+
+	@Override
 	public <C> void save(final Class<C> clazz, final C objectToSave) {
 		logger.trace("call save()-method");
 		em.persist(objectToSave);
@@ -81,4 +94,5 @@ public class DerbyDB implements IDatabase {
 	public static DerbyDB getInstance() {
 		return instance;
 	}
+
 }

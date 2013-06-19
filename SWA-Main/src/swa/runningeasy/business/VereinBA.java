@@ -33,7 +33,21 @@ public class VereinBA extends AbstractBA {
 
 		logger.debug("creating: " + verein);
 		objectWriter.begin();
-		objectWriter.save(VereinBE.class, new VereinBE(verein));
+
+		// @formatter:off
+		// check if verein ist already in db
+		VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class, 
+				"WHERE " + "(name is = " + verein.getName()	+ ")" + "AND " 
+						 + "(strasse is = " + verein.getStrasse() + ")" + "AND " 
+						 + "(land is = " + verein.getLand() + ")" + "AND " 
+						 + "(ort is = " + verein.getOrt() + ")" + "AND " 
+						 + "(plz is = " + verein.getPlz() + ")"
+				);
+		// @formatter:on
+		if (vereinBE == null)
+			vereinBE = new VereinBE(verein);
+
+		objectWriter.save(VereinBE.class, vereinBE);
 		objectWriter.commit();
 	}
 

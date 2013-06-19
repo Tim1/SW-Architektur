@@ -62,8 +62,6 @@ public class LaeuferBE implements ConvertibleToDTO {
 
 	public void setVerein(final VereinBE verein) {
 		this.verein = verein;
-		if (!verein.getLaeuferList().contains(this))
-			verein.getLaeuferList().add(this);
 	}
 
 	public String getName() {
