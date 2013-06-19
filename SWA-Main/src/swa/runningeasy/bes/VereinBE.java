@@ -96,4 +96,7 @@ public class VereinBE implements ConvertibleToDTO {
 				+ ", land=" + land + "]";
 	}
 
+	public final Long getId() {
+		return id;
+	}
 }

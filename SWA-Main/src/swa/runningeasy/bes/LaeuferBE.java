@@ -3,12 +3,10 @@
  */
 package swa.runningeasy.bes;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 import swa.runningeasy.dtos.LaeuferDTO;
 
@@ -20,20 +18,20 @@ import swa.runningeasy.dtos.LaeuferDTO;
 public class LaeuferBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long		id;
-	@ManyToOne(cascade = CascadeType.ALL)
-	private VereinBE	verein;
+	private Long	id;
+	// @ManyToOne(cascade = CascadeType.ALL)
+	// private VereinBE verein;
 
-	private String		name;
-	private String		vorname;
-	private int			geburtsjahr;
-	private char		geschlecht;
-	private String		email;
-	private String		sms;
-	private String		strasse;
-	private String		plz;
-	private String		ort;
-	private String		land;
+	private String	name;
+	private String	vorname;
+	private int		geburtsjahr;
+	private char	geschlecht;
+	private String	email;
+	private String	sms;
+	private String	strasse;
+	private String	plz;
+	private String	ort;
+	private String	land;
 
 
 	public LaeuferBE() {
@@ -53,16 +51,16 @@ public class LaeuferBE implements ConvertibleToDTO {
 		land = laeuferDTO.getLand();
 
 		// TODO: check where to find the right verein
-		verein = new VereinBE();
+		// verein = new VereinBE();
 	}
 
-	public VereinBE getVerein() {
-		return verein;
-	}
-
-	public void setVerein(final VereinBE verein) {
-		this.verein = verein;
-	}
+	// public VereinBE getVerein() {
+	// return verein;
+	// }
+	//
+	// public void setVerein(final VereinBE verein) {
+	// this.verein = verein;
+	// }
 
 	public String getName() {
 		return name;
@@ -156,6 +154,10 @@ public class LaeuferBE implements ConvertibleToDTO {
 		return "LaeuferBE [id=" + id + ", name=" + name + ", vorname=" + vorname + ", geburtsjahr=" + geburtsjahr
 				+ ", geschlecht=" + geschlecht + ", email=" + email + ", sms=" + sms + ", strasse=" + strasse
 				+ ", plz=" + plz + ", ort=" + ort + ", land=" + land + "]";
+	}
+
+	public final Long getId() {
+		return id;
 	}
 
 

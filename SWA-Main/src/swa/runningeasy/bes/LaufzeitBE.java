@@ -67,6 +67,7 @@ public class LaufzeitBE implements ConvertibleToDTO {
 		this.veranstaltung = veranstaltung;
 	}
 
+	@Override
 	public LaufzeitDTO asDTO() {
 		LaufzeitDTO laufzeitDTO = new LaufzeitDTO(startnummer, laufzeit, veranstaltung.getName());
 		return laufzeitDTO;
@@ -77,4 +78,7 @@ public class LaufzeitBE implements ConvertibleToDTO {
 		return "LaufzeitBE [id=" + id + ", laufzeit=" + laufzeit + ", veranstaltung=" + veranstaltung + "]";
 	}
 
+	public final Long getId() {
+		return id;
+	}
 }

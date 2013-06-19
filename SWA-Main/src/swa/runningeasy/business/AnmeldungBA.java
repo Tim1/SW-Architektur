@@ -3,6 +3,7 @@
  */
 package swa.runningeasy.business;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -10,7 +11,11 @@ import org.apache.log4j.Logger;
 import swa.runningeasy.bes.AnmeldungBE;
 import swa.runningeasy.bes.LaeuferBE;
 import swa.runningeasy.bes.VeranstaltungBE;
+import swa.runningeasy.bes.VereinBE;
 import swa.runningeasy.dtos.AnmeldungDTO;
+import swa.runningeasy.dtos.VeranstaltungDTO;
+import swa.runningeasy.dtos.VereinDTO;
+import swa.runningeasy.init.BAFactory;
 import swa.runningeasy.init.TransformerFactory;
 
 /**
@@ -34,18 +39,39 @@ public class AnmeldungBA extends AbstractBA {
 		if (anmeldung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+
+		// createLauefer if laeufer in anmeldung already exists in db
+		LaeuferBE laeuferBE = BAFactory.getLaeuferBA().createLaeufer(anmeldung.getLaeufer());
+
+		// check if veranstaltung in anmeldung already exists in db
+		VeranstaltungBE veranstaltungBE = BAFactory.getVeranstaltungBA().createVeranstaltung(
+				new VeranstaltungDTO(anmeldung.getVeranstaltung(), new Date(), new Date(), 0));
+
+		// check if verein in anmeldung already exists in db
+		VereinBE vereinBE = BAFactory.getVereinBA().createVerein(new VereinDTO(anmeldung.getVerein()));
+
 		logger.debug("creating: " + anmeldung);
 		objectWriter.begin();
+		// check if laufzeit already exists in db
+		// @formatter:off
+		AnmeldungBE anmledungBE = objectReader.getObjectByQuery(AnmeldungBE.class, 
+				"WHERE " 
+						 + "(bezahlt is = " + anmeldung.isBezahlt()+ ")" + "AND " 
+						 + "(startnummer is = " + anmeldung.getStartnummer() + ")" + "AND " 
+						 + "(LAEUFER_ID is = " + laeuferBE.getId()	+ ")" + "AND " 
+						 + "(VERANSTALTUNG_ID is = " + veranstaltungBE.getId()	+ ")" + "AND "
+						 + "(VEREIN_ID is = " + vereinBE.getId() + ")"
+				);
+		// @formatter:on
 
-		AnmeldungBE anmledungBE = new AnmeldungBE(anmeldung);
-		LaeuferBE laeuferBE = objectReader.getObjectByQuery(LaeuferBE.class, "WHERE name = " + anmeldung.getLaeufer());
-		VeranstaltungBE veranstatlungBE = objectReader.getObjectByQuery(VeranstaltungBE.class, "WHERE name = "
-				+ anmeldung.getVerein());
+		if (anmledungBE == null) {
+			anmledungBE = new AnmeldungBE(anmeldung);
+			anmledungBE.setLaeufer(laeuferBE);
+			anmledungBE.setVeranstaltung(veranstaltungBE);
+			anmledungBE.setVerein(vereinBE);
+			objectWriter.save(AnmeldungBE.class, anmledungBE);
+		}
 
-		anmledungBE.setLaeufer(laeuferBE);
-		anmledungBE.setVeranstaltung(veranstatlungBE);
-
-		objectWriter.save(AnmeldungBE.class, anmledungBE);
 		objectWriter.commit();
 	}
 

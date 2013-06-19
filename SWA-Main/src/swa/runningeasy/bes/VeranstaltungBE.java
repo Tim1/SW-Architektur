@@ -75,6 +75,7 @@ public class VeranstaltungBE implements ConvertibleToDTO {
 		this.startgebuehr = startgebuehr;
 	}
 
+	@Override
 	public VeranstaltungDTO asDTO() {
 		VeranstaltungDTO veranstaltungDTO = new VeranstaltungDTO(name, datum, anmeldeschluss, startgebuehr);
 		return veranstaltungDTO;
@@ -86,5 +87,8 @@ public class VeranstaltungBE implements ConvertibleToDTO {
 				+ anmeldeschluss + ", startgebuehr=" + startgebuehr + "]";
 	}
 
+	public final Long getId() {
+		return id;
+	}
 
 }

@@ -26,7 +26,7 @@ public class VereinBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if verein is null or has illegal arguments
 	 */
-	public void createVerein(final VereinDTO verein) throws IllegalArgumentException {
+	public VereinBE createVerein(final VereinDTO verein) throws IllegalArgumentException {
 		logger.trace("call createVerein()-method");
 		if (verein == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
@@ -34,21 +34,24 @@ public class VereinBA extends AbstractBA {
 		logger.debug("creating: " + verein);
 		objectWriter.begin();
 
-		// @formatter:off
 		// check if verein ist already in db
+		// @formatter:off
 		VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class, 
-				"WHERE " + "(name is = " + verein.getName()	+ ")" + "AND " 
-						 + "(strasse is = " + verein.getStrasse() + ")" + "AND " 
-						 + "(land is = " + verein.getLand() + ")" + "AND " 
-						 + "(ort is = " + verein.getOrt() + ")" + "AND " 
-						 + "(plz is = " + verein.getPlz() + ")"
+				"WHERE " 
+						 + "(name = " + verein.getName()	+ ")" 
+//						 + "AND " 
+//						 + "(land is = " + verein.getLand() + ")" + "AND " 
+//						 + "(ort is = " + verein.getOrt() + ")" + "AND " 
+//						 + "(strasse is = " + verein.getStrasse() + ")" + "AND " 
+//						 + "(plz is = " + verein.getPlz() + ")"
 				);
 		// @formatter:on
-		if (vereinBE == null)
+		if (vereinBE == null) {
 			vereinBE = new VereinBE(verein);
-
-		objectWriter.save(VereinBE.class, vereinBE);
+			objectWriter.save(VereinBE.class, vereinBE);
+		}
 		objectWriter.commit();
+		return vereinBE;
 	}
 
 	/**

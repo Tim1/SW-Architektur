@@ -51,10 +51,9 @@ public class DerbyDB implements IDatabase {
 	}
 
 	@Override
-	public <C> C getObjectByQuery(final Class<C> clazz, final String StrQuery) {
+	public <C> C getObjectByQuery(final Class<C> clazz, final String strQuery) {
 		logger.trace("call getObjectByQuery()-method");
-		Query query = em.createQuery("select x from " + clazz.getSimpleName() + StrQuery);
-
+		Query query = em.createQuery("select x from " + clazz.getSimpleName() + " x " + strQuery);
 		@SuppressWarnings("unchecked")
 		List<C> resultList = query.getResultList();
 		if (resultList.isEmpty())

@@ -3,6 +3,7 @@
  */
 package swa.runningeasy.business;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -10,6 +11,8 @@ import org.apache.log4j.Logger;
 import swa.runningeasy.bes.LaufzeitBE;
 import swa.runningeasy.bes.VeranstaltungBE;
 import swa.runningeasy.dtos.LaufzeitDTO;
+import swa.runningeasy.dtos.VeranstaltungDTO;
+import swa.runningeasy.init.BAFactory;
 import swa.runningeasy.init.TransformerFactory;
 
 /**
@@ -32,15 +35,26 @@ public class LaufzeitBA extends AbstractBA {
 		if (laufzeit == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
+		VeranstaltungBE veranstaltungBE = BAFactory.getVeranstaltungBA().createVeranstaltung(
+				new VeranstaltungDTO(laufzeit.getVeranstaltung(), new Date(), new Date(), 0));
+
+
 		logger.debug("creating: " + laufzeit);
+		// check if laufzeit ist already in db
 		objectWriter.begin();
-
-		LaufzeitBE laufzeitBE = new LaufzeitBE(laufzeit);
-		VeranstaltungBE veranstaltungBE = objectReader.getObjectByQuery(VeranstaltungBE.class, "WHERE name is = "
-				+ laufzeit.getVeranstaltung());
-		laufzeitBE.setVeranstaltung(veranstaltungBE);
-
-		objectWriter.save(LaufzeitBE.class, laufzeitBE);
+		// @formatter:off
+		LaufzeitBE laufzeitBE = objectReader.getObjectByQuery(LaufzeitBE.class, 
+				"WHERE " 
+						 + "(laufzeit is = " + laufzeit.getLaufzeit()	+ ")" + "AND " 
+						 + "(VERANSTALTUNG_ID is = " + veranstaltungBE.getId()	+ ")" + "AND " 
+						 + "(startnummer is = " + laufzeit.getStartnummer() + ")"
+				);
+		// @formatter:on
+		if (laufzeitBE == null) {
+			laufzeitBE = new LaufzeitBE(laufzeit);
+			laufzeitBE.setVeranstaltung(veranstaltungBE);
+			objectWriter.save(LaufzeitBE.class, laufzeitBE);
+		}
 		objectWriter.commit();
 	}
 

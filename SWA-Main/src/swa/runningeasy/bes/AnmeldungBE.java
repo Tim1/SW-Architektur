@@ -25,6 +25,8 @@ public class AnmeldungBE implements ConvertibleToDTO {
 	private LaeuferBE		laeufer;
 	@ManyToOne(cascade = CascadeType.ALL)
 	private VeranstaltungBE	veranstaltung;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private VereinBE		verein;
 
 	private int				startnummer;
 	private boolean			bezahlt;
@@ -40,9 +42,10 @@ public class AnmeldungBE implements ConvertibleToDTO {
 		laeufer = new LaeuferBE(anmeldungDTO.getLaeufer());
 		veranstaltung = new VeranstaltungBE();
 		veranstaltung.setName(anmeldungDTO.getVeranstaltung());
-
+		verein = new VereinBE();
+		verein.setName(anmeldungDTO.getVerein());
 		// TODO: there must be a better solution, or?
-		laeufer.getVerein().setName(anmeldungDTO.getVerein());
+		// laeufer.getVerein().setName(anmeldungDTO.getVerein());
 	}
 
 	public LaeuferBE getLaeufer() {
@@ -77,10 +80,11 @@ public class AnmeldungBE implements ConvertibleToDTO {
 		this.startnummer = startnummer;
 	}
 
+	@Override
 	public AnmeldungDTO asDTO() {
 
-		AnmeldungDTO anmeldungDTO = new AnmeldungDTO(laeufer.asDTO(), bezahlt, veranstaltung.getName(), laeufer
-				.getVerein().getName(), startnummer);
+		AnmeldungDTO anmeldungDTO = new AnmeldungDTO(laeufer.asDTO(), bezahlt, veranstaltung.getName(),
+				verein.getName(), startnummer);
 		return anmeldungDTO;
 	}
 
@@ -90,4 +94,17 @@ public class AnmeldungBE implements ConvertibleToDTO {
 				+ startnummer + ", bezahlt=" + bezahlt + "]";
 	}
 
+	public final Long getId() {
+		return id;
+	}
+
+
+	public final VereinBE getVerein() {
+		return verein;
+	}
+
+
+	public final void setVerein(final VereinBE verein) {
+		this.verein = verein;
+	}
 }

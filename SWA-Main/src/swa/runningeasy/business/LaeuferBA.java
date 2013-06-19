@@ -19,7 +19,7 @@ public class LaeuferBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if laeufer is null or has illegal arguments
 	 */
-	public void createLaeufer(final LaeuferDTO laeufer) throws IllegalArgumentException {
+	public LaeuferBE createLaeufer(final LaeuferDTO laeufer) throws IllegalArgumentException {
 		logger.trace("call createLaeufer()-method");
 		if (laeufer == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
@@ -27,14 +27,28 @@ public class LaeuferBA extends AbstractBA {
 		logger.debug("creating: " + laeufer);
 		objectWriter.begin();
 
-		LaeuferBE laeuferBE = new LaeuferBE(laeufer);
-		// geht nicht, da man den verin in der dto schon nicht setzen kann...
-		// VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class,
-		// "WHERE name = " + laeufer.getVerein());
-		// laeuferBE.setVerein(vereinBE);
-
-		objectWriter.save(LaeuferBE.class, laeuferBE);
+		// check if laeufer ist already in db
+		// @formatter:off
+		LaeuferBE laeuferBE = objectReader.getObjectByQuery(LaeuferBE.class, 
+				"WHERE "  
+						+ "(vorname is = " + laeufer.getVorname() + ")" + "AND "
+						+ "(name is = " + laeufer.getName() + ")" + "AND " 
+						+ "(geburtsjahr is = " + laeufer.getGeburtsjahr() + ")" + "AND " 
+						+ "(geschlecht is = " + laeufer.getGeschlecht() + ")" + "AND " 
+						+ "(land is = " + laeufer.getLand() + ")" + "AND "
+						+ "(ort is = " + laeufer.getOrt() + ")" + "AND " 
+						+ "(plz is = " + laeufer.getPlz() + ")" + "AND " 
+						+ "(strasse is = " + laeufer.getStrasse() + ")" + "AND " 
+						+ "(sms is = " + laeufer.getSms() + ")" + "AND " 
+						+ "(email is = " + laeufer.getEmail()	+ ")" 
+				);
+		// @formatter:on
+		if (laeuferBE == null) {
+			laeuferBE = new LaeuferBE(laeufer);
+			objectWriter.save(LaeuferBE.class, laeuferBE);
+		}
 		objectWriter.commit();
+		return laeuferBE;
 	}
 
 	/**

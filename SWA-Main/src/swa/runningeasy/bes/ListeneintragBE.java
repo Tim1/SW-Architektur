@@ -24,6 +24,8 @@ public class ListeneintragBE implements ConvertibleToDTO {
 	private LaeuferBE	laeufer;
 	@OneToOne
 	private LaufzeitBE	laufzeit;
+	@OneToOne
+	private VereinBE	verein;
 
 	private int			platzierung;
 
@@ -41,6 +43,9 @@ public class ListeneintragBE implements ConvertibleToDTO {
 
 		laufzeit = new LaufzeitBE();
 		laufzeit.setLaufzeit(listeneintragDTO.getLaufzeit());
+
+		verein = new VereinBE();
+		verein.setName(listeneintragDTO.getVerein());
 	}
 
 
@@ -69,10 +74,11 @@ public class ListeneintragBE implements ConvertibleToDTO {
 		this.laeufer = laeufer;
 	}
 
+	@Override
 	public ListeneintragDTO asDTO() {
 		ListeneintragDTO listeneintragDTO = new ListeneintragDTO(laeufer.getName(), laeufer.getVorname(),
-				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), laeufer.getVerein().getName(),
-				laufzeit.getStartnummer(), platzierung, laufzeit.getLaufzeit());
+				laeufer.getGeburtsjahr(), laeufer.getGeschlecht(), verein.getName(), laufzeit.getStartnummer(),
+				platzierung, laufzeit.getLaufzeit());
 		return listeneintragDTO;
 	}
 
@@ -82,4 +88,7 @@ public class ListeneintragBE implements ConvertibleToDTO {
 				+ laufzeit + "]";
 	}
 
+	public final Long getId() {
+		return id;
+	}
 }

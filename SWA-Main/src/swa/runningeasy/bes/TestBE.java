@@ -41,4 +41,7 @@ public class TestBE {
 		return "Todo [summary=" + summary + ", description=" + description + "]";
 	}
 
+	public final Long getId() {
+		return id;
+	}
 }

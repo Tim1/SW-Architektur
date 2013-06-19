@@ -111,7 +111,7 @@ public class RunningServiceBA implements RunningServices {
 		BAFactory.init();
 
 		// TODO: set Database
-		DBInit.setRealDB(false);
+		DBInit.setRealDB(true);
 		DBInit.init();
 
 		veranstaltungBA = BAFactory.getVeranstaltungBA();
