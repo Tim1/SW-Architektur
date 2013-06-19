@@ -31,16 +31,8 @@ public class LaeuferBA extends AbstractBA {
 		// @formatter:off
 		LaeuferBE laeuferBE = objectReader.getObjectByQuery(LaeuferBE.class, 
 				"WHERE "  
-						+ "(vorname is = " + laeufer.getVorname() + ")" + "AND "
-						+ "(name is = " + laeufer.getName() + ")" + "AND " 
-						+ "(geburtsjahr is = " + laeufer.getGeburtsjahr() + ")" + "AND " 
-						+ "(geschlecht is = " + laeufer.getGeschlecht() + ")" + "AND " 
-						+ "(land is = " + laeufer.getLand() + ")" + "AND "
-						+ "(ort is = " + laeufer.getOrt() + ")" + "AND " 
-						+ "(plz is = " + laeufer.getPlz() + ")" + "AND " 
-						+ "(strasse is = " + laeufer.getStrasse() + ")" + "AND " 
-						+ "(sms is = " + laeufer.getSms() + ")" + "AND " 
-						+ "(email is = " + laeufer.getEmail()	+ ")" 
+						+ "(x.vorname = \"" + laeufer.getVorname() + "\")" + "AND "
+						+ "(x.name = \"" + laeufer.getName() + "\")"
 				);
 		// @formatter:on
 		if (laeuferBE == null) {

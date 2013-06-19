@@ -31,7 +31,9 @@ public class DerbyDB implements IDatabase {
 	@Override
 	public <C> C getObjectById(final Class<C> clazz, final Long id) {
 		logger.trace("call getObjectById()-method");
-		return null;
+
+		Query query = em.createQuery("select y from " + clazz.getSimpleName() + " y " + "WHERE y.id = " + id);
+		return (C) query.getSingleResult();
 	}
 
 	@Override

@@ -45,9 +45,9 @@ public class LaufzeitBA extends AbstractBA {
 		// @formatter:off
 		LaufzeitBE laufzeitBE = objectReader.getObjectByQuery(LaufzeitBE.class, 
 				"WHERE " 
-						 + "(laufzeit is = " + laufzeit.getLaufzeit()	+ ")" + "AND " 
-						 + "(VERANSTALTUNG_ID is = " + veranstaltungBE.getId()	+ ")" + "AND " 
-						 + "(startnummer is = " + laufzeit.getStartnummer() + ")"
+//						 + "(x.laufzeit = " + laufzeit.getLaufzeit().	+ ")" + "AND " 
+//						 + "(VERANSTALTUNG_ID is = " + veranstaltungBE.getId()	+ ")" + "AND " 
+						 + "(x.startnummer = " + laufzeit.getStartnummer() + ")"
 				);
 		// @formatter:on
 		if (laufzeitBE == null) {

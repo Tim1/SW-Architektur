@@ -38,7 +38,7 @@ public class VereinBA extends AbstractBA {
 		// @formatter:off
 		VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class, 
 				"WHERE " 
-						 + "(name = " + verein.getName()	+ ")" 
+						 + "(x.name = \"" + verein.getName()	+ "\")" 
 //						 + "AND " 
 //						 + "(land is = " + verein.getLand() + ")" + "AND " 
 //						 + "(ort is = " + verein.getOrt() + ")" + "AND " 

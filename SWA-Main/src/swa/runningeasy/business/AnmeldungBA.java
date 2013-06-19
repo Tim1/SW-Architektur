@@ -54,14 +54,15 @@ public class AnmeldungBA extends AbstractBA {
 		objectWriter.begin();
 		// check if laufzeit already exists in db
 		// @formatter:off
-		AnmeldungBE anmledungBE = objectReader.getObjectByQuery(AnmeldungBE.class, 
-				"WHERE " 
-						 + "(bezahlt is = " + anmeldung.isBezahlt()+ ")" + "AND " 
-						 + "(startnummer is = " + anmeldung.getStartnummer() + ")" + "AND " 
-						 + "(LAEUFER_ID is = " + laeuferBE.getId()	+ ")" + "AND " 
-						 + "(VERANSTALTUNG_ID is = " + veranstaltungBE.getId()	+ ")" + "AND "
-						 + "(VEREIN_ID is = " + vereinBE.getId() + ")"
-				);
+		AnmeldungBE anmledungBE =  null;
+//				objectReader.getObjectByQuery(AnmeldungBE.class, 
+//				"WHERE " 
+//						 + "(bezahlt is = " + anmeldung.isBezahlt()+ ")" + "AND " 
+//						 + "(startnummer is = " + anmeldung.getStartnummer() + ")" + "AND " 
+//						 + "(x.laeufer = \"" + laeuferBE	+ "\")" + "AND " 
+//						 + "(x.veranstaltung = \"" + veranstaltungBE	+ "\")"// + "AND "
+//						 + "(VEREIN_ID is = " + vereinBE.getId() + ")"
+//				);
 		// @formatter:on
 
 		if (anmledungBE == null) {

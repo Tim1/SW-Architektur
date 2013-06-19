@@ -23,10 +23,11 @@ public class VeranstaltungBA extends AbstractBA {
 	 * 
 	 * @param veranstaltung
 	 *            to create
+	 * @return
 	 * @throws IllegalArgumentException
 	 *             if veranstaltung is null or has illegal arguments
 	 */
-	public void createVeranstaltung(final VeranstaltungDTO veranstaltung) throws IllegalArgumentException {
+	public VeranstaltungBE createVeranstaltung(final VeranstaltungDTO veranstaltung) throws IllegalArgumentException {
 		logger.trace("call createVeranstaltung()-method");
 		if (veranstaltung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
@@ -36,11 +37,11 @@ public class VeranstaltungBA extends AbstractBA {
 		// @formatter:off
 		// check if veranstaltung ist already in db
 		VeranstaltungBE veranstaltungBE =  objectReader.getObjectByQuery(VeranstaltungBE.class, 
-				"WHERE " + "(anmeldeschluss is = " + veranstaltung.getName()	+ ")" + "AND " 
+				"WHERE " //+ "(anmeldeschluss is = " + veranstaltung.getName()	+ ")" + "AND " 
 						//TODO: date format?
-						 + "(datum is = " + veranstaltung.getDatum() + ")" + "AND " 
-						 + "(name is = " + veranstaltung.getName() + ")" + "AND " 
-						 + "(startgebuehr is = " + veranstaltung.getStartgebuehr() + ")"
+//						 + "(datum is = " + veranstaltung.getDatum() + ")" + "AND " 
+						 + "(x.name = \"" + veranstaltung.getName() + "\")" //+ "AND " 
+//						 + "(startgebuehr is = " + veranstaltung.getStartgebuehr() + ")"
 				);
 		// @formatter:on
 		if (veranstaltungBE == null)
@@ -48,6 +49,8 @@ public class VeranstaltungBA extends AbstractBA {
 
 		objectWriter.save(VeranstaltungBE.class, veranstaltungBE);
 		objectWriter.commit();
+
+		return veranstaltungBE;
 	}
 
 	/**
