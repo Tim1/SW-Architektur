@@ -3,10 +3,14 @@
  */
 package swa.runningeasy.bes;
 
+
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import swa.runningeasy.dtos.VereinDTO;
 
@@ -18,13 +22,32 @@ import swa.runningeasy.dtos.VereinDTO;
 public class VereinBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long	id;
+	private Long			id;
 
-	private String	name;
-	private String	strasse;
-	private String	plz;
-	private String	ort;
-	private String	land;
+	private String			name;
+	private String			strasse;
+	private String			plz;
+	private String			ort;
+	private String			land;
+
+	@OneToMany(mappedBy = "verein")
+	private List<LaeuferBE>	laeuferList;
+
+
+	public void addLaeufer(final LaeuferBE laeufer) {
+		laeuferList.add(laeufer);
+		if (laeufer.getVerein() != this)
+			laeufer.setVerein(this);
+	}
+
+	public List<LaeuferBE> getLaeuferList() {
+		return laeuferList;
+	}
+
+	public void removeLaeufer(final LaeuferBE laeufer) {
+		laeuferList.remove(laeufer);
+	}
+
 
 	public VereinBE() {
 
@@ -78,6 +101,7 @@ public class VereinBE implements ConvertibleToDTO {
 		this.land = land;
 	}
 
+	@Override
 	public VereinDTO asDTO() {
 		VereinDTO vereinDTO = new VereinDTO(name);
 		vereinDTO.setLand(land);
