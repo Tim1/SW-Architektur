@@ -21,7 +21,6 @@ public class RunningServicesFactory {
 		logger.trace("call getInstance()-method");
 		if (instance == null) {
 			instance = new RunningServiceBA();
-			instance.init();
 		}
 
 		return instance;

@@ -29,6 +29,7 @@ import swa.runningeasy.services.RunningServices;
  * 
  */
 public class RunningServiceBA implements RunningServices {
+	private boolean			isInit	= false;
 	private VeranstaltungBA	veranstaltungBA;
 	private VereinBA		vereinBA;
 	private AnmeldungBA		anmeldungBA;
@@ -107,7 +108,11 @@ public class RunningServiceBA implements RunningServices {
 
 	@Override
 	public void init() {
-		logger.trace("call init()-method");
+		// only initialize one time
+		if (isInit)
+			return;
+
+		logger.info("##########      Starting Runningeasy      ##########");
 		BAFactory.init();
 
 		// TODO: set Database
@@ -120,6 +125,7 @@ public class RunningServiceBA implements RunningServices {
 		laeuferBA = BAFactory.getLaeuferBA();
 		ergebnisBA = BAFactory.getLaufzeitBA();
 		listeneintragBA = BAFactory.getListeneintragBA();
+		isInit = true;
 	}
 
 }
