@@ -34,12 +34,6 @@ public class EmulatedDB implements IDatabase {
 		return null;
 	}
 
-	@Override
-	public <C> List<C> getObjectByValues(final Class<C> clazz, final Object dto) {
-		logger.trace("call getObjectByValues()-method");
-		return null;
-	}
-
 	@SuppressWarnings("unchecked")
 	@Override
 	public <C> List<C> getAllObjects(final Class<C> clazz) {
@@ -72,6 +66,11 @@ public class EmulatedDB implements IDatabase {
 	@Override
 	public <C> C getObjectByQuery(final Class<C> clazz, final Map<String, String> parameters) {
 		return null;
+	}
+
+	@Override
+	public <C> List<C> getObjectByQueryList(Class<C> clazz, Map<String, String> parameters) {
+		return new ArrayList<>();
 	}
 
 }

@@ -62,8 +62,6 @@ public class LaeuferBA extends AbstractBA {
 	 */
 	public void updateLaeufer(final LaeuferDTO laeufer) {
 		logger.trace("call updateLaeufer()-method");
-
-		// merge, interface erweitern.
 	}
 
 	/**

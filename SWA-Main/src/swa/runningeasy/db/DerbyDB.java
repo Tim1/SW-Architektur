@@ -3,6 +3,7 @@
  */
 package swa.runningeasy.db;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -29,18 +30,13 @@ public class DerbyDB implements IDatabase {
 		instance = new DerbyDB(em);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public <C> C getObjectById(final Class<C> clazz, final Long id) {
 		logger.trace("call getObjectById()-method");
 
 		Query query = em.createQuery("select y from " + clazz.getSimpleName() + " y " + "WHERE y.id = " + id);
 		return (C) query.getSingleResult();
-	}
-
-	@Override
-	public <C> List<C> getObjectByValues(final Class<C> clazz, final Object dto) {
-		logger.trace("call getObjectByValues()-method");
-		return null;
 	}
 
 	@Override
@@ -56,11 +52,21 @@ public class DerbyDB implements IDatabase {
 
 	@Override
 	public <C> C getObjectByQuery(final Class<C> clazz, final Map<String, String> parameters) {
+		List<C> list = getObjectByQueryList(clazz, parameters);
+
+		if (list.size() > 0)
+			return list.get(0);
+		else
+			return null;
+	}
+
+	@Override
+	public <C> List<C> getObjectByQueryList(Class<C> clazz, Map<String, String> parameters) {
 		logger.trace("call getObjectByQuery()-method");
 
 		StringBuilder strQuery = new StringBuilder("select x from " + clazz.getSimpleName() + " x WHERE");
 		for (String key : parameters.keySet()) {
-			strQuery.append(" " + key + " = " + "\"" + parameters.get(key) + "\" " + "AND");
+			strQuery.append(" ").append(key).append(" = \"").append(parameters.get(key)).append("\" AND");
 		}
 		strQuery.delete(strQuery.lastIndexOf(" AND"), strQuery.length());
 		Query query = em.createQuery(strQuery.toString());
@@ -68,9 +74,9 @@ public class DerbyDB implements IDatabase {
 		@SuppressWarnings("unchecked")
 		List<C> resultList = query.getResultList();
 		if (resultList.isEmpty())
-			return null;
+			return new ArrayList<>();
 		else
-			return resultList.get(0);
+			return resultList;
 	}
 
 	@Override

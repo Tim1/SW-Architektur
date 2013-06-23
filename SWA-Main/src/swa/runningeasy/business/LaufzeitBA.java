@@ -99,14 +99,6 @@ public class LaufzeitBA extends AbstractBA {
 
 
 	/**
-	 * TODO: to implement (editTime)
-	 */
-	public void editTime() {
-		logger.trace("call editTime()-Method");
-
-	}
-
-	/**
 	 * 
 	 * @return List of all Laufzeitse
 	 */

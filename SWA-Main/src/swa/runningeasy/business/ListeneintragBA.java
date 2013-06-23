@@ -4,8 +4,9 @@
 package swa.runningeasy.business;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -66,20 +67,12 @@ public class ListeneintragBA extends AbstractBA {
 
 	private List<AnmeldungDTO> getAllAnmeldungen(final String veranstaltung) {
 		logger.trace("call getAllAnmeldungen()-method");
-		List<AnmeldungDTO> result = TransformerFactory.toDTOList(AnmeldungDTO.class,
-				objectReader.getAllObjects(AnmeldungBE.class));
+		Map<String, String> parameters = new HashMap<>();
+		parameters.put("x.veranstaltung.name", veranstaltung);
 
-		Iterator<AnmeldungDTO> it = result.iterator();
-		if (it.hasNext()) {
-			for (AnmeldungDTO dto = it.next(); it.hasNext(); dto = it.next()) {
-				if (!dto.getVeranstaltung().equals(veranstaltung))
-					it.remove();
-			}
-		}
+		List<AnmeldungBE> queryList = objectReader.getObjectByQueryList(AnmeldungBE.class, parameters);
 
-
-		return result;
+		return TransformerFactory.toDTOList(AnmeldungDTO.class, queryList);
 	}
-
 
 }
