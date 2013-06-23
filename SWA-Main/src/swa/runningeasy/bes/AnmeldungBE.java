@@ -44,8 +44,6 @@ public class AnmeldungBE implements ConvertibleToDTO {
 		veranstaltung.setName(anmeldungDTO.getVeranstaltung());
 		verein = new VereinBE();
 		verein.setName(anmeldungDTO.getVerein());
-		// TODO: there must be a better solution, or?
-		// laeufer.getVerein().setName(anmeldungDTO.getVerein());
 	}
 
 	public LaeuferBE getLaeufer() {
@@ -94,11 +92,6 @@ public class AnmeldungBE implements ConvertibleToDTO {
 				+ startnummer + ", bezahlt=" + bezahlt + "]";
 	}
 
-	public final Long getId() {
-		return id;
-	}
-
-
 	public final VereinBE getVerein() {
 		return verein;
 	}
@@ -106,5 +99,10 @@ public class AnmeldungBE implements ConvertibleToDTO {
 
 	public final void setVerein(final VereinBE verein) {
 		this.verein = verein;
+	}
+
+
+	public final Long getId() {
+		return id;
 	}
 }

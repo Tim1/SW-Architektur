@@ -2,6 +2,7 @@ package swa.runningeasy.db;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -54,10 +55,6 @@ public class EmulatedDB implements IDatabase {
 		return result;
 	}
 
-	@Override
-	public <C> C getObjectByQuery(final Class<C> clazz, final String StrQuery) {
-		return null;
-	}
 
 	public static EmulatedDB getInstance() {
 		return instance;
@@ -69,6 +66,12 @@ public class EmulatedDB implements IDatabase {
 
 	@Override
 	public void commit() {
+	}
+
+
+	@Override
+	public <C> C getObjectByQuery(final Class<C> clazz, final Map<String, String> parameters) {
+		return null;
 	}
 
 }

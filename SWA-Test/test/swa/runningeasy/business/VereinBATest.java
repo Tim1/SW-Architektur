@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swa.runningeasy.TestData;
+import swa.runningeasy.bes.VereinBE;
 import swa.runningeasy.dtos.VereinDTO;
 import swa.runningeasy.init.BAFactory;
 
@@ -35,5 +36,16 @@ public class VereinBATest extends AbstractBATest {
 
 		List<VereinDTO> result = vereinBA.getAllVereine();
 		Assert.assertEquals(countBefore + 1, result.size());
+	}
+
+	@Test
+	public void testgetVerein() {
+		VereinDTO vereinDTO = TestData.getVereinDTO();
+
+		vereinBA.createVerein(vereinDTO);
+
+		VereinBE vereinBE = vereinBA.getVerein(vereinDTO);
+
+		Assert.assertEquals(vereinDTO.toString(), vereinBE.asDTO().toString());
 	}
 }

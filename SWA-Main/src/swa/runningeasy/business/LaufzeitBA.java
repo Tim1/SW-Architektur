@@ -4,7 +4,9 @@
 package swa.runningeasy.business;
 
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -20,7 +22,16 @@ import swa.runningeasy.init.TransformerFactory;
  * 
  */
 public class LaufzeitBA extends AbstractBA {
-	private static Logger	logger	= Logger.getLogger(LaufzeitBA.class);
+	private static Logger			logger	= Logger.getLogger(LaufzeitBA.class);
+
+	private static VeranstaltungBA	veranstaltungBA;
+
+	@Override
+	public void init() {
+		super.init();
+		veranstaltungBA = BAFactory.getVeranstaltungBA();
+	}
+
 
 	/**
 	 * Creates a new Laufzeit and saves
@@ -35,27 +46,45 @@ public class LaufzeitBA extends AbstractBA {
 		if (laufzeit == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		VeranstaltungBE veranstaltungBE = BAFactory.getVeranstaltungBA().createVeranstaltung(
-				new VeranstaltungDTO(laufzeit.getVeranstaltung(), new Date(), new Date(), 0));
-
-
-		logger.debug("creating: " + laufzeit);
 		// check if laufzeit ist already in db
-		objectWriter.begin();
-		// @formatter:off
-		LaufzeitBE laufzeitBE = objectReader.getObjectByQuery(LaufzeitBE.class, 
-				"WHERE " 
-//						 + "(x.laufzeit = " + laufzeit.getLaufzeit().	+ ")" + "AND " 
-//						 + "(VERANSTALTUNG_ID is = " + veranstaltungBE.getId()	+ ")" + "AND " 
-						 + "(x.startnummer = " + laufzeit.getStartnummer() + ")"
-				);
-		// @formatter:on
+		LaufzeitBE laufzeitBE = getLaufzeit(laufzeit);
+
+
 		if (laufzeitBE == null) {
+			logger.debug("creating: " + laufzeit);
+
+			VeranstaltungDTO veranstaltung = new VeranstaltungDTO(laufzeit.getVeranstaltung(), new Date(), new Date(),
+					0);
+			veranstaltungBA.createVeranstaltung(veranstaltung);
+			VeranstaltungBE veranstaltungBE = veranstaltungBA.getVeranstaltung(veranstaltung);
+
+			objectWriter.begin();
 			laufzeitBE = new LaufzeitBE(laufzeit);
 			laufzeitBE.setVeranstaltung(veranstaltungBE);
 			objectWriter.save(LaufzeitBE.class, laufzeitBE);
+			objectWriter.commit();
 		}
-		objectWriter.commit();
+	}
+
+	public LaufzeitBE getLaufzeit(final LaufzeitDTO laufzeit) {
+		logger.trace("call createLaufzeit()-Method");
+		if (laufzeit == null)
+			throw new IllegalArgumentException("Argument must not be NULL");
+
+		VeranstaltungDTO veranstaltung = new VeranstaltungDTO(laufzeit.getVeranstaltung(), new Date(), new Date(), 0);
+		VeranstaltungBE veranstaltungBE = veranstaltungBA.getVeranstaltung(veranstaltung);
+		if (veranstaltungBE == null) {
+			return null;
+		}
+
+		Map<String, String> parameters = new LinkedHashMap<String, String>();
+		parameters.put("x.veranstaltung.id", "" + veranstaltungBE.getId());
+		parameters.put("x.startnummer", "" + laufzeit.getStartnummer());
+
+		LaufzeitBE laufzeitBE = objectReader.getObjectByQuery(LaufzeitBE.class, parameters);
+
+		return laufzeitBE;
+
 	}
 
 	/**

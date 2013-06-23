@@ -4,6 +4,7 @@
 package swa.runningeasy.db;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -52,10 +53,18 @@ public class DerbyDB implements IDatabase {
 		return resultList;
 	}
 
+
 	@Override
-	public <C> C getObjectByQuery(final Class<C> clazz, final String strQuery) {
+	public <C> C getObjectByQuery(final Class<C> clazz, final Map<String, String> parameters) {
 		logger.trace("call getObjectByQuery()-method");
-		Query query = em.createQuery("select x from " + clazz.getSimpleName() + " x " + strQuery);
+
+		StringBuilder strQuery = new StringBuilder("select x from " + clazz.getSimpleName() + " x WHERE");
+		for (String key : parameters.keySet()) {
+			strQuery.append(" " + key + " = " + "\"" + parameters.get(key) + "\" " + "AND");
+		}
+		strQuery.delete(strQuery.lastIndexOf(" AND"), strQuery.length());
+		Query query = em.createQuery(strQuery.toString());
+
 		@SuppressWarnings("unchecked")
 		List<C> resultList = query.getResultList();
 		if (resultList.isEmpty())
@@ -95,5 +104,6 @@ public class DerbyDB implements IDatabase {
 	public static DerbyDB getInstance() {
 		return instance;
 	}
+
 
 }

@@ -115,7 +115,7 @@ public class RunningServiceBA implements RunningServices {
 		logger.info("##########      Starting Runningeasy      ##########");
 		BAFactory.init();
 
-		// TODO: set Database
+		// set Database
 		DBInit.setRealDB(true);
 		DBInit.init();
 

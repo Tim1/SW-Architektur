@@ -4,7 +4,9 @@
 package swa.runningeasy.business;
 
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -13,6 +15,7 @@ import swa.runningeasy.bes.LaeuferBE;
 import swa.runningeasy.bes.VeranstaltungBE;
 import swa.runningeasy.bes.VereinBE;
 import swa.runningeasy.dtos.AnmeldungDTO;
+import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
 import swa.runningeasy.init.BAFactory;
@@ -24,7 +27,19 @@ import swa.runningeasy.init.TransformerFactory;
  */
 public class AnmeldungBA extends AbstractBA {
 
-	private static Logger	logger	= Logger.getLogger(AnmeldungBA.class);
+	private static Logger			logger	= Logger.getLogger(AnmeldungBA.class);
+	private static LaeuferBA		laueferBA;
+	private static VeranstaltungBA	veranstaltungBA;
+	private static VereinBA			vereinBA;
+
+	@Override
+	public void init() {
+		super.init();
+		laueferBA = BAFactory.getLaeuferBA();
+		veranstaltungBA = BAFactory.getVeranstaltungBA();
+		vereinBA = BAFactory.getVereinBA();
+	}
+
 
 	/**
 	 * Creates a new Anmeldung and saves
@@ -40,40 +55,67 @@ public class AnmeldungBA extends AbstractBA {
 			throw new IllegalArgumentException("Argument must not be NULL");
 
 
-		// createLauefer if laeufer in anmeldung already exists in db
-		LaeuferBE laeuferBE = BAFactory.getLaeuferBA().createLaeufer(anmeldung.getLaeufer());
-
-		// check if veranstaltung in anmeldung already exists in db
-		VeranstaltungBE veranstaltungBE = BAFactory.getVeranstaltungBA().createVeranstaltung(
-				new VeranstaltungDTO(anmeldung.getVeranstaltung(), new Date(), new Date(), 0));
-
-		// check if verein in anmeldung already exists in db
-		VereinBE vereinBE = BAFactory.getVereinBA().createVerein(new VereinDTO(anmeldung.getVerein()));
-
-		logger.debug("creating: " + anmeldung);
-		objectWriter.begin();
 		// check if laufzeit already exists in db
-		// @formatter:off
-		AnmeldungBE anmledungBE =  null;
-//				objectReader.getObjectByQuery(AnmeldungBE.class, 
-//				"WHERE " 
-//						 + "(bezahlt is = " + anmeldung.isBezahlt()+ ")" + "AND " 
-//						 + "(startnummer is = " + anmeldung.getStartnummer() + ")" + "AND " 
-//						 + "(x.laeufer = \"" + laeuferBE	+ "\")" + "AND " 
-//						 + "(x.veranstaltung = \"" + veranstaltungBE	+ "\")"// + "AND "
-//						 + "(VEREIN_ID is = " + vereinBE.getId() + ")"
-//				);
-		// @formatter:on
+		AnmeldungBE anmeldungBE = getAnmeldung(anmeldung);
 
-		if (anmledungBE == null) {
-			anmledungBE = new AnmeldungBE(anmeldung);
-			anmledungBE.setLaeufer(laeuferBE);
-			anmledungBE.setVeranstaltung(veranstaltungBE);
-			anmledungBE.setVerein(vereinBE);
-			objectWriter.save(AnmeldungBE.class, anmledungBE);
+		if (anmeldungBE == null) {
+			logger.debug("creating: " + anmeldung);
+
+			VeranstaltungDTO veranstaltung = new VeranstaltungDTO(anmeldung.getVeranstaltung(), new Date(), new Date(),
+					0);
+			veranstaltungBA.createVeranstaltung(veranstaltung);
+			VeranstaltungBE veranstaltungBE = veranstaltungBA.getVeranstaltung(veranstaltung);
+
+			LaeuferDTO laeufer = anmeldung.getLaeufer();
+			laueferBA.createLaeufer(laeufer);
+			LaeuferBE laeuferBE = laueferBA.getLaeufer(laeufer);
+
+			VereinDTO verein = new VereinDTO(anmeldung.getVerein());
+			vereinBA.createVerein(verein);
+			VereinBE vereinBE = vereinBA.getVerein(verein);
+
+			objectWriter.begin();
+			anmeldungBE = new AnmeldungBE(anmeldung);
+			anmeldungBE.setLaeufer(laeuferBE);
+			anmeldungBE.setVeranstaltung(veranstaltungBE);
+			anmeldungBE.setVerein(vereinBE);
+			objectWriter.save(AnmeldungBE.class, anmeldungBE);
+			objectWriter.commit();
 		}
+	}
 
-		objectWriter.commit();
+	public AnmeldungBE getAnmeldung(final AnmeldungDTO anmeldung) {
+		logger.trace("call getAnmeldung-method");
+		if (anmeldung == null)
+			throw new IllegalArgumentException("Argument must not be NULL");
+
+		LaeuferDTO laeufer = anmeldung.getLaeufer();
+		LaeuferBE laeuferBE = laueferBA.getLaeufer(laeufer);
+		if (laeuferBE == null)
+			return null;
+
+		VeranstaltungDTO veranstaltung = new VeranstaltungDTO(anmeldung.getVeranstaltung(), new Date(), new Date(), 0);
+		VeranstaltungBE veranstaltungBE = veranstaltungBA.getVeranstaltung(veranstaltung);
+		if (veranstaltungBE == null)
+			return null;
+
+		VereinDTO verein = new VereinDTO(anmeldung.getVerein());
+		VereinBE vereinBE = vereinBA.getVerein(verein);
+		if (vereinBE == null)
+			return null;
+
+		Map<String, String> parameters = new LinkedHashMap<String, String>();
+		parameters.put("x.bezahlt", "" + anmeldung.isBezahlt());
+		parameters.put("x.startnummer", "" + anmeldung.getStartnummer());
+		parameters.put("x.laeufer.id", "" + laeuferBE.getId());
+		parameters.put("x.veranstaltung.id", "" + veranstaltungBE.getId());
+		parameters.put("x.verein.id", "" + vereinBE.getId());
+
+
+		AnmeldungBE anmeldungBE = objectReader.getObjectByQuery(AnmeldungBE.class, parameters);
+
+
+		return anmeldungBE;
 	}
 
 	/**

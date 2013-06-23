@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swa.runningeasy.TestData;
+import swa.runningeasy.bes.LaeuferBE;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.init.BAFactory;
 
@@ -51,5 +52,17 @@ public class LaeuferBATest extends AbstractBATest {
 		// should fail with IllegalArgumentException
 		laeuferBA.createLaeufer(null);
 	}
+
+	@Test
+	public void testgetLaeufer() {
+		LaeuferDTO laeuferDTO = TestData.getLaeuferDTO();
+
+		laeuferBA.createLaeufer(laeuferDTO);
+
+		LaeuferBE laeuferBE = laeuferBA.getLaeufer(laeuferDTO);
+
+		Assert.assertEquals(laeuferDTO.toString(), laeuferBE.asDTO().toString());
+	}
+
 
 }

@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swa.runningeasy.TestData;
+import swa.runningeasy.bes.VeranstaltungBE;
 import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.init.BAFactory;
 
@@ -35,5 +36,17 @@ public class VeranstaltungBATest extends AbstractBATest {
 
 		List<VeranstaltungDTO> result = veranstaltungBA.getAllVeranstaltungen();
 		Assert.assertEquals(countBefore + 1, result.size());
+	}
+
+
+	@Test
+	public void testgetVeranstaltung() {
+		VeranstaltungDTO veranstaltungDTO = TestData.getVeranstaltungDTO();
+
+		veranstaltungBA.createVeranstaltung(veranstaltungDTO);
+
+		VeranstaltungBE veranstaltungBE = veranstaltungBA.getVeranstaltung(veranstaltungDTO);
+
+		Assert.assertEquals(veranstaltungDTO.toString(), veranstaltungBE.asDTO().toString());
 	}
 }

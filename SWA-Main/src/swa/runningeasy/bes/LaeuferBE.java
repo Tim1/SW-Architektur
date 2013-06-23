@@ -19,8 +19,6 @@ public class LaeuferBE implements ConvertibleToDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long	id;
-	// @ManyToOne(cascade = CascadeType.ALL)
-	// private VereinBE verein;
 
 	private String	name;
 	private String	vorname;
@@ -50,17 +48,7 @@ public class LaeuferBE implements ConvertibleToDTO {
 		ort = laeuferDTO.getOrt();
 		land = laeuferDTO.getLand();
 
-		// TODO: check where to find the right verein
-		// verein = new VereinBE();
 	}
-
-	// public VereinBE getVerein() {
-	// return verein;
-	// }
-	//
-	// public void setVerein(final VereinBE verein) {
-	// this.verein = verein;
-	// }
 
 	public String getName() {
 		return name;
@@ -159,6 +147,4 @@ public class LaeuferBE implements ConvertibleToDTO {
 	public final Long getId() {
 		return id;
 	}
-
-
 }

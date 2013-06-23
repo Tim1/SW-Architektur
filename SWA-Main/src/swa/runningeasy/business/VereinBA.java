@@ -3,7 +3,9 @@
  */
 package swa.runningeasy.business;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -26,31 +28,36 @@ public class VereinBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if verein is null or has illegal arguments
 	 */
-	public VereinBE createVerein(final VereinDTO verein) throws IllegalArgumentException {
+	public void createVerein(final VereinDTO verein) throws IllegalArgumentException {
 		logger.trace("call createVerein()-method");
 		if (verein == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		logger.debug("creating: " + verein);
-		objectWriter.begin();
 
 		// check if verein ist already in db
-		// @formatter:off
-		VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class, 
-				"WHERE " 
-						 + "(x.name = \"" + verein.getName()	+ "\")" 
-//						 + "AND " 
-//						 + "(land is = " + verein.getLand() + ")" + "AND " 
-//						 + "(ort is = " + verein.getOrt() + ")" + "AND " 
-//						 + "(strasse is = " + verein.getStrasse() + ")" + "AND " 
-//						 + "(plz is = " + verein.getPlz() + ")"
-				);
-		// @formatter:on
+		VereinBE vereinBE = getVerein(verein);
+
 		if (vereinBE == null) {
+			logger.debug("creating: " + verein);
+			objectWriter.begin();
 			vereinBE = new VereinBE(verein);
 			objectWriter.save(VereinBE.class, vereinBE);
+			objectWriter.commit();
 		}
-		objectWriter.commit();
+	}
+
+
+	public VereinBE getVerein(final VereinDTO verein) throws IllegalArgumentException {
+		logger.trace("call getVerein()-method");
+		if (verein == null)
+			throw new IllegalArgumentException("Argument must not be NULL");
+
+
+		Map<String, String> parameters = new LinkedHashMap<String, String>();
+		parameters.put("x.name", "" + verein.getName());
+
+		VereinBE vereinBE = objectReader.getObjectByQuery(VereinBE.class, parameters);
+
 		return vereinBE;
 	}
 

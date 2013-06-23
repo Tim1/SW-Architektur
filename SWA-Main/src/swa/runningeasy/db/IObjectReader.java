@@ -4,6 +4,7 @@
 package swa.runningeasy.db;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -18,6 +19,6 @@ public interface IObjectReader {
 
 	public <C> List<C> getAllObjects(Class<C> clazz);
 
-	public <C> C getObjectByQuery(Class<C> clazz, String StrQuery);
+	public <C> C getObjectByQuery(Class<C> clazz, Map<String, String> parameters);
 
 }

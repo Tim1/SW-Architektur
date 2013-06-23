@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swa.runningeasy.TestData;
+import swa.runningeasy.bes.LaufzeitBE;
 import swa.runningeasy.dtos.LaufzeitDTO;
 import swa.runningeasy.init.BAFactory;
 
@@ -35,5 +36,16 @@ public class LaufzeitBATest extends AbstractBATest {
 
 		List<LaufzeitDTO> result = laufzeitBA.getAllLaufzeiten();
 		Assert.assertEquals(countBefore + 1, result.size());
+	}
+
+	@Test
+	public void testgetLaufzeit() {
+		LaufzeitDTO laufzeitDTO = TestData.getLaufzeitDTO();
+
+		laufzeitBA.createLaufzeit(laufzeitDTO);
+
+		LaufzeitBE laufzeitBE = laufzeitBA.getLaufzeit(laufzeitDTO);
+
+		Assert.assertEquals(laufzeitDTO.toString(), laufzeitBE.asDTO().toString());
 	}
 }

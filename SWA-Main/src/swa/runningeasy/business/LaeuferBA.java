@@ -1,6 +1,8 @@
 package swa.runningeasy.business;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -11,6 +13,7 @@ import swa.runningeasy.init.TransformerFactory;
 public class LaeuferBA extends AbstractBA {
 	private static Logger	logger	= Logger.getLogger(LaeuferBA.class);
 
+
 	/**
 	 * Creates a new Laeufer and saves
 	 * 
@@ -19,27 +22,35 @@ public class LaeuferBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if laeufer is null or has illegal arguments
 	 */
-	public LaeuferBE createLaeufer(final LaeuferDTO laeufer) throws IllegalArgumentException {
+	public void createLaeufer(final LaeuferDTO laeufer) throws IllegalArgumentException {
 		logger.trace("call createLaeufer()-method");
 		if (laeufer == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		logger.debug("creating: " + laeufer);
-		objectWriter.begin();
 
 		// check if laeufer ist already in db
-		// @formatter:off
-		LaeuferBE laeuferBE = objectReader.getObjectByQuery(LaeuferBE.class, 
-				"WHERE "  
-						+ "(x.vorname = \"" + laeufer.getVorname() + "\")" + "AND "
-						+ "(x.name = \"" + laeufer.getName() + "\")"
-				);
-		// @formatter:on
+		LaeuferBE laeuferBE = getLaeufer(laeufer);
+
 		if (laeuferBE == null) {
+			logger.debug("creating: " + laeufer);
+			objectWriter.begin();
 			laeuferBE = new LaeuferBE(laeufer);
 			objectWriter.save(LaeuferBE.class, laeuferBE);
+			objectWriter.commit();
 		}
-		objectWriter.commit();
+	}
+
+	public LaeuferBE getLaeufer(final LaeuferDTO laeufer) {
+		logger.trace("call getLaeufer-method");
+		if (laeufer == null)
+			throw new IllegalArgumentException("Argument must not be NULL");
+
+
+		Map<String, String> parameters = new LinkedHashMap<String, String>();
+		parameters.put("x.vorname", "" + laeufer.getVorname());
+		parameters.put("x.name", "" + laeufer.getName());
+
+		LaeuferBE laeuferBE = objectReader.getObjectByQuery(LaeuferBE.class, parameters);
 		return laeuferBE;
 	}
 

@@ -3,7 +3,9 @@
  */
 package swa.runningeasy.business;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -27,29 +29,32 @@ public class VeranstaltungBA extends AbstractBA {
 	 * @throws IllegalArgumentException
 	 *             if veranstaltung is null or has illegal arguments
 	 */
-	public VeranstaltungBE createVeranstaltung(final VeranstaltungDTO veranstaltung) throws IllegalArgumentException {
+	public void createVeranstaltung(final VeranstaltungDTO veranstaltung) throws IllegalArgumentException {
 		logger.trace("call createVeranstaltung()-method");
 		if (veranstaltung == null)
 			throw new IllegalArgumentException("Argument must not be NULL");
 
-		logger.debug("creating: " + veranstaltung);
-		objectWriter.begin();
-		// @formatter:off
 		// check if veranstaltung ist already in db
-		VeranstaltungBE veranstaltungBE =  objectReader.getObjectByQuery(VeranstaltungBE.class, 
-				"WHERE " //+ "(anmeldeschluss is = " + veranstaltung.getName()	+ ")" + "AND " 
-						//TODO: date format?
-//						 + "(datum is = " + veranstaltung.getDatum() + ")" + "AND " 
-						 + "(x.name = \"" + veranstaltung.getName() + "\")" //+ "AND " 
-//						 + "(startgebuehr is = " + veranstaltung.getStartgebuehr() + ")"
-				);
-		// @formatter:on
-		if (veranstaltungBE == null)
+		VeranstaltungBE veranstaltungBE = getVeranstaltung(veranstaltung);
+
+		if (veranstaltungBE == null) {
+			logger.debug("creating: " + veranstaltung);
+			objectWriter.begin();
 			veranstaltungBE = new VeranstaltungBE(veranstaltung);
+			objectWriter.save(VeranstaltungBE.class, veranstaltungBE);
+			objectWriter.commit();
+		}
+	}
 
-		objectWriter.save(VeranstaltungBE.class, veranstaltungBE);
-		objectWriter.commit();
 
+	public VeranstaltungBE getVeranstaltung(final VeranstaltungDTO veranstaltung) {
+		logger.trace("call createVeranstaltung()-method");
+		if (veranstaltung == null)
+			throw new IllegalArgumentException("Argument must not be NULL");
+
+		Map<String, String> parameters = new LinkedHashMap<String, String>();
+		parameters.put("x.name", "" + veranstaltung.getName());
+		VeranstaltungBE veranstaltungBE = objectReader.getObjectByQuery(VeranstaltungBE.class, parameters);
 		return veranstaltungBE;
 	}
 

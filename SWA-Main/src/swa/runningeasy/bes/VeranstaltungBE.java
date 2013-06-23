@@ -90,5 +90,4 @@ public class VeranstaltungBE implements ConvertibleToDTO {
 	public final Long getId() {
 		return id;
 	}
-
 }
