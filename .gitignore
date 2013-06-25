@@ -1,5 +1,5 @@
 #global gitignore
-
+db/
 desktop.ini
 
 # some file types #
