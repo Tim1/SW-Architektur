@@ -8,9 +8,7 @@ package swa.runningeasy.extern;
  * 
  */
 public interface ILaufzeitsystem {
-	// TODO: what param type?
 	public void pushZwischenzeitForLaeufer();
 
-	// TODO: what param type?
 	public void pushEndzeitForLaeufer();
 }
