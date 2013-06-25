@@ -18,6 +18,7 @@ import javax.swing.table.TableModel;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.client.connector.RunningServicesFactory;
+import swa.runningeasy.client.util.DTOAttributes;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
@@ -39,13 +40,6 @@ public class Tab3Controller implements ActionListener {
 	private final RunningServices	runningServices;
 	private final JTextField		textfield;
 
-	private Vector<String>			columnAnmeldung;
-	private Vector<String>			columnLaeufer;
-	private Vector<String>			columnLaufzeit;
-	private Vector<String>			columnAuswertung;
-	private Vector<String>			columnVeranstaltung;
-	private Vector<String>			columnVerein;
-
 	public Tab3Controller(final JList<String> list, final JTextField textfield, final JButton button, final JTable table) {
 		this.list = list;
 		this.textfield = textfield;
@@ -53,56 +47,6 @@ public class Tab3Controller implements ActionListener {
 		this.table = table;
 
 		runningServices = RunningServicesFactory.getInstance();
-		initColumnNames();
-	}
-
-	private void initColumnNames() {
-		columnAnmeldung = new Vector<>();
-		columnAnmeldung.add("Läufer");
-		columnAnmeldung.add("bezahlt");
-		columnAnmeldung.add("Veranstaltung");
-		columnAnmeldung.add("Verein");
-		columnAnmeldung.add("Startnummer");
-
-		columnLaeufer = new Vector<>();
-		columnLaeufer.add("Name");
-		columnLaeufer.add("Vorname");
-		columnLaeufer.add("Geburtsjahr");
-		columnLaeufer.add("Geschlecht");
-		columnLaeufer.add("eMail");
-		columnLaeufer.add("SMS");
-		columnLaeufer.add("Straße");
-		columnLaeufer.add("PLZ");
-		columnLaeufer.add("Ort");
-		columnLaeufer.add("Land");
-
-		columnLaufzeit = new Vector<>();
-		columnLaufzeit.add("Startnummer");
-		columnLaufzeit.add("Laufzeit");
-		columnLaufzeit.add("Veranstaltung");
-
-		columnAuswertung = new Vector<>();
-		columnAuswertung.add("Name");
-		columnAuswertung.add("Vorname");
-		columnAuswertung.add("Geburtsjahr");
-		columnAuswertung.add("Geschlecht");
-		columnAuswertung.add("Verein");
-		columnAuswertung.add("Laufzeit");
-		columnAuswertung.add("Startnummer");
-		columnAuswertung.add("Platzierung");
-
-		columnVeranstaltung = new Vector<>();
-		columnVeranstaltung.add("Name");
-		columnVeranstaltung.add("Datum");
-		columnVeranstaltung.add("Anmeldeschluss");
-		columnVeranstaltung.add("Startgebühr");
-
-		columnVerein = new Vector<>();
-		columnVerein.add("Name");
-		columnVerein.add("Straße");
-		columnVerein.add("PLZ");
-		columnVerein.add("Ort");
-		columnVerein.add("Land");
 	}
 
 	@Override
@@ -121,27 +65,27 @@ public class Tab3Controller implements ActionListener {
 		switch (selectedValue) {
 		case "Veranstaltung":
 			dtos = runningServices.getVeranstaltungen();
-			column = columnVeranstaltung;
+			column = DTOAttributes.veranstaltung;
 			break;
 		case "Verein":
 			dtos = runningServices.getVereine();
-			column = columnVerein;
+			column = DTOAttributes.verein;
 			break;
 		case "Anmeldung":
 			dtos = runningServices.getAnmeldungen(textfield.getText());
-			column = columnAnmeldung;
+			column = DTOAttributes.anmeldung;
 			break;
 		case "Läufer":
 			dtos = runningServices.getLaeufer();
-			column = columnLaeufer;
+			column = DTOAttributes.laeufer;
 			break;
 		case "Laufzeit":
 			dtos = runningServices.getLaufzeiten(textfield.getText());
-			column = columnLaufzeit;
+			column = DTOAttributes.laufzeit;
 			break;
 		case "Auswertung":
 			dtos = runningServices.getAuswertung(Auswertung.STARTLISTE, textfield.getText());
-			column = columnAuswertung;
+			column = DTOAttributes.auswertung;
 			break;
 		}
 
