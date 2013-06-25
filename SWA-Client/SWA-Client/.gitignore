@@ -1,6 +1,7 @@
 #SWA-Client gitignore
 
 /db/
+/logs/
 
 # include lib and doc folder (even otherwise ignored)#
 !db/derby.properties
