@@ -14,6 +14,7 @@ import java.util.Vector;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -112,12 +113,14 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 			textValues.add(field.getText());
 		}
 
+		String artikel = "Der";// german Artikel for Error/Info-Dialog
 		// Try parsing the values and creating the corresponding DTOs
 		try {
 			DateFormat df = DateFormat.getInstance();
 			Object dto = null;
 			switch (selected) {
 			case "Veranstaltung":
+				artikel = "Die";
 				VeranstaltungDTO veranstaltungDTO = new VeranstaltungDTO(textValues.get(0),
 						df.parse(textValues.get(1)), df.parse(textValues.get(2)), Integer.parseInt(textValues.get(3)));
 				runningService.erzeugeVeranstaltung(veranstaltungDTO);
@@ -133,6 +136,7 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 				dto = vereinDTO;
 				break;
 			case "Anmeldung":
+				artikel = "Die";
 				AnmeldungDTO anmeldungDTO = new AnmeldungDTO(null, Boolean.parseBoolean(textValues.get(1)),
 						textValues.get(2), textValues.get(3), Integer.parseInt(textValues.get(4)));
 				runningService.erzeugeAnmeldung(anmeldungDTO);
@@ -146,6 +150,7 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 				dto = laeuferDTO;
 				break;
 			case "Laufzeit":
+				artikel = "Die";
 				LaufzeitDTO laufzeitDTO = new LaufzeitDTO(Integer.parseInt(textValues.get(0)), df.parse(textValues
 						.get(1)), textValues.get(2));
 				runningService.erzeugeLaufzeit(laufzeitDTO);
@@ -153,12 +158,15 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 				break;
 			}
 			logger.info("Succesfully created Object in DB: " + dto);
-			// TODO: alert Window for User (succes)
+			JOptionPane.showMessageDialog(null, artikel + " " + selected + " wurde erfolgreich gespeichert",
+					"Speichern erfolgreich", JOptionPane.INFORMATION_MESSAGE);
 
-			// clears the Form
+			// clears/resets the form
 			updateForm();
 		} catch (NumberFormatException | ParseException e) {
-			// TODO: alert Window for User (warning wrong values)
+			JOptionPane.showMessageDialog(null, artikel + " " + selected
+					+ " konnte nicht angelegt werden.\n Bitte prüfen sie die Eingabefelder auf ungültige Werte.",
+					"Speichern abgebrochen", JOptionPane.ERROR_MESSAGE);
 			logger.info("Exception parsing Values: " + e);
 		}
 	}
