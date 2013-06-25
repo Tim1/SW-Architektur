@@ -91,12 +91,14 @@ public class RunningServiceBA implements RunningServices {
 	@Override
 	public List<AnmeldungDTO> getAnmeldungen(final String Veranstaltung) {
 		logger.trace("call getAnmeldungen()-method");
+		// FIXME: why is veranstaltung ignored?
 		return anmeldungBA.getAllAnmeldungen();
 	}
 
 	@Override
 	public List<LaufzeitDTO> getLaufzeiten(final String Veranstaltung) {
 		logger.trace("call getLaufzeiten()-method");
+		// FIXME: why is veranstaltung ignored?
 		return ergebnisBA.getAllLaufzeiten();
 	}
 

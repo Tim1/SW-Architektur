@@ -4,10 +4,10 @@
 package swa.runningeasy.client.view;
 
 import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Dimension;
 
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -16,15 +16,17 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import swa.runningeasy.client.controller.Tab3Controller;
+
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
  */
 public class Tab3_Display extends JPanel {
 	private static final long	serialVersionUID	= 1L;
-	private Button				buttonLoad;
+	private JButton				buttonLoad;
 	private JTextField			txtFieldDTO;
-	private JList				listDTOs;
+	private JList<String>		listDTOs;
 
 
 	public Tab3_Display() {
@@ -33,10 +35,11 @@ public class Tab3_Display extends JPanel {
 
 	private void initJPanel() {
 		// initialize leafs
-		buttonLoad = new Button("Laden");
+		buttonLoad = new JButton("Laden");
 		txtFieldDTO = new JTextField();
 		txtFieldDTO.setPreferredSize(new Dimension(15, 40));
-		listDTOs = (new JList<>(new String[] { "Veranstaltung", "Verein", "Anmeldung", "Läufer", "Laufzeit" }));
+		listDTOs = (new JList<>(new String[] { "Veranstaltung", "Verein", "Anmeldung", "Läufer", "Laufzeit",
+				"Auswertung" }));
 		listDTOs.addListSelectionListener(new ListSelectionListener() {
 
 			@Override
@@ -75,20 +78,7 @@ public class Tab3_Display extends JPanel {
 		this.add(panelSelection, BorderLayout.WEST);
 
 
-		// create table jscrollpane
-		String[] columnNames = { "First Name", "Last Name", "Sport", "# of Years", "Vegetarian" };
-		Object[][] data = { { "Kathy", "Smith", "Snowboarding", new Integer(5), new Boolean(false) },
-				{ "John", "Doe", "Rowing", new Integer(3), new Boolean(true) },
-				{ "Sue", "Black", "Knitting", new Integer(2), new Boolean(false) },
-				{ "Jane", "White", "Speed reading", new Integer(20), new Boolean(true) },
-				{ "Joe", "Brown", "Pool", new Integer(10), new Boolean(false) },
-				{ "Kathy", "Smith", "Snowboarding", new Integer(5), new Boolean(false) },
-				{ "John", "Doe", "Rowing", new Integer(3), new Boolean(true) },
-				{ "Sue", "Black", "Knitting", new Integer(2), new Boolean(false) },
-				{ "Jane", "White", "Speed reading", new Integer(20), new Boolean(true) },
-				{ "Joe", "Brown", "Pool", new Integer(10), new Boolean(false) } };
-
-		JTable tableEntries = new JTable(data, columnNames);
+		JTable tableEntries = new JTable();
 		JScrollPane scrollPaneTable = new JScrollPane(tableEntries);
 		tableEntries.setFillsViewportHeight(true);
 		scrollPaneTable.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -96,7 +86,7 @@ public class Tab3_Display extends JPanel {
 
 		this.add(scrollPaneTable, BorderLayout.CENTER);
 
-
+		buttonLoad.addActionListener(new Tab3Controller(listDTOs, txtFieldDTO, buttonLoad, tableEntries));
 		this.setVisible(true);
 	}
 
