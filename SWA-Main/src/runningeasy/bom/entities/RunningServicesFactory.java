@@ -4,6 +4,7 @@
 package runningeasy.bom.entities;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import swa.runningeasy.business.services.RunningServiceBA;
 import swa.runningeasy.services.RunningServices;
@@ -20,6 +21,7 @@ public class RunningServicesFactory {
 	public static synchronized RunningServices getInstance() {
 		logger.trace("call getInstance()-method");
 		if (instance == null) {
+			PropertyConfigurator.configureAndWatch("log4j.properties", 10 * 1000);
 			instance = new RunningServiceBA();
 		}
 

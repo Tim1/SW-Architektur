@@ -21,6 +21,8 @@ public class MainFrame extends JFrame {
 	}
 
 	public void initUI() {
+		setResizable(false);
+
 		jtabbedPane = new JTabbedPane();
 		getContentPane().add(jtabbedPane);
 
