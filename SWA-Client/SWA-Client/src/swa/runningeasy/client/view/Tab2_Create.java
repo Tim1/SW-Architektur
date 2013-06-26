@@ -3,7 +3,6 @@
  */
 package swa.runningeasy.client.view;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -11,6 +10,7 @@ import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -42,6 +42,7 @@ public class Tab2_Create extends JPanel {
 
 		// initialize components
 		list = new JList<>(new String[] { "Veranstaltung", "Verein", "Anmeldung", "Läufer", "Laufzeit" });
+		list.setSelectedIndex(0);
 
 		labelList = new ArrayList<JLabel>(10);
 		for (int i = 1; i <= 10; i++) {
@@ -55,18 +56,18 @@ public class Tab2_Create extends JPanel {
 		}
 		butCancel = new JButton("Cancel");
 		butCancel.setAlignmentX(CENTER_ALIGNMENT);
-		butCancel.setMaximumSize(new Dimension(100, 25));
-		butCreate = new JButton("Absenden");
+		butCancel.setMaximumSize(new Dimension(90, 25));
+		butCreate = new JButton("Senden");
 		butCreate.setAlignmentX(CENTER_ALIGNMENT);
-		butCreate.setMaximumSize(new Dimension(100, 25));
+		butCreate.setMaximumSize(new Dimension(90, 25));
 
 		// create option panel
 		JPanel panelOption = new JPanel();
-		BorderLayout borderLayoutpanelOption = new BorderLayout();
-		panelOption.setLayout(borderLayoutpanelOption);
-		panelOption.add(list, BorderLayout.NORTH);
-		panelOption.add(butCreate, BorderLayout.CENTER);
-		panelOption.add(butCancel, BorderLayout.SOUTH);
+		panelOption.setLayout(new BoxLayout(panelOption, BoxLayout.Y_AXIS));
+		panelOption.add(list);
+		panelOption.add(new JLabel(" "));
+		panelOption.add(butCreate);
+		panelOption.add(butCancel);
 
 
 		// create panel for label
@@ -82,6 +83,7 @@ public class Tab2_Create extends JPanel {
 		GridBagConstraints c = new GridBagConstraints();
 		// add components
 		c.fill = GridBagConstraints.FIRST_LINE_START;
+		c.anchor = GridBagConstraints.NORTH;
 		c.gridx = 0;
 		c.gridy = 0;
 		this.add(panelOption, c);
@@ -94,8 +96,8 @@ public class Tab2_Create extends JPanel {
 
 
 		c.fill = GridBagConstraints.BOTH;
-		c.gridwidth = java.awt.GridBagConstraints.RELATIVE;
-		c.gridheight = java.awt.GridBagConstraints.RELATIVE;
+		c.gridwidth = GridBagConstraints.RELATIVE;
+		c.gridheight = GridBagConstraints.RELATIVE;
 		c.gridx = 2;
 		c.gridy = 0;
 		c.weightx = 1.0;
@@ -108,6 +110,7 @@ public class Tab2_Create extends JPanel {
 		list.addListSelectionListener(controller);
 		butCancel.addActionListener(controller);
 		butCreate.addActionListener(controller);
+		controller.valueChanged(null);
 
 		this.setVisible(true);
 	}

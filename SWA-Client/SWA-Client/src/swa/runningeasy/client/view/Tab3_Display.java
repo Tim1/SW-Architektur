@@ -9,13 +9,12 @@ import java.awt.GridBagLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 import swa.runningeasy.client.controller.Tab3Controller;
 
@@ -42,36 +41,20 @@ public class Tab3_Display extends JPanel {
 		txtFieldDTO = new JTextField();
 		txtFieldDTO.setPreferredSize(new Dimension(100, 25));
 		listDTOs = (new JList<>(new String[] { "Veranstaltung", "Verein", "Anmeldung", "Läufer", "Laufzeit",
-				"Auswertung" }));
-		listDTOs.addListSelectionListener(new ListSelectionListener() {
-
-			@Override
-			public void valueChanged(final ListSelectionEvent arg0) {
-				if (!arg0.getValueIsAdjusting()) {
-
-					switch (listDTOs.getSelectedValue().toString()) {
-					case "Läufer":
-					case "Verein":
-						txtFieldDTO.setEditable(false);
-						break;
-					case "Veranstaltung":
-					case "Anmeldung":
-					case "Laufzeit":
-						txtFieldDTO.setEditable(true);
-					default:
-						break;
-					}
-
-				}
-			}
-		});
+		// "Auswertung" //Disabled because it displays no entries
+				}));
+		listDTOs.setSelectedIndex(0);
 
 
 		// create selection JPanel
 		JPanel panelSelection = new JPanel();
 		panelSelection.setLayout(new BoxLayout(panelSelection, BoxLayout.Y_AXIS));
 		panelSelection.add(listDTOs);
-		panelSelection.add(txtFieldDTO);
+		panelSelection.add(new JLabel(" "));
+		// disable because it will not be used by the current
+		// Server-Implementation (in RunningServicesBA)
+		// panelSelection.add(txtFieldDTO);
+		// panelSelection.add(new JLabel(" "));
 		panelSelection.add(butLoad);
 
 
@@ -87,6 +70,7 @@ public class Tab3_Display extends JPanel {
 
 		// add components
 		c.fill = GridBagConstraints.HORIZONTAL;
+		c.anchor = GridBagConstraints.NORTH;
 		c.gridx = 0;
 		c.gridy = 0;
 		this.add(panelSelection, c);
@@ -100,7 +84,10 @@ public class Tab3_Display extends JPanel {
 		c.weighty = 1.0;
 		this.add(scrollPaneTable, c);
 
-		butLoad.addActionListener(new Tab3Controller(listDTOs, txtFieldDTO, butLoad, tableEntries));
+		Tab3Controller controller = new Tab3Controller(listDTOs, txtFieldDTO, butLoad, tableEntries);
+		butLoad.addActionListener(controller);
+		listDTOs.addListSelectionListener(controller);
+
 		this.setVisible(true);
 	}
 

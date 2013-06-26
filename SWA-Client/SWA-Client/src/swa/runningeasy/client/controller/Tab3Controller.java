@@ -13,6 +13,8 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -33,7 +35,7 @@ import swa.runningeasy.services.RunningServices;
  * @author Tim Schmiedl (Cyboot)
  * 
  */
-public class Tab3Controller implements ActionListener {
+public class Tab3Controller implements ActionListener, ListSelectionListener {
 	private static final Logger		logger	= Logger.getLogger(Tab3Controller.class);
 	private final JList<String>		list;
 	private final JButton			button;
@@ -195,5 +197,25 @@ public class Tab3Controller implements ActionListener {
 		row.add(dto.getStartgebuehr());
 		row.add(dto.getDatum());
 		row.add(dto.getAnmeldeschluss());
+	}
+
+	@Override
+	public void valueChanged(final ListSelectionEvent le) {
+		if (!le.getValueIsAdjusting()) {
+
+			switch (list.getSelectedValue().toString()) {
+			case "Läufer":
+			case "Veranstaltung":
+			case "Verein":
+				textfield.setEditable(false);
+				break;
+			case "Anmeldung":
+			case "Laufzeit":
+				textfield.setEditable(true);
+			default:
+				break;
+			}
+
+		}
 	}
 }
