@@ -10,6 +10,7 @@ import java.util.Vector;
 
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -17,7 +18,7 @@ import javax.swing.table.TableModel;
 
 import org.apache.log4j.Logger;
 
-import swa.runningeasy.client.connector.RunningServicesFactory;
+import swa.runningeasy.client.connector.RunningServicesFactoryForClient;
 import swa.runningeasy.client.util.DTOAttributes;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
@@ -46,7 +47,7 @@ public class Tab3Controller implements ActionListener {
 		this.button = button;
 		this.table = table;
 
-		runningServices = RunningServicesFactory.getInstance();
+		runningServices = RunningServicesFactoryForClient.getInstance();
 	}
 
 	@Override
@@ -58,39 +59,48 @@ public class Tab3Controller implements ActionListener {
 		// needed for the additional Argument in AnmeldungDTO and LaufzeitDTO
 		String selectedValue = list.getSelectedValue();
 
-		// Reads the DTOs from Database
-		// TODO check for asynchron implementation
-		List dtos = null;
-		Vector<String> column = null;
-		switch (selectedValue) {
-		case "Veranstaltung":
-			dtos = runningServices.getVeranstaltungen();
-			column = DTOAttributes.veranstaltung;
-			break;
-		case "Verein":
-			dtos = runningServices.getVereine();
-			column = DTOAttributes.verein;
-			break;
-		case "Anmeldung":
-			dtos = runningServices.getAnmeldungen(textfield.getText());
-			column = DTOAttributes.anmeldung;
-			break;
-		case "Läufer":
-			dtos = runningServices.getLaeufer();
-			column = DTOAttributes.laeufer;
-			break;
-		case "Laufzeit":
-			dtos = runningServices.getLaufzeiten(textfield.getText());
-			column = DTOAttributes.laufzeit;
-			break;
-		case "Auswertung":
-			dtos = runningServices.getAuswertung(Auswertung.STARTLISTE, textfield.getText());
-			column = DTOAttributes.auswertung;
-			break;
+		try {
+
+			// Reads the DTOs from Database
+			// TODO check for asynchron implementation
+			List dtos = null;
+			Vector<String> column = null;
+			switch (selectedValue) {
+			case "Veranstaltung":
+				dtos = runningServices.getVeranstaltungen();
+				column = DTOAttributes.veranstaltung;
+				break;
+			case "Verein":
+				dtos = runningServices.getVereine();
+				column = DTOAttributes.verein;
+				break;
+			case "Anmeldung":
+				dtos = runningServices.getAnmeldungen(textfield.getText());
+				column = DTOAttributes.anmeldung;
+				break;
+			case "Läufer":
+				dtos = runningServices.getLaeufer();
+				column = DTOAttributes.laeufer;
+				break;
+			case "Laufzeit":
+				dtos = runningServices.getLaufzeiten(textfield.getText());
+				column = DTOAttributes.laufzeit;
+				break;
+			case "Auswertung":
+				dtos = runningServices.getAuswertung(Auswertung.STARTLISTE, textfield.getText());
+				column = DTOAttributes.auswertung;
+				break;
+			}
+
+			logger.debug("filling Table with Data (" + selectedValue + ")");
+			table.setModel(getTableModell(dtos, column));
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null,
+					"Beim Laden der Daten ist leider ein inter Fehler aufgetreten\n\n Fehler: '" + e + "'",
+					"Interner Fehler", JOptionPane.ERROR_MESSAGE);
 		}
 
-		logger.debug("filling Table with Data (" + selectedValue + ")");
-		table.setModel(getTableModell(dtos, column));
+
 		button.setEnabled(true);
 	}
 

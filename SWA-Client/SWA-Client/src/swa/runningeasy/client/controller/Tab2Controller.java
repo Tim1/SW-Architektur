@@ -21,7 +21,7 @@ import javax.swing.event.ListSelectionListener;
 
 import org.apache.log4j.Logger;
 
-import swa.runningeasy.client.connector.RunningServicesFactory;
+import swa.runningeasy.client.connector.RunningServicesFactoryForClient;
 import swa.runningeasy.client.util.DTOAttributes;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
@@ -52,7 +52,7 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 		this.list = list;
 		this.sendButton = sendButton;
 		this.cancelButton = cancelButton;
-		this.runningService = RunningServicesFactory.getInstance();
+		this.runningService = RunningServicesFactoryForClient.getInstance();
 	}
 
 
@@ -163,11 +163,16 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 
 			// clears/resets the form
 			updateForm();
-		} catch (NumberFormatException | ParseException e) {
+		} catch (NumberFormatException | ParseException | StringIndexOutOfBoundsException e) {
+			logger.info("Exception parsing Values: " + e);
 			JOptionPane.showMessageDialog(null, artikel + " " + selected
 					+ " konnte nicht angelegt werden.\n Bitte prüfen sie die Eingabefelder auf ungültige Werte.",
 					"Speichern abgebrochen", JOptionPane.ERROR_MESSAGE);
-			logger.info("Exception parsing Values: " + e);
+		} catch (Exception e) {
+			logger.warn(e);
+			JOptionPane.showMessageDialog(null, "Beim Speichern der Daten ist leider ein inter Fehler aufgetreten.\n"
+					+ "Bitte prüfen sie, ob eine Datenbankverbindung besteht (Statusfeld im ersten Tab)\n\n"
+					+ "Fehler: '" + e + "'", "Interner Fehler", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 

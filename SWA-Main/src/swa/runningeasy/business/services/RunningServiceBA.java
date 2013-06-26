@@ -13,6 +13,7 @@ import swa.runningeasy.business.LaufzeitBA;
 import swa.runningeasy.business.ListeneintragBA;
 import swa.runningeasy.business.VeranstaltungBA;
 import swa.runningeasy.business.VereinBA;
+import swa.runningeasy.db.DerbyDB;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
@@ -21,14 +22,15 @@ import swa.runningeasy.dtos.VeranstaltungDTO;
 import swa.runningeasy.dtos.VereinDTO;
 import swa.runningeasy.init.BAFactory;
 import swa.runningeasy.init.DBInit;
+import swa.runningeasy.junit.TestDataImporter;
 import swa.runningeasy.services.Auswertung;
-import swa.runningeasy.services.RunningServices;
+import swa.runningeasy.services.RunningServicesExtended;
 
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
  */
-public class RunningServiceBA implements RunningServices {
+public class RunningServiceBA implements RunningServicesExtended {
 	private boolean			isInit	= false;
 	private VeranstaltungBA	veranstaltungBA;
 	private VereinBA		vereinBA;
@@ -114,6 +116,7 @@ public class RunningServiceBA implements RunningServices {
 		if (isInit)
 			return;
 
+		logger.info("####################################################");
 		logger.info("##########      Starting Runningeasy      ##########");
 		BAFactory.init();
 
@@ -128,6 +131,23 @@ public class RunningServiceBA implements RunningServices {
 		ergebnisBA = BAFactory.getLaufzeitBA();
 		listeneintragBA = BAFactory.getListeneintragBA();
 		isInit = true;
+	}
+
+	@Override
+	public void deleteAllData() {
+		try {
+			DerbyDB.getInstance().delteAllData();
+		} catch (Exception e) {
+			logger.warn(e);
+		}
+
+	}
+
+	@Override
+	public void fillTestData() {
+		// Run the TestDataImporter from the JUnit-Test to import Testdata
+		TestDataImporter testDataImporter = new TestDataImporter();
+		testDataImporter.initialize();
 	}
 
 }

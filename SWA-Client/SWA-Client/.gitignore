@@ -1,5 +1,5 @@
 #SWA-Client gitignore
-
+/bin/
 /db/
 /logs/
 

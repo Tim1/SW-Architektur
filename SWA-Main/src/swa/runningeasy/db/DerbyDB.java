@@ -12,6 +12,13 @@ import javax.persistence.Query;
 
 import org.apache.log4j.Logger;
 
+import swa.runningeasy.bes.AnmeldungBE;
+import swa.runningeasy.bes.LaeuferBE;
+import swa.runningeasy.bes.LaufzeitBE;
+import swa.runningeasy.bes.ListeneintragBE;
+import swa.runningeasy.bes.VeranstaltungBE;
+import swa.runningeasy.bes.VereinBE;
+
 /**
  * @author Tim Schmiedl (Cyboot)
  * 
@@ -61,7 +68,7 @@ public class DerbyDB implements IDatabase {
 	}
 
 	@Override
-	public <C> List<C> getObjectByQueryList(Class<C> clazz, Map<String, String> parameters) {
+	public <C> List<C> getObjectByQueryList(final Class<C> clazz, final Map<String, String> parameters) {
 		logger.trace("call getObjectByQuery()-method");
 
 		StringBuilder strQuery = new StringBuilder("select x from " + clazz.getSimpleName() + " x WHERE");
@@ -93,13 +100,13 @@ public class DerbyDB implements IDatabase {
 
 	@Override
 	public void commit() {
-		logger.debug("commiting DB-Transaction");
+		logger.trace("commiting DB-Transaction");
 		em.getTransaction().commit();
 	}
 
 	@Override
 	public void begin() {
-		logger.debug("beginning DB-Transaction");
+		logger.trace("beginning DB-Transaction");
 		em.getTransaction().begin();
 	}
 
@@ -109,6 +116,26 @@ public class DerbyDB implements IDatabase {
 
 	public static DerbyDB getInstance() {
 		return instance;
+	}
+
+	@Override
+	public void delteAllData() {
+		logger.info("ATTENTION: deleting all data, truncate Tables...");
+
+		begin();
+		Query query = em.createQuery("DELETE FROM " + AnmeldungBE.class.getSimpleName());
+		query.executeUpdate();
+		query = em.createQuery("DELETE FROM " + LaeuferBE.class.getSimpleName());
+		query.executeUpdate();
+		query = em.createQuery("DELETE FROM " + LaufzeitBE.class.getSimpleName());
+		query.executeUpdate();
+		query = em.createQuery("DELETE FROM " + ListeneintragBE.class.getSimpleName());
+		query.executeUpdate();
+		query = em.createQuery("DELETE FROM " + VeranstaltungBE.class.getSimpleName());
+		query.executeUpdate();
+		query = em.createQuery("DELETE FROM " + VereinBE.class.getSimpleName());
+		query.executeUpdate();
+		commit();
 	}
 
 

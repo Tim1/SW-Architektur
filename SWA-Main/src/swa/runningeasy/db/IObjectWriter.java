@@ -22,4 +22,9 @@ public interface IObjectWriter {
 	 * commits the transaction
 	 */
 	public void commit();
+
+	/**
+	 * deletes all Data, clear/truncate all tables
+	 */
+	void delteAllData();
 }

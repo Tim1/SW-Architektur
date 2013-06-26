@@ -24,6 +24,7 @@ public class DBInit {
 	private static final Logger	logger					= Logger.getLogger(DBInit.class);
 
 	private static boolean		realDB					= false;
+	private static boolean		truncateTablesOnStart	= true;
 
 	/**
 	 * Forces that the real DB is used. Can be useful for JUnit-Test where real
@@ -44,6 +45,9 @@ public class DBInit {
 			logger.info("Done initializing Derby DB.");
 
 			db = DerbyDB.getInstance();
+			if (truncateTablesOnStart) {
+				db.delteAllData();
+			}
 		} else {
 			logger.info("You are on an emulated Database!");
 			db = EmulatedDB.getInstance();
@@ -89,5 +93,12 @@ public class DBInit {
 			return true;
 		}
 
+	}
+
+	/**
+	 * @param truncateTablesOnStart
+	 */
+	public static void truncateTablesOnStart(final boolean truncateTablesOnStart) {
+		DBInit.truncateTablesOnStart = truncateTablesOnStart;
 	}
 }

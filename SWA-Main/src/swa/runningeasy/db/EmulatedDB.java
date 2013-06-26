@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 public class EmulatedDB implements IDatabase {
 	private static EmulatedDB	instance	= new EmulatedDB();
 
-	private final List<Object>	values		= new ArrayList<>();
+	private List<Object>		values		= new ArrayList<>();
 	private static Logger		logger		= Logger.getLogger(EmulatedDB.class);
 
 	// private Constructor
@@ -69,8 +69,13 @@ public class EmulatedDB implements IDatabase {
 	}
 
 	@Override
-	public <C> List<C> getObjectByQueryList(Class<C> clazz, Map<String, String> parameters) {
+	public <C> List<C> getObjectByQueryList(final Class<C> clazz, final Map<String, String> parameters) {
 		return new ArrayList<>();
+	}
+
+	@Override
+	public void delteAllData() {
+		values = new ArrayList<>();
 	}
 
 }

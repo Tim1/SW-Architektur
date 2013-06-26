@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swa.runningeasy.init.BAFactory;
+import swa.runningeasy.services.Auswertung;
 
 /**
  * @author Tim Schmiedl (Cyboot)
@@ -24,6 +25,6 @@ public class ListeneintragBATest extends AbstractBATest {
 
 	@Test
 	public void testgenerateListeneintrag() {
-		// TODO: implement Test for ListeneintragBA
+		listeneintragBA.generateListeneintrag(Auswertung.STARTLISTE, "");
 	}
 }
