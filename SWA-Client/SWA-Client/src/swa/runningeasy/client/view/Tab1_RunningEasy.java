@@ -77,7 +77,6 @@ public class Tab1_RunningEasy extends JPanel {
 		BoxLayout boxLayoutbuttonPanel = new BoxLayout(buttonPanel, BoxLayout.Y_AXIS);
 		buttonPanel.setLayout(boxLayoutbuttonPanel);
 		buttonPanel.add(Box.createVerticalGlue());
-		buttonPanel.add(Box.createVerticalGlue());
 		buttonPanel.add(butConnect);
 		buttonPanel.add(butfillDataDB);
 		buttonPanel.add(butDeleteDB);
@@ -99,7 +98,6 @@ public class Tab1_RunningEasy extends JPanel {
 
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;
-		c.gridwidth = 1;
 		c.gridy = 1;
 		this.add(paneDBStatus, c);
 
