@@ -22,6 +22,7 @@ import org.apache.log4j.Logger;
 
 import swa.runningeasy.client.connector.RunningServicesFactoryForClient;
 import swa.runningeasy.client.util.DTOAttributes;
+import swa.runningeasy.client.view.MainFrame;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
@@ -97,9 +98,10 @@ public class Tab3Controller implements ActionListener, ListSelectionListener {
 			logger.debug("filling Table with Data (" + selectedValue + ")");
 			table.setModel(getTableModell(dtos, column));
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null,
-					"Beim Laden der Daten ist leider ein inter Fehler aufgetreten\n\n Fehler: '" + e + "'",
-					"Interner Fehler", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(MainFrame.getInstance(),
+					"Beim Laden der Daten ist leider ein Fehler aufgetreten.\n"
+							+ "Bitte prüfen sie, ob eine Datenbankverbindung besteht (Statusfeld im ersten Tab)\n\n"
+							+ "Fehler: '" + e + "'", "Interner Fehler", JOptionPane.ERROR_MESSAGE);
 		}
 
 

@@ -11,10 +11,11 @@ import javax.swing.JTabbedPane;
  * 
  */
 public class MainFrame extends JFrame {
-	private static final long	serialVersionUID	= 1L;
-	private JTabbedPane			jtabbedPane;
+	private static final long		serialVersionUID	= 1L;
+	private static final MainFrame	instance			= new MainFrame();
+	private JTabbedPane				jtabbedPane;
 
-	public MainFrame() {
+	private MainFrame() {
 		super("RunningEasy");
 	}
 
@@ -34,5 +35,9 @@ public class MainFrame extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);
+	}
+
+	public static MainFrame getInstance() {
+		return instance;
 	}
 }

@@ -23,6 +23,7 @@ import org.apache.log4j.Logger;
 
 import swa.runningeasy.client.connector.RunningServicesFactoryForClient;
 import swa.runningeasy.client.util.DTOAttributes;
+import swa.runningeasy.client.view.MainFrame;
 import swa.runningeasy.dtos.AnmeldungDTO;
 import swa.runningeasy.dtos.LaeuferDTO;
 import swa.runningeasy.dtos.LaufzeitDTO;
@@ -158,21 +159,22 @@ public class Tab2Controller implements ActionListener, ListSelectionListener {
 				break;
 			}
 			logger.info("Succesfully created Object in DB: " + dto);
-			JOptionPane.showMessageDialog(null, artikel + " " + selected + " wurde erfolgreich gespeichert",
-					"Speichern erfolgreich", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(MainFrame.getInstance(), artikel + " " + selected
+					+ " wurde erfolgreich gespeichert", "Speichern erfolgreich", JOptionPane.INFORMATION_MESSAGE);
 
 			// clears/resets the form
 			updateForm();
 		} catch (NumberFormatException | ParseException | StringIndexOutOfBoundsException e) {
 			logger.info("Exception parsing Values: " + e);
-			JOptionPane.showMessageDialog(null, artikel + " " + selected
+			JOptionPane.showMessageDialog(MainFrame.getInstance(), artikel + " " + selected
 					+ " konnte nicht angelegt werden.\n Bitte prüfen sie die Eingabefelder auf ungültige Werte.",
 					"Speichern abgebrochen", JOptionPane.ERROR_MESSAGE);
 		} catch (Exception e) {
 			logger.warn(e);
-			JOptionPane.showMessageDialog(null, "Beim Speichern der Daten ist leider ein inter Fehler aufgetreten.\n"
-					+ "Bitte prüfen sie, ob eine Datenbankverbindung besteht (Statusfeld im ersten Tab)\n\n"
-					+ "Fehler: '" + e + "'", "Interner Fehler", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(MainFrame.getInstance(),
+					"Beim Speichern der Daten ist leider ein Fehler aufgetreten.\n"
+							+ "Bitte prüfen sie, ob eine Datenbankverbindung besteht (Statusfeld im ersten Tab)\n\n"
+							+ "Fehler: '" + e + "'", "Interner Fehler", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 

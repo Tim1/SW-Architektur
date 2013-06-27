@@ -11,7 +11,7 @@ import swa.runningeasy.client.view.MainFrame;
  */
 public class Main {
 	public static void main(final String[] args) {
-		MainFrame mainFrame = new MainFrame();
+		MainFrame mainFrame = MainFrame.getInstance();
 		mainFrame.initUI();
 	}
 }

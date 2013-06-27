@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import org.apache.log4j.Logger;
 
 import swa.runningeasy.client.connector.RunningServicesFactoryForClient;
+import swa.runningeasy.client.view.MainFrame;
 import swa.runningeasy.services.RunningServicesExtended;
 
 /**
@@ -52,8 +53,8 @@ public class Tab1Controller implements ActionListener {
 	}
 
 	private void fillData() {
-		int result = JOptionPane.showConfirmDialog(null, "Wollen Sie die Datenbank mit Testdaten füllen?",
-				"Testdaten füllen", JOptionPane.CANCEL_OPTION);
+		int result = JOptionPane.showConfirmDialog(MainFrame.getInstance(),
+				"Wollen Sie die Datenbank mit Testdaten füllen?", "Testdaten füllen", JOptionPane.CANCEL_OPTION);
 
 		if (result == JOptionPane.OK_OPTION) {
 			logger.info("filling Testdata");
@@ -62,7 +63,7 @@ public class Tab1Controller implements ActionListener {
 	}
 
 	private void deleteData() {
-		int result = JOptionPane.showConfirmDialog(null,
+		int result = JOptionPane.showConfirmDialog(MainFrame.getInstance(),
 				"Achtung Sie sind im Begriff alle vorhanden Daten zu löschen.\n" + "Fortfahren?", "Alle Daten löschen",
 				JOptionPane.CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 
